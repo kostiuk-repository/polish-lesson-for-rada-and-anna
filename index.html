@@ -1,172 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lekcja Języka Polskiego: Dialog w kawiarni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Polish Learning Hub</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Lekcja Języka Polskiego: Dialog w kawiarni</h1>
-            <h2>Научись, как заказывать еду и напитки по-польски</h2>
+            <h1>Каталог уроков</h1>
+            <h2>Выберите тему для изучения</h2>
         </header>
-
-        <div class="section">
-            <h3>Postacie (Персонажи)</h3>
-            <div class="characters">
-                <div class="character">
-                    <h4>Kelner</h4>
-                    <p>Официант</p>
-                </div>
-                <div class="character">
-                    <h4>Radosława</h4>
-                    <p>Радослава</p>
-                </div>
-                <div class="character">
-                    <h4>Anna</h4>
-                    <p>Анна</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Dialog (Диалог)</h3>
-            
-            <div class="dialog-tabs">
-                <button class="tab-button active" onclick="showDialog('dialog1', event)">Диалог 1: Первый визит</button>
-                <button class="tab-button" onclick="showDialog('dialog2', event)">Диалог 2: В дождливый день</button>
-            </div>
-            
-            <div id="dialog1" class="dialog-container active">
-                <div class="dialog-line">
-                    <div class="speaker">Kelner:</div>
-                    <div class="dialog-text clickable-sentence" data-translation="Добрый день, приветствую в нашей кофейне! Есть ли у вас бронь?" data-pronunciation="(ДЕНЬ ДО-бры, ВИ-там в НА-шей ка-ВЯР-ни! Чи МА-йонг ПА-нье ре-зер-ВА-цье?)">
-                        <span class="clickable-word" data-word="Dzień">Dzień</span> 
-                        <span class="clickable-word" data-word="dobry">dobry</span>, 
-                        <span class="clickable-word" data-word="witam">witam</span> w naszej kawiarni! Czy <span class="clickable-word" data-word="mają">mają</span> Panie 
-                        <span class="clickable-word" data-word="rezerwację">rezerwację</span>?
-                    </div>
-                </div>
-
-                <div class="dialog-line">
-                    <div class="speaker">Radosława:</div>
-                    <div class="dialog-text clickable-sentence" data-translation="Добрый день, нет, у нас нет брони. Могли бы мы получить столик у окна?" data-pronunciation="(ДЕНЬ ДО-бры, нье, нье МА-мы ре-зер-ВА-ци. Чи мог-ВИ-би-шмы ДО-стач сто-лик пши ОК-нье?)">
-                        <span class="clickable-word" data-word="Dzień">Dzień</span> 
-                        <span class="clickable-word" data-word="dobry">dobry</span>, nie, nie <span class="clickable-word" data-word="mamy">mamy</span> 
-                        <span class="clickable-word" data-word="rezerwacji">rezerwacji</span>. Czy <span class="clickable-word" data-word="mogłybyśmy">mogłybyśmy</span> <span class="clickable-word" data-word="dostać">dostać</span> 
-                        <span class="clickable-word" data-word="stolik">stolik</span> przy oknie?
-                    </div>
-                </div>
-
-                <!-- Остальные диалоги... -->
-                <!-- Для краткости показываю только начало, в полной версии все диалоги будут включены -->
-            </div>
-
-            <div id="dialog2" class="dialog-container">
-                <!-- Второй диалог... -->
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Słowniczek (Словарь)</h3>
-            <div class="dictionary-search">
-                <input type="text" id="dictionarySearch" placeholder="Поиск по словарю..." class="search-input">
-                <button onclick="searchDictionary()"><i class="fas fa-search"></i></button>
-            </div>
-            <table id="dictionaryTable">
-                <thead>
-                    <tr>
-                        <th>Słowo/Zwrot po polsku</th>
-                        <th>Перевод на русский</th>
-                        <th>Przykład użycia</th>
-                    </tr>
-                </thead>
-                <tbody id="dictionaryTableBody">
-                    <!-- Словарь будет заполняться динамически -->
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section">
-            <h3>Gramatyka w pigułce (Грамматика в двух словах)</h3>
-            
-            <div class="grammar-topic">
-                <h4>Temat 1: Grzeczne prośby (Вежливые просьбы)</h4>
-                <p>Для вежливых просьб в польском языке часто используется условное наклонение (tryb przypuszczający).</p>
-                <p><strong>Przykłady:</strong></p>
-                <ul>
-                    <li><strong>Chciałabym sałatkę</strong> (Я хотела бы салат) - форма для женщины</li>
-                    <li><strong>Chciałbym sałatkę</strong> (Я хотел бы салат) - форма для мужчины</li>
-                    <li><strong>Czy mogłybyśmy dostać stolik?</strong> (Могли бы мы получить столик?) - когда говорят только женщины</li>
-                </ul>
-            </div>
-
-            <div class="grammar-topic">
-                <h4>Temat 2: Narzędnik (z czym?) (Творительный падеж (с чем?))</h4>
-                <p>Чтобы сказать "что-то с чем-то", используется предлог <strong>z</strong> и творительный падеж.</p>
-                <p><strong>Przykłady:</strong></p>
-                <ul>
-                    <li><strong>woda z cytryną</strong> (вода с лимоном)</li>
-                    <li><strong>sałatka z kurczakiem</strong> (салат с курицей)</li>
-                    <li><strong>makaron z warzywami</strong> (макароны с овощами)</li>
-                    <li><strong>sernik z malinami</strong> (чизкейк с малиной)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Ćwiczenia (Упражнения)</h3>
-            <div class="exercise">
-                <h4>Ćwiczenie: Uzupełnij luki (Заполните пропуски)</h4>
-                
-                <div class="fill-blank">
-                    <p>1. Dzień dobry, nie, nie mamy</p> 
-                    <input type="text" class="blank-input" data-answer="rezerwacji" placeholder="...">
-                </div>
-                
-                <div class="fill-blank">
-                    <p>2. Chciałabym sałatkę z kurczakiem, ale proszę powiedzieć, czy w sosie są</p> 
-                    <input type="text" class="blank-input" data-answer="orzechy" placeholder="...">?
-                </div>
-                
-                <div class="fill-blank">
-                    <p>3. Czy mogę przynieść</p> 
-                    <input type="text" class="blank-input" data-answer="rachunek" placeholder="...">?
-                </div>
-                
-                <div class="fill-blank">
-                    <p>4. Oto zapłata i zostawiamy</p> 
-                    <input type="text" class="blank-input" data-answer="napiwek" placeholder="...">.
-                </div>
-                
-                <button class="check-btn" onclick="checkAnswers()">Sprawdź odpowiedzi</button>
-            </div>
-        </div>
+        <main id="catalog-container">
+            </main>
     </div>
-
-    <!-- Улучшенное модальное окно -->
-    <div id="wordModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="modal-controls">
-                    <button class="play-btn" onclick="playPronunciation()" title="Произношение">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="bookmark-btn" onclick="toggleBookmark()" title="Добавить в закладки">
-                        <i class="far fa-bookmark"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
-    <script src="wordData.js"></script>
-    <script src="script.js"></script>
+    <script src="js/mainapp.js"></script>
 </body>
 </html>

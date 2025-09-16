@@ -1,0 +1,50 @@
+{
+  "id": "restaurant-dialogue-1",
+  "title": "Диалог в кофейне",
+  "characters": [
+    { "name": "Kelner", "translation": "Официант" },
+    { "name": "Radosława", "translation": "Радослава" },
+    { "name": "Anna", "translation": "Анна" }
+  ],
+  "content": [
+    {
+      "speaker": "Kelner",
+      "sentence": "Dzień dobry, witam w naszej kawiarni! Czy mają Panie rezerwację?",
+      "translation": "Добрый день, приветствую в нашей кофейне! Есть ли у вас бронь?",
+      "pronunciation": "(ДЕНЬ ДО-бры, ВИ-там...)",
+      "words": [
+        { "text": "Dzień", "wordKey": "Dzień" },
+        { "text": "dobry", "wordKey": "dobry" },
+        { "text": "witam", "wordKey": "witać" },
+        { "text": "mają", "wordKey": "mieć" },
+        { "text": "rezerwację", "wordKey": "rezerwacja" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Dzień dobry, nie, nie mamy rezerwacji. Czy mogłybyśmy dostać stolik przy oknie?",
+      "translation": "Добрый день, нет, у нас нет брони. Могли бы мы получить столик у окна?",
+      "pronunciation": "(ДЕНЬ ДО-бры, нье...)",
+      "words": [
+         { "text": "mamy", "wordKey": "mieć" },
+         { "text": "rezerwacji", "wordKey": "rezerwacja" },
+         { "text": "mogłybyśmy", "wordKey": "móc" },
+         { "text": "dostać", "wordKey": "dostać" },
+         { "text": "stolik", "wordKey": "stolik" }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Grzeczne prośby (Вежливые просьбы)",
+      "content": "<p>Для вежливых просьб часто используется условное наклонение...</p><ul><li><strong>Chciałabym...</strong></li></ul>"
+    }
+  ],
+  "exercises": [
+      {
+        "type": "fill-blank",
+        "sentence": ["Dzień dobry, nie, nie mamy ", {"blank": "rezerwacji"}],
+        "id": 1
+      }
+  ]
+}

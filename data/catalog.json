@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": "restaurant",
+      "title": "Ресторан",
+      "description": "Все, что связано с заказом еды, общением с официантом и посещением кафе.",
+      "lessons": [
+        {
+          "id": "restaurant-dialogue-1",
+          "title": "Диалог в кофейне",
+          "description": "Базовый диалог: как заказать кофе и десерт.",
+          "level": "A1",
+          "type": "dialogue",
+          "dataFile": "lessons/restaurant_dialogue_1.json"
+        },
+        {
+          "id": "restaurant-review-1",
+          "title": "Отзыв о ресторане",
+          "description": "Учимся читать и писать отзывы о заведениях.",
+          "level": "A2",
+          "type": "review",
+          "dataFile": "lessons/restaurant_review_1.json"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "Магазин",
+      "description": "Покупки, общение с продавцом, возврат товара.",
+      "lessons": [
+        {
+          "id": "shop-dialogue-1",
+          "title": "Покупка одежды",
+          "description": "Как спросить о размере, цвете и цене.",
+          "level": "A1",
+          "type": "dialogue",
+          "dataFile": "lessons/shop_dialogue_1.json"
+        }
+      ]
+    }
+  ]
+}

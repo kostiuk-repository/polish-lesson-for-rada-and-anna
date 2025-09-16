@@ -1,0 +1,25 @@
+{
+  "dzień": {
+    "type": "noun",
+    "gender": "m",
+    "translation": "день",
+    "pronunciation": "(джень)",
+    "cases": {
+      "Mianownik": "dzień",
+      "Dopełniacz": "dnia"
+    },
+    "examples": [
+       { "polish": "Miłego dnia!", "russian": "Хорошего дня!" }
+    ]
+  },
+  "rezerwacja": {
+    "type": "noun",
+    "gender": "f",
+    "translation": "бронь",
+    "base_form": "rezerwacja",
+    "cases": {
+      "Biernik": "rezerwację",
+      "Dopełniacz": "rezerwacji"
+    }
+  }
+}
