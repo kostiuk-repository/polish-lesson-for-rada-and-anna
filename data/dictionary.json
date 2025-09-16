@@ -1,25 +1,101 @@
 {
-  "dzień": {
-    "type": "noun",
-    "gender": "m",
-    "translation": "день",
-    "pronunciation": "(джень)",
-    "cases": {
-      "Mianownik": "dzień",
-      "Dopełniacz": "dnia"
+  "być": {
+    "lemma": "być",
+    "part_of_speech": "verb",
+    "translations": { "ru": "быть" },
+    "pronunciation": { "ru_transcription": "быч" },
+    "morphology": { "aspect": "imperfective" },
+    "inflection": {
+      "present": { "sg1": "jestem", "sg2": "jesteś", "sg3": "jest", "pl1": "jesteśmy", "pl2": "jesteście", "pl3": "są" },
+      "past": { "sg1m": "byłem", "sg1f": "byłam", "sg2m": "byłeś", "sg2f": "byłaś", "sg3m": "był", "sg3f": "była", "sg3n": "było", "pl1m": "byliśmy", "pl1f": "byłyśmy", "pl2m": "byliście", "pl2f": "byłyście", "pl3m": "byli", "pl3f": "były" },
+      "future": { "sg1": "będę", "sg2": "będziesz", "sg3": "będzie", "pl1": "będziemy", "pl2": "będziecie", "pl3": "będą" },
+      "imperative": { "sg2": "bądź", "pl1": "bądźmy", "pl2": "bądźcie" }
     },
     "examples": [
-       { "polish": "Miłego dnia!", "russian": "Хорошего дня!" }
-    ]
+      { "pl": "Jestem w domu.", "ru": "Я дома." },
+      { "pl": "Wczoraj byłam w Warszawie.", "ru": "Вчера я была в Варшаве." },
+      { "pl": "Jutro będziemy w pracy.", "ru": "Завтра мы будем на работе." }
+    ],
+    "applied_rules": ["ć"]
   },
-  "rezerwacja": {
-    "type": "noun",
-    "gender": "f",
-    "translation": "бронь",
-    "base_form": "rezerwacja",
-    "cases": {
-      "Biernik": "rezerwację",
-      "Dopełniacz": "rezerwacji"
-    }
+  "mieć": {
+    "lemma": "mieć",
+    "part_of_speech": "verb",
+    "translations": { "ru": "иметь" },
+    "pronunciation": { "ru_transcription": "мьечь" },
+    "morphology": { "aspect": "imperfective" },
+    "inflection": {
+      "present": { "sg1": "mam", "sg2": "masz", "sg3": "ma", "pl1": "mamy", "pl2": "macie", "pl3": "mają" },
+      "past": { "sg1m": "miałem", "sg1f": "miałam", "sg2m": "miałeś", "sg2f": "miałaś", "sg3m": "miał", "sg3f": "miała", "sg3n": "miało", "pl1m": "mieliśmy", "pl1f": "miałyśmy", "pl2m": "mieliście", "pl2f": "miałyście", "pl3m": "mieli", "pl3f": "miały" }
+    },
+    "examples": [
+      { "pl": "Mam pytanie.", "ru": "У меня есть вопрос." },
+      { "pl": "Czy macie rezerwację?", "ru": "У вас есть бронь?" }
+    ],
+    "applied_rules": ["ć"]
+  },
+  "chcieć": {
+    "lemma": "chcieć",
+    "part_of_speech": "verb",
+    "translations": { "ru": "хотеть" },
+    "pronunciation": { "ru_transcription": "хчечь" },
+    "morphology": { "aspect": "imperfective" },
+    "inflection": {
+        "present": { "sg1": "chcę", "sg2": "chcesz", "sg3": "chce", "pl1": "chcemy", "pl2": "chcecie", "pl3": "chcą" },
+        "past": { "sg1m": "chciałem", "sg1f": "chciałam", "sg3m": "chciał", "pl1m": "chcieliśmy", "pl3m": "chcieli" }
+    },
+    "examples": [
+        { "pl": "Chcę zamówić kawę.", "ru": "Я хочу заказать кофе." },
+        { "pl": "Co chcesz na obiad?", "ru": "Что ты хочешь на обед?" }
+    ],
+    "applied_rules": ["ć", "ch"]
+  },
+  "prosić": {
+    "lemma": "prosić",
+    "part_of_speech": "verb",
+    "translations": { "ru": "просить" },
+    "pronunciation": { "ru_transcription": "прошичь" },
+    "morphology": { "aspect": "imperfective" },
+    "inflection": {
+      "present": { "sg1": "proszę", "sg2": "prosisz", "sg3": "prosi", "pl1": "prosimy", "pl2": "prosicie", "pl3": "proszą" }
+    },
+    "examples": [
+      { "pl": "Proszę o rachunek.", "ru": "Счет, пожалуйста." },
+      { "pl": "Poproszę kawę.", "ru": "Кофе, пожалуйста (совершенный вид)." }
+    ],
+    "phrases_and_idioms": [
+        { "pl": "proszę bardzo", "ru": "пожалуйста (в ответ на спасибо)" },
+        { "pl": "prosić o rękę", "ru": "просить руки" }
+    ],
+    "applied_rules": ["ś", "ć", "rz"]
+  },
+  "stolik": {
+    "lemma": "stolik",
+    "part_of_speech": "noun",
+    "translations": { "ru": "столик" },
+    "pronunciation": { "ru_transcription": "столик" },
+    "morphology": { "gender": "masculine inanimate" },
+    "inflection": {
+        "nom_sg": "stolik", "gen_sg": "stolika", "dat_sg": "stolikowi", "acc_sg": "stolik", "ins_sg": "stolikiem", "loc_sg": "stoliku",
+        "nom_pl": "stoliki", "gen_pl": "stolików", "dat_pl": "stolikom", "acc_pl": "stoliki", "ins_pl": "stolikami", "loc_pl": "stolikach"
+    },
+    "examples": [
+        {"pl": "Poproszę stolik dla dwóch osób.", "ru": "Пожалуйста, столик на двоих."}
+    ],
+    "applied_rules": []
+  },
+  "rachunek": {
+    "lemma": "rachunek",
+    "part_of_speech": "noun",
+    "translations": { "ru": "счет" },
+    "pronunciation": { "ru_transcription": "рахунэк" },
+    "morphology": { "gender": "masculine inanimate" },
+    "inflection": {
+        "nom_sg": "rachunek", "gen_sg": "rachunku", "acc_sg": "rachunek"
+    },
+    "examples": [
+        {"pl": "Czy mogę prosić o rachunek?", "ru": "Могу я попросить счет?"}
+    ],
+    "applied_rules": ["ch"]
   }
 }

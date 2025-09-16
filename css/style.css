@@ -726,3 +726,82 @@ tr:last-child td { border-bottom: none; }
     }
     .close { font-size: 28px; }
 }
+
+/* --- СТИЛІ ДЛЯ СТОРІНКИ УРОКУ --- */
+
+.lesson-header-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-header-box h1 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.lesson-header-box p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.lesson-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- СТИЛІ ДЛЯ ВКЛАДОК --- */
+.lesson-tabs {
+    display: flex;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #718096;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    margin-bottom: -2px; /* Накладається на нижню межу */
+}
+
+.tab-button:hover {
+    color: #2d3748;
+}
+
+.tab-button.active {
+    color: #8B4513; /* Фірмовий колір */
+    border-bottom-color: #8B4513;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
