@@ -18,19 +18,29 @@ async function loadCatalog() {
     container.innerHTML = ''; // Очищаем контейнер
 
     catalog.categories.forEach(category => {
+        // Додаємо заголовок для кожної категорії
         let categoryHtml = `
-            <section class="category">
-                <h3>${category.title}</h3>
-                <p>${category.description}</p>
+            <section class="category-section">
+                <h2>${category.title}</h2>
+                <p class="category-description">${category.description}</p>
                 <div class="lessons-grid">
         `;
+        // Генеруємо картки уроків
         category.lessons.forEach(lesson => {
             categoryHtml += `
-                <a href="lesson.html?id=${lesson.id}" class="lesson-card">
-                    <h4>${lesson.title}</h4>
-                    <p>${lesson.description}</p>
-                    <span class="label level-${lesson.level.toLowerCase()}">${lesson.level}</span>
-                    <span class="label type-${lesson.type}">${lesson.type}</span>
+                <a href="lesson.html?id=${lesson.id}" class="lesson-card" data-type="${lesson.type}">
+                    <div class="card-content">
+                        <h4>${lesson.title}</h4>
+                        <p>${lesson.description}</p>
+                        <div class="card-footer">
+                            <div class="card-labels">
+                                <span class="label level-${lesson.level.toLowerCase()}">${lesson.level}</span>
+                                <span class="label type-${lesson.type}">${lesson.type}</span>
+                            </div>
+                            <i class="fas fa-arrow-right arrow-icon"></i>
+                        </div>
+                    </div>
+                    <div class="card-decoration"></div>
                 </a>
             `;
         });
