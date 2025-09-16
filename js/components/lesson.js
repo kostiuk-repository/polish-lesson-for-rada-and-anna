@@ -503,12 +503,5 @@ export class LessonComponent {
     if (this.container) {
       this.container.innerHTML = '';
     }
-    
-    // Показываем каталог обратно
-    const catalogSection = document.getElementById('catalog-section');
-    const lessonSection = document.getElementById('lesson-section');
-    
-    if (catalogSection) catalogSection.style.display = 'block';
-    if (lessonSection) lessonSection.style.display = 'none';
   }
 }

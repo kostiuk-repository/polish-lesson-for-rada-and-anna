@@ -443,9 +443,19 @@ export class ModalComponent {
     }
   }
 
+  playAudio() {
+    if (!this.currentContent?.wordData) return;
+    const word = this.currentContent.wordData.lemma;
+    // Вызываем сервис озвучки
+    if (window.PolishApp && window.PolishApp.speech) {
+      window.PolishApp.speech.speak(word);
+    } else {
+      console.error('SpeechService не найден.');
+    }
+  }
+
   toggleBookmark() {
     if (!this.currentContent?.wordData) return;
-
     const word = this.currentContent.wordData.lemma;
     const isBookmarked = this.isWordBookmarked(word);
     const bookmarkBtn = this.modal.querySelector('.bookmark-btn');
@@ -459,24 +469,22 @@ export class ModalComponent {
     }
   }
 
-  playAudio() {
-    if (!this.currentContent?.wordData) return;
-
-    const word = this.currentContent.wordData.lemma;
-    // Здесь будет логика воспроизведения аудио
-    console.log('Playing audio for:', word);
-  }
-
   isWordBookmarked(word) {
-    const bookmarks = JSON.parse(localStorage.getItem('wordBookmarks') || '[]');
-    return bookmarks.includes(word);
+    if (window.PolishApp && window.PolishApp.storage) {
+      return window.PolishApp.storage.isWordBookmarked(word);
+    }
+    return false;
   }
 
   addToBookmarks(word) {
-    const bookmarks = JSON.parse(localStorage.getItem('wordBookmarks') || '[]');
-    if (!bookmarks.includes(word)) {
-      bookmarks.push(word);
-      localStorage.setItem('wordBookmarks', JSON.stringify(bookmarks));
+    if (window.PolishApp && window.PolishApp.storage) {
+      window.PolishApp.storage.addWordBookmark(word, this.currentContent.wordData);
+    }
+  }
+
+  removeFromBookmarks(word) {
+    if (window.PolishApp && window.PolishApp.storage) {
+      window.PolishApp.storage.removeWordBookmark(word);
     }
   }
 

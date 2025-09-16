@@ -814,24 +814,13 @@ export const Utils = {
    * @returns {Promise<boolean>}
    */
   async copyToClipboard(text) {
+    if (!navigator.clipboard) {
+      console.error('Clipboard API не поддерживается в этом браузере.');
+      return false;
+    }
     try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(text);
-        return true;
-      } else {
-        // Fallback для старых браузеров
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        const result = document.execCommand('copy');
-        document.body.removeChild(textArea);
-        return result;
-      }
+      await navigator.clipboard.writeText(text);
+      return true;
     } catch (error) {
       console.error('Ошибка копирования в буфер обмена:', error);
       return false;

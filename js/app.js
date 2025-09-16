@@ -36,6 +36,22 @@ class PolishLearningApp {
     }
   }
 
+  showPage(page) {
+    const catalogSection = document.getElementById('catalog-section');
+    const lessonSection = document.getElementById('lesson-section');
+    const pageHeader = document.getElementById('page-header');
+
+    if (page === 'catalog') {
+      catalogSection.style.display = 'block';
+      pageHeader.style.display = 'block';
+      lessonSection.style.display = 'none';
+    } else if (page === 'lesson') {
+      catalogSection.style.display = 'none';
+      pageHeader.style.display = 'none';
+      lessonSection.style.display = 'block';
+    }
+  }
+
   setupRouting() {
     // Главная страница - каталог
     this.router.addRoute('', () => this.loadCatalogPage());
@@ -50,6 +66,7 @@ class PolishLearningApp {
 
   async loadCatalogPage() {
     this.destroyCurrentComponent();
+    this.showPage('catalog'); // Показываем нужную страницу
     const { CatalogComponent } = await import('./components/catalog.js');
     const catalog = new CatalogComponent({
       api: this.api,
@@ -61,6 +78,7 @@ class PolishLearningApp {
 
   async loadLessonPage(lessonId) {
     this.destroyCurrentComponent();
+    this.showPage('lesson'); // Показываем нужную страницу
     const { LessonComponent } = await import('./components/lesson.js');
     const lesson = new LessonComponent({
       lessonId,
