@@ -1,0 +1,12 @@
+{
+  "dobry": {
+    "lemma": "dobry",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "хороший" }
+  },
+  "nowy": {
+    "lemma": "nowy",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "новый" }
+  }
+}

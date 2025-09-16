@@ -1,0 +1,14 @@
+{
+  "sklep": {
+    "lemma": "sklep",
+    "part_of_speech": "noun",
+    "translations": { "ru": "магазин" },
+    "morphology": { "gender": "masculine" }
+  },
+  "cena": {
+    "lemma": "cena",
+    "part_of_speech": "noun",
+    "translations": { "ru": "цена" },
+    "morphology": { "gender": "feminine" }
+  }
+}

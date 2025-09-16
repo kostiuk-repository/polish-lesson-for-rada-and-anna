@@ -1,0 +1,12 @@
+{
+  "piękny": {
+    "lemma": "piękny",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "красивый" }
+  },
+  "interesujący": {
+    "lemma": "interesujący",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "интересный" }
+  }
+}

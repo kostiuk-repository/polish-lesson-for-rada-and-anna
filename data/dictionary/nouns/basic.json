@@ -1,0 +1,14 @@
+{
+  "dom": {
+    "lemma": "dom",
+    "part_of_speech": "noun",
+    "translations": { "ru": "дом" },
+    "morphology": { "gender": "masculine" }
+  },
+  "książka": {
+    "lemma": "książka",
+    "part_of_speech": "noun",
+    "translations": { "ru": "книга" },
+    "morphology": { "gender": "feminine" }
+  }
+}

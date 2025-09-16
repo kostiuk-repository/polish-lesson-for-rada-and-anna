@@ -1,0 +1,40 @@
+{
+  "id": "shop-dialogue-1",
+  "title": "Dialog w sklepie odzieżowym",
+  "description": "Jak pytać o rozmiar, kolor i cenę.",
+  "tags": ["zakupy", "sklep", "ubrania"],
+  "level": "A1",
+  "type": "dialogue",
+  "characters": [
+    { "name": "Sprzedawca", "translation": "Продавец" },
+    { "name": "Klient", "translation": "Клиент" }
+  ],
+  "content": [
+    {
+      "speaker": "Sprzedawca",
+      "sentence": "Dzień dobry, w czym mogę pomóc?",
+      "translation": "Добрый день, чем могу помочь?",
+      "words": [
+        { "text": "Dzień", "wordKey": "dzień" },
+        { "text": "dobry,", "wordKey": "dobry" },
+        { "text": "w", "wordKey": "w" },
+        { "text": "czym", "wordKey": "czym" },
+        { "text": "mogę", "wordKey": "móc" },
+        { "text": "pomóc?", "wordKey": "pomóc" }
+      ]
+    },
+    {
+      "speaker": "Klient",
+      "sentence": "Dzień dobry, szukam koszuli.",
+      "translation": "Добрый день, я ищу рубашку.",
+      "words": [
+        { "text": "Dzień", "wordKey": "dzień" },
+        { "text": "dobry,", "wordKey": "dobry" },
+        { "text": "szukam", "wordKey": "szukać" },
+        { "text": "koszuli.", "wordKey": "koszula" }
+      ]
+    }
+  ],
+  "grammar": [],
+  "exercises": []
+}

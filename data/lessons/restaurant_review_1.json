@@ -1,0 +1,22 @@
+{
+  "id": "restaurant-review-1",
+  "title": "Recenzja restauracji",
+  "description": "Uczymy się czytać i pisać recenzje restauracji.",
+  "tags": ["jedzenie", "restauracja", "opinia"],
+  "level": "A2",
+  "type": "review",
+  "content": [
+    {
+      "type": "paragraph",
+      "speaker": "Narrator",
+      "sentence": "To jest przykładowy tekst recenzji restauracji.",
+      "text": "To jest przykładowy tekst recenzji restauracji.",
+      "translation": "Это примерный текст отзыва о ресторане. Полная версия появится позже.",
+      "words": [
+        { "text": "To jest przykładowy tekst recenzji restauracji.", "wordKey": "recenzja" }
+      ]
+    }
+  ],
+  "grammar": [],
+  "exercises": []
+}
