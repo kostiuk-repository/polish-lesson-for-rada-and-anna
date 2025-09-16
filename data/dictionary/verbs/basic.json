@@ -1,0 +1,158 @@
+{
+  "być": {
+    "lemma": "być",
+    "part_of_speech": "verb",
+    "translations": { "ru": "быть" },
+    "pronunciation": { 
+      "ru_transcription": "быч",
+      "key_forms": [
+        { "pl": "jestem", "ru": "ЕСТЭМ" },
+        { "pl": "jesteś", "ru": "ЕС-ТЕШЬ" },
+        { "pl": "jest", "ru": "ЕСТ" },
+        { "pl": "są", "ru": "С(оу̃)" }
+      ]
+    },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "intransitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "jestem", "sg2": "jesteś", "sg3": "jest", "pl1": "jesteśmy", "pl2": "jesteście", "pl3": "są" },
+      "past_masc": { "sg1": "byłem", "sg2": "byłeś", "sg3": "był", "pl1": "byliśmy", "pl2": "byliście", "pl3": "byli" },
+      "past_fem": { "sg1": "byłam", "sg2": "byłaś", "sg3": "była", "pl1": "byłyśmy", "pl2": "byłyście", "pl3": "były" },
+      "past_neut": { "sg3": "było" },
+      "future": { "sg1": "będę", "sg2": "będziesz", "sg3": "będzie", "pl1": "będziemy", "pl2": "będziecie", "pl3": "będą" },
+      "imperative": { "sg2": "bądź", "pl1": "bądźmy", "pl2": "bądźcie" }
+    },
+    "examples": [
+      { "pl": "Jestem zmęczony.", "ru": "Я устал.", "ru_transcription": "Естэм змэнчоный." },
+      { "pl": "Czy jesteście gotowi?", "ru": "Вы готовы?", "ru_transcription": "чы ес-ТЭШЬ-че готови?" },
+      { "pl": "Wczoraj byłam w kinie.", "ru": "Вчера я была в кино.", "ru_transcription": "вчорай быуам в кинэ." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "być może", "ru": "возможно" },
+      { "pl": "być w stanie", "ru": "быть в состоянии" },
+      { "pl": "być za/przeciw", "ru": "быть за/против" }
+    ],
+    "applied_rules": ["ć", "ł", "ą", "ę"]
+  },
+
+  "mieć": {
+    "lemma": "mieć",
+    "part_of_speech": "verb",
+    "translations": { "ru": "иметь" },
+    "pronunciation": { "ru_transcription": "мьечь" },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "mam", "sg2": "masz", "sg3": "ma", "pl1": "mamy", "pl2": "macie", "pl3": "mają" },
+      "past_masc": { "sg1": "miałem", "sg2": "miałeś", "sg3": "miał", "pl1": "mieliśmy", "pl2": "mieliście", "pl3": "mieli" },
+      "past_fem": { "sg1": "miałam", "sg2": "miałaś", "sg3": "miała", "pl1": "miałyśmy", "pl2": "miałyście", "pl3": "miały" },
+      "past_neut": { "sg3": "miało" }
+    },
+    "examples": [
+      { "pl": "Mam pytanie.", "ru": "У меня есть вопрос." },
+      { "pl": "Czy macie rezerwację?", "ru": "У вас есть бронь?" },
+      { "pl": "Miała nadzieję.", "ru": "У неё была надежда." }
+    ],
+    "applied_rules": ["ć", "ą"]
+  },
+
+  "chcieć": {
+    "lemma": "chcieć",
+    "part_of_speech": "verb",
+    "translations": { "ru": "хотеть" },
+    "pronunciation": { "ru_transcription": "хчечь" },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "chcę", "sg2": "chcesz", "sg3": "chce", "pl1": "chcemy", "pl2": "chcecie", "pl3": "chcą" },
+      "past_masc": { "sg1": "chciałem", "sg2": "chciałeś", "sg3": "chciał", "pl1": "chcieliśmy", "pl2": "chcieliście", "pl3": "chcieli" },
+      "past_fem": { "sg1": "chciałam", "sg2": "chciałaś", "sg3": "chciała", "pl1": "chciałyśmy", "pl2": "chciałyście", "pl3": "chciały" }
+    },
+    "examples": [
+      { "pl": "Chcę zamówić kawę.", "ru": "Я хочу заказать кофе." },
+      { "pl": "Co chcesz na obiad?", "ru": "Что ты хочешь на обед?" },
+      { "pl": "Chciałabym risotto.", "ru": "Я бы хотела ризотто." }
+    ],
+    "applied_rules": ["ć", "ę", "ą"]
+  },
+
+  "móc": {
+    "lemma": "móc",
+    "part_of_speech": "verb",
+    "translations": { "ru": "мочь" },
+    "pronunciation": { "ru_transcription": "муц" },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "modal",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "mogę", "sg2": "możesz", "sg3": "może", "pl1": "możemy", "pl2": "możecie", "pl3": "mogą" },
+      "past_masc": { "sg1": "mogłem", "sg2": "mogłeś", "sg3": "mógł", "pl1": "mogliśmy", "pl2": "mogliście", "pl3": "mogli" },
+      "past_fem": { "sg1": "mogłam", "sg2": "mogłaś", "sg3": "mogła", "pl1": "mogłyśmy", "pl2": "mogłyście", "pl3": "mogły" },
+      "conditional": { "sg1": "mógłbym/mogłabym", "sg2": "mógłbyś/mogłabyś", "sg3": "mógłby/mogłaby/mogłoby" }
+    },
+    "examples": [
+      { "pl": "Mogę prosić o menu?", "ru": "Могу ли я попросить меню?" },
+      { "pl": "Możemy przygotować.", "ru": "Мы можем приготовить." },
+      { "pl": "Mogłabym prosić o rachunek?", "ru": "Могла бы я попросить счет?" }
+    ],
+    "applied_rules": ["ć", "ę", "ą", "ł"]
+  },
+
+  "prosić": {
+    "lemma": "prosić",
+    "part_of_speech": "verb",
+    "translations": { "ru": "просить" },
+    "pronunciation": { "ru_transcription": "прошичь" },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false,
+      "perfective_pair": "poprosić"
+    },
+    "inflection": {
+      "present": { "sg1": "proszę", "sg2": "prosisz", "sg3": "prosi", "pl1": "prosimy", "pl2": "prosicie", "pl3": "proszą" }
+    },
+    "examples": [
+      { "pl": "Proszę o rachunek.", "ru": "Счет, пожалуйста." },
+      { "pl": "Poproszę kawę.", "ru": "Кофе, пожалуйста (совершенный вид)." },
+      { "pl": "Prosimy usiąść.", "ru": "Просим присаживаться." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "proszę bardzo", "ru": "пожалуйста (в ответ на спасибо)" },
+      { "pl": "prosić o rękę", "ru": "просить руки" }
+    ],
+    "applied_rules": ["ś", "ć", "ę", "ą"]
+  },
+
+  "dziękować": {
+    "lemma": "dziękować",
+    "part_of_speech": "verb",
+    "translations": { "ru": "благодарить" },
+    "pronunciation": { "ru_transcription": "джэнковач" },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "intransitive",
+      "reflexive": false,
+      "perfective_pair": "podziękować"
+    },
+    "inflection": {
+      "present": { "sg1": "dziękuję", "sg2": "dziękujesz", "sg3": "dziękuje", "pl1": "dziękujemy", "pl2": "dziękujecie", "pl3": "dziękują" }
+    },
+    "examples": [
+      { "pl": "Dziękuję za pomoc.", "ru": "Спасибо за помощь." },
+      { "pl": "Bardzo dziękuję.", "ru": "Большое спасибо." }
+    ],
+    "applied_rules": ["ę", "ą"]
+  }
+}

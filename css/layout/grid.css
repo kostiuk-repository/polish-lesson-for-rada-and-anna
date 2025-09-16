@@ -1,0 +1,288 @@
+/* Основная сетка */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Колонки */
+.grid--1 { grid-template-columns: 1fr; }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--5 { grid-template-columns: repeat(5, 1fr); }
+.grid--6 { grid-template-columns: repeat(6, 1fr); }
+
+/* Автоматические колонки */
+.grid--auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid--auto-fit-sm {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid--auto-fit-lg {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid--auto-fit-xl {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Специальные сетки */
+.grid--sidebar {
+  grid-template-columns: 250px 1fr;
+}
+
+.grid--sidebar-right {
+  grid-template-columns: 1fr 250px;
+}
+
+.grid--header-content {
+  grid-template-rows: auto 1fr;
+}
+
+.grid--header-content-footer {
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Отступы между элементами */
+.grid--gap-none { gap: 0; }
+.grid--gap-sm { gap: var(--space-3); }
+.grid--gap-md { gap: var(--space-6); }
+.grid--gap-lg { gap: var(--space-8); }
+.grid--gap-xl { gap: var(--space-12); }
+
+/* Выравнивание элементов */
+.grid--center {
+  place-items: center;
+}
+
+.grid--start {
+  place-items: start;
+}
+
+.grid--end {
+  place-items: end;
+}
+
+.grid--stretch {
+  place-items: stretch;
+}
+
+/* Выравнивание контента */
+.grid--content-center {
+  place-content: center;
+}
+
+.grid--content-start {
+  place-content: start;
+}
+
+.grid--content-end {
+  place-content: end;
+}
+
+.grid--content-space-between {
+  place-content: space-between;
+}
+
+/* Элементы сетки */
+.grid-item {
+  min-width: 0; /* Предотвращает переполнение */
+}
+
+/* Размещение элементов */
+.grid-item--span-2 { grid-column: span 2; }
+.grid-item--span-3 { grid-column: span 3; }
+.grid-item--span-4 { grid-column: span 4; }
+.grid-item--span-5 { grid-column: span 5; }
+.grid-item--span-6 { grid-column: span 6; }
+
+.grid-item--row-span-2 { grid-row: span 2; }
+.grid-item--row-span-3 { grid-row: span 3; }
+.grid-item--row-span-4 { grid-row: span 4; }
+
+/* Позиционирование */
+.grid-item--start { justify-self: start; }
+.grid-item--center { justify-self: center; }
+.grid-item--end { justify-self: end; }
+.grid-item--stretch { justify-self: stretch; }
+
+.grid-item--top { align-self: start; }
+.grid-item--middle { align-self: center; }
+.grid-item--bottom { align-self: end; }
+.grid-item--fill { align-self: stretch; }
+
+/* Сетка для карточек */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+  padding: var(--space-4) 0;
+}
+
+.cards-grid--small {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.cards-grid--large {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-10);
+}
+
+/* Сетка для списка */
+.list-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.list-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Flexbox утилиты (дополнение к grid) */
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex--column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Justify content */
+.flex--justify-start { justify-content: flex-start; }
+.flex--justify-end { justify-content: flex-end; }
+.flex--justify-center { justify-content: center; }
+.flex--justify-between { justify-content: space-between; }
+.flex--justify-around { justify-content: space-around; }
+.flex--justify-evenly { justify-content: space-evenly; }
+
+/* Align items */
+.flex--align-start { align-items: flex-start; }
+.flex--align-end { align-items: flex-end; }
+.flex--align-center { align-items: center; }
+.flex--align-baseline { align-items: baseline; }
+.flex--align-stretch { align-items: stretch; }
+
+/* Flex элементы */
+.flex-item--grow { flex-grow: 1; }
+.flex-item--shrink { flex-shrink: 1; }
+.flex-item--no-grow { flex-grow: 0; }
+.flex-item--no-shrink { flex-shrink: 0; }
+
+.flex-item--1 { flex: 1; }
+.flex-item--2 { flex: 2; }
+.flex-item--3 { flex: 3; }
+
+/* Gaps для flexbox */
+.flex--gap-none { gap: 0; }
+.flex--gap-sm { gap: var(--space-2); }
+.flex--gap-md { gap: var(--space-4); }
+.flex--gap-lg { gap: var(--space-6); }
+.flex--gap-xl { gap: var(--space-8); }
+
+/* Адаптивные модификаторы */
+@media (max-width: 1024px) {
+  .grid--sidebar,
+  .grid--sidebar-right {
+    grid-template-columns: 1fr;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+  
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--4,
+  .grid--5,
+  .grid--6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  
+  .cards-grid--small {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--5,
+  .grid--6 {
+    grid-template-columns: 1fr;
+  }
+  
+  .list-grid--2,
+  .list-grid--3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-item--span-2,
+  .grid-item--span-3,
+  .grid-item--span-4,
+  .grid-item--span-5,
+  .grid-item--span-6 {
+    grid-column: span 1;
+  }
+  
+  .flex--md-column {
+    flex-direction: column;
+  }
+  
+  .flex--md-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: var(--space-4);
+  }
+  
+  .cards-grid {
+    gap: var(--space-4);
+    padding: var(--space-2) 0;
+  }
+  
+  .flex {
+    gap: var(--space-3);
+  }
+}

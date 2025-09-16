@@ -1,0 +1,30 @@
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Базовые стили */
+@import 'base/variables.css';
+@import 'base/reset.css';
+
+/* Лейаут */
+@import 'layout/container.css';
+@import 'layout/header.css';
+@import 'layout/grid.css';
+
+/* Компоненты */
+@import 'components/cards.css';
+@import 'components/buttons.css';
+@import 'components/labels.css';
+@import 'components/tabs.css';
+@import 'components/forms.css';
+@import 'components/tables.css';
+@import 'components/dialog.css';
+
+/* Модули */
+@import 'modules/modal.css';
+@import 'modules/exercises.css';
+@import 'modules/grammar.css';
+
+/* Утилиты */
+@import 'utils/animations.css';
+@import 'utils/utilities.css';
+@import 'utils/responsive.css';

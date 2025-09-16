@@ -1,0 +1,121 @@
+/* Базовая карточка */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Карточки уроков */
+.lesson-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  min-height: 240px;
+}
+
+.lesson-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.lesson-card:hover .card-decoration {
+  opacity: 0.1;
+}
+
+.lesson-card:hover .arrow-icon {
+  color: var(--primary-color);
+}
+
+/* Содержимое карточки */
+.card-content h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--gray-700);
+}
+
+.card-content p {
+  font-size: var(--font-size-base);
+  color: var(--gray-500);
+  flex-grow: 1;
+  margin-bottom: var(--space-5);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Подвал карточки */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Декоративные элементы */
+.card-decoration {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-full);
+  opacity: 0.05;
+  transition: opacity var(--transition-base);
+}
+
+/* Декорации по типам */
+.lesson-card[data-type="dialogue"] .card-decoration {
+  background-color: var(--primary-color);
+}
+
+.lesson-card[data-type="review"] .card-decoration {
+  background-color: var(--info-color);
+}
+
+.lesson-card[data-type="text"] .card-decoration {
+  background-color: var(--level-a2-color);
+}
+
+.lesson-card[data-type="exercise"] .card-decoration {
+  background-color: var(--warning-color);
+}
+
+/* Иконка стрелки */
+.arrow-icon {
+  font-size: var(--font-size-2xl);
+  color: var(--gray-400);
+  transition: color var(--transition-base);
+}
+
+/* Сетка карточек */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+}
+
+/* Адаптивность для карточек */
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .lesson-card {
+    min-height: 200px;
+  }
+  
+  .card {
+    padding: var(--space-5);
+  }
+}

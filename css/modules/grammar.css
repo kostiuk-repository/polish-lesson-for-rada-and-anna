@@ -1,0 +1,414 @@
+/* Контейнер грамматических тем */
+.grammar-container {
+  margin-top: var(--space-8);
+}
+
+/* Отдельная грамматическая тема */
+.grammar-topic {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+.grammar-topic:last-child {
+  margin-bottom: 0;
+}
+
+.grammar-topic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+/* Заголовок грамматической темы */
+.grammar-topic__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  margin-bottom: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.grammar-topic__title::before {
+  content: '📚';
+  font-size: var(--font-size-3xl);
+  flex-shrink: 0;
+}
+
+/* Содержание грамматической темы */
+.grammar-topic__content {
+  line-height: var(--line-height-relaxed);
+  color: var(--gray-700);
+}
+
+.grammar-topic__content h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  margin: var(--space-6) 0 var(--space-3) 0;
+}
+
+.grammar-topic__content h4:first-child {
+  margin-top: 0;
+}
+
+.grammar-topic__content p {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-base);
+}
+
+.grammar-topic__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Списки в грамматических темах */
+.grammar-topic__content ul,
+.grammar-topic__content ol {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-6);
+}
+
+.grammar-topic__content ul {
+  list-style: none;
+  position: relative;
+}
+
+.grammar-topic__content ul li {
+  position: relative;
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-6);
+}
+
+.grammar-topic__content ul li::before {
+  content: '☕';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
+  font-size: var(--font-size-base);
+}
+
+.grammar-topic__content ol {
+  list-style: decimal;
+}
+
+.grammar-topic__content ol li {
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-2);
+}
+
+/* Примеры в грамматике */
+.grammar-example {
+  background: var(--secondary-light);
+  padding: var(--space-4);
+  border-radius: var(--radius-base);
+  margin: var(--space-4) 0;
+  border-left: 4px solid var(--secondary-color);
+  position: relative;
+}
+
+.grammar-example::before {
+  content: '💡';
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: var(--font-size-lg);
+}
+
+.grammar-example__text {
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-dark);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-lg);
+}
+
+.grammar-example__translation {
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+/* Важные заметки */
+.grammar-note {
+  background: var(--info-bg);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  margin: var(--space-6) 0;
+  border: 2px solid var(--info-color);
+  position: relative;
+}
+
+.grammar-note::before {
+  content: 'ℹ️';
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-size: var(--font-size-xl);
+}
+
+.grammar-note__content {
+  margin-left: var(--space-8);
+  color: var(--info-color);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Предупреждения */
+.grammar-warning {
+  background: var(--warning-bg);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  margin: var(--space-6) 0;
+  border: 2px solid var(--warning-color);
+  position: relative;
+}
+
+.grammar-warning::before {
+  content: '⚠️';
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-size: var(--font-size-xl);
+}
+
+.grammar-warning__content {
+  margin-left: var(--space-8);
+  color: var(--warning-color);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Таблицы форм */
+.grammar-forms-table {
+  width: 100%;
+  margin: var(--space-6) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.grammar-forms-table th {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--space-4);
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+}
+
+.grammar-forms-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.grammar-forms-table tbody tr:nth-child(even) {
+  background-color: var(--gray-50);
+}
+
+.grammar-forms-table tbody tr:hover {
+  background-color: var(--secondary-light);
+}
+
+/* Формы слов */
+.word-form {
+  display: inline-block;
+  background: var(--secondary-light);
+  color: var(--primary-dark);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-base);
+  font-weight: var(--font-weight-medium);
+  margin: 0 var(--space-1);
+  font-family: 'Courier New', monospace;
+}
+
+/* Ударение в словах */
+.word-stress {
+  color: var(--error-color);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+/* Звуки и произношение */
+.phonetic-transcription {
+  font-family: 'Courier New', monospace;
+  background: var(--gray-100);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--primary-color);
+  font-size: var(--font-size-sm);
+}
+
+/* Секции грамматики */
+.grammar-section {
+  margin-bottom: var(--space-10);
+}
+
+.grammar-section:last-child {
+  margin-bottom: 0;
+}
+
+.grammar-section__header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.grammar-section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: var(--space-2);
+}
+
+.grammar-section__description {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Интерактивные элементы */
+.grammar-interactive {
+  background: var(--gray-50);
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.grammar-interactive:hover {
+  border-color: var(--primary-color);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.grammar-interactive__icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-3);
+  color: var(--gray-400);
+}
+
+.grammar-interactive:hover .grammar-interactive__icon {
+  color: var(--primary-color);
+}
+
+.grammar-interactive__text {
+  color: var(--gray-600);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Схемы и диаграммы */
+.grammar-diagram {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  text-align: center;
+  position: relative;
+}
+
+.grammar-diagram__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  margin-bottom: var(--space-4);
+}
+
+/* Навигация по грамматике */
+.grammar-nav {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.grammar-nav__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  margin-bottom: var(--space-4);
+}
+
+.grammar-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.grammar-nav__item {
+  background: var(--white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--gray-200);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.grammar-nav__item:hover {
+  border-color: var(--primary-color);
+  background: var(--secondary-light);
+  color: var(--primary-dark);
+}
+
+.grammar-nav__item--active {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .grammar-topic {
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+  
+  .grammar-topic__title {
+    font-size: var(--font-size-xl);
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+  
+  .grammar-note,
+  .grammar-warning {
+    padding: var(--space-4);
+  }
+  
+  .grammar-note__content,
+  .grammar-warning__content {
+    margin-left: var(--space-6);
+  }
+  
+  .grammar-section__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .grammar-nav__list {
+    flex-direction: column;
+  }
+  
+  .grammar-nav__item {
+    text-align: center;
+  }
+  
+  .grammar-forms-table {
+    font-size: var(--font-size-sm);
+  }
+  
+  .grammar-forms-table th,
+  .grammar-forms-table td {
+    padding: var(--space-2) var(--space-3);
+  }
+}

@@ -1,0 +1,91 @@
+/* Современный сброс стилей */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: var(--line-height-normal);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--gray-700);
+  background-color: var(--gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Убираем стили списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем стили ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем границы у изображений */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* Убираем стили кнопок */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Убираем стили форм */
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Убираем outline при фокусе (будем добавлять свой) */
+*:focus {
+  outline: none;
+}
+
+/* Доступность - показываем outline для клавиатурной навигации */
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Убираем стили таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Скрываем элементы визуально, но оставляем для скринридеров */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

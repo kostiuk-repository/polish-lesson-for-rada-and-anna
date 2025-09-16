@@ -1,0 +1,368 @@
+/* Контейнер диалога */
+.dialog-container {
+  margin-bottom: var(--space-8);
+}
+
+/* Строка диалога */
+.dialog-line {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+  border-left: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.dialog-line:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(2px);
+}
+
+/* Имя говорящего */
+.dialog-speaker {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dialog-speaker::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* Разные цвета для разных персонажей */
+.dialog-line[data-speaker="kelner"] {
+  border-left-color: var(--primary-color);
+}
+
+.dialog-line[data-speaker="kelner"] .dialog-speaker {
+  color: var(--primary-color);
+}
+
+.dialog-line[data-speaker="kelner"] .dialog-speaker::before {
+  background-color: var(--primary-color);
+}
+
+.dialog-line[data-speaker="radosława"] {
+  border-left-color: var(--accent-color);
+}
+
+.dialog-line[data-speaker="radosława"] .dialog-speaker {
+  color: var(--accent-color);
+}
+
+.dialog-line[data-speaker="radosława"] .dialog-speaker::before {
+  background-color: var(--accent-color);
+}
+
+.dialog-line[data-speaker="anna"] {
+  border-left-color: var(--info-color);
+}
+
+.dialog-line[data-speaker="anna"] .dialog-speaker {
+  color: var(--info-color);
+}
+
+.dialog-line[data-speaker="anna"] .dialog-speaker::before {
+  background-color: var(--info-color);
+}
+
+/* Текст диалога */
+.dialog-text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--gray-700);
+  margin-bottom: var(--space-4);
+}
+
+/* Перевод диалога */
+.dialog-translation {
+  font-size: var(--font-size-base);
+  color: var(--gray-500);
+  font-style: italic;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--gray-100);
+  display: none;
+}
+
+.dialog-translation--visible {
+  display: block;
+  animation: fadeIn var(--transition-base);
+}
+
+/* Кликабельные элементы в диалоге */
+.clickable-word {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  background-color: rgba(221, 184, 146, 0.15);
+  border-bottom: 1px dashed var(--secondary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.clickable-word:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  border-bottom-style: solid;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.clickable-word:active {
+  transform: translateY(0);
+}
+
+/* Всплывающие подсказки для слов */
+.clickable-word::after {
+  content: attr(data-translation);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gray-800);
+  color: var(--white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 100;
+  margin-bottom: var(--space-2);
+}
+
+.clickable-word::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--gray-800);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 100;
+  margin-bottom: 2px;
+}
+
+.clickable-word:hover::after,
+.clickable-word:hover::before {
+  opacity: 1;
+}
+
+/* Кликабельные предложения */
+.clickable-sentence {
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: var(--space-2);
+  margin: calc(-1 * var(--space-2));
+  border-radius: var(--radius-base);
+  position: relative;
+}
+
+.clickable-sentence:hover {
+  background-color: var(--gray-50);
+}
+
+.clickable-sentence::after {
+  content: '';
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/%3e%3c/svg%3e");
+  background-size: contain;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.clickable-sentence:hover::after {
+  opacity: 0.5;
+}
+
+/* Аудио контролы */
+.dialog-audio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.audio-play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.audio-play-btn:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.05);
+}
+
+.audio-play-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-play-btn--playing {
+  background-color: var(--warning-color);
+}
+
+/* Переключение перевода */
+.dialog-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background-color: var(--gray-50);
+  border-radius: var(--radius-base);
+}
+
+.translation-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: var(--gray-300);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform var(--transition-base);
+}
+
+.toggle-switch--active {
+  background-color: var(--primary-color);
+}
+
+.toggle-switch--active::after {
+  transform: translateX(20px);
+}
+
+/* Индикатор прогресса диалога */
+.dialog-progress {
+  height: 4px;
+  background-color: var(--gray-200);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+
+.dialog-progress__bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: width var(--transition-slow);
+  width: 0%;
+}
+
+/* Персонажи */
+.dialog-characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  background-color: var(--gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.dialog-character {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--white);
+  border-radius: var(--radius-base);
+  border: 2px solid var(--gray-100);
+  transition: all var(--transition-base);
+}
+
+.dialog-character:hover {
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.dialog-character__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  margin-bottom: var(--space-2);
+}
+
+.dialog-character__translation {
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dialog-line {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .dialog-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .dialog-speaker {
+    font-size: var(--font-size-base);
+  }
+  
+  .dialog-characters {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  
+  .dialog-controls {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: stretch;
+  }
+  
+  .clickable-word::after {
+    display: none; /* Скрываем подсказки на мобильных */
+  }
+}

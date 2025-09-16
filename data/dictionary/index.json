@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2024-01-15",
+    "total_words": 245,
+    "description": "Интерактивный словарь польского языка с произношением и примерами"
+  },
+  
+  "categories": {
+    "verbs": {
+      "name": "Глаголы",
+      "description": "Польские глаголы с полным спряжением",
+      "themes": {
+        "basic": {
+          "file": "verbs/basic.json",
+          "words_count": 15,
+          "description": "Основные глаголы повседневного общения"
+        },
+        "restaurant": {
+          "file": "verbs/restaurant.json", 
+          "words_count": 12,
+          "description": "Глаголы для ресторана и кафе"
+        },
+        "shop": {
+          "file": "verbs/shop.json",
+          "words_count": 10,
+          "description": "Глаголы для покупок и магазинов"
+        }
+      }
+    },
+    
+    "nouns": {
+      "name": "Существительные",
+      "description": "Польские существительные с падежными формами",
+      "themes": {
+        "basic": {
+          "file": "nouns/basic.json",
+          "words_count": 25,
+          "description": "Основные существительные"
+        },
+        "restaurant": {
+          "file": "nouns/restaurant.json",
+          "words_count": 18,
+          "description": "Существительные для ресторана"
+        },
+        "shop": {
+          "file": "nouns/shop.json",
+          "words_count": 15,
+          "description": "Существительные для магазинов"
+        },
+        "family": {
+          "file": "nouns/family.json",
+          "words_count": 12,
+          "description": "Семья и родственники"
+        }
+      }
+    },
+    
+    "adjectives": {
+      "name": "Прилагательные",
+      "description": "Польские прилагательные с формами склонения",
+      "themes": {
+        "basic": {
+          "file": "adjectives/basic.json",
+          "words_count": 20,
+          "description": "Основные прилагательные"
+        },
+        "descriptive": {
+          "file": "adjectives/descriptive.json",
+          "words_count": 25,
+          "description": "Описательные прилагательные"
+        },
+        "colors": {
+          "file": "adjectives/colors.json", 
+          "words_count": 12,
+          "description": "Цвета"
+        }
+      }
+    },
+    
+    "adverbs": {
+      "name": "Наречия",
+      "description": "Польские наречия",
+      "themes": {
+        "basic": {
+          "file": "adverbs/basic.json",
+          "words_count": 15,
+          "description": "Основные наречия"
+        },
+        "time": {
+          "file": "adverbs/time.json",
+          "words_count": 10,
+          "description": "Наречия времени"
+        }
+      }
+    },
+    
+    "pronouns": {
+      "name": "Местоимения",
+      "description": "Польские местоимения",
+      "themes": {
+        "personal": {
+          "file": "pronouns/personal.json",
+          "words_count": 8,
+          "description": "Личные местоимения"
+        },
+        "possessive": {
+          "file": "pronouns/possessive.json",
+          "words_count": 12,
+          "description": "Притяжательные местоимения"
+        }
+      }
+    },
+    
+    "prepositions": {
+      "name": "Предлоги",
+      "description": "Польские предлоги",
+      "themes": {
+        "basic": {
+          "file": "prepositions/basic.json",
+          "words_count": 15,
+          "description": "Основные предлоги"
+        }
+      }
+    },
+    
+    "conjunctions": {
+      "name": "Союзы",
+      "description": "Польские союзы",
+      "themes": {
+        "basic": {
+          "file": "conjunctions/basic.json",
+          "words_count": 10,
+          "description": "Основные союзы"
+        }
+      }
+    },
+    
+    "numbers": {
+      "name": "Числительные",
+      "description": "Польские числительные",
+      "themes": {
+        "cardinal": {
+          "file": "numbers/cardinal.json",
+          "words_count": 20,
+          "description": "Количественные числительные"
+        },
+        "ordinal": {
+          "file": "numbers/ordinal.json",
+          "words_count": 20,
+          "description": "Порядковые числительные"
+        }
+      }
+    }
+  },
+  
+  "tags": {
+    "frequency": {
+      "most_common": "Самые употребительные слова",
+      "common": "Часто используемые",
+      "uncommon": "Редко используемые"
+    },
+    "difficulty": {
+      "easy": "Легкие для запоминания",
+      "medium": "Средней сложности", 
+      "hard": "Сложные"
+    },
+    "topics": {
+      "daily_life": "Повседневная жизнь",
+      "food": "Еда и питание",
+      "travel": "Путешествия",
+      "work": "Работа",
+      "family": "Семья",
+      "health": "Здоровье",
+      "education": "Образование",
+      "entertainment": "Развлечения"
+    }
+  },
+  
+  "search_tips": [
+    "Можно искать как по польскому, так и по русскому слову",
+    "Поиск работает с частичными совпадениями",
+    "Используйте фильтры для уточнения поиска",
+    "Кликните на слово в диалоге для получения подробной информации"
+  ],
+  
+  "learning_features": {
+    "pronunciation": {
+      "enabled": true,
+      "description": "Русская транскрипция для всех слов"
+    },
+    "conjugation": {
+      "enabled": true,
+      "description": "Полные таблицы спряжения глаголов"
+    },
+    "declension": {
+      "enabled": true,
+      "description": "Склонение существительных и прилагательных"
+    },
+    "examples": {
+      "enabled": true,
+      "description": "Примеры использования в контексте"
+    },
+    "audio": {
+      "enabled": false,
+      "description": "Аудио произношение (планируется)"
+    }
+  },
+  
+  "statistics": {
+    "by_part_of_speech": {
+      "verbs": 37,
+      "nouns": 70,
+      "adjectives": 57,
+      "adverbs": 25,
+      "pronouns": 20,
+      "prepositions": 15,
+      "conjunctions": 10,
+      "numbers": 40,
+      "particles": 8,
+      "interjections": 3
+    },
+    "by_difficulty": {
+      "A1": 120,
+      "A2": 85,
+      "B1": 30,
+      "B2": 10
+    },
+    "most_searched": [
+      "być", "mieć", "chcieć", "móc", "prosić",
+      "stolik", "menu", "rachunek", "kawiarnia", "zupa"
+    ]
+  }
+}

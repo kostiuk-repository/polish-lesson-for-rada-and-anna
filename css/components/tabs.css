@@ -1,0 +1,251 @@
+/* Контейнер табов */
+.tabs {
+  width: 100%;
+}
+
+/* Список табов */
+.tabs__list {
+  display: flex;
+  border-bottom: 2px solid var(--gray-200);
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabs__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Отдельная кнопка таба */
+.tabs__button {
+  background: none;
+  border: none;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-500);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all var(--transition-base);
+  margin-bottom: -2px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tabs__button:hover {
+  color: var(--gray-700);
+  background-color: var(--gray-50);
+}
+
+.tabs__button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Активный таб */
+.tabs__button--active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: var(--gray-50);
+}
+
+.tabs__button--active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: var(--space-2);
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-color);
+}
+
+/* Контент табов */
+.tabs__content {
+  display: none;
+  animation: fadeInUp var(--transition-base);
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+/* Панель таба */
+.tabs__panel {
+  outline: none;
+}
+
+/* Вариации табов */
+
+/* Компактные табы */
+.tabs--compact .tabs__button {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+}
+
+/* Табы с иконками */
+.tabs__button--with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tabs__button--with-icon .icon {
+  font-size: var(--font-size-base);
+}
+
+/* Вертикальные табы */
+.tabs--vertical {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.tabs--vertical .tabs__list {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 2px solid var(--gray-200);
+  margin-bottom: 0;
+  margin-right: var(--space-6);
+  min-width: 200px;
+}
+
+.tabs--vertical .tabs__button {
+  justify-content: flex-start;
+  text-align: left;
+  border-bottom: none;
+  border-right: 3px solid transparent;
+  margin-bottom: 0;
+  margin-right: -2px;
+}
+
+.tabs--vertical .tabs__button--active {
+  border-bottom-color: transparent;
+  border-right-color: var(--primary-color);
+}
+
+.tabs--vertical .tabs__content {
+  flex: 1;
+}
+
+/* Табы в карточках */
+.tabs--card .tabs__list {
+  border-bottom: none;
+  gap: var(--space-1);
+  background-color: var(--gray-100);
+  padding: var(--space-1);
+  border-radius: var(--radius-lg);
+}
+
+.tabs--card .tabs__button {
+  border-radius: var(--radius-base);
+  border-bottom: none;
+  margin-bottom: 0;
+  transition: all var(--transition-fast);
+}
+
+.tabs--card .tabs__button:hover {
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.tabs--card .tabs__button--active {
+  background-color: var(--white);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  border-bottom-color: transparent;
+}
+
+/* Табы с подчеркиванием */
+.tabs--underline .tabs__list {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.tabs--underline .tabs__button {
+  border-bottom-width: 2px;
+  margin-bottom: -1px;
+}
+
+/* Табы для урока */
+.lesson-tabs {
+  margin-bottom: var(--space-8);
+}
+
+.lesson-tabs .tabs__button {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-4) var(--space-8);
+}
+
+/* Индикатор количества элементов в табе */
+.tabs__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--space-2);
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  margin-left: var(--space-2);
+}
+
+.tabs__button--active .tabs__badge {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .tabs__button {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+  }
+  
+  .lesson-tabs .tabs__button {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-base);
+  }
+  
+  .tabs--vertical {
+    flex-direction: column;
+  }
+  
+  .tabs--vertical .tabs__list {
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 2px solid var(--gray-200);
+    margin-right: 0;
+    margin-bottom: var(--space-6);
+    min-width: auto;
+  }
+  
+  .tabs--vertical .tabs__button {
+    border-right: none;
+    border-bottom: 3px solid transparent;
+    margin-right: 0;
+    margin-bottom: -2px;
+  }
+  
+  .tabs--vertical .tabs__button--active {
+    border-right-color: transparent;
+    border-bottom-color: var(--primary-color);
+  }
+}
