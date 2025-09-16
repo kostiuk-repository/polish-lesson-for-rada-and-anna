@@ -1,4 +1,4 @@
-import { TabsComponent } from '../ui/tabs.js';
+import { TabsComponent } from './tabs.js';
 import { ModalComponent } from './modal.js';
 import { ExercisesComponent } from './exercises.js';
 import { ClickableWordsHandler } from '../ui/clickable-words.js';

@@ -1,0 +1,18 @@
+{
+  "zamawiać": {
+    "lemma": "zamawiać",
+    "part_of_speech": "verb",
+    "translations": { "ru": "заказывать" },
+    "examples": [
+      { "pl": "Chciałbym zamówić stolik.", "ru": "Я хотел бы заказать столик." }
+    ]
+  },
+  "płacić": {
+    "lemma": "płacić",
+    "part_of_speech": "verb",
+    "translations": { "ru": "платить" },
+    "examples": [
+      { "pl": "Czy mogę zapłacić kartą?", "ru": "Могу ли я заплатить картой?" }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kupować": {
+    "lemma": "kupować",
+    "part_of_speech": "verb",
+    "translations": { "ru": "покупать" },
+    "examples": [
+      { "pl": "Chcę kupić ten płaszcz.", "ru": "Я хочу купить это пальто." }
+    ]
+  },
+  "przymierzyć": {
+    "lemma": "przymierzyć",
+    "part_of_speech": "verb",
+    "translations": { "ru": "примерить" },
+    "examples": [
+      { "pl": "Czy mogę to przymierzyć?", "ru": "Могу ли я это примерить?" }
+    ]
+  }
+}
