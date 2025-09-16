@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "Грамматические правила польского языка",
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+  },
+  
+  "rules": {
+    "verbs": {
+      "conjugation": {
+        "present_tense": {
+          "title": "Настоящее время",
+          "level": "A1",
+          "description": "Спряжение глаголов в настоящем времени",
+          "examples": [
+            {
+              "verb": "mówić",
+              "forms": {
+                "ja": "mówię",
+                "ty": "mówisz", 
+                "on/ona/ono": "mówi",
+                "my": "mówimy",
+                "wy": "mówicie",
+                "oni/one": "mówią"
+              }
+            }
+          ],
+          "patterns": {
+            "type_1": {
+              "ending": "-ę, -isz, -i, -imy, -icie, -ą",
+              "examples": ["mówić", "robić", "prosić"]
+            },
+            "type_2": {
+              "ending": "-am, -asz, -a, -amy, -acie, -ają",
+              "examples": ["czytać", "słuchać", "grać"]
+            }
+          }
+        },
+        "past_tense": {
+          "title": "Прошедшее время",
+          "level": "A1",
+          "description": "Образование прошедшего времени с учетом рода",
+          "formation": "основа глагола + -ł/-ła/-ło + окончание",
+          "examples": [
+            {
+              "verb": "być",
+              "masculine": ["byłem", "byłeś", "był", "byliśmy", "byliście", "byli"],
+              "feminine": ["byłam", "byłaś", "była", "byłyśmy", "byłyście", "były"],
+              "neuter": [null, null, "było", null, null, null]
+            }
+          ]
+        },
+        "future_tense": {
+          "title": "Будущее время",
+          "level": "A2",
+          "description": "Два способа образования будущего времени",
+          "types": {
+            "simple_future": {
+              "description": "Простое будущее (глаголы совершенного вида)",
+              "example": "kupię, kupisz, kupi..."
+            },
+            "compound_future": {
+              "description": "Составное будущее (być + инфинитив или -ł форма)",
+              "examples": [
+                "będę czytać/czytał",
+                "będziesz czytać/czytała"
+              ]
+            }
+          }
+        }
+      },
+      "aspects": {
+        "title": "Виды глаголов",
+        "level": "A2",
+        "description": "Различие между совершенным и несовершенным видом",
+        "imperfective": {
+          "description": "Несовершенный вид - процесс, повторяющееся действие",
+          "examples": [
+            {"verb": "czytać", "meaning": "читать (процесс)"},
+            {"verb": "pisać", "meaning": "писать (процесс)"}
+          ]
+        },
+        "perfective": {
+          "description": "Совершенный вид - завершенное, результативное действие",
+          "examples": [
+            {"verb": "przeczytać", "meaning": "прочитать (результат)"},
+            {"verb": "napisać", "meaning": "написать (результат)"}
+          ]
+        }
+      }
+    },
+    
+    "nouns": {
+      "cases": {
+        "title": "Падежи",
+        "level": "A1",
+        "description": "Система падежей в польском языке",
+        "cases": {
+          "nominative": {
+            "title": "Mianownik (Именительный)",
+            "questions": ["kto?", "co?"],
+            "function": "Подлежащее",
+            "examples": [
+              {"sentence": "To jest stół.", "word": "stół", "case": "nom"}
+            ]
+          },
+          "genitive": {
+            "title": "Dopełniacz (Родительный)",
+            "questions": ["kogo?", "czego?"],
+            "functions": ["Отрицание", "Количество", "Принадлежность"],
+            "examples": [
+              {"sentence": "Nie ma czasu.", "word": "czasu", "case": "gen"},
+              {"sentence": "Dom mojego brata.", "word": "brata", "case": "gen"}
+            ]
+          },
+          "dative": {
+            "title": "Celownik (Дательный)",
+            "questions": ["komu?", "czemu?"],
+            "function": "Косвенное дополнение",
+            "examples": [
+              {"sentence": "Daję książkę bratu.", "word": "bratu", "case": "dat"}
+            ]
+          },
+          "accusative": {
+            "title": "Biernik (Винительный)",
+            "questions": ["kogo?", "co?"],
+            "function": "Прямое дополнение",
+            "examples": [
+              {"sentence": "Czytam książkę.", "word": "książkę", "case": "acc"}
+            ]
+          },
+          "instrumental": {
+            "title": "Narzędnik (Творительный)",
+            "questions": ["kim?", "czym?"],
+            "functions": ["Орудие действия", "Способ", "Компания"],
+            "examples": [
+              {"sentence": "Piszę długopisem.", "word": "długopisem", "case": "ins"},
+              {"sentence": "Idę z przyjacielem.", "word": "przyjacielem", "case": "ins"}
+            ]
+          },
+          "locative": {
+            "title": "Miejscownik (Предложный)",
+            "questions": ["o kim?", "o czym?", "gdzie?"],
+            "functions": ["Место", "Предмет речи"],
+            "examples": [
+              {"sentence": "Myślę o domu.", "word": "domu", "case": "loc"},
+              {"sentence": "Mieszkam w Warszawie.", "word": "Warszawie", "case": "loc"}
+            ]
+          },
+          "vocative": {
+            "title": "Wołacz (Звательный)", 
+            "function": "Обращение",
+            "examples": [
+              {"sentence": "Panie doktorze!", "word": "doktorze", "case": "voc"}
+            ]
+          }
+        }
+      },
+      "gender": {
+        "title": "Род существительных",
+        "level": "A1",
+        "description": "Три рода в польском языке",
+        "genders": {
+          "masculine": {
+            "title": "Мужской род",
+            "subtypes": {
+              "animate": {
+                "description": "Одушевленные (люди, животные)",
+                "endings": ["-", "-a"],
+                "examples": ["mężczyzna", "student", "kot"]
+              },
+              "inanimate": {
+                "description": "Неодушевленные",
+                "endings": ["-"],
+                "examples": ["stół", "dom", "telefon"]
+              }
+            }
+          },
+          "feminine": {
+            "title": "Женский род",
+            "endings": ["-a", "-i", "-ość"],
+            "examples": ["kobieta", "pani", "miłość"]
+          },
+          "neuter": {
+            "title": "Средний род",
+            "endings": ["-o", "-e", "-ę", "-um"],
+            "examples": ["okno", "pole", "imię", "muzeum"]
+          }
+        }
+      }
+    },
+    
+    "adjectives": {
+      "agreement": {
+        "title": "Согласование прилагательных",
+        "level": "A1",
+        "description": "Прилагательные согласуются в роде, числе и падеже",
+        "patterns": {
+          "hard_stem": {
+            "description": "Твердая основа",
+            "masculine": {
+              "nom_sg": "dobry",
+              "gen_sg": "dobrego",
+              "examples": ["dobry dom", "dobrego domu"]
+            },
+            "feminine": {
+              "nom_sg": "dobra", 
+              "gen_sg": "dobrej",
+              "examples": ["dobra książka", "dobrej książki"]
+            },
+            "neuter": {
+              "nom_sg": "dobre",
+              "gen_sg": "dobrego", 
+              "examples": ["dobre dziecko", "dobrego dziecka"]
+            }
+          },
+          "soft_stem": {
+            "description": "Мягкая основа",
+            "examples": ["letni", "zimowy", "czerwony"]
+          }
+        }
+      },
+      "comparison": {
+        "title": "Степени сравнения",
+        "level": "A2",
+        "description": "Сравнительная и превосходная степени",
+        "comparative": {
+          "formation": "основа + -szy/-iej",
+          "examples": [
+            {"positive": "dobry", "comparative": "lepszy"},
+            {"positive": "duży", "comparative": "większy"},
+            {"positive": "ładny", "comparative": "ładniejszy"}
+          ]
+        },
+        "superlative": {
+          "formation": "naj- + сравнительная степень",
+          "examples": [
+            {"positive": "dobry", "superlative": "najlepszy"},
+            {"positive": "duży", "superlative": "największy"}
+          ]
+        }
+      }
+    },
+    
+    "prepositions": {
+      "title": "Предлоги и падежи",
+      "level": "A1",
+      "description": "Предлоги управляют определенными падежами",
+      "by_case": {
+        "genitive": {
+          "prepositions": ["od", "do", "z", "bez", "dla", "u", "koło", "obok"],
+          "examples": [
+            {"prep": "od", "example": "od poniedziałku", "meaning": "с понедельника"},
+            {"prep": "do", "example": "do domu", "meaning": "домой"},
+            {"prep": "z", "example": "z Polski", "meaning": "из Польши"}
+          ]
+        },
+        "accusative": {
+          "prepositions": ["na", "w", "za", "przez", "po"],
+          "note": "Некоторые предлоги могут управлять разными падежами",
+          "examples": [
+            {"prep": "na", "example": "na stół", "meaning": "на стол (направление)"},
+            {"prep": "w", "example": "w poniedziałek", "meaning": "в понедельник"}
+          ]
+        },
+        "locative": {
+          "prepositions": ["w", "na", "o", "po", "przy"],
+          "examples": [
+            {"prep": "w", "example": "w domu", "meaning": "дома (место)"},
+            {"prep": "na", "example": "na stole", "meaning": "на столе (место)"},
+            {"prep": "o", "example": "o pracy", "meaning": "о работе"}
+          ]
+        },
+        "instrumental": {
+          "prepositions": ["z", "nad", "pod", "przed", "za", "między"],
+          "examples": [
+            {"prep": "z", "example": "z bratem", "meaning": "с братом"},
+            {"prep": "nad", "example": "nad rzeką", "meaning": "над рекой"}
+          ]
+        }
+      }
+    },
+    
+    "word_order": {
+      "title": "Порядок слов",
+      "level": "A2",
+      "description": "Относительно свободный порядок слов с нюансами",
+      "basic_order": "SVO (Подлежащее-Сказуемое-Дополнение)",
+      "variations": {
+        "emphasis": {
+          "description": "Для эмфазы элемент выносится в начало",
+          "examples": [
+            {"neutral": "Jan czyta książkę.", "emphatic": "Książkę czyta Jan."}
+          ]
+        },
+        "questions": {
+          "description": "В вопросах часто инверсия",
+          "examples": [
+            {"question": "Co robi Jan?", "answer": "Jan czyta."}
+          ]
+        }
+      }
+    },
+    
+    "numbers": {
+      "title": "Числительные",
+      "level": "A1",
+      "description": "Особенности употребления числительных",
+      "agreement": {
+        "1": {
+          "description": "1 + именительный падеж",
+          "example": "jeden stół"
+        },
+        "2-4": {
+          "description": "2-4 + именительный падеж множественного числа",
+          "examples": ["dwa stoły", "trzy książki", "cztery domy"]
+        },
+        "5+": {
+          "description": "5+ + родительный падеж множественного числа",
+          "examples": ["pięć stołów", "dziesięć książek"]
+        }
+      },
+      "collective": {
+        "description": "Собирательные числительные",
+        "examples": [
+          {"number": "dwoje", "usage": "двое (разнополые)"},
+          {"number": "troje", "usage": "трое (разнополые)"}
+        ]
+      }
+    },
+    
+    "pronunciation": {
+      "title": "Особенности произношения",
+      "level": "A1", 
+      "rules": {
+        "stress": {
+          "rule": "Ударение почти всегда на предпоследнем слоге",
+          "exceptions": ["некоторые заимствования", "условное наклонение"]
+        },
+        "consonant_clusters": {
+          "description": "Сочетания согласных",
+          "examples": [
+            {"letters": "szcz", "sound": "[щ]", "word": "szczęście"},
+            {"letters": "dż", "sound": "[дж]", "word": "dżem"}
+          ]
+        }
+      }
+    }
+  },
+  
+  "common_patterns": {
+    "restaurant": {
+      "title": "В ресторане",
+      "patterns": [
+        {
+          "pattern": "Poproszę + Acc",
+          "meaning": "Я попрошу...",
+          "examples": ["Poproszę kawę.", "Poproszę rachunek."]
+        },
+        {
+          "pattern": "Czy mogę + infinitive",
+          "meaning": "Могу ли я...",
+          "examples": ["Czy mogę prosić o menu?", "Czy mogę zapłacić kartą?"]
+        }
+      ]
+    },
+    "time": {
+      "title": "Время",
+      "patterns": [
+        {
+          "pattern": "o + Loc",
+          "meaning": "в ... часов",
+          "examples": ["o ósmej", "o dwunastej"]
+        },
+        {
+          "pattern": "w + Acc (day)",
+          "meaning": "в (день недели)",
+          "examples": ["w poniedziałek", "w sobotę"]
+        }
+      ]
+    }
+  },
+  
+  "exercises": {
+    "case_practice": {
+      "title": "Практика падежей",
+      "type": "fill_blank",
+      "examples": [
+        {
+          "sentence": "Idę do _____ (sklep)",
+          "answer": "sklepu",
+          "case": "genitive"
+        },
+        {
+          "sentence": "Czytam _____ (książka)",
+          "answer": "książkę", 
+          "case": "accusative"
+        }
+      ]
+    },
+    "verb_conjugation": {
+      "title": "Спряжение глаголов",
+      "type": "conjugation_table",
+      "verbs": ["być", "mieć", "robić", "chcieć"]
+    }
+  }
+}
