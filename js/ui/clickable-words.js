@@ -4,12 +4,20 @@ export class ClickableWordsHandler {
     this.dictionary = dictionary;
     this.modal = modal;
     this.activeWord = null;
+    this.tooltip = null;
     
     this.init();
   }
 
   init() {
+    this.createTooltip();
     this.setupEventListeners();
+  }
+
+  createTooltip() {
+    this.tooltip = document.createElement('div');
+    this.tooltip.className = 'quick-tooltip';
+    document.body.appendChild(this.tooltip);
   }
 
   setupEventListeners() {
@@ -78,16 +86,13 @@ export class ClickableWordsHandler {
   }
 
   handleWordHover(wordElement) {
-    // Добавляем класс для эффекта наведения
     wordElement.classList.add('word-hovered');
-    
-    // Показываем краткую подсказку с переводом
     this.showQuickTooltip(wordElement);
   }
 
   handleWordLeave(wordElement) {
     wordElement.classList.remove('word-hovered');
-    this.hideQuickTooltip(wordElement);
+    this.hideQuickTooltip();
   }
 
   async getWordData(wordKey) {
@@ -148,55 +153,26 @@ export class ClickableWordsHandler {
   }
 
   showQuickTooltip(wordElement) {
-    // Проверяем, есть ли уже тултип
-    if (wordElement.querySelector('.quick-tooltip')) return;
-
     const translation = wordElement.dataset.translation;
-    if (!translation) return;
+    if (!translation || translation === 'Нет перевода') {
+      this.tooltip.classList.remove('quick-tooltip--visible');
+      return;
+    }
 
-    const tooltip = document.createElement('div');
-    tooltip.className = 'quick-tooltip';
-    tooltip.textContent = translation;
-    
-    // Позиционируем тултип
+    this.tooltip.textContent = translation;
     const rect = wordElement.getBoundingClientRect();
-    tooltip.style.position = 'fixed';
-    tooltip.style.top = `${rect.top - 35}px`;
-    tooltip.style.left = `${rect.left + (rect.width / 2)}px`;
-    tooltip.style.transform = 'translateX(-50%)';
-    tooltip.style.zIndex = '1000';
-    tooltip.style.background = 'var(--gray-800)';
-    tooltip.style.color = 'var(--white)';
-    tooltip.style.padding = 'var(--space-2) var(--space-3)';
-    tooltip.style.borderRadius = 'var(--radius-base)';
-    tooltip.style.fontSize = 'var(--font-size-xs)';
-    tooltip.style.whiteSpace = 'nowrap';
-    tooltip.style.opacity = '0';
-    tooltip.style.transition = 'opacity var(--transition-fast)';
-    tooltip.style.pointerEvents = 'none';
 
-    document.body.appendChild(tooltip);
+    // Position tooltip above the word
+    const top = rect.top - this.tooltip.offsetHeight - 8; // 8px gap
+    const left = rect.left + (rect.width / 2) - (this.tooltip.offsetWidth / 2);
 
-    // Анимация появления
-    requestAnimationFrame(() => {
-      tooltip.style.opacity = '1';
-    });
-
-    // Сохраняем ссылку на тултип
-    wordElement._tooltip = tooltip;
+    this.tooltip.style.top = `${top}px`;
+    this.tooltip.style.left = `${left}px`;
+    this.tooltip.classList.add('quick-tooltip--visible');
   }
 
-  hideQuickTooltip(wordElement) {
-    const tooltip = wordElement._tooltip;
-    if (tooltip) {
-      tooltip.style.opacity = '0';
-      setTimeout(() => {
-        if (tooltip.parentNode) {
-          tooltip.parentNode.removeChild(tooltip);
-        }
-      }, 150);
-      wordElement._tooltip = null;
-    }
+  hideQuickTooltip() {
+    this.tooltip.classList.remove('quick-tooltip--visible');
   }
 
   highlightWord(wordElement) {
@@ -333,5 +309,8 @@ export class ClickableWordsHandler {
     this.container = null;
     this.dictionary = null;
     this.modal = null;
+    if (this.tooltip) {
+        this.tooltip.remove();
+    }
   }
 }

@@ -9,16 +9,25 @@ export class DictionaryService {
   async init() {
     try {
       // Загружаем правила произношения
-      const rules = await this.api.getPhoneticRules();
-      this.phoneticRules = new Map(Object.entries(rules.rules));
+      const rulesData = await this.api.fetchJSON('rules/phonetic.json'); // Corrected path
+      if (rulesData && rulesData.rules) {
+        this.phoneticRules = new Map(Object.entries(rulesData.rules));
+      }
 
-      // Загружаем базовые категории словаря
-      await this.loadDictionaryCategory('verbs', 'basic');
-      await this.loadDictionaryCategory('nouns', 'basic');
-      await this.loadDictionaryCategory('adjectives', 'basic');
+      // Загружаем индекс словаря и все категории из него
+      const dictionaryIndex = await this.api.getDictionary();
+      const loadPromises = [];
+
+      for (const category in dictionaryIndex.categories) {
+        for (const theme in dictionaryIndex.categories[category].themes) {
+          loadPromises.push(this.loadDictionaryCategory(category, theme));
+        }
+      }
+
+      await Promise.all(loadPromises);
 
       this.isInitialized = true;
-      console.log('✅ DictionaryService инициализирован');
+      console.log('✅ DictionaryService инициализирован. Всего слов:', this.dictionary.size);
     } catch (error) {
       console.error('❌ Ошибка инициализации DictionaryService:', error);
       throw error;

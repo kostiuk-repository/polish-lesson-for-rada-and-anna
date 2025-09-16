@@ -236,6 +236,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Add for better responsiveness */
+  gap: var(--space-4); /* Add gap for spacing */
   margin-bottom: var(--space-6);
   padding: var(--space-4);
   background-color: var(--gray-50);
@@ -248,6 +250,13 @@
   gap: var(--space-2);
   font-size: var(--font-size-sm);
   color: var(--gray-600);
+}
+
+.translation-toggle label {
+  display: flex; /* Make the label a flex container */
+  align-items: center;
+  cursor: pointer;
+  gap: var(--space-3); /* Add gap between switch and text */
 }
 
 .toggle-switch {
@@ -333,6 +342,26 @@
 .dialog-character__translation {
   font-size: var(--font-size-base);
   color: var(--gray-600);
+}
+
+.quick-tooltip {
+  position: fixed;
+  background-color: var(--gray-800);
+  color: var(--white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  z-index: var(--z-tooltip);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.quick-tooltip--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Адаптивность */

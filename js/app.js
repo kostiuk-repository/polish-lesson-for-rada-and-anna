@@ -12,7 +12,8 @@ class PolishLearningApp {
     this.dictionary = new DictionaryService(this.api); 
     this.speech = new SpeechService();
     this.storage = new StorageService();
-    
+    this.currentComponent = null;
+
     this.init();
   }
 
@@ -48,15 +49,18 @@ class PolishLearningApp {
   }
 
   async loadCatalogPage() {
+    this.destroyCurrentComponent();
     const { CatalogComponent } = await import('./components/catalog.js');
     const catalog = new CatalogComponent({
       api: this.api,
       storage: this.storage
     });
+    this.currentComponent = catalog;
     await catalog.render();
   }
 
   async loadLessonPage(lessonId) {
+    this.destroyCurrentComponent();
     const { LessonComponent } = await import('./components/lesson.js');
     const lesson = new LessonComponent({
       lessonId,
@@ -65,6 +69,7 @@ class PolishLearningApp {
       speech: this.speech,
       storage: this.storage
     });
+    this.currentComponent = lesson;
     await lesson.render();
   }
 
@@ -81,6 +86,12 @@ class PolishLearningApp {
         <button onclick="location.reload()">Перезагрузить</button>
       </div>
     `;
+  }
+
+    destroyCurrentComponent() {
+    if (this.currentComponent && typeof this.currentComponent.destroy === 'function') {
+      this.currentComponent.destroy();
+    }
   }
 }
 

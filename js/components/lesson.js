@@ -19,6 +19,11 @@ export class LessonComponent {
     this.exercises = null;
     this.clickableWords = null;
     this.dialogLines = null;
+    this.currentlyPlaying = {
+        button: null,
+        text: ''
+    };
+    this.isDialogPlaying = false;
   }
 
   async render() {
@@ -282,7 +287,9 @@ export class LessonComponent {
     
     this.dialogLines = new DialogLinesHandler({
       container: this.container,
-      modal: this.modal
+      modal: this.modal,
+      speech: this.speech,
+      dictionary: this.dictionary
     });
   }
 
@@ -352,66 +359,92 @@ export class LessonComponent {
 
   async playAudio(text, button) {
     if (!text || !this.speech) return;
+
+    const playIcon = '<i class="fas fa-volume-up"></i>';
+    const pauseIcon = '<i class="fas fa-pause"></i>';
+    const resumeIcon = '<i class="fas fa-play"></i>';
+
+    // Если кликнули на другую кнопку во время воспроизведения
+    if (this.currentlyPlaying.button && this.currentlyPlaying.button !== button) {
+        this.currentlyPlaying.button.innerHTML = playIcon;
+        this.currentlyPlaying.button.disabled = false;
+        this.speech.stop();
+    }
     
+    this.currentlyPlaying.button = button;
+    this.currentlyPlaying.text = text;
+
     try {
-      // Визуальная обратная связь
-      button.classList.add('audio-play-btn--playing');
-      button.disabled = true;
-      
-      // Воспроизводим
-      await this.speech.speak(text);
-      
+      if (this.speech.isSpeaking()) {
+        this.speech.pause();
+        button.innerHTML = resumeIcon;
+      } else if (this.speech.isPaused()) {
+        this.speech.resume();
+        button.innerHTML = pauseIcon;
+      } else {
+        button.disabled = true;
+        button.innerHTML = pauseIcon;
+        await this.speech.speak(text);
+        // Когда воспроизведение закончится само
+        button.innerHTML = playIcon;
+        button.disabled = false;
+        this.currentlyPlaying.button = null;
+      }
     } catch (error) {
       console.error('Ошибка воспроизведения:', error);
-    } finally {
-      // Возвращаем исходное состояние
-      button.classList.remove('audio-play-btn--playing');
+      button.innerHTML = playIcon; // Reset on error
       button.disabled = false;
+      this.currentlyPlaying.button = null;
     }
   }
 
   async playAllDialog() {
     const playButton = this.container.querySelector('#play-all-dialog');
+    
+    if (this.isDialogPlaying) {
+        this.stopAllDialog(playButton);
+        return;
+    }
+
+    this.isDialogPlaying = true;
+    playButton.innerHTML = '<i class="fas fa-pause"></i>';
+    
     const progressBar = this.container.querySelector('.dialog-progress__bar');
     const dialogLines = this.container.querySelectorAll('.dialog-line');
-    
-    if (!dialogLines.length) return;
-    
+
     try {
-      playButton.disabled = true;
-      playButton.innerHTML = '<i class="fas fa-pause"></i>';
-      
-      for (let i = 0; i < dialogLines.length; i++) {
-        const line = dialogLines[i];
-        const lineIndex = parseInt(line.dataset.lineIndex);
-        const lineData = this.lessonData.content[lineIndex];
-        
-        if (lineData?.sentence) {
-          // Подсвечиваем текущую строку
-          line.classList.add('animate-pulse');
-          
-          // Воспроизводим
-          await this.speech.speak(lineData.sentence);
-          
-          // Убираем подсветку
-          line.classList.remove('animate-pulse');
-          
-          // Обновляем прогресс
-          const progress = ((i + 1) / dialogLines.length) * 100;
-          progressBar.style.width = `${progress}%`;
+        for (let i = 0; i < dialogLines.length; i++) {
+            if (!this.isDialogPlaying) break; // Прерываем цикл, если нажали стоп
+
+            const line = dialogLines[i];
+            const sentence = line.querySelector('.dialog-text').textContent.trim();
+
+            if (sentence) {
+                line.classList.add('dialog-line--playing');
+                await this.speech.speak(sentence);
+                line.classList.remove('dialog-line--playing');
+
+                const progress = ((i + 1) / dialogLines.length) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+            await this.delay(500); // Пауза между репликами
         }
-        
-        // Пауза между строками
-        await this.delay(800);
-      }
-      
-    } catch (error) {
-      console.error('Ошибка воспроизведения диалога:', error);
+    } catch(error) {
+        console.error('Ошибка воспроизведения диалога:', error);
     } finally {
-      playButton.disabled = false;
-      playButton.innerHTML = '<i class="fas fa-play"></i>';
-      progressBar.style.width = '0%';
+        this.stopAllDialog(playButton);
     }
+  }
+
+  stopAllDialog(playButton) {
+      this.isDialogPlaying = false;
+      this.speech.stop();
+      if (playButton) {
+          playButton.innerHTML = '<i class="fas fa-play"></i>';
+      }
+      this.container.querySelectorAll('.dialog-line--playing').forEach(el => el.classList.remove('dialog-line--playing'));
+      const progressBar = this.container.querySelector('.dialog-progress__bar');
+      if(progressBar) progressBar.style.width = '0%';
   }
 
   trackLessonStart() {
@@ -459,6 +492,7 @@ export class LessonComponent {
 
   destroy() {
     // Очищаем компоненты
+    this.stopAllDialog();
     if (this.tabs) this.tabs.destroy();
     if (this.modal) this.modal.destroy();
     if (this.exercises) this.exercises.destroy();
