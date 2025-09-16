@@ -9,7 +9,7 @@ class PolishLearningApp {
   constructor() {
     this.router = new Router();
     this.api = new API();
-    this.dictionary = new DictionaryService();
+    this.dictionary = new DictionaryService(this.api); 
     this.speech = new SpeechService();
     this.storage = new StorageService();
     
