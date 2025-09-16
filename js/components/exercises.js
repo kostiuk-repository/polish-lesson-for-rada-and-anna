@@ -782,9 +782,6 @@ export class ExercisesComponent {
   }
 
   destroy() {
-    // Сохраняем прогресс перед уничтожением
-    this.autoSaveAnswers();
-    
     // Очищаем ссылки
     this.container = null;
     this.exercisesData = null;

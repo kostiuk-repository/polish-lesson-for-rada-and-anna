@@ -106,7 +106,7 @@ class PolishLearningApp {
     `;
   }
 
-    destroyCurrentComponent() {
+  destroyCurrentComponent() {
     if (this.currentComponent && typeof this.currentComponent.destroy === 'function') {
       this.currentComponent.destroy();
     }
@@ -114,9 +114,9 @@ class PolishLearningApp {
 }
 
 // Экспортируем для глобального использования
-window.PolishApp = PolishLearningApp;
+window.PolishLearningApp = PolishLearningApp;
 
 // Запускаем приложение после загрузки DOM
 document.addEventListener('DOMContentLoaded', () => {
-  new PolishLearningApp();
+  window.PolishApp = new PolishLearningApp();
 });
