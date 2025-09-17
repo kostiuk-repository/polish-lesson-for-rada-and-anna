@@ -1,0 +1,56 @@
+{
+  "oto": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Oto menu.",
+        "ru": "Вот меню.",
+        "ru_transcription": "ото мэню."
+      },
+      {
+        "pl": "Oto i ja!",
+        "ru": "А вот и я!",
+        "ru_transcription": "ото и я!"
+      }
+    ],
+    "inflection": {},
+    "lemma": "oto",
+    "morphology": {},
+    "part_of_speech": "interjection",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "ото"
+    },
+    "translations": {
+      "ru": "вот"
+    }
+  },
+  "panie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Przepraszam panie!",
+        "ru": "Извините, господин!",
+        "ru_transcription": "пшЭпрашам паНЕ!"
+      },
+      {
+        "pl": "Co Pan zamawia, panie?",
+        "ru": "Что Вы заказываете, господин?",
+        "ru_transcription": "цо пан замаВЯ паНЕ?"
+      }
+    ],
+    "inflection": {},
+    "lemma": "panie",
+    "morphology": {},
+    "part_of_speech": "interjection",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "паНЕ"
+    },
+    "translations": {
+      "ru": "господин"
+    }
+  }
+}

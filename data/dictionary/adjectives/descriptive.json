@@ -1,12 +1,563 @@
 {
-  "piękny": {
-    "lemma": "piękny",
+  "aromatyczny": {
+    "applied_rules": [
+      "cz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Ta kawa jest bardzo aromatyczna.",
+        "ru": "Этот кофе очень ароматный.",
+        "ru_transcription": "та кава ест бардзо ароматЫчна."
+      },
+      {
+        "pl": "Aromatyczne zioła.",
+        "ru": "Ароматные травы.",
+        "ru_transcription": "ароматЫчнэ зЁва."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "aromatyczną",
+        "dative": "aromatycznej",
+        "genitive": "aromatycznej",
+        "instrumental": "aromatyczną",
+        "locative": "aromatycznej",
+        "nominative": "aromatyczna",
+        "vocative": "aromatyczna"
+      },
+      "masculine": {
+        "accusative": "aromatyczny/aromatycznego",
+        "dative": "aromatycznemu",
+        "genitive": "aromatycznego",
+        "instrumental": "aromatycznym",
+        "locative": "aromatycznym",
+        "nominative": "aromatyczny",
+        "vocative": "aromatyczny"
+      },
+      "neuter": {
+        "accusative": "aromatyczne",
+        "dative": "aromatycznemu",
+        "genitive": "aromatycznego",
+        "instrumental": "aromatycznym",
+        "locative": "aromatycznym",
+        "nominative": "aromatyczne",
+        "vocative": "aromatyczne"
+      }
+    },
+    "lemma": "aromatyczny",
+    "morphology": {
+      "gradable": true
+    },
     "part_of_speech": "adjective",
-    "translations": { "ru": "красивый" }
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "aromatyczna",
+          "ru": "ароматЫчна"
+        },
+        {
+          "pl": "aromatyczne",
+          "ru": "ароматЫчнэ"
+        }
+      ],
+      "ru_transcription": "ароматЫчны"
+    },
+    "translations": {
+      "ru": "ароматный"
+    }
+  },
+  "cytrynowy": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Cytrynowa tarta.",
+        "ru": "Лимонный торт.",
+        "ru_transcription": "цытрынОва тарта."
+      },
+      {
+        "pl": "Cytrynowy sos.",
+        "ru": "Лимонный соус.",
+        "ru_transcription": "цытрынОвы сос."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "cytrynową",
+        "dative": "cytrynowej",
+        "genitive": "cytrynowej",
+        "instrumental": "cytrynową",
+        "locative": "cytrynowej",
+        "nominative": "cytrynowa",
+        "vocative": "cytrynowa"
+      },
+      "masculine": {
+        "accusative": "cytrynowy/cytrynowego",
+        "dative": "cytrynowemu",
+        "genitive": "cytrynowego",
+        "instrumental": "cytrynowym",
+        "locative": "cytrynowym",
+        "nominative": "cytrynowy",
+        "vocative": "cytrynowy"
+      },
+      "neuter": {
+        "accusative": "cytrynowe",
+        "dative": "cytrynowemu",
+        "genitive": "cytrynowego",
+        "instrumental": "cytrynowym",
+        "locative": "cytrynowym",
+        "nominative": "cytrynowe",
+        "vocative": "cytrynowe"
+      }
+    },
+    "lemma": "cytrynowy",
+    "morphology": {
+      "gradable": false
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "cytrynowa",
+          "ru": "цытрынОва"
+        },
+        {
+          "pl": "cytrynowe",
+          "ru": "цытрынОвэ"
+        }
+      ],
+      "ru_transcription": "цытрынОвы"
+    },
+    "translations": {
+      "ru": "лимонный"
+    }
+  },
+  "delikatny": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Ma delikatny smak.",
+        "ru": "Имеет деликатный вкус.",
+        "ru_transcription": "ма дэликАтны смак."
+      },
+      {
+        "pl": "Delikatna skóra.",
+        "ru": "Деликатная кожа.",
+        "ru_transcription": "дэликАтна скура."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "delikatną",
+        "dative": "delikatnej",
+        "genitive": "delikatnej",
+        "instrumental": "delikatną",
+        "locative": "delikatnej",
+        "nominative": "delikatna",
+        "vocative": "delikatna"
+      },
+      "masculine": {
+        "accusative": "delikatny/delikatnego",
+        "dative": "delikatnemu",
+        "genitive": "delikatnego",
+        "instrumental": "delikatnym",
+        "locative": "delikatnym",
+        "nominative": "delikatny",
+        "vocative": "delikatny"
+      },
+      "neuter": {
+        "accusative": "delikatne",
+        "dative": "delikatnemu",
+        "genitive": "delikatnego",
+        "instrumental": "delikatnym",
+        "locative": "delikatnym",
+        "nominative": "delikatne",
+        "vocative": "delikatne"
+      }
+    },
+    "lemma": "delikatny",
+    "morphology": {
+      "gradable": true
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "delikatna",
+          "ru": "дэликАтна"
+        },
+        {
+          "pl": "delikatne",
+          "ru": "дэликАтнэ"
+        }
+      ],
+      "ru_transcription": "дэликАтны"
+    },
+    "translations": {
+      "ru": "деликатный"
+    }
+  },
+  "gazowany": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Woda gazowana czy niegazowana?",
+        "ru": "Вода газированная или негазированная?",
+        "ru_transcription": "вода газОвана чы нЭгазОвана?"
+      },
+      {
+        "pl": "Napój gazowany.",
+        "ru": "Газированный напиток.",
+        "ru_transcription": "напуй газОваны."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "gazowaną",
+        "dative": "gazowanej",
+        "genitive": "gazowanej",
+        "instrumental": "gazowaną",
+        "locative": "gazowanej",
+        "nominative": "gazowana",
+        "vocative": "gazowana"
+      },
+      "masculine": {
+        "accusative": "gazowany/gazowanego",
+        "dative": "gazowanemu",
+        "genitive": "gazowanego",
+        "instrumental": "gazowanym",
+        "locative": "gazowanym",
+        "nominative": "gazowany",
+        "vocative": "gazowany"
+      },
+      "neuter": {
+        "accusative": "gazowane",
+        "dative": "gazowanemu",
+        "genitive": "gazowanego",
+        "instrumental": "gazowanym",
+        "locative": "gazowanym",
+        "nominative": "gazowane",
+        "vocative": "gazowane"
+      }
+    },
+    "lemma": "gazowany",
+    "morphology": {
+      "gradable": false
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "gazowana",
+          "ru": "газОвана"
+        },
+        {
+          "pl": "gazowane",
+          "ru": "газОванэ"
+        }
+      ],
+      "ru_transcription": "газОваны"
+    },
+    "translations": {
+      "ru": "газированный"
+    }
+  },
+  "gorący": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Gorąca herbata.",
+        "ru": "Горячий чай.",
+        "ru_transcription": "гоРОнца хэрбата."
+      },
+      {
+        "pl": "Jest bardzo gorąco.",
+        "ru": "Очень жарко.",
+        "ru_transcription": "ест бардзо гоРОнцо."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "gorącą",
+        "dative": "gorącej",
+        "genitive": "gorącej",
+        "instrumental": "gorącą",
+        "locative": "gorącej",
+        "nominative": "gorąca",
+        "vocative": "gorąca"
+      },
+      "masculine": {
+        "accusative": "gorący/gorącego",
+        "dative": "gorącemu",
+        "genitive": "gorącego",
+        "instrumental": "gorącym",
+        "locative": "gorącym",
+        "nominative": "gorący",
+        "vocative": "gorący"
+      },
+      "neuter": {
+        "accusative": "gorące",
+        "dative": "gorącemu",
+        "genitive": "gorącego",
+        "instrumental": "gorącym",
+        "locative": "gorącym",
+        "nominative": "gorące",
+        "vocative": "gorące"
+      }
+    },
+    "lemma": "gorący",
+    "morphology": {
+      "gradable": true
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "gorąca",
+          "ru": "гоРОнца"
+        },
+        {
+          "pl": "gorące",
+          "ru": "гоРОнцэ"
+        }
+      ],
+      "ru_transcription": "гоРОнцы"
+    },
+    "translations": {
+      "ru": "горячий"
+    }
   },
   "interesujący": {
     "lemma": "interesujący",
     "part_of_speech": "adjective",
-    "translations": { "ru": "интересный" }
+    "translations": {
+      "ru": "интересный"
+    }
+  },
+  "kokosowy": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Mleko kokosowe.",
+        "ru": "Кокосовое молоко.",
+        "ru_transcription": "млЭко кокосОвэ."
+      },
+      {
+        "pl": "Deser kokosowy.",
+        "ru": "Кокосовый десерт.",
+        "ru_transcription": "дэсэр кокосОвы."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "kokosową",
+        "dative": "kokosowej",
+        "genitive": "kokosowej",
+        "instrumental": "kokosową",
+        "locative": "kokosowej",
+        "nominative": "kokosowa",
+        "vocative": "kokosowa"
+      },
+      "masculine": {
+        "accusative": "kokosowy/kokosowego",
+        "dative": "kokosowemu",
+        "genitive": "kokosowego",
+        "instrumental": "kokosowym",
+        "locative": "kokosowym",
+        "nominative": "kokosowy",
+        "vocative": "kokosowy"
+      },
+      "neuter": {
+        "accusative": "kokosowe",
+        "dative": "kokosowemu",
+        "genitive": "kokosowego",
+        "instrumental": "kokosowym",
+        "locative": "kokosowym",
+        "nominative": "kokosowe",
+        "vocative": "kokosowe"
+      }
+    },
+    "lemma": "kokosowy",
+    "morphology": {
+      "gradable": false
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "kokosowa",
+          "ru": "кокосОва"
+        },
+        {
+          "pl": "kokosowe",
+          "ru": "кокосОвэ"
+        }
+      ],
+      "ru_transcription": "кокосОвы"
+    },
+    "translations": {
+      "ru": "кокосовый"
+    }
+  },
+  "kremowy": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Sos kremowy.",
+        "ru": "Кремовый соус.",
+        "ru_transcription": "сос крэмОвы."
+      },
+      {
+        "pl": "Zupa kremowa.",
+        "ru": "Крем-суп.",
+        "ru_transcription": "зупа крэмОва."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "kremową",
+        "dative": "kremowej",
+        "genitive": "kremowej",
+        "instrumental": "kremową",
+        "locative": "kremowej",
+        "nominative": "kremowa",
+        "vocative": "kremowa"
+      },
+      "masculine": {
+        "accusative": "kremowy/kremowego",
+        "dative": "kremowemu",
+        "genitive": "kremowego",
+        "instrumental": "kremowym",
+        "locative": "kremowym",
+        "nominative": "kremowy",
+        "vocative": "kremowy"
+      },
+      "neuter": {
+        "accusative": "kremowe",
+        "dative": "kremowemu",
+        "genitive": "kremowego",
+        "instrumental": "kremowym",
+        "locative": "kremowym",
+        "nominative": "kremowe",
+        "vocative": "kremowe"
+      }
+    },
+    "lemma": "kremowy",
+    "morphology": {
+      "gradable": false
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "kremowa",
+          "ru": "крэмОва"
+        },
+        {
+          "pl": "kremowe",
+          "ru": "крэмОвэ"
+        }
+      ],
+      "ru_transcription": "крэмОвы"
+    },
+    "translations": {
+      "ru": "кремовый"
+    }
+  },
+  "piękny": {
+    "lemma": "piękny",
+    "part_of_speech": "adjective",
+    "translations": {
+      "ru": "красивый"
+    }
+  },
+  "przepyszny": {
+    "applied_rules": [
+      "rz",
+      "sz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "To jest przepyszne!",
+        "ru": "Это превосходно!",
+        "ru_transcription": "то ест пшЭпышнэ!"
+      },
+      {
+        "pl": "Przepyszny deser.",
+        "ru": "Превосходный десерт.",
+        "ru_transcription": "пшЭпышны дэсэр."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "przepyszną",
+        "dative": "przepysznej",
+        "genitive": "przepysznej",
+        "instrumental": "przepyszną",
+        "locative": "przepysznej",
+        "nominative": "przepyszna",
+        "vocative": "przepyszna"
+      },
+      "masculine": {
+        "accusative": "przepyszny/przepysznego",
+        "dative": "przepysznemu",
+        "genitive": "przepysznego",
+        "instrumental": "przepysznym",
+        "locative": "przepysznym",
+        "nominative": "przepyszny",
+        "vocative": "przepyszny"
+      },
+      "neuter": {
+        "accusative": "przepyszne",
+        "dative": "przepysznemu",
+        "genitive": "przepysznego",
+        "instrumental": "przepysznym",
+        "locative": "przepysznym",
+        "nominative": "przepyszne",
+        "vocative": "przepyszne"
+      }
+    },
+    "lemma": "przepyszny",
+    "morphology": {
+      "gradable": true
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "przepyszna",
+          "ru": "пшЭпышна"
+        },
+        {
+          "pl": "przepyszne",
+          "ru": "пшЭпышнэ"
+        }
+      ],
+      "ru_transcription": "пшЭпышны"
+    },
+    "translations": {
+      "ru": "превосходный"
+    }
   }
 }

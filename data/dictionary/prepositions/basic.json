@@ -1,80 +1,248 @@
 {
-  "na": {
-    "lemma": "na",
-    "part_of_speech": "preposition",
-    "translations": { "ru": "на" },
-    "pronunciation": { 
-      "ru_transcription": "на",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+  "dla": {
+    "applied_rules": [],
     "examples": [
-      { "pl": "Książka jest na stole.", "ru": "Книга на столе.", "ru_transcription": "кшёжка ест на столэ." },
-      { "pl": "Idę na pocztę.", "ru": "Иду на почту.", "ru_transcription": "идЭм на почтЭм." }
+      {
+        "pl": "Stolik dla dwóch osób.",
+        "ru": "Столик на двоих.",
+        "ru_transcription": "столик для двух осуб."
+      },
+      {
+        "pl": "Prezent dla ciebie.",
+        "ru": "Подарок для тебя.",
+        "ru_transcription": "прэзэнт для цЕбЕ."
+      }
     ],
-    "phrases_and_idioms": [
-      { "pl": "na pewno", "ru": "наверняка" },
-      { "pl": "na przykład", "ru": "например" }
-    ],
-    "applied_rules": []
-  },
-  "w": {
-    "lemma": "w",
-    "part_of_speech": "preposition",
-    "translations": { "ru": "в" },
-    "pronunciation": { 
-      "ru_transcription": "в",
-      "key_forms": []
-    },
-    "morphology": {},
     "inflection": {},
-    "examples": [
-      { "pl": "Jestem w domu.", "ru": "Я дома.", "ru_transcription": "естэм в дому." },
-      { "pl": "W poniedziałek mam lekcje.", "ru": "В понедельник у меня уроки.", "ru_transcription": "в понЭдзяВЭк мам лЭкцЕ." }
-    ],
-    "phrases_and_idioms": [
-      { "pl": "w końcu", "ru": "наконец" },
-      { "pl": "w ogóle", "ru": "вообще" }
-    ],
-    "applied_rules": []
+    "lemma": "dla",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "для"
+    },
+    "translations": {
+      "ru": "для"
+    }
   },
   "do": {
-    "lemma": "do",
-    "part_of_speech": "preposition",
-    "translations": { "ru": "к, до, в" },
-    "pronunciation": { 
-      "ru_transcription": "до",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Idę do sklepu.", "ru": "Иду в магазин.", "ru_transcription": "идЭм до склЭпу." },
-      { "pl": "Od rana do wieczora.", "ru": "С утра до вечера.", "ru_transcription": "од рана до вЭчора." }
+      {
+        "pl": "Idę do sklepu.",
+        "ru": "Иду в магазин.",
+        "ru_transcription": "идЭм до склЭпу."
+      },
+      {
+        "pl": "Od rana do wieczora.",
+        "ru": "С утра до вечера.",
+        "ru_transcription": "од рана до вЭчора."
+      }
     ],
+    "inflection": {},
+    "lemma": "do",
+    "morphology": {},
+    "part_of_speech": "preposition",
     "phrases_and_idioms": [
-      { "pl": "do widzenia", "ru": "до свидания" }
+      {
+        "pl": "do widzenia",
+        "ru": "до свидания"
+      }
     ],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "до"
+    },
+    "translations": {
+      "ru": "к, до, в"
+    }
+  },
+  "na": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Książka jest na stole.",
+        "ru": "Книга на столе.",
+        "ru_transcription": "кшёжка ест на столэ."
+      },
+      {
+        "pl": "Idę na pocztę.",
+        "ru": "Иду на почту.",
+        "ru_transcription": "идЭм на почтЭм."
+      }
+    ],
+    "inflection": {},
+    "lemma": "na",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [
+      {
+        "pl": "na pewno",
+        "ru": "наверняка"
+      },
+      {
+        "pl": "na przykład",
+        "ru": "например"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "на"
+    },
+    "translations": {
+      "ru": "на"
+    }
+  },
+  "o": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Myślę o tobie.",
+        "ru": "Думаю о тебе.",
+        "ru_transcription": "мышлЭм о тобЕ."
+      },
+      {
+        "pl": "Opowiadaj o sobie.",
+        "ru": "Рассказывай о себе.",
+        "ru_transcription": "опоВЯдай о собЕ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "o",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "о"
+    },
+    "translations": {
+      "ru": "о, об"
+    }
+  },
+  "przy": {
+    "applied_rules": [
+      "rz"
+    ],
+    "examples": [
+      {
+        "pl": "Stolik przy oknie.",
+        "ru": "Столик у окна.",
+        "ru_transcription": "столик пшы окьнЭ."
+      },
+      {
+        "pl": "Siedzę przy stole.",
+        "ru": "Сижу за столом.",
+        "ru_transcription": "шЁдзэм пшы столэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "przy",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "пшы"
+    },
+    "translations": {
+      "ru": "при, у"
+    }
+  },
+  "w": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Jestem w domu.",
+        "ru": "Я дома.",
+        "ru_transcription": "естэм в дому."
+      },
+      {
+        "pl": "W poniedziałek mam lekcje.",
+        "ru": "В понедельник у меня уроки.",
+        "ru_transcription": "в понЭдзяВЭк мам лЭкцЕ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "w",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [
+      {
+        "pl": "w końcu",
+        "ru": "наконец"
+      },
+      {
+        "pl": "w ogóle",
+        "ru": "вообще"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "в"
+    },
+    "translations": {
+      "ru": "в"
+    }
   },
   "z": {
-    "lemma": "z",
-    "part_of_speech": "preposition",
-    "translations": { "ru": "с, из" },
-    "pronunciation": { 
-      "ru_transcription": "з",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Idę z przyjacielem.", "ru": "Иду с другом.", "ru_transcription": "идЭм з пшыяцЕлем." },
-      { "pl": "Wracam z pracy.", "ru": "Возвращаюсь с работы.", "ru_transcription": "врацам з працы." }
+      {
+        "pl": "Idę z przyjacielem.",
+        "ru": "Иду с другом.",
+        "ru_transcription": "идЭм з пшыяцЕлем."
+      },
+      {
+        "pl": "Wracam z pracy.",
+        "ru": "Возвращаюсь с работы.",
+        "ru_transcription": "врацам з працы."
+      }
     ],
+    "inflection": {},
+    "lemma": "z",
+    "morphology": {},
+    "part_of_speech": "preposition",
     "phrases_and_idioms": [
-      { "pl": "z przyjemnością", "ru": "с удовольствием" }
+      {
+        "pl": "z przyjemnością",
+        "ru": "с удовольствием"
+      }
     ],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "з"
+    },
+    "translations": {
+      "ru": "с, из"
+    }
+  },
+  "za": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dziękuję za pomoc.",
+        "ru": "Спасибо за помощь.",
+        "ru_transcription": "дзЁнкуЕм за помоц."
+      },
+      {
+        "pl": "Zapłaciłem za obiad.",
+        "ru": "Заплатил за обед.",
+        "ru_transcription": "запВАциВэм за обЯд."
+      }
+    ],
+    "inflection": {},
+    "lemma": "za",
+    "morphology": {},
+    "part_of_speech": "preposition",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "за"
+    },
+    "translations": {
+      "ru": "за"
+    }
   }
 }

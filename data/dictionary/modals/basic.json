@@ -1,0 +1,31 @@
+{
+  "można": {
+    "applied_rules": [
+      "ż"
+    ],
+    "examples": [
+      {
+        "pl": "Można zapłacić kartą?",
+        "ru": "Можно оплатить картой?",
+        "ru_transcription": "можна запВАцич картОм?"
+      },
+      {
+        "pl": "Tutaj można palić.",
+        "ru": "Здесь можно курить.",
+        "ru_transcription": "тутай можна палич."
+      }
+    ],
+    "inflection": {},
+    "lemma": "można",
+    "morphology": {},
+    "part_of_speech": "modal",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "можна"
+    },
+    "translations": {
+      "ru": "можно"
+    }
+  }
+}

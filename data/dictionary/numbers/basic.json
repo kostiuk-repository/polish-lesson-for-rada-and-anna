@@ -1,0 +1,156 @@
+{
+  "dwa": {
+    "applied_rules": [
+      "ó"
+    ],
+    "examples": [
+      {
+        "pl": "Dwa piwa, proszę.",
+        "ru": "Два пива, пожалуйста.",
+        "ru_transcription": "два пива прошэм."
+      },
+      {
+        "pl": "Dwie kawy.",
+        "ru": "Два кофе.",
+        "ru_transcription": "двЕ кавы."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "dwie",
+        "dative": "dwóm/dwom",
+        "genitive": "dwóch/dwu",
+        "instrumental": "dwoma",
+        "locative": "dwóch/dwu",
+        "nominative": "dwie",
+        "vocative": "dwie"
+      },
+      "masculine_neuter": {
+        "accusative": "dwa",
+        "dative": "dwóm/dwom",
+        "genitive": "dwóch/dwu",
+        "instrumental": "dwoma",
+        "locative": "dwóch/dwu",
+        "nominative": "dwa",
+        "vocative": "dwa"
+      }
+    },
+    "lemma": "dwa",
+    "morphology": {},
+    "part_of_speech": "numeral",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "dwie",
+          "ru": "двЕ"
+        }
+      ],
+      "ru_transcription": "два"
+    },
+    "translations": {
+      "ru": "два"
+    }
+  },
+  "jeden": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Jeden stolik dla dwóch osób.",
+        "ru": "Один столик на двоих.",
+        "ru_transcription": "Едэн столик для двух осуб."
+      },
+      {
+        "pl": "Jedna kawa, proszę.",
+        "ru": "Один кофе, пожалуйста.",
+        "ru_transcription": "Една кава прошэм."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "jedną",
+        "dative": "jednej",
+        "genitive": "jednej",
+        "instrumental": "jedną",
+        "locative": "jednej",
+        "nominative": "jedna",
+        "vocative": "jedna"
+      },
+      "masculine": {
+        "accusative": "jeden/jednego",
+        "dative": "jednemu",
+        "genitive": "jednego",
+        "instrumental": "jednym",
+        "locative": "jednym",
+        "nominative": "jeden",
+        "vocative": "jeden"
+      },
+      "neuter": {
+        "accusative": "jedno",
+        "dative": "jednemu",
+        "genitive": "jednego",
+        "instrumental": "jednym",
+        "locative": "jednym",
+        "nominative": "jedno",
+        "vocative": "jedno"
+      }
+    },
+    "lemma": "jeden",
+    "morphology": {},
+    "part_of_speech": "numeral",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "jedna",
+          "ru": "Една"
+        },
+        {
+          "pl": "jedno",
+          "ru": "Едно"
+        }
+      ],
+      "ru_transcription": "Едэн"
+    },
+    "translations": {
+      "ru": "один"
+    }
+  },
+  "kilka": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Kilka minut.",
+        "ru": "Несколько минут.",
+        "ru_transcription": "кИлька минут."
+      },
+      {
+        "pl": "Zamówiłem kilka dań.",
+        "ru": "Заказал несколько блюд.",
+        "ru_transcription": "замувИВэм кИлька дань."
+      }
+    ],
+    "inflection": {
+      "accusative": "kilka",
+      "dative": "kilku",
+      "genitive": "kilku",
+      "instrumental": "kilkoma",
+      "locative": "kilku",
+      "nominative": "kilka",
+      "vocative": "kilka"
+    },
+    "lemma": "kilka",
+    "morphology": {},
+    "part_of_speech": "numeral",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "кИлька"
+    },
+    "translations": {
+      "ru": "несколько"
+    }
+  }
+}

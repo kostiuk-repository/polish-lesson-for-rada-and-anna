@@ -1,0 +1,29 @@
+{
+  "–": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dzień – noc.",
+        "ru": "День — ночь.",
+        "ru_transcription": "джэнь — ноц."
+      },
+      {
+        "pl": "To jest – oczywiście – niemożliwe.",
+        "ru": "Это — конечно — невозможно.",
+        "ru_transcription": "то ест — очывИшчЕ — нЭможлИвэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "–",
+    "morphology": {},
+    "part_of_speech": "punctuation",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "тирЭ"
+    },
+    "translations": {
+      "ru": "тире"
+    }
+  }
+}

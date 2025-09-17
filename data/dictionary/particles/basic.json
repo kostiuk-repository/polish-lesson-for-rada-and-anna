@@ -1,0 +1,63 @@
+{
+  "nie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Nie rozumiem.",
+        "ru": "Не понимаю.",
+        "ru_transcription": "нЭ розумЕм."
+      },
+      {
+        "pl": "To nie jest dobre.",
+        "ru": "Это нехорошо.",
+        "ru_transcription": "то нЭ ест добрэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "nie",
+    "morphology": {},
+    "part_of_speech": "particle",
+    "phrases_and_idioms": [
+      {
+        "pl": "nie ma",
+        "ru": "нет"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "нЭ"
+    },
+    "translations": {
+      "ru": "не"
+    }
+  },
+  "też": {
+    "applied_rules": [
+      "ż"
+    ],
+    "examples": [
+      {
+        "pl": "Ja też chcę.",
+        "ru": "Я тоже хочу.",
+        "ru_transcription": "я тЭж хцэм."
+      },
+      {
+        "pl": "To też jest dobre.",
+        "ru": "Это тоже хорошо.",
+        "ru_transcription": "то тЭж ест добрэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "też",
+    "morphology": {},
+    "part_of_speech": "particle",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "тЭж"
+    },
+    "translations": {
+      "ru": "тоже"
+    }
+  }
+}
