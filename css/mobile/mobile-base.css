@@ -352,6 +352,11 @@ pre code {
   font-family: 'Times New Roman', serif;
   color: var(--info-color);
   font-size: var(--font-size-xs);
+  margin-bottom: var(--space-2);
+}
+
+.text-transcription:empty {
+  display: none;
 }
 
 /* Утилиты для сенсорных устройств */

@@ -147,14 +147,16 @@ export class LessonComponent {
 
   generateContentHTML() {
     return `
-      <div class="tabs__content tabs__content--active" data-content="main">
-        ${this.generateDialogHTML()}
-      </div>
-      <div class="tabs__content" data-content="grammar">
-        ${this.generateGrammarHTML()}
-      </div>
-      <div class="tabs__content" data-content="exercises">
-        ${this.generateExercisesHTML()}
+      <div class="tabs__content-wrapper">
+        <div class="tabs__content tabs__content--active" data-content="main">
+          ${this.generateDialogHTML()}
+        </div>
+        <div class="tabs__content" data-content="grammar">
+          ${this.generateGrammarHTML()}
+        </div>
+        <div class="tabs__content" data-content="exercises">
+          ${this.generateExercisesHTML()}
+        </div>
       </div>
     `;
   }
@@ -224,6 +226,7 @@ export class LessonComponent {
   generateDialogLinesHTML() {
     return this.lessonData.content
       .map((line, index) => {
+        const speaker = line.speaker || '';
         const wordsHTML = (line.words || [])
           .map(word => {
             // ИСПРАВЛЕНО: Получаем перевод асинхронно, но показываем загрузку
@@ -240,12 +243,12 @@ export class LessonComponent {
           .join(' ');
           
         return `
-          <div class="dialog-line" 
-               data-speaker="${line.speaker.toLowerCase()}"
+          <div class="dialog-line"
+               data-speaker="${speaker.toLowerCase()}"
                data-line-index="${index}">
-            
+
             <div class="dialog-speaker">
-              ${line.speaker}
+              <span class="dialog-speaker-name">${speaker}</span>
               <button class="audio-play-btn"
                       data-text="${line.sentence}"
                       title="Озвучить"
@@ -297,9 +300,9 @@ export class LessonComponent {
 
   initializeComponents() {
     console.log('🔧 Инициализируем компоненты урока');
-    
+
     // Инициализируем табы
-    const tabsElement = this.container.querySelector('[data-tabs]');
+    const tabsElement = this.container.querySelector('[data-tabs="lesson-tabs"]');
     if (tabsElement) {
       this.tabs = new TabsComponent(tabsElement);
     }
