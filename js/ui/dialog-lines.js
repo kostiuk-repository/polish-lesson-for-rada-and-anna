@@ -124,9 +124,10 @@ export class DialogLinesHandler {
   generateSentenceDetailsHTML({ polish, russian, speaker, lineIndex }) {
     const words = Array.from(this.container.querySelectorAll(`[data-line-index="${lineIndex}"] .clickable-word`));
     const wordAnalysisHTML = words.map(wordEl => {
-        const word = wordEl.textContent;
-        const wordKey = wordEl.dataset.wordKey;
-        const wordData = this.dictionary.getWord(wordKey);
+        const word = wordEl.textContent.trim();
+        const rawKey = wordEl.dataset.wordKey || word;
+        const normalizedKey = rawKey.toLowerCase();
+        const wordData = this.dictionary?.getWord?.(rawKey) || this.dictionary?.getWord?.(normalizedKey) || null;
         const translation = wordData?.translations?.ru || 'Перевод не найден';
         return `<li><strong>${word}</strong> - ${translation}</li>`;
     }).join('');
@@ -154,7 +155,7 @@ export class DialogLinesHandler {
             </div>
 
             <div class="tabs__content" data-content="pronunciation">
-                <div class.pronunciation-guide">
+                <div class="pronunciation-guide">
                     ${this.generatePronunciationGuide(polish)}
                 </div>
             </div>

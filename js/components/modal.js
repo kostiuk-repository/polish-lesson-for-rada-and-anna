@@ -219,37 +219,75 @@ export class ModalComponent {
   }
 
   generateConjugationTabHTML(wordData) {
-    // Бажаний порядок часів
-    const tenseOrder = ['present', 'past_masc', 'past_fem', 'past_neut', 'future', 'imperative', 'conditional'];
-    
-    // Фільтруємо та сортуємо часи, які є у слова
-    const tenses = tenseOrder.filter(tense => wordData.inflection[tense]);
+    const inflection = wordData.inflection || {};
+    const tenseOrder = ['present', 'past', 'past_masc', 'past_fem', 'past_neut', 'future', 'imperative', 'conditional'];
 
-    if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
+    const availableTenses = [];
 
-    const personOrder = ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'];
+    tenseOrder.forEach((tenseKey) => {
+      const tenseData = inflection[tenseKey];
+      if (tenseData && Object.keys(tenseData).length > 0) {
+        availableTenses.push({ key: tenseKey, forms: tenseData });
+      }
+    });
 
-    const tenseTabs = tenses.map((tense, index) => `
-      <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${tense}">${this.getTenseName(tense)}</button>
-    `).join('');
+    Object.entries(inflection).forEach(([tenseKey, forms]) => {
+      if (!tenseOrder.includes(tenseKey) && forms && Object.keys(forms).length > 0) {
+        availableTenses.push({ key: tenseKey, forms });
+      }
+    });
 
-    const tenseContents = tenses.map((tense, index) => {
-      const forms = wordData.inflection[tense];
-      return `
-        <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${tense}">
-          <div class="conjugation-table-wrapper">
-            <table class="conjugation-table table--compact">
-              <tbody>
-                ${personOrder.filter(form => forms[form]).map(form => `
-                  <tr>
-                    <td>${this.getFormName(form)}</td>
-                    <td><strong>${forms[form]}</strong></td>
-                  </tr>`).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>`;
-    }).join('');
+    if (availableTenses.length === 0) {
+      return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
+    }
+
+    const formOrders = {
+      present: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
+      future: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
+      conditional: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
+      imperative: ['sg2', 'pl1', 'pl2'],
+      past: ['sg1m', 'sg1f', 'sg2m', 'sg2f', 'sg3m', 'sg3f', 'sg3n', 'pl1m', 'pl1f', 'pl2m', 'pl2f', 'pl3m', 'pl3f'],
+      past_masc: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
+      past_fem: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
+      past_neut: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3']
+    };
+
+    const tenseTabs = availableTenses
+      .map(({ key }, index) => `
+        <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${key}">${this.getTenseName(key)}</button>
+      `)
+      .join('');
+
+    const tenseContents = availableTenses
+      .map(({ key, forms }, index) => {
+        const order = formOrders[key] || Object.keys(forms);
+        const seen = new Set();
+
+        const orderedRows = order
+          .filter(formKey => forms[formKey])
+          .map(formKey => {
+            seen.add(formKey);
+            return this.generateConjugationRow(formKey, forms[formKey]);
+          });
+
+        const remainingRows = Object.entries(forms)
+          .filter(([formKey]) => !seen.has(formKey) && forms[formKey])
+          .map(([formKey, value]) => this.generateConjugationRow(formKey, value));
+
+        const rows = [...orderedRows, ...remainingRows].join('');
+
+        return `
+          <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${key}">
+            <div class="conjugation-table-wrapper">
+              <table class="conjugation-table table--compact">
+                <tbody>
+                  ${rows}
+                </tbody>
+              </table>
+            </div>
+          </div>`;
+      })
+      .join('');
 
     return `
       <div class="inflection-container">
@@ -260,6 +298,14 @@ export class ModalComponent {
           <div class="tabs__content-wrapper">${tenseContents}</div>
         </div>
       </div>`;
+  }
+
+  generateConjugationRow(formKey, value) {
+    return `
+      <tr>
+        <td>${this.getFormName(formKey)}</td>
+        <td><strong>${value}</strong></td>
+      </tr>`;
   }
 
   generateDeclensionTabHTML(wordData) {
@@ -295,12 +341,39 @@ export class ModalComponent {
   }
 
   getTenseName(tenseKey) {
-    const names = { present: 'Настоящее', past_masc: 'Прошедшее (муж.)', past_fem: 'Прошедшее (жен.)', past_neut: 'Прошедшее (ср.)', future: 'Будущее', imperative: 'Повелительное', conditional: 'Условное' };
+    const names = { present: 'Настоящее', past: 'Прошедшее', past_masc: 'Прошедшее (муж.)', past_fem: 'Прошедшее (жен.)', past_neut: 'Прошедшее (ср.)', future: 'Будущее', imperative: 'Повелительное', conditional: 'Условное' };
     return names[tenseKey] || this.capitalize(tenseKey);
   }
 
   getFormName(form) {
-    const names = { sg1: 'ja', sg2: 'ty', sg3: 'on/ona/ono', pl1: 'my', pl2: 'wy', pl3: 'oni/one', nominative: 'Именительный', genitive: 'Родительный', dative: 'Дательный', accusative: 'Винительный', instrumental: 'Творительный', locative: 'Предложный', vocative: 'Звательный' };
+    const names = {
+      sg1: 'ja',
+      sg2: 'ty',
+      sg3: 'on/ona/ono',
+      pl1: 'my',
+      pl2: 'wy',
+      pl3: 'oni/one',
+      sg1m: 'ja (муж.)',
+      sg1f: 'ja (жен.)',
+      sg2m: 'ty (муж.)',
+      sg2f: 'ty (жен.)',
+      sg3m: 'on',
+      sg3f: 'ona',
+      sg3n: 'ono',
+      pl1m: 'my (муж.)',
+      pl1f: 'my (жен.)',
+      pl2m: 'wy (муж.)',
+      pl2f: 'wy (жен.)',
+      pl3m: 'oni',
+      pl3f: 'one',
+      nominative: 'Именительный',
+      genitive: 'Родительный',
+      dative: 'Дательный',
+      accusative: 'Винительный',
+      instrumental: 'Творительный',
+      locative: 'Предложный',
+      vocative: 'Звательный'
+    };
     return names[form] || form;
   }
 
