@@ -21,7 +21,7 @@ class App {
             { path: '/lesson/:id', render: (params) => this.showLesson(params.id) },
             { path: '/dictionary', render: () => this.showPlaceholder('Словник') },
             { path: '/rules', render: () => this.showPlaceholder('Правила') },
-            { path: '/exercises', render: () => this.showPlaceholder('Вправи') },
+            { path: '/categories', render: () => this.showCatalog() },
         ];
         this.router = new Router(routes, this.rootElement);
     }
