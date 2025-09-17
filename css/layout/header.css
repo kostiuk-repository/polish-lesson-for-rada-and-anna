@@ -1,11 +1,11 @@
 .app-header {
-    background-color: var(--color-surface-primary);
-    border-bottom: 1px solid var(--color-border);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-200);
     padding: var(--space-3) 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
 }
 
 .header-container {
