@@ -16,15 +16,16 @@
 </head>
 <body>
     <div id="app" class="app">
-        <nav id="main-navigation" class="main-nav">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li><a href="#" class="nav-link">Основы польского</a></li>
-                    <li><a href="#/categories" class="nav-link" data-nav-link="categories">Категории</a></li>
-                    <li><a href="#/dictionary" class="nav-link" data-nav-link="dictionary">Словарь</a></li>
-                </ul>
+        <header class="app-header">
+            <div class="container header-container">
+                <a href="/" class="logo" data-router-link>Polish App</a>
+                <nav class="app-nav">
+                    <a href="/dictionary" class="nav-link" data-router-link>Словарь</a>
+                    <a href="/rules" class="nav-link" data-router-link>Правила</a>
+                    <a href="/exercises" class="nav-link" data-router-link>Упражнения</a>
+                </nav>
             </div>
-        </nav>
+        </header>
 
         <main id="main-content" class="main-content">
             <div id="page-container" class="container">

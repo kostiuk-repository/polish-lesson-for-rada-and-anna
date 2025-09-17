@@ -1,146 +1,70 @@
 import { Router } from './core/router.js';
-import { API } from './core/api.js';
-import { DictionaryService } from './services/dictionary.js';
-import { SpeechService } from './services/speech.js';
-import { StorageService } from './services/storage.js';
+import { Api } from './core/api.js';
+import { Dictionary } from './services/dictionary.js';
+import { ModalComponent } from './components/modal.js';
+import { CatalogComponent } from './components/catalog.js';
+import { LessonComponent } from './components/lesson.js';
 
-class PolishLearningApp {
-  constructor() {
-    this.router = new Router();
-    this.api = new API();
-    this.dictionary = new DictionaryService(this.api);
-    this.speech = new SpeechService();
-    this.storage = new StorageService();
-    this.currentComponent = null;
-    this.pageContainer = null; // Initialize as null
-  }
-
-  async init() {
-    try {
-      // Get the container element here, inside init
-      this.pageContainer = document.getElementById('page-container');
-      if (!this.pageContainer) {
-        console.error('Fatal Error: #page-container not found in the DOM.');
-        return;
-      }
-
-      await this.dictionary.init();
-      await this.speech.init();
-
-      this.setupRouting();
-      this.setupNavigation();
-
-      this.router.start();
-
-      console.log('✅ Polish Learning App инициализирован');
-    } catch (error) {
-      console.error('❌ Ошибка инициализации:', error);
-      this.showError('Ошибка загрузки приложения');
+class App {
+    constructor() {
+        this.api = new Api('data');
+        this.dictionary = new Dictionary(this.api);
+        this.modal = new ModalComponent({ dictionary: this.dictionary });
+        this.rootElement = document.getElementById('app-root');
+        this.initRouter();
+        this.initEventListeners();
     }
-  }
-  
-  setupRouting() {
-    this.router.addRoute('', () => this.router.navigate('categories', true));
-    this.router.addRoute('categories', () => this.loadCatalogPage());
-    this.router.addRoute('categories/:id', (params) => this.loadCategoryPage(params.id));
-    this.router.addRoute('lesson/:id', (params) => this.loadLessonPage(params.id));
-    this.router.addRoute('dictionary', () => this.loadDictionaryPage());
-  }
-  
-  setupNavigation() {
-      const nav = document.getElementById('main-navigation');
-      if (!nav) {
-        console.warn('Main navigation element не найден.');
-        return;
-      }
 
-      nav.addEventListener('click', (e) => {
-          const link = e.target.closest('[data-nav-link]');
-          if (!link) {
-              return;
-          }
-
-          e.preventDefault();
-
-          const targetPath = link.dataset.navLink;
-          if (targetPath) {
-              this.router.navigate(targetPath);
-              this.updateActiveTab(targetPath);
-          }
-      });
-
-      // Set active tab on page load
-      window.addEventListener('hashchange', () => this.updateActiveTab());
-      this.updateActiveTab();
-  }
-
-  updateActiveTab(forcedPath) {
-      const nav = document.getElementById('main-navigation');
-      if (!nav) {
-        return;
-      }
-
-      const path = forcedPath || this.router.getCurrentPath().split('/')[0] || 'categories';
-      nav.querySelectorAll('[data-nav-link]').forEach(link => {
-          link.classList.toggle('active', link.dataset.navLink === path);
-      });
-  }
-
-  async loadCatalogPage() {
-    this.destroyCurrentComponent();
-    const { CatalogComponent } = await import('./components/catalog.js');
-    this.currentComponent = new CatalogComponent({ 
-        container: this.pageContainer, 
-        api: this.api 
-    });
-    await this.currentComponent.render();
-  }
-  
-  async loadCategoryPage(categoryId) {
-    this.destroyCurrentComponent();
-    const { CategoryComponent } = await import('./components/category.js');
-    this.currentComponent = new CategoryComponent({
-        container: this.pageContainer,
-        api: this.api,
-        categoryId: categoryId
-    });
-    await this.currentComponent.render();
-  }
-
-  async loadLessonPage(lessonId) {
-    this.destroyCurrentComponent();
-    const { LessonComponent } = await import('./components/lesson.js');
-    this.currentComponent = new LessonComponent({
-      container: this.pageContainer,
-      lessonId,
-      api: this.api,
-      dictionary: this.dictionary,
-      speech: this.speech,
-      storage: this.storage
-    });
-    await this.currentComponent.render();
-  }
-
-  async loadDictionaryPage() {
-    this.destroyCurrentComponent();
-    this.pageContainer.innerHTML = '<h1>Словарь (в разработке)</h1>';
-  }
-
-  showError(message) {
-    if (this.pageContainer) {
-      this.pageContainer.innerHTML = `<div class="error-container"><h2>Произошла ошибка</h2><p>${message}</p></div>`;
+    initRouter() {
+        const routes = [
+            { path: '/', render: () => this.showCatalog() },
+            { path: '/lesson/:id', render: (params) => this.showLesson(params.id) },
+            { path: '/dictionary', render: () => this.showPlaceholder('Словник') },
+            { path: '/rules', render: () => this.showPlaceholder('Правила') },
+            { path: '/exercises', render: () => this.showPlaceholder('Вправи') },
+        ];
+        this.router = new Router(routes, this.rootElement);
     }
-  }
 
-  destroyCurrentComponent() {
-    if (this.currentComponent && typeof this.currentComponent.destroy === 'function') {
-      this.currentComponent.destroy();
+    initEventListeners() {
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.matches('[data-router-link]')) {
+                e.preventDefault();
+                const targetUrl = link.getAttribute('href');
+                this.router.navigateTo(targetUrl);
+            }
+        });
     }
-    this.pageContainer.innerHTML = '';
-  }
+
+    showCatalog() {
+        if (!this.catalogComponent) {
+            this.catalogComponent = new CatalogComponent(this.api, this.router);
+        }
+        this.catalogComponent.render(this.rootElement);
+    }
+
+    showLesson(lessonId) {
+        if (!this.lessonComponent) {
+            this.lessonComponent = new LessonComponent({
+                api: this.api,
+                dictionary: this.dictionary,
+                modal: this.modal,
+            });
+        }
+        this.lessonComponent.loadAndRender(lessonId, this.rootElement);
+    }
+    
+    showPlaceholder(pageTitle) {
+        this.rootElement.innerHTML = `
+            <div class="container placeholder-page">
+                <h1 class="placeholder-title">${pageTitle}</h1>
+                <p class="placeholder-text">Цей розділ знаходиться в розробці.</p>
+            </div>
+        `;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.PolishApp = new PolishLearningApp();
-  window.PolishApp.init();
+    window.app = new App();
 });

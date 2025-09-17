@@ -29,3 +29,18 @@
 @import 'utils/animations.css';
 @import 'utils/utilities.css';
 @import 'utils/responsive.css';
+
+.placeholder-page {
+    padding-top: var(--space-10);
+    text-align: center;
+}
+
+.placeholder-title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--space-4);
+}
+
+.placeholder-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
