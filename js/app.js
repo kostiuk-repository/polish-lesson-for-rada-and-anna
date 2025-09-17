@@ -52,18 +52,16 @@ class App {
     }
 
     async initServices() {
-        try {
-            // Инициализируем сервисы в нужном порядке
-            await this.storage.init?.() || Promise.resolve();
-            await this.speech.init?.() || Promise.resolve();
-            
-            // Словарь пока не инициализируем, чтобы не блокировать загрузку
-            // await this.dictionary.init();
-            
-            console.log('📦 Сервисы инициализированы');
-        } catch (error) {
-            console.warn('⚠️ Некоторые сервисы не удалось инициализировать:', error);
-        }
+        this.api = new ApiService();
+        this.storage = new StorageService();
+        this.speechService = new SpeechService();
+        this.dictionaryService = new DictionaryService(this.api);
+        this.modal = new Modal('modal');
+
+        await Promise.all([
+            this.speechService.init(),
+            this.dictionaryService.init()
+        ]);
     }
 
     initRouter() {
