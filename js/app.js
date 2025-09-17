@@ -10,7 +10,7 @@ import { CategoryComponent } from './components/category.js';
 
 class App {
     constructor() {
-        this.api = new API('data');
+        this.api = new API('data/');
         this.dictionary = new DictionaryService(this.api);
         this.speech = new SpeechService();
         this.storage = new StorageService();
