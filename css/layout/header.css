@@ -1,51 +1,38 @@
-/* Главный заголовок приложения */
 .page-header {
-  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
-  padding: var(--space-12) 0 var(--space-8) 0;
-  margin-bottom: var(--space-8);
+  padding: var(--space-6) 0; /* Уменьшил вертикальные отступы */
+  margin-bottom: var(--space-6); /* Уменьшил нижний отступ */
   border-bottom: 1px solid var(--gray-200);
-  position: relative;
-  overflow: hidden;
+  background: var(--white); /* Убрал градиент */
 }
 
+/* Удалил псевдо-элемент с градиентной полосой */
 .page-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 50%, var(--info-color) 100%);
+  display: none;
 }
 
 .page-header h1 {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--gray-800);
-  margin-bottom: var(--space-4);
-  text-align: center;
-  position: relative;
+  font-size: var(--font-size-4xl); /* Немного уменьшил шрифт */
+  text-align: left; /* Выравнивание по левому краю для более чистого вида */
 }
 
+/* Удалил декоративное подчеркивание под заголовком */
 .page-header h1::after {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-2);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  border-radius: var(--radius-full);
+  display: none;
 }
 
+/* Удалил подзаголовок, так как он не несет важной информации на этих страницах */
 .page-subtitle {
-  font-size: var(--font-size-xl);
-  color: var(--gray-600);
+  display: none;
+}
+
+/* Добавил компактный модификатор для заголовка в категории */
+.page-header--compact {
+  padding: var(--space-8) 0;
+  margin-bottom: var(--space-4);
+}
+
+.page-header--compact h1 {
   text-align: center;
-  line-height: var(--line-height-relaxed);
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* Навигационная панель */

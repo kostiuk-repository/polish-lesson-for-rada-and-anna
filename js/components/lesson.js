@@ -312,8 +312,15 @@ export class LessonComponent {
 
   toggleTranslations(show) {
     const dialogContainer = this.container.querySelector('.dialog-container');
+    const toggleSwitch = this.container.querySelector('.toggle-switch');
+
     if (dialogContainer) {
-        dialogContainer.classList.toggle('show-translations', show);
+      dialogContainer.classList.toggle('show-translations', show);
+    }
+    
+    if (toggleSwitch) {
+      toggleSwitch.classList.toggle('toggle-switch--active', show);
+      toggleSwitch.setAttribute('aria-checked', show);
     }
   }
 

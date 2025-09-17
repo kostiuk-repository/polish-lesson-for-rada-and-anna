@@ -27,16 +27,29 @@ export class CategoryComponent {
 
   generateCategoryHTML() {
     return `
-      <header class="page-header">
+      <header class="page-header page-header--compact">
         <div class="container">
           <a href="#/categories" class="btn btn--outline mb-4">&larr; Назад до категорій</a>
           <h1>${this.category.title}</h1>
-          <p class="page-subtitle">${this.category.description}</p>
         </div>
       </header>
       <section class="filters-section">
           <div class="container">
-            // ... фильтры ...
+              <div class="filters-container">
+                  <div class="filter-group">
+                      <label for="search-input">Пошук:</label>
+                      <input type="text" id="search-input" class="search-input" placeholder="Пошук по назві...">
+                  </div>
+                  <div class="filter-group">
+                      <label for="type-filter">Тип:</label>
+                      <select id="type-filter" class="filter-select">
+                          <option value="all">Всі типи</option>
+                          <option value="dialogue">Діалог</option>
+                          <option value="review">Відгук</option>
+                          <option value="text">Текст</option>
+                      </select>
+                  </div>
+              </div>
           </div>
       </section>
       <section class="catalog-section">
