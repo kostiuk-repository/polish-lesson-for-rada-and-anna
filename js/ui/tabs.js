@@ -66,37 +66,36 @@ export class TabsComponent {
 
     if (!newContent || !this.contentWrapper) return;
     
-    // Розраховуємо висоту нового контенту
+    // Встановлюємо точну висоту для плавної анімації
     const newHeight = newContent.scrollHeight;
 
-    // Для плавної анімації фіксуємо поточну висоту обгортки
-    if (animate) {
-      this.contentWrapper.style.overflow = 'hidden';
-      this.contentWrapper.style.height = `${this.contentWrapper.offsetHeight}px`;
-    }
-
-    // Ховаємо старий контент і показуємо новий
+    // Спочатку ховаємо старий контент
     if (oldContent) {
       oldContent.classList.remove(this.options.contentActiveClass);
     }
+    
+    // Показуємо новий контент, щоб розрахувати висоту
     newContent.classList.add(this.options.contentActiveClass);
+    
+    if (animate) {
+      this.contentWrapper.style.overflow = 'hidden';
+      // Встановлюємо висоту перед анімацією, якщо вона ще не встановлена
+      if (this.contentWrapper.style.height === 'auto' || !this.contentWrapper.style.height) {
+          this.contentWrapper.style.height = `${this.contentWrapper.offsetHeight}px`;
+      }
 
-    // Асинхронно запускаємо анімацію, щоб браузер встиг обробити зміни
-    requestAnimationFrame(() => {
-      if (animate) {
+      requestAnimationFrame(() => {
         this.contentWrapper.style.transition = `height ${this.options.animationDuration}ms ease-in-out`;
         this.contentWrapper.style.height = `${newHeight}px`;
 
-        // Після анімації повертаємо автоматичну висоту
         setTimeout(() => {
           this.contentWrapper.style.transition = '';
           this.contentWrapper.style.height = 'auto';
           this.contentWrapper.style.overflow = '';
         }, this.options.animationDuration);
-      } else {
-        // Якщо анімація не потрібна, просто встановлюємо висоту
-        this.contentWrapper.style.height = 'auto';
-      }
-    });
+      });
+    } else {
+      this.contentWrapper.style.height = 'auto';
+    }
   }
 }

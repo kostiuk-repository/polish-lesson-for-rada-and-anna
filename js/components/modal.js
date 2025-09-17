@@ -158,6 +158,10 @@ export class ModalComponent {
   generateWordContent(wordData) {
     const isVerb = wordData.part_of_speech === 'verb';
     const inflectionTabTitle = isVerb ? 'Спряжение' : 'Склонение';
+
+    // Перевіряємо, чи є взагалі дані для вкладки "Склонение/Спряжение"
+    const hasInflection = wordData.inflection && Object.keys(wordData.inflection).length > 0;
+
     return `
       <div class="word-details">
         ${this.generateWordHeader(wordData)}
@@ -165,7 +169,7 @@ export class ModalComponent {
           <div class="tabs__list" role="tablist">
             <button class="tabs__button tabs__button--active" role="tab" data-tab="base">База</button>
             <button class="tabs__button" role="tab" data-tab="examples">Примеры</button>
-            ${wordData.inflection ? `<button class="tabs__button" role="tab" data-tab="inflection">${inflectionTabTitle}</button>` : ''}
+            ${hasInflection ? `<button class="tabs__button" role="tab" data-tab="inflection">${inflectionTabTitle}</button>` : ''}
           </div>
         </nav>
         <div class="modal-section">
@@ -176,7 +180,7 @@ export class ModalComponent {
             <div class="tabs__content" data-content="examples">
               ${this.generateExamplesTabHTML(wordData)}
             </div>
-            ${wordData.inflection ? `
+            ${hasInflection ? `
             <div class="tabs__content" data-content="inflection">
               ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
             </div>
@@ -215,7 +219,12 @@ export class ModalComponent {
   }
 
   generateConjugationTabHTML(wordData) {
-    const tenses = Object.keys(wordData.inflection);
+    // Бажаний порядок часів
+    const tenseOrder = ['present', 'past_masc', 'past_fem', 'past_neut', 'future', 'imperative', 'conditional'];
+    
+    // Фільтруємо та сортуємо часи, які є у слова
+    const tenses = tenseOrder.filter(tense => wordData.inflection[tense]);
+
     if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
 
     const personOrder = ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'];
