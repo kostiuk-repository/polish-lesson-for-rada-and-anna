@@ -47,8 +47,23 @@ class PolishLearningApp {
       nav.addEventListener('click', (e) => {
           const tab = e.target.closest('[data-tab-link]');
           if (tab) {
+              // Update active tab style
+              nav.querySelectorAll('.tabs__button').forEach(t => t.classList.remove('tabs__button--active'));
+              tab.classList.add('tabs__button--active');
+              
               this.router.navigate(tab.dataset.tabLink);
           }
+      });
+      // Set active tab on page load
+      window.addEventListener('hashchange', () => this.updateActiveTab());
+      this.updateActiveTab();
+  }
+  
+  updateActiveTab() {
+      const path = this.router.getCurrentPath().split('/')[0] || 'categories';
+      const nav = document.getElementById('main-navigation');
+      nav.querySelectorAll('.tabs__button').forEach(t => {
+          t.classList.toggle('tabs__button--active', t.dataset.tabLink === path);
       });
   }
 
