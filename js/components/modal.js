@@ -2,7 +2,7 @@ import { TabsComponent } from '../ui/tabs.js';
 
 export class ModalComponent {
   constructor({ dictionary }) {
-    this.dictionary = dictionary; // Залежність від DictionaryService
+    this.dictionary = dictionary;
     this.modal = null;
     this.isOpen = false;
     this.currentContent = null;
@@ -33,28 +33,19 @@ export class ModalComponent {
           <header class="modal__header">
             <h2 class="modal__title" id="modal-title"></h2>
             <div class="modal__controls">
-              <button class="modal__control-btn bookmark-btn" 
-                      title="Добавить в закладки"
-                      aria-label="Добавить в закладки">
+              <button class="modal__control-btn bookmark-btn" title="Добавить в закладки" aria-label="Добавить в закладки">
                 <i class="fas fa-bookmark"></i>
               </button>
-              <button class="modal__control-btn audio-btn" 
-                      title="Прослушать произношение"
-                      aria-label="Прослушать произношение">
+              <button class="modal__control-btn audio-btn" title="Прослушать произношение" aria-label="Прослушать произношение">
                 <i class="fas fa-volume-up"></i>
               </button>
             </div>
-            <button class="modal__close" 
-                    aria-label="Закрыть модальное окно">
+            <button class="modal__close" aria-label="Закрыть модальное окно">
               <i class="fas fa-times"></i>
             </button>
           </header>
-          
-          <div class="modal__body" id="modal-body">
-            </div>
-          
-          <footer class="modal__footer" id="modal-footer" style="display: none;">
-            </footer>
+          <div class="modal__body" id="modal-body"></div>
+          <footer class="modal__footer" id="modal-footer" style="display: none;"></footer>
         </div>
       `;
       
@@ -70,59 +61,32 @@ export class ModalComponent {
 
   setupEventListeners() {
     this.modal.addEventListener('click', (e) => {
-      if (e.target === this.modal) {
-        this.close();
-      }
+      if (e.target === this.modal) this.close();
     });
-
-    const closeBtn = this.modal.querySelector('.modal__close');
-    closeBtn.addEventListener('click', () => this.close());
-
-    const bookmarkBtn = this.modal.querySelector('.bookmark-btn');
-    bookmarkBtn.addEventListener('click', () => this.toggleBookmark());
-
-    const audioBtn = this.modal.querySelector('.audio-btn');
-    audioBtn.addEventListener('click', () => this.playAudio());
-
+    this.modal.querySelector('.modal__close').addEventListener('click', () => this.close());
+    this.modal.querySelector('.bookmark-btn').addEventListener('click', () => this.toggleBookmark());
+    this.modal.querySelector('.audio-btn').addEventListener('click', () => this.playAudio());
     this.modal.addEventListener('keydown', (e) => this.handleKeyDown(e));
   }
 
   showWord(wordData, options = {}) {
     const content = this.generateWordContent(wordData);
-    
-    this.open({
-      title: wordData.lemma,
-      content,
-      size: 'large',
-      wordData,
-      ...options
-    });
+    this.open({ title: wordData.lemma, content, size: 'large', wordData, ...options });
   }
 
   open(config) {
-    const {
-      title = '',
-      content = '',
-      size = 'default',
-      footer = null,
-      onClose = null,
-      wordData = null
-    } = config;
-
+    const { title = '', content = '', size = 'default', footer = null, onClose = null, wordData = null } = config;
     this.focusedElementBeforeModal = document.activeElement;
     this.onCloseCallback = onClose;
     this.currentContent = { wordData, ...config };
-
     this.setTitle(title);
     this.setContent(content);
     this.setFooter(footer);
     this.setSize(size);
     this.updateHeaderButtons(wordData);
-
     this.modal.classList.add('modal--open');
     this.modal.setAttribute('aria-hidden', 'false');
     this.isOpen = true;
-
     this.focusModal();
     document.body.style.overflow = 'hidden';
     this.modal.querySelector('.modal__content').classList.add('modal-enter');
@@ -130,31 +94,17 @@ export class ModalComponent {
 
   close() {
     if (!this.isOpen) return;
-
     const content = this.modal.querySelector('.modal__content');
     content.classList.add('modal-exit');
-
     setTimeout(() => {
       if (this.focusedElementBeforeModal) {
-        try {
-          this.focusedElementBeforeModal.focus();
-        } catch (e) {
-          // ignore
-        }
-      } else if (document.activeElement && this.modal.contains(document.activeElement)) {
-        try {
-          document.activeElement.blur();
-        } catch (e) {
-          // ignore
-        }
+        try { this.focusedElementBeforeModal.focus(); } catch (e) {}
       }
-
       this.modal.classList.remove('modal--open');
       this.modal.setAttribute('aria-hidden', 'true');
       this.isOpen = false;
       document.body.style.overflow = '';
       content.classList.remove('modal-enter', 'modal-exit');
-
       if (this.onCloseCallback) {
         this.onCloseCallback();
         this.onCloseCallback = null;
@@ -163,9 +113,7 @@ export class ModalComponent {
     }, 300);
   }
 
-  setTitle(title) {
-    this.modal.querySelector('#modal-title').textContent = title;
-  }
+  setTitle(title) { this.modal.querySelector('#modal-title').textContent = title; }
 
   setContent(content) {
     const bodyElement = this.modal.querySelector('#modal-body');
@@ -175,10 +123,7 @@ export class ModalComponent {
       bodyElement.innerHTML = '';
       bodyElement.appendChild(content);
     }
-    const tabsInsideModal = bodyElement.querySelectorAll('[data-tabs]');
-    if (tabsInsideModal.length > 0) {
-      tabsInsideModal.forEach(tabContainer => new TabsComponent(tabContainer));
-    }
+    bodyElement.querySelectorAll('[data-tabs]').forEach(tabContainer => new TabsComponent(tabContainer));
   }
 
   setFooter(footer) {
@@ -194,20 +139,16 @@ export class ModalComponent {
   setSize(size) {
     const content = this.modal.querySelector('.modal__content');
     content.classList.remove('modal--small', 'modal--large', 'modal--full');
-    if (size !== 'default') {
-      content.classList.add(`modal--${size}`);
-    }
+    if (size !== 'default') content.classList.add(`modal--${size}`);
   }
 
   updateHeaderButtons(wordData) {
     const bookmarkBtn = this.modal.querySelector('.bookmark-btn');
     const audioBtn = this.modal.querySelector('.audio-btn');
-
     if (wordData) {
       bookmarkBtn.style.display = 'flex';
       audioBtn.style.display = 'flex';
-      const isBookmarked = this.isWordBookmarked(wordData.lemma);
-      bookmarkBtn.classList.toggle('active', isBookmarked);
+      bookmarkBtn.classList.toggle('active', this.isWordBookmarked(wordData.lemma));
     } else {
       bookmarkBtn.style.display = 'none';
       audioBtn.style.display = 'none';
@@ -217,74 +158,66 @@ export class ModalComponent {
   generateWordContent(wordData) {
     const isVerb = wordData.part_of_speech === 'verb';
     const inflectionTabTitle = isVerb ? 'Спряжение' : 'Склонение';
-
     return `
       <div class="word-details">
         ${this.generateWordHeader(wordData)}
-        
         <nav class="tabs tabs--chips" data-tabs="word-details-tabs">
-          </nav>
-        
+          <div class="tabs__list" role="tablist">
+            <button class="tabs__button tabs__button--active" role="tab" data-tab="base">База</button>
+            <button class="tabs__button" role="tab" data-tab="examples">Примеры</button>
+            ${wordData.inflection ? `<button class="tabs__button" role="tab" data-tab="inflection">${inflectionTabTitle}</button>` : ''}
+          </div>
+        </nav>
         <div class="modal-section">
-          <div class="tabs__content_wrapper"> <div class="tabs__content tabs__content--active" data-content="base">
+          <div class="tabs__content-wrapper">
+            <div class="tabs__content tabs__content--active" data-content="base">
               ${this.generateBaseTabHTML(wordData)}
             </div>
             <div class="tabs__content" data-content="examples">
               ${this.generateExamplesTabHTML(wordData)}
             </div>
             ${wordData.inflection ? `
-              <div class="tabs__content" data-content="inflection">
-                ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
-              </div>
+            <div class="tabs__content" data-content="inflection">
+              ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
+            </div>
             ` : ''}
-          </div> </div>
-      </div>
-    `;
+          </div>
+        </div>
+      </div>`;
   }
 
   generateWordHeader(wordData) {
-    return `
-      <div class="word-header">
-        <h3 class="word-title">${wordData.lemma}</h3>
-        <span class="word-type-badge">${this.dictionary.getPartOfSpeechName(wordData.part_of_speech)}</span>
-      </div>
-    `;
+    return `<div class="word-header">
+              <h3 class="word-title">${wordData.lemma}</h3>
+              <span class="word-type-badge">${this.dictionary.getPartOfSpeechName(wordData.part_of_speech)}</span>
+            </div>`;
   }
 
   generateBaseTabHTML(wordData) {
     const translation = wordData.translations?.ru || 'Нет перевода';
     const pronunciation = wordData.pronunciation?.ru_transcription || '';
-    
-    return `
-      <div class="translation-section">
-        <div class="translation-text">${translation}</div>
-        ${pronunciation ? `<div class="pronunciation">[${pronunciation}]</div>` : ''}
-      </div>
-    `;
+    return `<div class="translation-section">
+              <div class="translation-text">${translation}</div>
+              ${pronunciation ? `<div class="pronunciation">[${pronunciation}]</div>` : ''}
+            </div>`;
   }
 
   generateExamplesTabHTML(wordData) {
     if (!wordData.examples?.length) {
       return '<p class="text-muted text-center">Примеры для этого слова отсутствуют.</p>';
     }
-    const examples = wordData.examples
-      .map(example => `
-        <div class="example-item">
-          <div class="example-polish">${example.pl}</div>
-          <div class="example-russian">${example.ru}</div>
-          ${example.ru_transcription ? `<div class="example-transcription">[${example.ru_transcription}]</div>` : ''}
-        </div>
-      `)
-      .join('');
-
-    return `<div class="examples-list">${examples}</div>`;
+    return `<div class="examples-list">${wordData.examples.map(ex => `
+      <div class="example-item">
+        <div class="example-polish">${ex.pl}</div>
+        <div class="example-russian">${ex.ru}</div>
+        ${ex.ru_transcription ? `<div class="example-transcription">[${ex.ru_transcription}]</div>` : ''}
+      </div>`).join('')}</div>`;
   }
 
   generateConjugationTabHTML(wordData) {
     const tenses = Object.keys(wordData.inflection);
     if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
-    
-    // Встановлюємо правильний порядок осіб
+
     const personOrder = ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'];
 
     const tenseTabs = tenses.map((tense, index) => `
@@ -293,67 +226,47 @@ export class ModalComponent {
 
     const tenseContents = tenses.map((tense, index) => {
       const forms = wordData.inflection[tense];
-      if (Object.keys(forms).length === 0) return '';
-      
-      const formsTable = `
-        <div class="conjugation-table-wrapper">
-          <table class="conjugation-table table--compact">
-            <tbody>
-              ${personOrder
-                .filter(form => forms[form]) // Фільтруємо, щоб уникнути помилок, якщо форми немає
-                .map(form => `
+      return `
+        <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${tense}">
+          <div class="conjugation-table-wrapper">
+            <table class="conjugation-table table--compact">
+              <tbody>
+                ${personOrder.filter(form => forms[form]).map(form => `
                   <tr>
                     <td>${this.getFormName(form)}</td>
                     <td><strong>${forms[form]}</strong></td>
-                  </tr>
-                `).join('')}
-            </tbody>
-          </table>
-        </div>
-      `;
-
-      return `
-        <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${tense}">
-          ${formsTable}
-        </div>
-      `;
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>`;
     }).join('');
 
     return `
       <div class="inflection-container">
         <nav class="tabs tabs--chips" data-tabs="inflection-tabs">
-          <div class="tabs__list" role="tablist">
-            ${tenseTabs}
-          </div>
+          <div class="tabs__list" role="tablist">${tenseTabs}</div>
         </nav>
-        <div class="inflection-content mt-4 tabs__content_wrapper"> ${tenseContents}
+        <div class="inflection-content mt-4">
+          <div class="tabs__content-wrapper">${tenseContents}</div>
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
   generateDeclensionTabHTML(wordData) {
     const hasSingular = wordData.inflection.singular && Object.keys(wordData.inflection.singular).length > 0;
     const hasPlural = wordData.inflection.plural && Object.keys(wordData.inflection.plural).length > 0;
 
-    const createTableHTML = (forms) => {
-      if (!forms) return '<p class="text-muted text-center">Формы отсутствуют.</p>';
-      return `
-        <table class="conjugation-table table--striped table--compact">
-          <tbody>
-            ${Object.entries(forms).map(([form, value]) => `
-              <tr>
-                <td>${this.getFormName(form)}</td>
-                <td><strong>${value}</strong></td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      `;
-    };
-
-    const singularContentHTML = hasSingular ? createTableHTML(wordData.inflection.singular) : '';
-    const pluralContentHTML = hasPlural ? createTableHTML(wordData.inflection.plural) : '';
+    const createTableHTML = (forms) => `
+      <table class="conjugation-table table--striped table--compact">
+        <tbody>
+          ${Object.entries(forms).map(([form, value]) => `
+            <tr>
+              <td>${this.getFormName(form)}</td>
+              <td><strong>${value}</strong></td>
+            </tr>`).join('')}
+        </tbody>
+      </table>`;
 
     return `
       <div class="inflection-container">
@@ -364,69 +277,26 @@ export class ModalComponent {
           </div>
         </nav>
         <div class="inflection-content mt-4">
-          ${hasSingular ? `
-            <div class="tabs__content tabs__content--active" data-content="singular">
-              ${singularContentHTML}
-            </div>
-          ` : ''}
-          ${hasPlural ? `
-            <div class="tabs__content ${!hasSingular ? 'tabs__content--active' : ''}" data-content="plural">
-              ${pluralContentHTML}
-            </div>
-          ` : ''}
+          <div class="tabs__content-wrapper">
+            ${hasSingular ? `<div class="tabs__content tabs__content--active" data-content="singular">${createTableHTML(wordData.inflection.singular)}</div>` : ''}
+            ${hasPlural ? `<div class="tabs__content ${!hasSingular ? 'tabs__content--active' : ''}" data-content="plural">${createTableHTML(wordData.inflection.plural)}</div>` : ''}
+          </div>
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
   getTenseName(tenseKey) {
-    const names = {
-      'present': 'Настоящее',
-      'past_masc': 'Прошедшее (муж.)',
-      'past_fem': 'Прошедшее (жен.)',
-      'past_neut': 'Прошедшее (ср.)',
-      'future': 'Будущее',
-      'imperative': 'Повелительное',
-      'conditional': 'Условное'
-    };
+    const names = { present: 'Настоящее', past_masc: 'Прошедшее (муж.)', past_fem: 'Прошедшее (жен.)', past_neut: 'Прошедшее (ср.)', future: 'Будущее', imperative: 'Повелительное', conditional: 'Условное' };
     return names[tenseKey] || this.capitalize(tenseKey);
   }
 
-  getInflectionCategoryName(category) {
-    const names = {
-      'singular': 'Единственное число',
-      'plural': 'Множественное число',
-      'masculine': 'Мужской род',
-      'feminine': 'Женский род',
-      'neuter': 'Средний род',
-      'present': 'Настоящее время',
-      'past_masc': 'Прошедшее время (муж.)',
-      'past_fem': 'Прошедшее время (жен.)',
-      'past_neut': 'Прошедшее время (ср.)',
-      'future': 'Будущее время'
-    };
-    return names[category] || this.capitalize(category);
-  }
-
   getFormName(form) {
-    const names = {
-      'sg1': 'ja', 'sg2': 'ty', 'sg3': 'on/ona/ono',
-      'pl1': 'my', 'pl2': 'wy', 'pl3': 'oni/one',
-      'nominative': 'Именительный', 'genitive': 'Родительный',
-      'dative': 'Дательный', 'accusative': 'Винительный',
-      'instrumental': 'Творительный', 'locative': 'Предложный',
-      'vocative': 'Звательный',
-      '1sg': '1л. ед.ч.', '2sg': '2л. ед.ч.', '3sg': '3л. ед.ч.',
-      '1pl': '1л. мн.ч.', '2pl': '2л. мн.ч.', '3pl': '3л. мн.ч.'
-    };
+    const names = { sg1: 'ja', sg2: 'ty', sg3: 'on/ona/ono', pl1: 'my', pl2: 'wy', pl3: 'oni/one', nominative: 'Именительный', genitive: 'Родительный', dative: 'Дательный', accusative: 'Винительный', instrumental: 'Творительный', locative: 'Предложный', vocative: 'Звательный' };
     return names[form] || form;
   }
-  
-  capitalize(str) {
-      if (!str) return '';
-      return str.charAt(0).toUpperCase() + str.slice(1);
-  }
 
+  capitalize(str) { return str ? str.charAt(0).toUpperCase() + str.slice(1) : ''; }
+  
   focusModal() {
     const firstFocusableElement = this.modal.querySelector(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'

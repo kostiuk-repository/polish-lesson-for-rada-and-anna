@@ -78,9 +78,7 @@
 
 /* Таблица склонений/спряжений */
 .conjugation-table {
-  margin-top: var(--space-6);
-  font-size: var(--font-size-sm);
-  max-width: 500px; 
+  max-width: 500px;
   width: 100%;
 }
 

@@ -1,40 +1,37 @@
-// js/ui/tabs.js
-
 export class TabsComponent {
   constructor(container, options = {}) {
     this.container = container;
     this.options = {
       activeClass: 'tabs__button--active',
       contentActiveClass: 'tabs__content--active',
-      ...options
+      animationDuration: 300,
+      ...options,
     };
-    
     this.init();
   }
 
   init() {
     if (!this.container) return;
 
-    this.tabs = Array.from(this.container.querySelectorAll('[role="tab"]'));
-    this.contentWrapper = this.container.querySelector('.tabs__content_wrapper') || this.findContentWrapper();
-    if (!this.contentWrapper) return;
+    this.tabs = Array.from(this.container.querySelectorAll('[data-tab]'));
+    if (this.tabs.length === 0) return;
+
+    // Шукаємо контент відносно батьківського елемента, щоб знайти сусідні блоки
+    const searchContext = this.container.closest('.modal__body, .inflection-container') || document;
+    this.contents = this.tabs.map(tab => searchContext.querySelector(`[data-content="${tab.dataset.tab}"]`));
     
-    this.contents = Array.from(this.contentWrapper.querySelectorAll('.tabs__content'));
+    // Обгорткою для анімації буде спільний батьківський елемент контенту
+    this.contentWrapper = this.contents.length > 0 && this.contents[0] ? this.contents[0].parentElement : null;
 
     this.setupInitialState();
     this.setupEventListeners();
   }
 
-  findContentWrapper() {
-    // Якщо немає спеціальної обгортки, беремо батьківський елемент першого контенту
-    const firstContent = this.container.querySelector('.tabs__content');
-    return firstContent ? firstContent.parentElement : null;
-  }
-
   setupInitialState() {
     this.activeIndex = this.tabs.findIndex(tab => tab.classList.contains(this.options.activeClass));
-    if (this.activeIndex === -1) this.activeIndex = 0;
-    
+    if (this.activeIndex === -1) {
+      this.activeIndex = 0;
+    }
     this.showTab(this.activeIndex, false);
   }
 
@@ -48,7 +45,7 @@ export class TabsComponent {
   }
 
   showTab(index, animate = true) {
-    if (index === this.activeIndex) return;
+    if (index === this.activeIndex || !this.tabs[index]) return;
 
     const previousIndex = this.activeIndex;
     this.activeIndex = index;
@@ -56,39 +53,50 @@ export class TabsComponent {
     // Оновлюємо кнопки
     this.tabs.forEach((tab, i) => {
       tab.classList.toggle(this.options.activeClass, i === index);
-      tab.setAttribute('aria-selected', i === index);
+      tab.setAttribute('aria-selected', String(i === index));
     });
 
-    // Оновлюємо контент
-    const oldContent = this.contents[previousIndex];
-    const newContent = this.contents[index];
+    // Перемикаємо контент
+    this.switchContent(previousIndex, index, animate);
+  }
 
+  switchContent(previousIndex, newIndex, animate) {
+    const oldContent = this.contents[previousIndex];
+    const newContent = this.contents[newIndex];
+
+    if (!newContent || !this.contentWrapper) return;
+    
+    // Розраховуємо висоту нового контенту
+    const newHeight = newContent.scrollHeight;
+
+    // Для плавної анімації фіксуємо поточну висоту обгортки
+    if (animate) {
+      this.contentWrapper.style.overflow = 'hidden';
+      this.contentWrapper.style.height = `${this.contentWrapper.offsetHeight}px`;
+    }
+
+    // Ховаємо старий контент і показуємо новий
     if (oldContent) {
       oldContent.classList.remove(this.options.contentActiveClass);
     }
-    
-    if (newContent) {
-      // Спочатку встановлюємо висоту, потім показуємо контент
-      this.adjustHeight(newContent, animate);
-      newContent.classList.add(this.options.contentActiveClass);
-    }
-  }
+    newContent.classList.add(this.options.contentActiveClass);
 
-  adjustHeight(newContent, animate) {
-    if (!this.contentWrapper || !newContent) return;
+    // Асинхронно запускаємо анімацію, щоб браузер встиг обробити зміни
+    requestAnimationFrame(() => {
+      if (animate) {
+        this.contentWrapper.style.transition = `height ${this.options.animationDuration}ms ease-in-out`;
+        this.contentWrapper.style.height = `${newHeight}px`;
 
-    if (!animate) {
-      this.contentWrapper.style.transition = 'none';
-    }
-
-    const newHeight = newContent.scrollHeight;
-    this.contentWrapper.style.height = `${newHeight}px`;
-
-    if (!animate) {
-      // Повертаємо анімацію після миттєвої зміни
-      setTimeout(() => {
-        this.contentWrapper.style.transition = '';
-      }, 0);
-    }
+        // Після анімації повертаємо автоматичну висоту
+        setTimeout(() => {
+          this.contentWrapper.style.transition = '';
+          this.contentWrapper.style.height = 'auto';
+          this.contentWrapper.style.overflow = '';
+        }, this.options.animationDuration);
+      } else {
+        // Якщо анімація не потрібна, просто встановлюємо висоту
+        this.contentWrapper.style.height = 'auto';
+      }
+    });
   }
 }

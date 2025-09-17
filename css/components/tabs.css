@@ -66,19 +66,15 @@
 
 /* Контент табов */
 .tabs__content {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute; /* Ховаємо неактивні таби, не впливаючи на висоту */
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  display: none;
 }
 
 .tabs__content--active {
-  opacity: 1;
-  visibility: visible;
-  position: relative; /* Активний таб визначає висоту */
+  display: block;
+}
+
+.tabs__content-wrapper {
+  position: relative;
 }
 
 /* Панель таба */
