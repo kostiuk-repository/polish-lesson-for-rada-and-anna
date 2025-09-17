@@ -18,6 +18,7 @@
 @import 'components/forms.css';
 @import 'components/tables.css';
 @import 'components/dialog.css';
+@import 'components/category-header.css';
 
 /* Модули */
 @import 'modules/modal.css';

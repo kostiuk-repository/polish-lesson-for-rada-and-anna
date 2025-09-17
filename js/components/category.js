@@ -27,31 +27,20 @@ export class CategoryComponent {
 
   generateCategoryHTML() {
     return `
-      <header class="page-header page-header--compact">
-        <div class="container">
-          <a href="#/categories" class="btn btn--outline mb-4">&larr; Назад до категорій</a>
-          <h1>${this.category.title}</h1>
+      <header class="category-header">
+        <div class="container category-header__container">
+          <a href="#/categories" class="btn btn--outline btn--icon-left">
+            <i class="fas fa-arrow-left"></i>
+            <span>Назад</span>
+          </a>
+          <h1 class="category-header__title">${this.category.title}</h1>
+          <div class="search-field">
+            <i class="fas fa-search search-field__icon"></i>
+            <input type="text" id="search-input" class="search-field__input" placeholder="Поиск уроков...">
+          </div>
         </div>
       </header>
-      <section class="filters-section">
-          <div class="container">
-              <div class="filters-container">
-                  <div class="filter-group">
-                      <label for="search-input">Пошук:</label>
-                      <input type="text" id="search-input" class="search-input" placeholder="Пошук по назві...">
-                  </div>
-                  <div class="filter-group">
-                      <label for="type-filter">Тип:</label>
-                      <select id="type-filter" class="filter-select">
-                          <option value="all">Всі типи</option>
-                          <option value="dialogue">Діалог</option>
-                          <option value="review">Відгук</option>
-                          <option value="text">Текст</option>
-                      </select>
-                  </div>
-              </div>
-          </div>
-      </section>
+      
       <section class="catalog-section">
         <div class="container">
             <div id="lessons-grid" class="cards-grid">
