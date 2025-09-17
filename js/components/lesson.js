@@ -6,7 +6,10 @@ import { DialogLinesHandler } from '../ui/dialog-lines.js';
 
 export class LessonComponent {
   constructor({ container, lessonId, api, dictionary, speech, storage }) {
-    this.container = container; // Используем переданный контейнер
+    if (!container) {
+      throw new Error('Контейнер урока не найден');
+    }
+    this.container = container;
     this.lessonId = lessonId;
     this.api = api;
     this.dictionary = dictionary;

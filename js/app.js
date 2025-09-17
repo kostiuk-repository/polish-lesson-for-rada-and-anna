@@ -8,25 +8,30 @@ class PolishLearningApp {
   constructor() {
     this.router = new Router();
     this.api = new API();
-    this.dictionary = new DictionaryService(this.api); 
+    this.dictionary = new DictionaryService(this.api);
     this.speech = new SpeechService();
     this.storage = new StorageService();
     this.currentComponent = null;
-    this.pageContainer = document.getElementById('page-container');
-
-    this.init();
+    this.pageContainer = null; // Initialize as null
   }
 
   async init() {
     try {
+      // Get the container element here, inside init
+      this.pageContainer = document.getElementById('page-container');
+      if (!this.pageContainer) {
+        console.error('Fatal Error: #page-container not found in the DOM.');
+        return;
+      }
+
       await this.dictionary.init();
       await this.speech.init();
-      
+
       this.setupRouting();
       this.setupNavigation();
 
       this.router.start();
-      
+
       console.log('✅ Polish Learning App инициализирован');
     } catch (error) {
       console.error('❌ Ошибка инициализации:', error);
@@ -108,7 +113,9 @@ class PolishLearningApp {
   }
 
   showError(message) {
-    this.pageContainer.innerHTML = `<div class="error-container"><h2>Произошла ошибка</h2><p>${message}</p></div>`;
+    if (this.pageContainer) {
+      this.pageContainer.innerHTML = `<div class="error-container"><h2>Произошла ошибка</h2><p>${message}</p></div>`;
+    }
   }
 
   destroyCurrentComponent() {
@@ -121,4 +128,5 @@ class PolishLearningApp {
 
 document.addEventListener('DOMContentLoaded', () => {
   window.PolishApp = new PolishLearningApp();
+  window.PolishApp.init();
 });
