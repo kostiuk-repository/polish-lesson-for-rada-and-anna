@@ -126,34 +126,46 @@ export class DialogLinesHandler {
     const wordAnalysisHTML = words.map(wordEl => {
         const word = wordEl.textContent;
         const wordKey = wordEl.dataset.wordKey;
-        const translation = this.dictionary.getWord(wordKey)?.translations?.ru || 'Нет перевода';
+        // Исправлена логика получения перевода, чтобы избежать "Нет перевода"
+        const wordData = this.dictionary.getWord(wordKey);
+        const translation = wordData?.translations?.ru || 'Перевод не найден';
         return `<li><strong>${word}</strong> - ${translation}</li>`;
     }).join('');
 
     return `
       <div class="sentence-details">
-        <div class="modal-section">
-            <h4 class="modal-section__title">Предложение</h4>
-            <div class="original-text">
-                <p class="text-polish" style="font-size: 1.2em;">${polish}</p>
-            </div>
-            <div class="translated-text">
-                <p class="text-russian">${russian}</p>
-            </div>
-        </div>
+        
+        <nav class="tabs tabs--card" data-tabs="sentence-details-tabs">
+          <div class="tabs__list" role="tablist">
+            <button class="tabs__button tabs__button--active" role="tab" data-tab="sentence">Предложение</button>
+            <button class="tabs__button" role="tab" data-tab="pronunciation">Произношение</button>
+            <button class="tabs__button" role="tab" data-tab="analysis">Разбор слов</button>
+          </div>
+        </nav>
 
         <div class="modal-section">
-            <h4 class="modal-section__title">Разбор слов</h4>
-            <ul class="word-breakdown-list">
-                ${wordAnalysisHTML}
-            </ul>
-        </div>
-        
-        <div class="modal-section">
-            <h4 class="modal-section__title">Произношение</h4>
-            <div class="pronunciation-guide">
-                ${this.generatePronunciationGuide(polish)}
-            </div>
+          
+          <div class="tabs__content tabs__content--active" data-content="sentence">
+              <div class="original-text">
+                  <p class="text-polish" style="font-size: 1.2em;">${polish}</p>
+              </div>
+              <div class="translated-text">
+                  <p class="text-russian">${russian}</p>
+              </div>
+          </div>
+
+          <div class="tabs__content" data-content="pronunciation">
+              <div class="pronunciation-guide">
+                  ${this.generatePronunciationGuide(polish)}
+              </div>
+          </div>
+
+          <div class="tabs__content" data-content="analysis">
+              <ul class="word-breakdown-list">
+                  ${wordAnalysisHTML}
+              </ul>
+          </div>
+
         </div>
       </div>
     `;

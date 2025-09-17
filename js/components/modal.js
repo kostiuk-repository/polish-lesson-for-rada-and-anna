@@ -248,27 +248,39 @@ export class ModalComponent {
   }
 
   generateWordContent(wordData) {
-    let content = this.generateWordHeader(wordData);
-    content += this.generateTranslationSection(wordData);
-    
-    if (wordData.examples?.length) {
-      content += this.generateExamplesSection(wordData);
-    }
-    
-    if (wordData.inflection) {
-      content += this.generateInflectionSection(wordData);
-    }
-    
-    if (wordData.applied_rules?.length) {
-      content += this.generatePronunciationRulesSection(wordData);
-    }
-    
-    return content;
+    const isVerb = wordData.part_of_speech === 'verb';
+    const inflectionTabTitle = isVerb ? 'Спряжение' : 'Склонение';
+
+    return `
+      <div class="word-details">
+        ${this.generateWordHeader(wordData)}
+        
+        <nav class="tabs tabs--card" data-tabs="word-details-tabs">
+          <div class="tabs__list" role="tablist">
+            <button class="tabs__button tabs__button--active" role="tab" data-tab="base">База</button>
+            <button class="tabs__button" role="tab" data-tab="examples">Примеры</button>
+            ${wordData.inflection ? `<button class="tabs__button" role="tab" data-tab="inflection">${inflectionTabTitle}</button>` : ''}
+          </div>
+        </nav>
+        
+        <div class="modal-section">
+          <div class="tabs__content tabs__content--active" data-content="base">
+            ${this.generateBaseTabHTML(wordData)}
+          </div>
+          <div class="tabs__content" data-content="examples">
+            ${this.generateExamplesTabHTML(wordData)}
+          </div>
+          ${wordData.inflection ? `
+            <div class="tabs__content" data-content="inflection">
+              ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
   }
 
   generateWordHeader(wordData) {
-    const pronunciation = wordData.pronunciation?.ru_transcription || '';
-    
     return `
       <div class="word-header">
         <h3 class="word-title">${wordData.lemma}</h3>
@@ -277,7 +289,7 @@ export class ModalComponent {
     `;
   }
 
-  generateTranslationSection(wordData) {
+  generateBaseTabHTML(wordData) {
     const translation = wordData.translations?.ru || 'Нет перевода';
     const pronunciation = wordData.pronunciation?.ru_transcription || '';
     
@@ -289,7 +301,10 @@ export class ModalComponent {
     `;
   }
 
-  generateExamplesSection(wordData) {
+  generateExamplesTabHTML(wordData) {
+    if (!wordData.examples?.length) {
+      return '<p class="text-muted text-center">Примеры для этого слова отсутствуют.</p>';
+    }
     const examples = wordData.examples
       .map(example => `
         <div class="example-item">
@@ -300,104 +315,135 @@ export class ModalComponent {
       `)
       .join('');
 
+    return `<div class="examples-list">${examples}</div>`;
+  }
+
+  generateConjugationTabHTML(wordData) {
+    const tenses = Object.keys(wordData.inflection);
+    if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
+    
+    // Создаем "нагетсы" (вложенные табы)
+    const tenseTabs = tenses.map((tense, index) => `
+      <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${tense}">${this.getTenseName(tense)}</button>
+    `).join('');
+
+    // Создаем контент для каждого "нагетса"
+    const tenseContents = tenses.map((tense, index) => {
+      const forms = wordData.inflection[tense];
+      if (Object.keys(forms).length === 0) return ''; // Пропускаем пустые секции (например, imperative для некоторых глаголов)
+      
+      const formsTable = `
+        <table class="conjugation-table table--compact">
+          <tbody>
+            ${Object.entries(forms).map(([form, value]) => `
+              <tr>
+                <td>${this.getFormName(form)}</td>
+                <td><strong>${value}</strong></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+
+      return `
+        <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${tense}">
+          ${formsTable}
+        </div>
+      `;
+    }).join('');
+
     return `
-      <div class="modal-section">
-        <h4 class="modal-section__title">
-          <i class="fas fa-lightbulb"></i>
-          Примеры использования
-        </h4>
-        <div class="examples-list">
-          ${examples}
+      <div class="inflection-container">
+        <nav class="tabs tabs--card" data-tabs="inflection-tabs">
+          <div class="tabs__list" role="tablist">
+            ${tenseTabs}
+          </div>
+        </nav>
+        <div class="inflection-content mt-4">
+          ${tenseContents}
         </div>
       </div>
     `;
   }
 
-  generateInflectionSection(wordData) {
-    let tableHTML = '<table class="conjugation-table table--striped">';
-    
-    // Генерируем заголовок
-    tableHTML += '<thead><tr><th>Форма</th><th>Значение</th></tr></thead><tbody>';
-    
-    // Генерируем строки для каждой формы
-    for (const [category, forms] of Object.entries(wordData.inflection)) {
-      if (typeof forms === 'object' && forms !== null) {
-        // Добавляем заголовок категории
-        tableHTML += `<tr class="table__group-header"><td colspan="2">${this.getCategoryName(category)}</td></tr>`;
-        
-        // Добавляем формы
-        for (const [form, value] of Object.entries(forms)) {
-          tableHTML += `<tr><td>${this.getFormName(form)}</td><td><strong>${value}</strong></td></tr>`;
-        }
-      }
-    }
-    
-    tableHTML += '</tbody></table>';
+  generateDeclensionTabHTML(wordData) {
+    let tableHTML = '';
+    const categories = Object.keys(wordData.inflection);
 
-    return `
-      <div class="modal-section">
-        <h4 class="modal-section__title">
-          <i class="fas fa-table"></i>
-          ${wordData.part_of_speech === 'verb' ? 'Спряжение' : 'Склонение'}
-        </h4>
-        ${tableHTML}
-      </div>
-    `;
-  }
-
-  generatePronunciationRulesSection(wordData) {
-    // Здесь будет логика для получения правил произношения
-    // Пока заглушка
-    return `
-      <div class="modal-section">
-        <h4 class="modal-section__title">
-          <i class="fas fa-volume-up"></i>
-          Правила произношения
-        </h4>
-        <div class="pronunciation-rules">
-          <p>Правила произношения будут добавлены позже</p>
+    categories.forEach(category => {
+      const forms = wordData.inflection[category];
+      tableHTML += `
+        <div class="declension-group">
+          <h5 class="declension-group__title">${this.getInflectionCategoryName(category)}</h5>
+          <table class="conjugation-table table--striped table--compact">
+            <tbody>
+              ${Object.entries(forms).map(([form, value]) => `
+                <tr>
+                  <td>${this.getFormName(form)}</td>
+                  <td><strong>${value}</strong></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
         </div>
-      </div>
-    `;
+      `;
+    });
+
+    return `<div class="declension-container">${tableHTML}</div>`;
   }
 
-  getPartOfSpeechName(pos) {
+  // Вспомогательные функции для названий
+  getTenseName(tenseKey) {
     const names = {
-      'verb': 'Глагол',
-      'noun': 'Существительное',
-      'adjective': 'Прилагательное',
-      'adverb': 'Наречие',
-      'pronoun': 'Местоимение',
-      'preposition': 'Предлог',
-      'conjunction': 'Союз',
-      'particle': 'Частица'
+      'present': 'Настоящее',
+      'past_masc': 'Прошедшее (муж.)',
+      'past_fem': 'Прошедшее (жен.)',
+      'past_neut': 'Прошедшее (ср.)',
+      'future': 'Будущее',
+      'imperative': 'Повелительное',
+      'conditional': 'Условное'
     };
-    return names[pos] || pos;
+    return names[tenseKey] || this.capitalize(tenseKey);
   }
 
-  getCategoryName(category) {
+  getInflectionCategoryName(category) {
     const names = {
+      'singular': 'Единственное число',
+      'plural': 'Множественное число',
+      'masculine': 'Мужской род',
+      'feminine': 'Женский род',
+      'neuter': 'Средний род',
+      // Fallback for tense-like categories (if ever used here)
       'present': 'Настоящее время',
       'past_masc': 'Прошедшее время (муж.)',
       'past_fem': 'Прошедшее время (жен.)',
       'past_neut': 'Прошедшее время (ср.)',
-      'future': 'Будущее время',
-      'imperative': 'Повелительное наклонение',
-      'conditional': 'Условное наклонение'
+      'future': 'Будущее время'
     };
-    return names[category] || category;
+    return names[category] || this.capitalize(category);
   }
 
+  // Consolidated getFormName for both verb-person keys and case/form names
   getFormName(form) {
     const names = {
-      'sg1': '1л. ед.ч.',
-      'sg2': '2л. ед.ч.',
-      'sg3': '3л. ед.ч.',
-      'pl1': '1л. мн.ч.',
-      'pl2': '2л. мн.ч.',
-      'pl3': '3л. мн.ч.'
+      // Verb person keys (pronouns)
+      'sg1': 'ja', 'sg2': 'ty', 'sg3': 'on/ona/ono',
+      'pl1': 'my', 'pl2': 'wy', 'pl3': 'oni/one',
+      // Grammatical cases / forms
+      'nominative': 'Именительный', 'genitive': 'Родительный',
+      'dative': 'Дательный', 'accusative': 'Винительный',
+      'instrumental': 'Творительный', 'locative': 'Предложный',
+      'vocative': 'Звательный',
+      // Alternative short labels often used for person-number (kept as fallback)
+      '1sg': '1л. ед.ч.', '2sg': '2л. ед.ч.', '3sg': '3л. ед.ч.',
+      '1pl': '1л. мн.ч.', '2pl': '2л. мн.ч.', '3pl': '3л. мн.ч.'
     };
     return names[form] || form;
+  }
+  
+  capitalize(str) {
+      if (!str) return '';
+      return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   focusModal() {
