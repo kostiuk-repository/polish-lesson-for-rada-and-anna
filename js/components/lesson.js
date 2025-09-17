@@ -25,7 +25,6 @@ export class LessonComponent {
   async render() {
     console.log('📖 LessonComponent: начинаем рендер');
     
-    // Получаем ID урока из URL
     this.lessonId = this.getLessonIdFromUrl();
     
     if (!this.lessonId) {
@@ -39,24 +38,14 @@ export class LessonComponent {
     try {
       console.log('📚 Загружаем урок:', this.lessonId);
       
-      // Загружаем данные урока
       this.lessonData = await this.api.getLesson(this.lessonId);
-      
-      // Получаем categoryId из каталога
       await this.getCategoryId();
       
       console.log('✅ Данные урока загружены:', this.lessonData.title);
       
-      // Рендерим урок
       this.renderLesson();
-      
-      // Инициализируем компоненты
       this.initializeComponents();
-      
-      // Настраиваем обработчики событий
       this.setupEventListeners();
-      
-      // Отслеживаем прогресс
       this.trackLessonStart();
       
       console.log('✅ Урок успешно отрендерен');
@@ -89,10 +78,7 @@ export class LessonComponent {
   }
 
   renderLesson() {
-    // Обновляем заголовок страницы
     document.title = `${this.lessonData.title} - Polish Learning Hub`;
-    
-    // Генерируем HTML урока
     const lessonHTML = this.generateLessonHTML();
     this.container.innerHTML = lessonHTML;
   }
@@ -112,7 +98,6 @@ export class LessonComponent {
       .map(tag => `<span class="tag">#${tag}</span>`)
       .join('');
 
-    // Правильная ссылка назад
     const backLink = this.categoryId ? `#/categories/${this.categoryId}` : '#/categories';
       
     return `
@@ -191,7 +176,7 @@ export class LessonComponent {
             <label>
               <input type="checkbox" id="show-translations" class="sr-only">
               <span class="toggle-switch" role="switch" aria-checked="false"></span>
-              <span class="ml-3">Показать переводы</span>
+              <span>Показать переводы</span>
             </label>
           </div>
           
@@ -237,12 +222,13 @@ export class LessonComponent {
       .map((line, index) => {
         const wordsHTML = (line.words || [])
           .map(word => {
-            const translation = this.getWordTranslation(word.wordKey);
+            // ИСПРАВЛЕНО: Получаем перевод асинхронно, но показываем загрузку
+            const wordKey = word.wordKey || word.text.toLowerCase();
             return `
               <span class="clickable-word" 
-                    data-word-key="${word.wordKey}"
-                    data-translation="${translation}"
-                    title="${translation}">
+                    data-word-key="${wordKey}"
+                    data-translation="Загрузка..."
+                    title="Нажмите для подробностей">
                 ${word.text}
               </span>
             `;
@@ -256,7 +242,7 @@ export class LessonComponent {
             
             <div class="dialog-speaker">
               ${line.speaker}
-              <button class="audio-play-btn ml-auto" 
+              <button class="audio-play-btn" 
                       data-text="${line.sentence}"
                       title="Озвучить">
                 <i class="fas fa-volume-up"></i>
@@ -269,7 +255,7 @@ export class LessonComponent {
             </div>
             
             <div class="dialog-translation">
-              <p class="text-transcription">${line.transcryption || ''}</p>
+              <p class="text-transcription">${line.transcription || ''}</p>
               <p class="text-russian">${line.translation}</p>
             </div>
           </div>
@@ -330,6 +316,9 @@ export class LessonComponent {
         dictionary: this.dictionary,
         modal: this.modal
       });
+      
+      // ИСПРАВЛЕНО: Загружаем переводы для всех слов после инициализации
+      this.loadWordTranslations();
     }
     
     if (this.modal && this.speech && this.dictionary) {
@@ -339,6 +328,45 @@ export class LessonComponent {
         speech: this.speech,
         dictionary: this.dictionary
       });
+    }
+  }
+
+  // НОВЫЙ МЕТОД: Загружает переводы для всех кликабельных слов
+  async loadWordTranslations() {
+    const clickableWords = this.container.querySelectorAll('.clickable-word');
+    
+    for (const wordElement of clickableWords) {
+      const wordKey = wordElement.dataset.wordKey;
+      if (wordKey) {
+        try {
+          const translation = await this.getWordTranslation(wordKey);
+          wordElement.dataset.translation = translation;
+          wordElement.setAttribute('title', translation);
+        } catch (error) {
+          console.warn('Не удалось загрузить перевод для слова:', wordKey);
+          wordElement.dataset.translation = 'Перевод недоступен';
+        }
+      }
+    }
+  }
+
+  async getWordTranslation(wordKey) {
+    if (!this.dictionary || !wordKey) {
+      return 'Словарь не инициализирован';
+    }
+    
+    try {
+      // Убеждаемся, что словарь инициализирован
+      if (!this.dictionary.isInitialized) {
+        await this.dictionary.init();
+      }
+      
+      // Получаем данные слова
+      const wordData = await this.dictionary.getWord(wordKey);
+      return wordData?.translations?.ru || 'Нет перевода';
+    } catch (error) {
+      console.warn('Ошибка получения перевода для слова:', wordKey, error);
+      return 'Ошибка загрузки';
     }
   }
 
@@ -364,21 +392,6 @@ export class LessonComponent {
         this.playAllDialog(playAllBtn);
       }
     });
-  }
-
-  getWordTranslation(wordKey) {
-    if (!this.dictionary || !wordKey) {
-      return 'Загрузка...';
-    }
-    
-    try {
-      // Синхронное получение данных слова
-      const wordData = this.dictionary.dictionary.get(this.dictionary.normalizeWord(wordKey));
-      return wordData?.translations?.ru || 'Нет перевода';
-    } catch (error) {
-      console.warn('Ошибка получения перевода для слова:', wordKey, error);
-      return 'Ошибка загрузки';
-    }
   }
 
   toggleTranslations(show) {

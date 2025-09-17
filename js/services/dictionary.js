@@ -19,11 +19,8 @@ export class DictionaryService {
       try {
         console.log('🔄 Начало инициализации DictionaryService...');
         
-        // Загружаем фонетические правила и индекс словаря
-        const [phoneticRules, dictionaryIndex] = await Promise.all([
-          this.api.getPhoneticRules(),
-          this.api.getDictionary()
-        ]);
+        // Загружаем фонетические правила
+        const phoneticRules = await this.api.getPhoneticRules();
         
         // Загружаем фонетические правила
         if (phoneticRules && Array.isArray(phoneticRules)) {
@@ -31,11 +28,13 @@ export class DictionaryService {
             this.phoneticRules.set(rule.letter, rule.pronunciation);
           }
         }
-        console.log(`✅ Фонетичні правила завантажено: ${this.phoneticRules.size} шт.`);
+        console.log(`✅ Фонетические правила загружено: ${this.phoneticRules.size} шт.`);
         
-        // Загружаем основной словарь
-        if (dictionaryIndex && typeof dictionaryIndex === 'object') {
-          for (const [word, data] of Object.entries(dictionaryIndex)) {
+        // ИСПРАВЛЕНИЕ: Загружаем основной словарь из dictionary.json (не index.json!)
+        const mainDictionary = await this.api.fetchJSON('dictionary.json');
+        
+        if (mainDictionary && typeof mainDictionary === 'object') {
+          for (const [word, data] of Object.entries(mainDictionary)) {
             const normalizedWord = this.normalizeWord(word);
             if (!this.dictionary.has(normalizedWord)) {
               this.dictionary.set(normalizedWord, {
@@ -46,10 +45,13 @@ export class DictionaryService {
           }
         }
         
+        // Дополнительно загружаем словари по категориям
+        await this.loadAllCategories();
+        
         this.isInitialized = true;
-        console.log(`✅ DictionaryService успішно ініціалізовано. Всього слів: ${this.dictionary.size}`);
+        console.log(`✅ DictionaryService успешно инициализован. Всего слов: ${this.dictionary.size}`);
       } catch (error) {
-        console.error('❌ Помилка під час ініціалізації DictionaryService:', error);
+        console.error('❌ Ошибка при инициализации DictionaryService:', error);
         throw error; 
       } finally {
         this.initializationPromise = null;
@@ -59,20 +61,52 @@ export class DictionaryService {
     return this.initializationPromise;
   }
 
+  async loadAllCategories() {
+    try {
+      // Загружаем индекс категорий для определения какие файлы загружать
+      const dictionaryIndex = await this.api.getDictionary();
+      
+      const loadPromises = [];
+      
+      if (dictionaryIndex.categories) {
+        for (const [categoryName, categoryData] of Object.entries(dictionaryIndex.categories)) {
+          if (categoryData.themes) {
+            for (const [themeName, themeData] of Object.entries(categoryData.themes)) {
+              if (themeData.words_count > 0) {
+                loadPromises.push(
+                  this.loadDictionaryCategory(categoryName, themeName)
+                );
+              }
+            }
+          }
+        }
+      }
+      
+      await Promise.all(loadPromises);
+    } catch (error) {
+      console.warn('Не удалось загрузить дополнительные категории:', error);
+    }
+  }
+
   async loadDictionaryCategory(category, theme = 'basic') {
     try {
       const words = await this.api.getDictionaryCategory(category, theme);
+      if (!words) return;
+      
       for (const [key, wordData] of Object.entries(words)) {
-        this.dictionary.set(key.toLowerCase(), {
-          lemma: key,
-          ...wordData,
-          category,
-          theme
-        });
+        const normalizedKey = this.normalizeWord(key);
+        if (!this.dictionary.has(normalizedKey)) {
+          this.dictionary.set(normalizedKey, {
+            lemma: key,
+            ...wordData,
+            category,
+            theme
+          });
+        }
       }
       console.log(`📚 Загружена категория: ${category}/${theme} (${Object.keys(words).length} слов)`);
     } catch (error) {
-      console.error(`❌ Ошибка загрузки категории ${category}/${theme}:`, error);
+      console.warn(`❌ Ошибка загрузки категории ${category}/${theme}:`, error);
     }
   }
 
@@ -82,9 +116,16 @@ export class DictionaryService {
     }
     const normalizedWord = this.normalizeWord(word);
     const wordData = this.dictionary.get(normalizedWord);
+    
+    if (wordData) {
+      // Увеличиваем счетчик просмотров
+      this.trackWordView(word);
+    }
+    
     return wordData || null;
   }
 
+  // Остальные методы остаются без изменений...
   searchWords(query, limit = 10) {
     const normalizedQuery = query.toLowerCase().trim();
     const results = [];
@@ -113,6 +154,14 @@ export class DictionaryService {
     }
     
     return results.sort((a, b) => b.relevance - a.relevance);
+  }
+
+  trackWordView(word) {
+    if (window.PolishApp?.storage) {
+      window.PolishApp.storage.updateWordProgress(word, {
+        viewCount: (window.PolishApp.storage.getWordProgress(word).viewCount || 0) + 1
+      });
+    }
   }
 
   getPhoneticRule(ruleKey) {
@@ -151,32 +200,6 @@ export class DictionaryService {
     };
   }
 
-  getWordExamples(word) {
-    const wordData = this.getWord(word);
-    return wordData?.examples || [];
-  }
-
-  getRelatedWords(word) {
-    const wordData = this.getWord(word);
-    if (!wordData) return [];
-    
-    const related = [];
-    const samePOS = this.getWordsByPartOfSpeech(wordData.part_of_speech);
-    related.push(...samePOS.slice(0, 5));
-    
-    return related;
-  }
-
-  getWordsByPartOfSpeech(partOfSpeech) {
-    const words = [];
-    for (const [key, wordData] of this.dictionary) {
-      if (wordData.part_of_speech === partOfSpeech) {
-        words.push({ key, ...wordData });
-      }
-    }
-    return words;
-  }
-
   normalizeWord(word) {
     return word.toLowerCase()
       .replace(/[.,!?;:()]/g, '')
@@ -189,6 +212,24 @@ export class DictionaryService {
     if (normalizedText.startsWith(query)) return 80;
     if (normalizedText.includes(query)) return 60;
     return 0;
+  }
+
+  getPartOfSpeechName(pos) {
+    const names = {
+      'verb': 'Глагол',
+      'noun': 'Существительное', 
+      'adjective': 'Прилагательное',
+      'adverb': 'Наречие',
+      'pronoun': 'Местоимение',
+      'preposition': 'Предлог',
+      'conjunction': 'Союз',
+      'particle': 'Частица',
+      'modal': 'Модальное слово',
+      'interjection': 'Междометие',
+      'numeral': 'Числительное',
+      'punctuation': 'Знак препинания'
+    };
+    return names[pos] || pos;
   }
 
   getStats() {
@@ -215,23 +256,5 @@ export class DictionaryService {
     }
     
     return stats;
-  }
-
-  getPartOfSpeechName(pos) {
-    const names = {
-      'verb': 'Глагол',
-      'noun': 'Существительное',
-      'adjective': 'Прилагательное',
-      'adverb': 'Наречие',
-      'pronoun': 'Местоимение',
-      'preposition': 'Предлог',
-      'conjunction': 'Союз',
-      'particle': 'Частица',
-      'modal': 'Модальное слово',
-      'interjection': 'Междометие',
-      'numeral': 'Числительное',
-      'punctuation': 'Знак препинания'
-    };
-    return names[pos] || pos;
   }
 }

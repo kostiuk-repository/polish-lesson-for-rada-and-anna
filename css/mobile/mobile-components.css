@@ -1,0 +1,388 @@
+/* css/mobile/mobile-components.css - Стили для мобильных устройств */
+
+/* Диалоговые элементы на мобильных */
+.dialog-line {
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-base);
+}
+
+.dialog-speaker {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.dialog-translation {
+  font-size: var(--font-size-sm);
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+  border-top: 1px solid var(--gray-100);
+}
+
+/* Кликабельные слова на мобильных */
+.clickable-word {
+  font-size: var(--font-size-base);
+  padding: var(--space-1) var(--space-2);
+  margin: 1px 2px;
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  min-height: 44px; /* Минимальная область касания */
+  min-width: 44px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Убираем tooltips на мобильных устройствах */
+.quick-tooltip {
+  display: none !important;
+}
+
+/* Модальные окна на мобильных */
+.modal {
+  padding: var(--space-2);
+  align-items: flex-start;
+  padding-top: var(--space-4);
+}
+
+.modal__content {
+  max-height: calc(100vh - var(--space-8));
+  width: calc(100vw - var(--space-4));
+  max-width: none;
+  border-radius: var(--radius-lg);
+  margin: 0;
+}
+
+.modal__header {
+  padding: var(--space-4) var(--space-5);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.modal__title {
+  font-size: var(--font-size-xl);
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.modal__body {
+  padding: var(--space-4);
+  max-height: calc(100vh - 200px);
+}
+
+.modal__footer {
+  padding: var(--space-4) var(--space-5);
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.modal__controls {
+  order: 2;
+  margin-left: 0;
+  margin-top: var(--space-2);
+}
+
+.modal__close {
+  order: 3;
+  margin-left: 0;
+  margin-top: var(--space-2);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Табы на мобильных */
+.tabs__list {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  padding: 0 var(--space-2);
+}
+
+.tabs__button {
+  min-height: 44px;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  flex: 1;
+  min-width: auto;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.tabs--chips .tabs__button {
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-3);
+  min-width: 80px;
+}
+
+/* Карточки на мобильных */
+.cards-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.lesson-card, .category-card {
+  min-height: 180px;
+  padding: var(--space-4);
+}
+
+.card-content h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-2);
+}
+
+.card-content p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* Кнопки на мобильных */
+.btn {
+  min-height: 44px;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+  touch-action: manipulation;
+}
+
+.btn--small {
+  min-height: 36px;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.btn--large {
+  min-height: 52px;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-lg);
+}
+
+/* Формы на мобильных */
+.form__input,
+.form__textarea,
+.form__select {
+  min-height: 44px;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+}
+
+.form__group--horizontal,
+.form__group--triple {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* Элементы управления диалогом */
+.dialog-controls {
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: stretch;
+  padding: var(--space-3);
+}
+
+.translation-toggle {
+  width: 100%;
+  justify-content: center;
+}
+
+.translation-toggle label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: var(--space-3);
+  font-size: var(--font-size-base);
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.toggle-switch::after {
+  width: 24px;
+  height: 24px;
+  top: 2px;
+  left: 2px;
+}
+
+.toggle-switch--active::after {
+  transform: translateX(22px);
+}
+
+/* Аудио кнопки */
+.audio-play-btn {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-size-base);
+  min-width: 40px;
+  min-height: 40px;
+}
+
+/* Заголовки уроков */
+.lesson-header-box {
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.lesson-header-box h1 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.lesson-header-box p {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-4);
+}
+
+.lesson-tags {
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.tag {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
+}
+
+/* Исправление переключателей */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  background-color: var(--gray-300);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform var(--transition-base);
+}
+
+.toggle-switch--active {
+  background-color: var(--primary-color);
+}
+
+.toggle-switch--active::after {
+  transform: translateX(22px);
+}
+
+/* Улучшенная прокрутка для мобильных */
+.modal__body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-400) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal__body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal__body::-webkit-scrollbar-thumb {
+  background-color: var(--gray-400);
+  border-radius: 2px;
+}
+
+/* Landscape режим на мобильных */
+@media (orientation: landscape) and (max-height: 500px) {
+  .modal {
+    align-items: center;
+    padding: var(--space-2);
+  }
+  
+  .modal__content {
+    max-height: 90vh;
+    max-width: 90vw;
+  }
+  
+  .modal__body {
+    max-height: calc(90vh - 120px);
+  }
+  
+  .modal__header {
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .modal__footer {
+    padding: var(--space-2) var(--space-4);
+    flex-direction: row;
+  }
+  
+  .modal__footer .btn {
+    width: auto;
+  }
+  
+  .lesson-header-box {
+    padding: var(--space-4);
+  }
+  
+  .lesson-header-box h1 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Очень маленькие экраны (меньше 400px) */
+@media (max-width: 400px) {
+  .modal {
+    padding: var(--space-1);
+    padding-top: var(--space-2);
+  }
+  
+  .modal__content {
+    max-height: calc(100vh - var(--space-4));
+    width: calc(100vw - var(--space-2));
+    border-radius: var(--radius-base);
+  }
+  
+  .modal__header {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .modal__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .modal__body {
+    padding: var(--space-3);
+    max-height: calc(100vh - 120px);
+  }
+  
+  .modal__footer {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .word-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .translation-text {
+    font-size: var(--font-size-lg);
+  }
+  
+  .tabs__button {
+    font-size: var(--font-size-xs);
+    padding: var(--space-2);
+  }
+}

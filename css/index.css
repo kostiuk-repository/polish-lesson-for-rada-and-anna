@@ -1,46 +1,33 @@
-/* Импорт шрифтов */
+/* css/index.css - Главный файл стилей */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Базовые стили */
+/* Базовые стили (общие для всех устройств) */
 @import 'base/variables.css';
 @import 'base/reset.css';
+
+/* Компоненты (с адаптивностью) */
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/forms.css';
+@import 'components/modal.css';
+@import 'components/tabs.css';
 
 /* Лейаут */
 @import 'layout/container.css';
 @import 'layout/header.css';
-@import 'layout/grid.css';
-
-/* Компоненты */
-@import 'components/cards.css';
-@import 'components/buttons.css';
-@import 'components/labels.css';
-@import 'components/tabs.css';
-@import 'components/forms.css';
-@import 'components/tables.css';
-@import 'components/dialog.css';
-@import 'components/category-header.css';
-
-/* Модули */
-@import 'modules/modal.css';
-@import 'modules/exercises.css';
-@import 'modules/grammar.css';
 
 /* Утилиты */
-@import 'utils/animations.css';
 @import 'utils/utilities.css';
-@import 'utils/responsive.css';
 
-.placeholder-page {
-    padding-top: var(--space-10);
-    text-align: center;
-}
+/* Мобильные стили (до 768px) */
+@import 'mobile/mobile-base.css' screen and (max-width: 768px);
+@import 'mobile/mobile-components.css' screen and (max-width: 768px);
+@import 'mobile/mobile-layout.css' screen and (max-width: 768px);
 
-.placeholder-title {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--space-4);
-}
+/* Десктопные стили (от 769px) */
+@import 'desktop/desktop-base.css' screen and (min-width: 769px);
+@import 'desktop/desktop-components.css' screen and (min-width: 769px);
+@import 'desktop/desktop-layout.css' screen and (min-width: 769px);
 
-.placeholder-text {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-secondary);
-}
+/* Планшетные стили (641px - 1024px) */
+@import 'tablet/tablet-adjustments.css' screen and (min-width: 641px) and (max-width: 1024px);
