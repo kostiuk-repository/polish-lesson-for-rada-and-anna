@@ -87,7 +87,11 @@ export class Router {
   }
 
   stop() {
+    if (!this.isStarted) {
+      return;
+    }
+
+    // TODO: Implement router teardown logic (remove listeners, cleanup state).
     this.isStarted = false;
-    // remove listeners
   }
 }

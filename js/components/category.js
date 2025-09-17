@@ -77,8 +77,13 @@ export class CategoryComponent {
       const searchInput = this.container.querySelector('#search-input');
       const typeFilter = this.container.querySelector('#type-filter');
 
-      searchInput.addEventListener('input', () => this.filterAndRender());
-      typeFilter.addEventListener('change', () => this.filterAndRender());
+      if (searchInput) {
+        searchInput.addEventListener('input', () => this.filterAndRender());
+      }
+
+      if (typeFilter) {
+        typeFilter.addEventListener('change', () => this.filterAndRender());
+      }
   }
 
   filterAndRender() {
@@ -86,8 +91,12 @@ export class CategoryComponent {
       const typeFilter = this.container.querySelector('#type-filter');
       const grid = this.container.querySelector('#lessons-grid');
 
-      const searchQuery = searchInput.value.toLowerCase();
-      const typeQuery = typeFilter.value;
+      if (!grid) {
+        return;
+      }
+
+      const searchQuery = searchInput ? searchInput.value.toLowerCase() : '';
+      const typeQuery = typeFilter ? typeFilter.value : 'all';
 
       const filteredLessons = this.lessons.filter(lesson => {
           const titleMatch = lesson.title.toLowerCase().includes(searchQuery);

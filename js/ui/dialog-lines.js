@@ -23,7 +23,7 @@ export class DialogLinesHandler {
       if (clickableSentence) {
         e.preventDefault();
         e.stopPropagation();
-        this.handleSentenceClick(clickableSentence);
+        this.handleSentenceClick(e, clickableSentence);
       }
     });
 
@@ -70,7 +70,7 @@ export class DialogLinesHandler {
     dialogLines.forEach(line => observer.observe(line));
   }
 
-  handleSentenceClick(sentenceElement) {
+  handleSentenceClick(event, sentenceElement) {
     if (event.target.closest('.clickable-word')) {
       return;
     }
@@ -292,16 +292,24 @@ export class DialogLinesHandler {
     }
   }
 
-    trackLinePlayback(lineIndex, speaker) {
-        if (window.PolishApp?.storage) {
-            window.PolishApp.storage.trackEvent('line_played', {
-                lineIndex,
-                speaker,
-                timestamp: Date.now(),
-                context: 'dialog'
-            });
-        }
+  showContextMenu(_event, _dialogLine) {
+    // TODO: Implement custom context menu actions for dialog lines.
+  }
+
+  handleKeyboardNavigation(_event) {
+    // TODO: Implement keyboard navigation between dialog lines.
+  }
+
+  trackLinePlayback(lineIndex, speaker) {
+    if (window.PolishApp?.storage) {
+      window.PolishApp.storage.trackEvent('line_played', {
+        lineIndex,
+        speaker,
+        timestamp: Date.now(),
+        context: 'dialog'
+      });
     }
+  }
 
   showNotification(message) {
     const notification = document.createElement('div');

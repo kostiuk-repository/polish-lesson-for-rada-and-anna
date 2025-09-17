@@ -98,8 +98,8 @@ export class ClickableWordsHandler {
   async getWordData(wordKey) {
     // Сначала ищем в загруженном словаре
     let wordData = this.dictionary.getWord(wordKey);
-    
-    if (!wordData) {
+
+    if (!wordData && typeof this.dictionary?.loadAdditionalWordData === 'function') {
       // Если не найдено, пытаемся загрузить дополнительные данные
       try {
         await this.dictionary.loadAdditionalWordData(wordKey);
@@ -235,7 +235,7 @@ export class ClickableWordsHandler {
    * @returns {Object} статистика
    */
   getClickStats() {
-    const events = JSON.parse(localStorage.getItem('userEvents') || '[]');
+    const events = this.getStoredEvents();
     const wordClicks = events.filter(event => event.type === 'word_clicked');
     
     const stats = {
@@ -283,7 +283,7 @@ export class ClickableWordsHandler {
    * @returns {Array} список изученных слов
    */
   getLearnedWords() {
-    const events = JSON.parse(localStorage.getItem('userEvents') || '[]');
+    const events = this.getStoredEvents();
     const wordClicks = events.filter(event => event.type === 'word_clicked');
     
     return Array.from(new Set(wordClicks.map(click => click.data.word)));
@@ -311,6 +311,21 @@ export class ClickableWordsHandler {
     this.modal = null;
     if (this.tooltip) {
         this.tooltip.remove();
+    }
+  }
+
+  getStoredEvents() {
+    const storage = window.PolishApp?.storage;
+
+    if (storage) {
+      return storage.get('user_events', []);
+    }
+
+    try {
+      return JSON.parse(localStorage.getItem('userEvents') || '[]');
+    } catch (error) {
+      console.warn('Не удалось прочитать события пользователя из localStorage:', error);
+      return [];
     }
   }
 }
