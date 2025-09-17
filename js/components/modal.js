@@ -332,29 +332,50 @@ export class ModalComponent {
   }
 
   generateDeclensionTabHTML(wordData) {
-    let tableHTML = '';
-    const categories = Object.keys(wordData.inflection);
+    const hasSingular = wordData.inflection.singular && Object.keys(wordData.inflection.singular).length > 0;
+    const hasPlural = wordData.inflection.plural && Object.keys(wordData.inflection.plural).length > 0;
 
-    categories.forEach(category => {
-      const forms = wordData.inflection[category];
-      tableHTML += `
-        <div class="declension-group">
-          <h5 class="declension-group__title">${this.getInflectionCategoryName(category)}</h5>
-          <table class="conjugation-table table--striped table--compact">
-            <tbody>
-              ${Object.entries(forms).map(([form, value]) => `
-                <tr>
-                  <td>${this.getFormName(form)}</td>
-                  <td><strong>${value}</strong></td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
+    const createTableHTML = (forms) => {
+      if (!forms) return '<p class="text-muted text-center">Формы отсутствуют.</p>';
+      return `
+        <table class="conjugation-table table--striped table--compact">
+          <tbody>
+            ${Object.entries(forms).map(([form, value]) => `
+              <tr>
+                <td>${this.getFormName(form)}</td>
+                <td><strong>${value}</strong></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
       `;
-    });
+    };
 
-    return `<div class="declension-container">${tableHTML}</div>`;
+    const singularContentHTML = hasSingular ? createTableHTML(wordData.inflection.singular) : '';
+    const pluralContentHTML = hasPlural ? createTableHTML(wordData.inflection.plural) : '';
+
+    return `
+      <div class="inflection-container">
+        <nav class="tabs tabs--chips" data-tabs="declension-subtabs">
+          <div class="tabs__list" role="tablist">
+            ${hasSingular ? `<button class="tabs__button tabs__button--active" role="tab" data-tab="singular">Единственное число</button>` : ''}
+            ${hasPlural ? `<button class="tabs__button ${!hasSingular ? 'tabs__button--active' : ''}" role="tab" data-tab="plural">Множественное число</button>` : ''}
+          </div>
+        </nav>
+        <div class="inflection-content mt-4">
+          ${hasSingular ? `
+            <div class="tabs__content tabs__content--active" data-content="singular">
+              ${singularContentHTML}
+            </div>
+          ` : ''}
+          ${hasPlural ? `
+            <div class="tabs__content ${!hasSingular ? 'tabs__content--active' : ''}" data-content="plural">
+              ${pluralContentHTML}
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
   }
 
   getTenseName(tenseKey) {

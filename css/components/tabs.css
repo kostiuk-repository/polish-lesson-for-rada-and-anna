@@ -253,6 +253,12 @@
   -webkit-mask-size: contain;
 }
 
+.inflection-container .tabs--chips .tabs__button {
+  font-size: var(--font-size-xs); /* Зменшуємо розмір шрифту */
+  padding: var(--space-1) var(--space-3); /* Зменшуємо внутрішні відступи */
+  height: auto; /* Дозволяємо висоті адаптуватися до контенту */
+}
+
 /* Анимации */
 @keyframes fadeInUp {
   from {

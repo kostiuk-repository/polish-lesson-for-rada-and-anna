@@ -121,6 +121,7 @@
   flex: 1;
   scrollbar-width: thin;
   scrollbar-color: var(--gray-300) transparent;
+  transition: height var(--transition-base) ease;
 }
 
 .modal__body::-webkit-scrollbar {

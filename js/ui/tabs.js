@@ -227,62 +227,37 @@ export class TabsComponent {
   switchContent(previousIndex, newIndex, animate) {
     const previousContent = this.contents[previousIndex];
     const newContent = this.contents[newIndex];
+    const contentWrapper = newContent?.parentElement;
 
-    if (!newContent) return;
+    if (!newContent || !contentWrapper) return;
 
-    if (animate && this.options.animationDuration > 0) {
-      this.animateContentSwitch(previousContent, newContent);
-    } else {
-      this.switchContentImmediate(previousContent, newContent);
+    const newHeight = newContent.scrollHeight;
+
+    // Встановлюємо фіксовану висоту для плавної анімації
+    contentWrapper.style.height = `${contentWrapper.offsetHeight}px`;
+
+    if (previousContent) {
+      previousContent.classList.remove(this.options.contentActiveClass);
+      previousContent.setAttribute('aria-hidden', 'true');
     }
+    
+    newContent.classList.add(this.options.contentActiveClass);
+    newContent.setAttribute('aria-hidden', 'false');
 
-    // Обновляем высоту если включена автовысота
+    // Даємо браузеру час на перерахунок і запускаємо анімацію висоти
+    requestAnimationFrame(() => {
+      contentWrapper.style.height = `${newHeight}px`;
+    });
+
+    // Після завершення анімації повертаємо height: auto, щоб контент не обрізався
+    // при зміні розміру вікна браузера
+    setTimeout(() => {
+      contentWrapper.style.height = 'auto';
+    }, this.options.animationDuration);
+
     if (this.options.autoHeight) {
       this.adjustHeight();
     }
-  }
-
-  switchContentImmediate(previousContent, newContent) {
-    if (previousContent) {
-      previousContent.classList.remove(this.options.contentActiveClass);
-      previousContent.style.display = 'none';
-      previousContent.setAttribute('aria-hidden', 'true');
-    }
-
-    newContent.classList.add(this.options.contentActiveClass);
-    newContent.style.display = 'block';
-    newContent.setAttribute('aria-hidden', 'false');
-  }
-
-  animateContentSwitch(previousContent, newContent) {
-    // Начинаем с скрытия предыдущего контента
-    if (previousContent) {
-      previousContent.style.opacity = '0';
-      
-      setTimeout(() => {
-        previousContent.classList.remove(this.options.contentActiveClass);
-        previousContent.style.display = 'none';
-        previousContent.setAttribute('aria-hidden', 'true');
-        previousContent.style.opacity = '';
-      }, this.options.animationDuration / 2);
-    }
-
-    // Показываем новый контент
-    newContent.style.opacity = '0';
-    newContent.style.display = 'block';
-    newContent.classList.add(this.options.contentActiveClass);
-    newContent.setAttribute('aria-hidden', 'false');
-
-    // Анимация появления
-    requestAnimationFrame(() => {
-      newContent.style.transition = `opacity ${this.options.animationDuration / 2}ms ease-in-out`;
-      newContent.style.opacity = '1';
-      
-      setTimeout(() => {
-        newContent.style.transition = '';
-        newContent.style.opacity = '';
-      }, this.options.animationDuration / 2);
-    });
   }
 
   adjustHeight() {
