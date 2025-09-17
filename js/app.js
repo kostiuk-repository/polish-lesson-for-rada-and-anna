@@ -1,5 +1,5 @@
 import { Router } from './core/router.js';
-import { Api } from './core/api.js';
+import { API } from './core/api.js'; 
 import { Dictionary } from './services/dictionary.js';
 import { ModalComponent } from './components/modal.js';
 import { CatalogComponent } from './components/catalog.js';
@@ -7,7 +7,7 @@ import { LessonComponent } from './components/lesson.js';
 
 class App {
     constructor() {
-        this.api = new Api('data');
+        this.api = new API('data');
         this.dictionary = new Dictionary(this.api);
         this.modal = new ModalComponent({ dictionary: this.dictionary });
         this.rootElement = document.getElementById('app-root');
@@ -39,9 +39,12 @@ class App {
 
     showCatalog() {
         if (!this.catalogComponent) {
-            this.catalogComponent = new CatalogComponent(this.api, this.router);
+            this.catalogComponent = new CatalogComponent({ 
+                container: this.rootElement, 
+                api: this.api 
+            });
         }
-        this.catalogComponent.render(this.rootElement);
+        this.catalogComponent.render(); 
     }
 
     showLesson(lessonId) {
