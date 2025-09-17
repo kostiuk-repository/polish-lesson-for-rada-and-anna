@@ -70,10 +70,18 @@
   border-right: none;
 }
 
+/* Обгортка для центрування таблиці відмінювання */
+.conjugation-table-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* Таблица склонений/спряжений */
 .conjugation-table {
   margin-top: var(--space-6);
   font-size: var(--font-size-sm);
+  max-width: 500px; 
+  width: 100%;
 }
 
 .conjugation-table th {

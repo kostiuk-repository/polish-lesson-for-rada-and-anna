@@ -66,12 +66,19 @@
 
 /* Контент табов */
 .tabs__content {
-  display: none;
-  animation: fadeInUp var(--transition-base);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute; /* Ховаємо неактивні таби, не впливаючи на висоту */
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
 
 .tabs__content--active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative; /* Активний таб визначає висоту */
 }
 
 /* Панель таба */
@@ -258,6 +265,12 @@
   padding: var(--space-1) var(--space-3); /* Зменшуємо внутрішні відступи */
   height: auto; /* Дозволяємо висоті адаптуватися до контенту */
 }
+
+.tabs__content_wrapper {
+  position: relative;
+  transition: height 0.3s ease-in-out;
+}
+
 
 /* Анимации */
 @keyframes fadeInUp {

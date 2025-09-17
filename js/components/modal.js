@@ -223,26 +223,21 @@ export class ModalComponent {
         ${this.generateWordHeader(wordData)}
         
         <nav class="tabs tabs--chips" data-tabs="word-details-tabs">
-          <div class="tabs__list" role="tablist">
-            <button class="tabs__button tabs__button--active" role="tab" data-tab="base">База</button>
-            <button class="tabs__button" role="tab" data-tab="examples">Примеры</button>
-            ${wordData.inflection ? `<button class="tabs__button" role="tab" data-tab="inflection">${inflectionTabTitle}</button>` : ''}
-          </div>
-        </nav>
+          </nav>
         
         <div class="modal-section">
-          <div class="tabs__content tabs__content--active" data-content="base">
-            ${this.generateBaseTabHTML(wordData)}
-          </div>
-          <div class="tabs__content" data-content="examples">
-            ${this.generateExamplesTabHTML(wordData)}
-          </div>
-          ${wordData.inflection ? `
-            <div class="tabs__content" data-content="inflection">
-              ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
+          <div class="tabs__content_wrapper"> <div class="tabs__content tabs__content--active" data-content="base">
+              ${this.generateBaseTabHTML(wordData)}
             </div>
-          ` : ''}
-        </div>
+            <div class="tabs__content" data-content="examples">
+              ${this.generateExamplesTabHTML(wordData)}
+            </div>
+            ${wordData.inflection ? `
+              <div class="tabs__content" data-content="inflection">
+                ${isVerb ? this.generateConjugationTabHTML(wordData) : this.generateDeclensionTabHTML(wordData)}
+              </div>
+            ` : ''}
+          </div> </div>
       </div>
     `;
   }
@@ -289,6 +284,9 @@ export class ModalComponent {
     const tenses = Object.keys(wordData.inflection);
     if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
     
+    // Встановлюємо правильний порядок осіб
+    const personOrder = ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'];
+
     const tenseTabs = tenses.map((tense, index) => `
       <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${tense}">${this.getTenseName(tense)}</button>
     `).join('');
@@ -298,16 +296,20 @@ export class ModalComponent {
       if (Object.keys(forms).length === 0) return '';
       
       const formsTable = `
-        <table class="conjugation-table table--compact">
-          <tbody>
-            ${Object.entries(forms).map(([form, value]) => `
-              <tr>
-                <td>${this.getFormName(form)}</td>
-                <td><strong>${value}</strong></td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
+        <div class="conjugation-table-wrapper">
+          <table class="conjugation-table table--compact">
+            <tbody>
+              ${personOrder
+                .filter(form => forms[form]) // Фільтруємо, щоб уникнути помилок, якщо форми немає
+                .map(form => `
+                  <tr>
+                    <td>${this.getFormName(form)}</td>
+                    <td><strong>${forms[form]}</strong></td>
+                  </tr>
+                `).join('')}
+            </tbody>
+          </table>
+        </div>
       `;
 
       return `
@@ -324,8 +326,7 @@ export class ModalComponent {
             ${tenseTabs}
           </div>
         </nav>
-        <div class="inflection-content mt-4">
-          ${tenseContents}
+        <div class="inflection-content mt-4 tabs__content_wrapper"> ${tenseContents}
         </div>
       </div>
     `;
