@@ -36,21 +36,7 @@ export class CategoryComponent {
       </header>
       <section class="filters-section">
           <div class="container">
-              <div class="filters-container">
-                  <div class="filter-group">
-                      <label for="search-input">Пошук:</label>
-                      <input type="text" id="search-input" class="search-input" placeholder="Пошук по назві...">
-                  </div>
-                  <div class="filter-group">
-                      <label for="type-filter">Тип:</label>
-                      <select id="type-filter" class="filter-select">
-                          <option value="all">Всі типи</option>
-                          <option value="dialogue">Діалог</option>
-                          <option value="review">Відгук</option>
-                          <option value="text">Текст</option>
-                      </select>
-                  </div>
-              </div>
+            // ... фильтры ...
           </div>
       </section>
       <section class="catalog-section">
