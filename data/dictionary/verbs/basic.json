@@ -1,207 +1,1519 @@
 {
-  "być": {
-    "lemma": "być",
-    "part_of_speech": "verb",
-    "translations": { "ru": "быть" },
-    "pronunciation": { 
-      "ru_transcription": "быч",
-      "key_forms": [
-        { "pl": "jestem", "ru": "ЕСТЭМ" },
-        { "pl": "jesteś", "ru": "ЕС-ТЕШЬ" },
-        { "pl": "jest", "ru": "ЕСТ" },
-        { "pl": "są", "ru": "С(оу̃)" }
-      ]
+  "brzmieć": {
+    "applied_rules": [
+      "rz",
+      "ć",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "To brzmi dobrze.",
+        "ru": "Это звучит хорошо.",
+        "ru_transcription": "То бжми добжэ."
+      },
+      {
+        "pl": "Jak to brzmi po polsku?",
+        "ru": "Как это звучит по-польски?",
+        "ru_transcription": "як то бжми по польску?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy brzmieli",
+        "pl2": "będziecie brzmieli",
+        "pl3": "będą brzmieli",
+        "sg1": "będę brzmiał/brzmiała",
+        "sg2": "będziesz brzmiał/brzmiała",
+        "sg3": "będzie brzmiał/brzmiała"
+      },
+      "imperative": {},
+      "past_fem": {
+        "pl1": "brzmiałyśmy",
+        "pl2": "brzmiałyście",
+        "pl3": "brzmiały",
+        "sg1": "brzmiałam",
+        "sg2": "brzmiałaś",
+        "sg3": "brzmiała"
+      },
+      "past_masc": {
+        "pl1": "brzmielihmy",
+        "pl2": "brzmielihcie",
+        "pl3": "brzmieli",
+        "sg1": "brzmiałem",
+        "sg2": "brzmiałeś",
+        "sg3": "brzmiał"
+      },
+      "past_neut": {
+        "sg3": "brzmiało"
+      },
+      "present": {
+        "pl1": "brzmimy",
+        "pl2": "brzmicie",
+        "pl3": "brzmią",
+        "sg1": "brzmię",
+        "sg2": "brzmisz",
+        "sg3": "brzmi"
+      }
     },
+    "lemma": "brzmieć",
     "morphology": {
       "aspect": "imperfective",
-      "transitivity": "intransitive",
-      "reflexive": false
+      "reflexive": false,
+      "transitivity": "intransitive"
     },
-    "inflection": {
-      "present": { "sg1": "jestem", "sg2": "jesteś", "sg3": "jest", "pl1": "jesteśmy", "pl2": "jesteście", "pl3": "są" },
-      "past_masc": { "sg1": "byłem", "sg2": "byłeś", "sg3": "był", "pl1": "byliśmy", "pl2": "byliście", "pl3": "byli" },
-      "past_fem": { "sg1": "byłam", "sg2": "byłaś", "sg3": "była", "pl1": "byłyśmy", "pl2": "byłyście", "pl3": "były" },
-      "past_neut": { "sg3": "było" },
-      "future": { "sg1": "będę", "sg2": "będziesz", "sg3": "będzie", "pl1": "będziemy", "pl2": "będziecie", "pl3": "będą" },
-      "imperative": { "sg2": "bądź", "pl1": "bądźmy", "pl2": "bądźcie" }
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "brzmi",
+          "ru": "БЖМИ"
+        },
+        {
+          "pl": "brzmią",
+          "ru": "БЖМЁ(oн̃)"
+        }
+      ],
+      "ru_transcription": "бжмэч"
     },
+    "translations": {
+      "ru": "звучать"
+    }
+  },
+  "być": {
+    "applied_rules": [
+      "ć",
+      "ł",
+      "ą",
+      "ę"
+    ],
     "examples": [
-      { "pl": "Jestem zmęczony.", "ru": "Я устал.", "ru_transcription": "Естэм змэнчоный." },
-      { "pl": "Czy jesteście gotowi?", "ru": "Вы готовы?", "ru_transcription": "чы ес-ТЭШЬ-че готови?" },
-      { "pl": "Wczoraj byłam w kinie.", "ru": "Вчера я была в кино.", "ru_transcription": "вчорай быуам в кинэ." }
+      {
+        "pl": "Jestem zmęczony.",
+        "ru": "Я устал.",
+        "ru_transcription": "Естэм змэнчоный."
+      },
+      {
+        "pl": "Czy jesteście gotowi?",
+        "ru": "Вы готовы?",
+        "ru_transcription": "чы ес-ТЭШЬ-че готови?"
+      },
+      {
+        "pl": "Wczoraj byłam w kinie.",
+        "ru": "Вчера я была в кино.",
+        "ru_transcription": "вчорай быуам в кинэ."
+      }
     ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy",
+        "pl2": "będziecie",
+        "pl3": "będą",
+        "sg1": "będę",
+        "sg2": "będziesz",
+        "sg3": "będzie"
+      },
+      "imperative": {
+        "pl1": "bądźmy",
+        "pl2": "bądźcie",
+        "sg2": "bądź"
+      },
+      "past_fem": {
+        "pl1": "byłyśmy",
+        "pl2": "byłyście",
+        "pl3": "były",
+        "sg1": "byłam",
+        "sg2": "byłaś",
+        "sg3": "była"
+      },
+      "past_masc": {
+        "pl1": "byliśmy",
+        "pl2": "byliście",
+        "pl3": "byli",
+        "sg1": "byłem",
+        "sg2": "byłeś",
+        "sg3": "był"
+      },
+      "past_neut": {
+        "sg3": "było"
+      },
+      "present": {
+        "pl1": "jesteśmy",
+        "pl2": "jesteście",
+        "pl3": "są",
+        "sg1": "jestem",
+        "sg2": "jesteś",
+        "sg3": "jest"
+      }
+    },
+    "lemma": "być",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
     "phrases_and_idioms": [
-      { "pl": "być może", "ru": "возможно" },
-      { "pl": "być w stanie", "ru": "быть в состоянии" }
+      {
+        "pl": "być może",
+        "ru": "возможно"
+      },
+      {
+        "pl": "być w stanie",
+        "ru": "быть в состоянии"
+      }
     ],
-    "applied_rules": ["ć", "ł", "ą", "ę"]
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "jestem",
+          "ru": "ЕСТЭМ"
+        },
+        {
+          "pl": "jesteś",
+          "ru": "ЕС-ТЕШЬ"
+        },
+        {
+          "pl": "jest",
+          "ru": "ЕСТ"
+        },
+        {
+          "pl": "są",
+          "ru": "С(оу̃)"
+        }
+      ],
+      "ru_transcription": "быч"
+    },
+    "translations": {
+      "ru": "быть"
+    }
   },
   "chcieć": {
+    "applied_rules": [
+      "ć",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Chcę kawę.",
+        "ru": "Я хочу кофе.",
+        "ru_transcription": "Хцэм кавэ."
+      },
+      {
+        "pl": "Co chcesz zamówić?",
+        "ru": "Что ты хочешь заказать?",
+        "ru_transcription": "цо хцешь замувич?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy chcieli",
+        "pl2": "będziecie chcieli",
+        "pl3": "będą chcieli",
+        "sg1": "będę chciał/chciała",
+        "sg2": "będziesz chciał/chciała",
+        "sg3": "będzie chciał/chciała"
+      },
+      "imperative": {},
+      "past_fem": {
+        "pl1": "chciałyśmy",
+        "pl2": "chciałyście",
+        "pl3": "chciały",
+        "sg1": "chciałam",
+        "sg2": "chciałaś",
+        "sg3": "chciała"
+      },
+      "past_masc": {
+        "pl1": "chcieliśmy",
+        "pl2": "chcieliście",
+        "pl3": "chcieli",
+        "sg1": "chciałem",
+        "sg2": "chciałeś",
+        "sg3": "chciał"
+      },
+      "past_neut": {
+        "sg3": "chciało"
+      },
+      "present": {
+        "pl1": "chcemy",
+        "pl2": "chcecie",
+        "pl3": "chcą",
+        "sg1": "chcę",
+        "sg2": "chcesz",
+        "sg3": "chce"
+      }
+    },
     "lemma": "chcieć",
-    "part_of_speech": "verb",
-    "translations": { "ru": "хотеть" },
-    "pronunciation": { 
-      "ru_transcription": "хцэч",
-      "key_forms": [
-        { "pl": "chcę", "ru": "ХЦЭМ" },
-        { "pl": "chcesz", "ru": "ХЦЕШЬ" },
-        { "pl": "chce", "ru": "ХЦЭ" }
-      ]
-    },
     "morphology": {
       "aspect": "imperfective",
-      "transitivity": "transitive",
-      "reflexive": false
+      "reflexive": false,
+      "transitivity": "transitive"
     },
-    "inflection": {
-      "present": { "sg1": "chcę", "sg2": "chcesz", "sg3": "chce", "pl1": "chcemy", "pl2": "chcecie", "pl3": "chcą" },
-      "past_masc": { "sg1": "chciałem", "sg2": "chciałeś", "sg3": "chciał", "pl1": "chcieliśmy", "pl2": "chcieliście", "pl3": "chcieli" },
-      "past_fem": { "sg1": "chciałam", "sg2": "chciałaś", "sg3": "chciała", "pl1": "chciałyśmy", "pl2": "chciałyście", "pl3": "chciały" },
-      "past_neut": { "sg3": "chciało" },
-      "future": { "sg1": "będę chciał/chciała", "sg2": "będziesz chciał/chciała", "sg3": "będzie chciał/chciała", "pl1": "będziemy chcieli", "pl2": "będziecie chcieli", "pl3": "będą chcieli" },
-      "imperative": {}
-    },
-    "examples": [
-      { "pl": "Chcę kawę.", "ru": "Я хочу кофе.", "ru_transcription": "Хцэм кавэ." },
-      { "pl": "Co chcesz zamówić?", "ru": "Что ты хочешь заказать?", "ru_transcription": "цо хцешь замувич?" }
-    ],
+    "part_of_speech": "verb",
     "phrases_and_idioms": [
-      { "pl": "chcieć czy nie chcieć", "ru": "хочешь не хочешь" }
+      {
+        "pl": "chcieć czy nie chcieć",
+        "ru": "хочешь не хочешь"
+      }
     ],
-    "applied_rules": ["ć", "ą"]
-  },
-  "brzmieć": {
-    "lemma": "brzmieć",
-    "part_of_speech": "verb",
-    "translations": { "ru": "звучать" },
-    "pronunciation": { 
-      "ru_transcription": "бжмэч",
+    "pronunciation": {
       "key_forms": [
-        { "pl": "brzmi", "ru": "БЖМИ" },
-        { "pl": "brzmią", "ru": "БЖМЁ(oн̃)" }
-      ]
+        {
+          "pl": "chcę",
+          "ru": "ХЦЭМ"
+        },
+        {
+          "pl": "chcesz",
+          "ru": "ХЦЕШЬ"
+        },
+        {
+          "pl": "chce",
+          "ru": "ХЦЭ"
+        }
+      ],
+      "ru_transcription": "хцэч"
     },
+    "translations": {
+      "ru": "хотеть"
+    }
+  },
+  "cieszyć": {
+    "applied_rules": [
+      "ć",
+      "ą",
+      "ę",
+      "ł"
+    ],
+    "examples": [
+      {
+        "pl": "Cieszę się z twojego sukcesu.",
+        "ru": "Радуюсь твоему успеху.",
+        "ru_transcription": "цЕшэм сЯ з твоЕго сукцЭсу."
+      },
+      {
+        "pl": "Bardzo się cieszę!",
+        "ru": "Очень радуюсь!",
+        "ru_transcription": "бардзо сЯ цЕшэм!"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy cieszyli",
+        "pl2": "będziecie cieszyli",
+        "pl3": "będą cieszyli",
+        "sg1": "będę cieszył/cieszyła",
+        "sg2": "będziesz cieszył/cieszyła",
+        "sg3": "będzie cieszył/cieszyła"
+      },
+      "imperative": {
+        "pl1": "cieszmy",
+        "pl2": "cieszcie",
+        "sg2": "ciesz"
+      },
+      "past_fem": {
+        "pl1": "cieszyłyśmy",
+        "pl2": "cieszyłyście",
+        "pl3": "cieszyły",
+        "sg1": "cieszyłam",
+        "sg2": "cieszyłaś",
+        "sg3": "cieszyła"
+      },
+      "past_masc": {
+        "pl1": "cieszyliśmy",
+        "pl2": "cieszyliście",
+        "pl3": "cieszyli",
+        "sg1": "cieszyłem",
+        "sg2": "cieszyłeś",
+        "sg3": "cieszył"
+      },
+      "past_neut": {
+        "sg3": "cieszyło"
+      },
+      "present": {
+        "pl1": "cieszymy",
+        "pl2": "cieszycie",
+        "pl3": "cieszą",
+        "sg1": "cieszę",
+        "sg2": "cieszysz",
+        "sg3": "cieszy"
+      }
+    },
+    "lemma": "cieszyć",
     "morphology": {
       "aspect": "imperfective",
-      "transitivity": "intransitive",
-      "reflexive": false
+      "reflexive": true,
+      "transitivity": "intransitive"
     },
-    "inflection": {
-      "present": { "sg1": "brzmię", "sg2": "brzmisz", "sg3": "brzmi", "pl1": "brzmimy", "pl2": "brzmicie", "pl3": "brzmią" },
-      "past_masc": { "sg1": "brzmiałem", "sg2": "brzmiałeś", "sg3": "brzmiał", "pl1": "brzmielihmy", "pl2": "brzmielihcie", "pl3": "brzmieli" },
-      "past_fem": { "sg1": "brzmiałam", "sg2": "brzmiałaś", "sg3": "brzmiała", "pl1": "brzmiałyśmy", "pl2": "brzmiałyście", "pl3": "brzmiały" },
-      "past_neut": { "sg3": "brzmiało" },
-      "future": { "sg1": "będę brzmiał/brzmiała", "sg2": "będziesz brzmiał/brzmiała", "sg3": "będzie brzmiał/brzmiała", "pl1": "będziemy brzmieli", "pl2": "będziecie brzmieli", "pl3": "będą brzmieli" },
-      "imperative": {}
-    },
-    "examples": [
-      { "pl": "To brzmi dobrze.", "ru": "Это звучит хорошо.", "ru_transcription": "То бжми добжэ." },
-      { "pl": "Jak to brzmi po polsku?", "ru": "Как это звучит по-польски?", "ru_transcription": "як то бжми по польску?" }
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "cieszyć się",
+        "ru": "радоваться"
+      }
     ],
-    "phrases_and_idioms": [],
-    "applied_rules": ["rz", "ć", "ą"]
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "cieszę",
+          "ru": "цЕшэм"
+        },
+        {
+          "pl": "cieszysz",
+          "ru": "цЕшышь"
+        },
+        {
+          "pl": "cieszy",
+          "ru": "цЕшы"
+        }
+      ],
+      "ru_transcription": "цЕшыч"
+    },
+    "translations": {
+      "ru": "радоваться"
+    }
   },
   "dać": {
-    "lemma": "dać",
-    "part_of_speech": "verb",
-    "translations": { "ru": "дать" },
-    "pronunciation": { 
-      "ru_transcription": "дач",
-      "key_forms": [
-        { "pl": "dam", "ru": "ДАМ" },
-        { "pl": "dasz", "ru": "ДАШЬ" },
-        { "pl": "da", "ru": "ДА" }
-      ]
+    "applied_rules": [
+      "ć",
+      "ł",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Dam ci pieniądze.",
+        "ru": "Дам тебе деньги.",
+        "ru_transcription": "Дам ци пэнёндзэ."
+      },
+      {
+        "pl": "Daj mi, proszę, sól.",
+        "ru": "Дай мне, пожалуйста, соль.",
+        "ru_transcription": "дай ми прошэ сул."
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "damy",
+        "pl2": "dacie",
+        "pl3": "dadzą",
+        "sg1": "dam",
+        "sg2": "dasz",
+        "sg3": "da"
+      },
+      "imperative": {
+        "pl1": "dajmy",
+        "pl2": "dajcie",
+        "sg2": "daj"
+      },
+      "past_fem": {
+        "pl1": "dałyśmy",
+        "pl2": "dałyście",
+        "pl3": "dały",
+        "sg1": "dałam",
+        "sg2": "dałaś",
+        "sg3": "dała"
+      },
+      "past_masc": {
+        "pl1": "daliśmy",
+        "pl2": "daliście",
+        "pl3": "dali",
+        "sg1": "dałem",
+        "sg2": "dałeś",
+        "sg3": "dał"
+      },
+      "past_neut": {
+        "sg3": "dało"
+      },
+      "present": {}
     },
+    "lemma": "dać",
     "morphology": {
       "aspect": "perfective",
-      "transitivity": "transitive",
-      "reflexive": false
+      "reflexive": false,
+      "transitivity": "transitive"
     },
-    "inflection": {
-      "present": {},
-      "past_masc": { "sg1": "dałem", "sg2": "dałeś", "sg3": "dał", "pl1": "daliśmy", "pl2": "daliście", "pl3": "dali" },
-      "past_fem": { "sg1": "dałam", "sg2": "dałaś", "sg3": "dała", "pl1": "dałyśmy", "pl2": "dałyście", "pl3": "dały" },
-      "past_neut": { "sg3": "dało" },
-      "future": { "sg1": "dam", "sg2": "dasz", "sg3": "da", "pl1": "damy", "pl2": "dacie", "pl3": "dadzą" },
-      "imperative": { "sg2": "daj", "pl1": "dajmy", "pl2": "dajcie" }
-    },
-    "examples": [
-      { "pl": "Dam ci pieniądze.", "ru": "Дам тебе деньги.", "ru_transcription": "Дам ци пэнёндзэ." },
-      { "pl": "Daj mi, proszę, sól.", "ru": "Дай мне, пожалуйста, соль.", "ru_transcription": "дай ми прошэ сул." }
-    ],
+    "part_of_speech": "verb",
     "phrases_and_idioms": [
-      { "pl": "dać sobie radę", "ru": "справиться" }
+      {
+        "pl": "dać sobie radę",
+        "ru": "справиться"
+      }
     ],
-    "applied_rules": ["ć", "ł", "ą"]
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "dam",
+          "ru": "ДАМ"
+        },
+        {
+          "pl": "dasz",
+          "ru": "ДАШЬ"
+        },
+        {
+          "pl": "da",
+          "ru": "ДА"
+        }
+      ],
+      "ru_transcription": "дач"
+    },
+    "translations": {
+      "ru": "дать"
+    }
+  },
+  "dodać": {
+    "applied_rules": [
+      "ć",
+      "ł",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Dodam trochę soli.",
+        "ru": "Добавлю немного соли.",
+        "ru_transcription": "додАМ трохэм соли."
+      },
+      {
+        "pl": "Czy mogę dodać cukru?",
+        "ru": "Могу добавить сахару?",
+        "ru_transcription": "чы могЭм додач цукру?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "dodamy",
+        "pl2": "dodacie",
+        "pl3": "dodadzą",
+        "sg1": "dodam",
+        "sg2": "dodasz",
+        "sg3": "doda"
+      },
+      "imperative": {
+        "pl1": "dodajmy",
+        "pl2": "dodajcie",
+        "sg2": "dodaj"
+      },
+      "past_fem": {
+        "pl1": "dodałyśmy",
+        "pl2": "dodałyście",
+        "pl3": "dodały",
+        "sg1": "dodałam",
+        "sg2": "dodałaś",
+        "sg3": "dodała"
+      },
+      "past_masc": {
+        "pl1": "dodaliśmy",
+        "pl2": "dodaliście",
+        "pl3": "dodali",
+        "sg1": "dodałem",
+        "sg2": "dodałeś",
+        "sg3": "dodał"
+      },
+      "past_neut": {
+        "sg3": "dodało"
+      },
+      "present": {}
+    },
+    "lemma": "dodać",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "dodam",
+          "ru": "додАМ"
+        },
+        {
+          "pl": "dodasz",
+          "ru": "додАШЬ"
+        },
+        {
+          "pl": "doda",
+          "ru": "додА"
+        }
+      ],
+      "ru_transcription": "додач"
+    },
+    "translations": {
+      "ru": "добавить"
+    }
+  },
+  "dopisywać": {
+    "applied_rules": [
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Dopisuję nowe słowa do słownika.",
+        "ru": "Дописываю новые слова в словарь.",
+        "ru_transcription": "допИсуЕм новэ слова до словника."
+      },
+      {
+        "pl": "Czy możesz dopisać adres?",
+        "ru": "Можешь дописать адрес?",
+        "ru_transcription": "чы можешь допИсач адрэс?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy dopisywali",
+        "pl2": "będziecie dopisywali",
+        "pl3": "będą dopisywali",
+        "sg1": "będę dopisywał/dopisywała",
+        "sg2": "będziesz dopisywał/dopisywała",
+        "sg3": "będzie dopisywał/dopisywała"
+      },
+      "imperative": {
+        "pl1": "dopisujmy",
+        "pl2": "dopisujcie",
+        "sg2": "dopisuj"
+      },
+      "past_fem": {
+        "pl1": "dopisywałyśmy",
+        "pl2": "dopisywałyście",
+        "pl3": "dopisywały",
+        "sg1": "dopisywałam",
+        "sg2": "dopisywałaś",
+        "sg3": "dopisywała"
+      },
+      "past_masc": {
+        "pl1": "dopisywaliśmy",
+        "pl2": "dopisywaliście",
+        "pl3": "dopisywali",
+        "sg1": "dopisywałem",
+        "sg2": "dopisywałeś",
+        "sg3": "dopisywał"
+      },
+      "past_neut": {
+        "sg3": "dopisywało"
+      },
+      "present": {
+        "pl1": "dopisujemy",
+        "pl2": "dopisujecie",
+        "pl3": "dopisują",
+        "sg1": "dopisuję",
+        "sg2": "dopisujesz",
+        "sg3": "dopisuje"
+      }
+    },
+    "lemma": "dopisywać",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "dopisuję",
+          "ru": "допИсуЕм"
+        },
+        {
+          "pl": "dopisujesz",
+          "ru": "допИсуЕшь"
+        },
+        {
+          "pl": "dopisuje",
+          "ru": "допИсуЕ"
+        }
+      ],
+      "ru_transcription": "допИсывач"
+    },
+    "translations": {
+      "ru": "дописывать"
+    }
+  },
+  "dziękować": {
+    "applied_rules": [
+      "ę",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Dziękuję za pomoc.",
+        "ru": "Спасибо за помощь.",
+        "ru_transcription": "дзЁнкуЕм за помоц."
+      },
+      {
+        "pl": "Bardzo dziękuję!",
+        "ru": "Большое спасибо!",
+        "ru_transcription": "бардзо дзЁнкуЕм!"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy dziękowali",
+        "pl2": "będziecie dziękowali",
+        "pl3": "będą dziękowali",
+        "sg1": "będę dziękował/dziękowała",
+        "sg2": "będziesz dziękował/dziękowała",
+        "sg3": "będzie dziękował/dziękowała"
+      },
+      "imperative": {
+        "pl1": "dziękujmy",
+        "pl2": "dziękujcie",
+        "sg2": "dziękuj"
+      },
+      "past_fem": {
+        "pl1": "dziękowałyśmy",
+        "pl2": "dziękowałyście",
+        "pl3": "dziękowały",
+        "sg1": "dziękowałam",
+        "sg2": "dziękowałaś",
+        "sg3": "dziękowała"
+      },
+      "past_masc": {
+        "pl1": "dziękowaliśmy",
+        "pl2": "dziękowaliście",
+        "pl3": "dziękowali",
+        "sg1": "dziękowałem",
+        "sg2": "dziękowałeś",
+        "sg3": "dziękował"
+      },
+      "past_neut": {
+        "sg3": "dziękowało"
+      },
+      "present": {
+        "pl1": "dziękujemy",
+        "pl2": "dziękujecie",
+        "pl3": "dziękują",
+        "sg1": "dziękuję",
+        "sg2": "dziękujesz",
+        "sg3": "dziękuje"
+      }
+    },
+    "lemma": "dziękować",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "dziękuję bardzo",
+        "ru": "большое спасибо"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "dziękuję",
+          "ru": "дзЁнкуЕм"
+        },
+        {
+          "pl": "dziękujesz",
+          "ru": "дзЁнкуЕшь"
+        },
+        {
+          "pl": "dziękuje",
+          "ru": "дзЁнкуЕ"
+        }
+      ],
+      "ru_transcription": "дзЁнкОвач"
+    },
+    "translations": {
+      "ru": "благодарить"
+    }
   },
   "mieć": {
-    "lemma": "mieć",
-    "part_of_speech": "verb",
-    "translations": { "ru": "иметь" },
-    "pronunciation": { 
-      "ru_transcription": "мэч",
-      "key_forms": [
-        { "pl": "mam", "ru": "МАМ" },
-        { "pl": "masz", "ru": "МАШЬ" },
-        { "pl": "ma", "ru": "МА" }
-      ]
+    "applied_rules": [
+      "ć",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Mam psa.",
+        "ru": "У меня есть собака.",
+        "ru_transcription": "Мам пса."
+      },
+      {
+        "pl": "Czy masz czas?",
+        "ru": "У тебя есть время?",
+        "ru_transcription": "чы машь час?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy mieli",
+        "pl2": "będziecie mieli",
+        "pl3": "będą mieli",
+        "sg1": "będę miał/miała",
+        "sg2": "będziesz miał/miała",
+        "sg3": "będzie miał/miała"
+      },
+      "imperative": {
+        "pl1": "miejmy",
+        "pl2": "miejcie",
+        "sg2": "miej"
+      },
+      "past_fem": {
+        "pl1": "miałyśmy",
+        "pl2": "miałyście",
+        "pl3": "miały",
+        "sg1": "miałam",
+        "sg2": "miałaś",
+        "sg3": "miała"
+      },
+      "past_masc": {
+        "pl1": "mieliśmy",
+        "pl2": "mieliście",
+        "pl3": "mieli",
+        "sg1": "miałem",
+        "sg2": "miałeś",
+        "sg3": "miał"
+      },
+      "past_neut": {
+        "sg3": "miało"
+      },
+      "present": {
+        "pl1": "mamy",
+        "pl2": "macie",
+        "pl3": "mają",
+        "sg1": "mam",
+        "sg2": "masz",
+        "sg3": "ma"
+      }
     },
+    "lemma": "mieć",
     "morphology": {
       "aspect": "imperfective",
-      "transitivity": "transitive",
-      "reflexive": false
+      "reflexive": false,
+      "transitivity": "transitive"
     },
-    "inflection": {
-      "present": { "sg1": "mam", "sg2": "masz", "sg3": "ma", "pl1": "mamy", "pl2": "macie", "pl3": "mają" },
-      "past_masc": { "sg1": "miałem", "sg2": "miałeś", "sg3": "miał", "pl1": "mieliśmy", "pl2": "mieliście", "pl3": "mieli" },
-      "past_fem": { "sg1": "miałam", "sg2": "miałaś", "sg3": "miała", "pl1": "miałyśmy", "pl2": "miałyście", "pl3": "miały" },
-      "past_neut": { "sg3": "miało" },
-      "future": { "sg1": "będę miał/miała", "sg2": "będziesz miał/miała", "sg3": "będzie miał/miała", "pl1": "będziemy mieli", "pl2": "będziecie mieli", "pl3": "będą mieli" },
-      "imperative": { "sg2": "miej", "pl1": "miejmy", "pl2": "miejcie" }
-    },
-    "examples": [
-      { "pl": "Mam psa.", "ru": "У меня есть собака.", "ru_transcription": "Мам пса." },
-      { "pl": "Czy masz czas?", "ru": "У тебя есть время?", "ru_transcription": "чы машь час?" }
-    ],
+    "part_of_speech": "verb",
     "phrases_and_idioms": [
-      { "pl": "mieć rację", "ru": "быть правым" },
-      { "pl": "mieć ochotę", "ru": "хотеть" }
+      {
+        "pl": "mieć rację",
+        "ru": "быть правым"
+      },
+      {
+        "pl": "mieć ochotę",
+        "ru": "хотеть"
+      }
     ],
-    "applied_rules": ["ć", "ą"]
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "mam",
+          "ru": "МАМ"
+        },
+        {
+          "pl": "masz",
+          "ru": "МАШЬ"
+        },
+        {
+          "pl": "ma",
+          "ru": "МА"
+        }
+      ],
+      "ru_transcription": "мэч"
+    },
+    "translations": {
+      "ru": "иметь"
+    }
   },
   "móc": {
-    "lemma": "móc",
-    "part_of_speech": "verb",
-    "translations": { "ru": "мочь" },
-    "pronunciation": { 
-      "ru_transcription": "муц",
-      "key_forms": [
-        { "pl": "mogę", "ru": "МОГЭМ" },
-        { "pl": "możesz", "ru": "МОЖЕШЬ" },
-        { "pl": "może", "ru": "МОЖЭ" }
-      ]
+    "applied_rules": [
+      "ó",
+      "ć",
+      "ą",
+      "ę",
+      "ż"
+    ],
+    "examples": [
+      {
+        "pl": "Mogę ci pomóc.",
+        "ru": "Я могу тебе помочь.",
+        "ru_transcription": "могэм ци помуц."
+      },
+      {
+        "pl": "Czy możesz przyjść?",
+        "ru": "Можешь прийти?",
+        "ru_transcription": "чы можешь пшийшьч?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy mogli",
+        "pl2": "będziecie mogli",
+        "pl3": "będą mogli",
+        "sg1": "będę mógł/mogła",
+        "sg2": "będziesz mógł/mogła",
+        "sg3": "będzie mógł/mogła"
+      },
+      "imperative": {},
+      "past_fem": {
+        "pl1": "mogłyśmy",
+        "pl2": "mogłyście",
+        "pl3": "mogły",
+        "sg1": "mogłam",
+        "sg2": "mogłaś",
+        "sg3": "mogła"
+      },
+      "past_masc": {
+        "pl1": "mogliśmy",
+        "pl2": "mogliście",
+        "pl3": "mogli",
+        "sg1": "mogłem",
+        "sg2": "mogłeś",
+        "sg3": "mógł"
+      },
+      "past_neut": {
+        "sg3": "mogło"
+      },
+      "present": {
+        "pl1": "możemy",
+        "pl2": "możecie",
+        "pl3": "mogą",
+        "sg1": "mogę",
+        "sg2": "możesz",
+        "sg3": "może"
+      }
     },
+    "lemma": "móc",
     "morphology": {
       "aspect": "imperfective",
-      "transitivity": "transitive",
-      "reflexive": false
+      "reflexive": false,
+      "transitivity": "transitive"
     },
-    "inflection": {
-      "present": { "sg1": "mogę", "sg2": "możesz", "sg3": "może", "pl1": "możemy", "pl2": "możecie", "pl3": "mogą" },
-      "past_masc": { "sg1": "mogłem", "sg2": "mogłeś", "sg3": "mógł", "pl1": "mogliśmy", "pl2": "mogliście", "pl3": "mogli" },
-      "past_fem": { "sg1": "mogłam", "sg2": "mogłaś", "sg3": "mogła", "pl1": "mogłyśmy", "pl2": "mogłyście", "pl3": "mogły" },
-      "past_neut": { "sg3": "mogło" },
-      "future": { "sg1": "będę mógł/mogła", "sg2": "będziesz mógł/mogła", "sg3": "będzie mógł/mogła", "pl1": "będziemy mogli", "pl2": "będziecie mogli", "pl3": "będą mogli" },
-      "imperative": {}
-    },
-    "examples": [
-      { "pl": "Mogę ci pomóc.", "ru": "Я могу тебе помочь.", "ru_transcription": "могэм ци помуц." },
-      { "pl": "Czy możesz przyjść?", "ru": "Можешь прийти?", "ru_transcription": "чы можешь пшийшьч?" }
-    ],
+    "part_of_speech": "verb",
     "phrases_and_idioms": [
-      { "pl": "może być", "ru": "может быть" }
+      {
+        "pl": "może być",
+        "ru": "может быть"
+      }
     ],
-    "applied_rules": ["ó", "ć", "ą", "ę", "ż"]
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "mogę",
+          "ru": "МОГЭМ"
+        },
+        {
+          "pl": "możesz",
+          "ru": "МОЖЕШЬ"
+        },
+        {
+          "pl": "może",
+          "ru": "МОЖЭ"
+        }
+      ],
+      "ru_transcription": "муц"
+    },
+    "translations": {
+      "ru": "мочь"
+    }
+  },
+  "potrzebować": {
+    "applied_rules": [
+      "rz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Potrzebuję pomocy.",
+        "ru": "Мне нужна помощь.",
+        "ru_transcription": "потшЭбуЕм помоцы."
+      },
+      {
+        "pl": "Czego potrzebujesz?",
+        "ru": "Что тебе нужно?",
+        "ru_transcription": "чЭго потшЭбуЕшь?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy potrzebowali",
+        "pl2": "będziecie potrzebowali",
+        "pl3": "będą potrzebowali",
+        "sg1": "będę potrzebował/potrzebowała",
+        "sg2": "będziesz potrzebował/potrzebowała",
+        "sg3": "będzie potrzebował/potrzebowała"
+      },
+      "imperative": {
+        "pl1": "potrzebujmy",
+        "pl2": "potrzebujcie",
+        "sg2": "potrzebuj"
+      },
+      "past_fem": {
+        "pl1": "potrzebowałyśmy",
+        "pl2": "potrzebowałyście",
+        "pl3": "potrzebowały",
+        "sg1": "potrzebowałam",
+        "sg2": "potrzebowałaś",
+        "sg3": "potrzebowała"
+      },
+      "past_masc": {
+        "pl1": "potrzebowaliśmy",
+        "pl2": "potrzebowaliście",
+        "pl3": "potrzebowali",
+        "sg1": "potrzebowałem",
+        "sg2": "potrzebowałeś",
+        "sg3": "potrzebował"
+      },
+      "past_neut": {
+        "sg3": "potrzebowało"
+      },
+      "present": {
+        "pl1": "potrzebujemy",
+        "pl2": "potrzebujecie",
+        "pl3": "potrzebują",
+        "sg1": "potrzebuję",
+        "sg2": "potrzebujesz",
+        "sg3": "potrzebuje"
+      }
+    },
+    "lemma": "potrzebować",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "potrzebuję",
+          "ru": "потшЭбуЕм"
+        },
+        {
+          "pl": "potrzebujesz",
+          "ru": "потшЭбуЕшь"
+        },
+        {
+          "pl": "potrzebuje",
+          "ru": "потшЭбуЕ"
+        }
+      ],
+      "ru_transcription": "потшЭбОвач"
+    },
+    "translations": {
+      "ru": "нуждаться"
+    }
+  },
+  "prosić": {
+    "applied_rules": [
+      "ć",
+      "ś",
+      "ą",
+      "ę",
+      "ł"
+    ],
+    "examples": [
+      {
+        "pl": "Proszę o rachunek.",
+        "ru": "Прошу счёт.",
+        "ru_transcription": "прошЭм о рахунэк."
+      },
+      {
+        "pl": "Czy mogę prosić?",
+        "ru": "Можно попросить?",
+        "ru_transcription": "чы могЭм прошИч?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy prosili",
+        "pl2": "będziecie prosili",
+        "pl3": "będą prosili",
+        "sg1": "będę prosił/prosiła",
+        "sg2": "będziesz prosił/prosiła",
+        "sg3": "będzie prosił/prosiła"
+      },
+      "imperative": {
+        "pl1": "prośmy",
+        "pl2": "proście",
+        "sg2": "proś"
+      },
+      "past_fem": {
+        "pl1": "prosiłyśmy",
+        "pl2": "prosiłyście",
+        "pl3": "prosiły",
+        "sg1": "prosiłam",
+        "sg2": "prosiłaś",
+        "sg3": "prosiła"
+      },
+      "past_masc": {
+        "pl1": "prosiliśmy",
+        "pl2": "prosiliście",
+        "pl3": "prosili",
+        "sg1": "prosiłem",
+        "sg2": "prosiłeś",
+        "sg3": "prosił"
+      },
+      "past_neut": {
+        "sg3": "prosiło"
+      },
+      "present": {
+        "pl1": "prosimy",
+        "pl2": "prosicie",
+        "pl3": "proszą",
+        "sg1": "proszę",
+        "sg2": "prosisz",
+        "sg3": "prosi"
+      }
+    },
+    "lemma": "prosić",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "proszę bardzo",
+        "ru": "пожалуйста"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "proszę",
+          "ru": "прошЭм"
+        },
+        {
+          "pl": "prosisz",
+          "ru": "прошИшь"
+        },
+        {
+          "pl": "prosi",
+          "ru": "прошИ"
+        }
+      ],
+      "ru_transcription": "прошИч"
+    },
+    "translations": {
+      "ru": "просить"
+    }
+  },
+  "przygotować": {
+    "applied_rules": [
+      "rz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Przygotujemy kolację.",
+        "ru": "Приготовим ужин.",
+        "ru_transcription": "пшыготУЕмы колацьем."
+      },
+      {
+        "pl": "Czy możesz przygotować kawę?",
+        "ru": "Можешь приготовить кофе?",
+        "ru_transcription": "чы можешь пшыготОвач кавэм?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "przygotujemy",
+        "pl2": "przygotujecie",
+        "pl3": "przygotują",
+        "sg1": "przygotuję",
+        "sg2": "przygotujesz",
+        "sg3": "przygotuje"
+      },
+      "imperative": {
+        "pl1": "przygotujmy",
+        "pl2": "przygotujcie",
+        "sg2": "przygotuj"
+      },
+      "past_fem": {
+        "pl1": "przygotowałyśmy",
+        "pl2": "przygotowałyście",
+        "pl3": "przygotowały",
+        "sg1": "przygotowałam",
+        "sg2": "przygotowałaś",
+        "sg3": "przygotowała"
+      },
+      "past_masc": {
+        "pl1": "przygotowaliśmy",
+        "pl2": "przygotowaliście",
+        "pl3": "przygotowali",
+        "sg1": "przygotowałem",
+        "sg2": "przygotowałeś",
+        "sg3": "przygotował"
+      },
+      "past_neut": {
+        "sg3": "przygotowało"
+      },
+      "present": {}
+    },
+    "lemma": "przygotować",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "przygotuję",
+          "ru": "пшыготУЕм"
+        },
+        {
+          "pl": "przygotujesz",
+          "ru": "пшыготУЕшь"
+        },
+        {
+          "pl": "przygotuje",
+          "ru": "пшыготУЕ"
+        }
+      ],
+      "ru_transcription": "пшыготОвач"
+    },
+    "translations": {
+      "ru": "приготовить"
+    }
+  },
+  "przyjąć": {
+    "applied_rules": [
+      "rz",
+      "ą",
+      "ę",
+      "ł"
+    ],
+    "examples": [
+      {
+        "pl": "Przyjmę zamówienie.",
+        "ru": "Приму заказ.",
+        "ru_transcription": "пшыймЭм замувЕнЕ."
+      },
+      {
+        "pl": "Czy Pan przyjmie zaproszenie?",
+        "ru": "Примете приглашение?",
+        "ru_transcription": "чы пан пшыймЕ запрошЕнЕ?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "przyjmiemy",
+        "pl2": "przyjmiecie",
+        "pl3": "przyjmą",
+        "sg1": "przyjmę",
+        "sg2": "przyjmiesz",
+        "sg3": "przyjmie"
+      },
+      "imperative": {
+        "pl1": "przyjmijmy",
+        "pl2": "przyjmijcie",
+        "sg2": "przyjmij"
+      },
+      "past_fem": {
+        "pl1": "przyjęłyśmy",
+        "pl2": "przyjęłyście",
+        "pl3": "przyjęły",
+        "sg1": "przyjęłam",
+        "sg2": "przyjęłaś",
+        "sg3": "przyjęła"
+      },
+      "past_masc": {
+        "pl1": "przyjęliśmy",
+        "pl2": "przyjęliście",
+        "pl3": "przyjęli",
+        "sg1": "przyjąłem",
+        "sg2": "przyjąłeś",
+        "sg3": "przyjął"
+      },
+      "past_neut": {
+        "sg3": "przyjęło"
+      },
+      "present": {}
+    },
+    "lemma": "przyjąć",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "przyjmę",
+          "ru": "пшыймЭм"
+        },
+        {
+          "pl": "przyjmiesz",
+          "ru": "пшыймЕшь"
+        },
+        {
+          "pl": "przyjmie",
+          "ru": "пшыймЕ"
+        }
+      ],
+      "ru_transcription": "пшыёнч"
+    },
+    "translations": {
+      "ru": "принять"
+    }
+  },
+  "usiąść": {
+    "applied_rules": [
+      "ś",
+      "ą",
+      "ł"
+    ],
+    "examples": [
+      {
+        "pl": "Proszę usiąść.",
+        "ru": "Садитесь, пожалуйста.",
+        "ru_transcription": "прошэм ушёншч."
+      },
+      {
+        "pl": "Gdzie mam usiąść?",
+        "ru": "Где мне сесть?",
+        "ru_transcription": "гдзЕ мам ушёншч?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "usiądziemy",
+        "pl2": "usiądziecie",
+        "pl3": "usiądą",
+        "sg1": "usiądę",
+        "sg2": "usiądziesz",
+        "sg3": "usiądzie"
+      },
+      "imperative": {
+        "pl1": "usiądźmy",
+        "pl2": "usiądźcie",
+        "sg2": "usiądź"
+      },
+      "past_fem": {
+        "pl1": "usiadłyśmy",
+        "pl2": "usiadłyście",
+        "pl3": "usiadły",
+        "sg1": "usiadłam",
+        "sg2": "usiadłaś",
+        "sg3": "usiadła"
+      },
+      "past_masc": {
+        "pl1": "usiedliśmy",
+        "pl2": "usiedliście",
+        "pl3": "usiedli",
+        "sg1": "usiadłem",
+        "sg2": "usiadłeś",
+        "sg3": "usiadł"
+      },
+      "past_neut": {
+        "sg3": "usiadło"
+      },
+      "present": {}
+    },
+    "lemma": "usiąść",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "usiądę",
+          "ru": "ушёндЭм"
+        },
+        {
+          "pl": "usiądziesz",
+          "ru": "ушёндзЕшь"
+        },
+        {
+          "pl": "usiądzie",
+          "ru": "ушёндзЕ"
+        }
+      ],
+      "ru_transcription": "ушёншч"
+    },
+    "translations": {
+      "ru": "сесть"
+    }
+  },
+  "witać": {
+    "applied_rules": [
+      "ć",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Witam Państwa!",
+        "ru": "Приветствую Вас!",
+        "ru_transcription": "вИтам пАньства!"
+      },
+      {
+        "pl": "Witamy w naszej restauracji.",
+        "ru": "Добро пожаловать в наш ресторан.",
+        "ru_transcription": "вИтамы в нашэй рэстаурацьи."
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "będziemy witali",
+        "pl2": "będziecie witali",
+        "pl3": "będą witali",
+        "sg1": "będę witał/witała",
+        "sg2": "będziesz witał/witała",
+        "sg3": "będzie witał/witała"
+      },
+      "imperative": {
+        "pl1": "witajmy",
+        "pl2": "witajcie",
+        "sg2": "witaj"
+      },
+      "past_fem": {
+        "pl1": "witałyśmy",
+        "pl2": "witałyście",
+        "pl3": "witały",
+        "sg1": "witałam",
+        "sg2": "witałaś",
+        "sg3": "witała"
+      },
+      "past_masc": {
+        "pl1": "witaliśmy",
+        "pl2": "witaliście",
+        "pl3": "witali",
+        "sg1": "witałem",
+        "sg2": "witałeś",
+        "sg3": "witał"
+      },
+      "past_neut": {
+        "sg3": "witało"
+      },
+      "present": {
+        "pl1": "witamy",
+        "pl2": "witacie",
+        "pl3": "witają",
+        "sg1": "witam",
+        "sg2": "witasz",
+        "sg3": "wita"
+      }
+    },
+    "lemma": "witać",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "witaj",
+        "ru": "привет"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "witam",
+          "ru": "вИтам"
+        },
+        {
+          "pl": "witasz",
+          "ru": "вИташь"
+        },
+        {
+          "pl": "wita",
+          "ru": "вИта"
+        }
+      ],
+      "ru_transcription": "вИтач"
+    },
+    "translations": {
+      "ru": "приветствовать"
+    }
+  },
+  "wrócić": {
+    "applied_rules": [
+      "ó",
+      "ć",
+      "ł",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Wrócę za godzinę.",
+        "ru": "Вернусь через час.",
+        "ru_transcription": "вруцЭм за годзИнэм."
+      },
+      {
+        "pl": "Kiedy wrócisz?",
+        "ru": "Когда вернёшься?",
+        "ru_transcription": "кеды вруцИшь?"
+      }
+    ],
+    "inflection": {
+      "future": {
+        "pl1": "wrócimy",
+        "pl2": "wrócicie",
+        "pl3": "wrócą",
+        "sg1": "wrócę",
+        "sg2": "wrócisz",
+        "sg3": "wróci"
+      },
+      "imperative": {
+        "pl1": "wróćmy",
+        "pl2": "wróćcie",
+        "sg2": "wróć"
+      },
+      "past_fem": {
+        "pl1": "wróciłyśmy",
+        "pl2": "wróciłyście",
+        "pl3": "wróciły",
+        "sg1": "wróciłam",
+        "sg2": "wróciłaś",
+        "sg3": "wróciła"
+      },
+      "past_masc": {
+        "pl1": "wróciliśmy",
+        "pl2": "wróciliście",
+        "pl3": "wrócili",
+        "sg1": "wróciłem",
+        "sg2": "wróciłeś",
+        "sg3": "wrócił"
+      },
+      "past_neut": {
+        "sg3": "wróciło"
+      },
+      "present": {}
+    },
+    "lemma": "wrócić",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "wrócę",
+          "ru": "вруцЭм"
+        },
+        {
+          "pl": "wrócisz",
+          "ru": "вруцИшь"
+        },
+        {
+          "pl": "wróci",
+          "ru": "вруцИ"
+        }
+      ],
+      "ru_transcription": "вруцИч"
+    },
+    "translations": {
+      "ru": "вернуться"
+    }
   }
 }

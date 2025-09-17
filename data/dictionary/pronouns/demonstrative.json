@@ -1,0 +1,253 @@
+{
+  "coś": {
+    "applied_rules": [
+      "ś",
+      "cz"
+    ],
+    "examples": [
+      {
+        "pl": "Chcę coś zjeść.",
+        "ru": "Хочу что-то съесть.",
+        "ru_transcription": "хцэм цошь зьЕшч."
+      },
+      {
+        "pl": "Czy coś jeszcze?",
+        "ru": "Что-нибудь ещё?",
+        "ru_transcription": "чы цошь ЕшчЭ?"
+      }
+    ],
+    "inflection": {
+      "accusative": "coś",
+      "dative": "czemuś",
+      "genitive": "czegoś",
+      "instrumental": "czymś",
+      "locative": "czymś",
+      "nominative": "coś"
+    },
+    "lemma": "coś",
+    "morphology": {},
+    "part_of_speech": "pronoun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "цошь"
+    },
+    "translations": {
+      "ru": "что-то"
+    }
+  },
+  "nasz": {
+    "applied_rules": [
+      "sz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "To nasz stolik.",
+        "ru": "Это наш столик.",
+        "ru_transcription": "то наш столик."
+      },
+      {
+        "pl": "Nasza rezerwacja.",
+        "ru": "Наша бронь.",
+        "ru_transcription": "наша рэзэрваця."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "naszą",
+        "dative": "naszej",
+        "genitive": "naszej",
+        "instrumental": "naszą",
+        "locative": "naszej",
+        "nominative": "nasza",
+        "vocative": "nasza"
+      },
+      "masculine": {
+        "accusative": "nasz/naszego",
+        "dative": "naszemu",
+        "genitive": "naszego",
+        "instrumental": "naszym",
+        "locative": "naszym",
+        "nominative": "nasz",
+        "vocative": "nasz"
+      },
+      "neuter": {
+        "accusative": "nasze",
+        "dative": "naszemu",
+        "genitive": "naszego",
+        "instrumental": "naszym",
+        "locative": "naszym",
+        "nominative": "nasze",
+        "vocative": "nasze"
+      }
+    },
+    "lemma": "nasz",
+    "morphology": {},
+    "part_of_speech": "pronoun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "nasza",
+          "ru": "наша"
+        },
+        {
+          "pl": "nasze",
+          "ru": "нашЭ"
+        }
+      ],
+      "ru_transcription": "наш"
+    },
+    "translations": {
+      "ru": "наш"
+    }
+  },
+  "ten": {
+    "applied_rules": [
+      "ę",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "Ten stolik jest wolny.",
+        "ru": "Этот столик свободен.",
+        "ru_transcription": "тэн столик ест вольны."
+      },
+      {
+        "pl": "Ta restauracja jest dobra.",
+        "ru": "Этот ресторан хороший.",
+        "ru_transcription": "та рэстауРАця ест добра."
+      }
+    ],
+    "inflection": {
+      "feminine": {
+        "accusative": "tę",
+        "dative": "tej",
+        "genitive": "tej",
+        "instrumental": "tą",
+        "locative": "tej",
+        "nominative": "ta",
+        "vocative": "ta"
+      },
+      "masculine": {
+        "accusative": "ten/tego",
+        "dative": "temu",
+        "genitive": "tego",
+        "instrumental": "tym",
+        "locative": "tym",
+        "nominative": "ten",
+        "vocative": "ten"
+      },
+      "neuter": {
+        "accusative": "to",
+        "dative": "temu",
+        "genitive": "tego",
+        "instrumental": "tym",
+        "locative": "tym",
+        "nominative": "to",
+        "vocative": "to"
+      }
+    },
+    "lemma": "ten",
+    "morphology": {},
+    "part_of_speech": "pronoun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [
+        {
+          "pl": "ta",
+          "ru": "та"
+        },
+        {
+          "pl": "to",
+          "ru": "то"
+        }
+      ],
+      "ru_transcription": "тэн"
+    },
+    "translations": {
+      "ru": "этот"
+    }
+  },
+  "to": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "To jest dobre.",
+        "ru": "Это хорошо.",
+        "ru_transcription": "то ест добрэ."
+      },
+      {
+        "pl": "Co to jest?",
+        "ru": "Что это такое?",
+        "ru_transcription": "цо то ест?"
+      }
+    ],
+    "inflection": {
+      "accusative": "to",
+      "dative": "temu",
+      "genitive": "tego",
+      "instrumental": "tym",
+      "locative": "tym",
+      "nominative": "to"
+    },
+    "lemma": "to",
+    "morphology": {},
+    "part_of_speech": "pronoun",
+    "phrases_and_idioms": [
+      {
+        "pl": "to znaczy",
+        "ru": "то есть"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "то"
+    },
+    "translations": {
+      "ru": "это"
+    }
+  },
+  "wszystko": {
+    "applied_rules": [
+      "sz"
+    ],
+    "examples": [
+      {
+        "pl": "Wszystko w porządku.",
+        "ru": "Всё в порядке.",
+        "ru_transcription": "вшыстко в поРОндку."
+      },
+      {
+        "pl": "To wszystko.",
+        "ru": "Это всё.",
+        "ru_transcription": "то вшыстко."
+      }
+    ],
+    "inflection": {
+      "accusative": "wszystko",
+      "dative": "wszystkiemu",
+      "genitive": "wszystkiego",
+      "instrumental": "wszystkim",
+      "locative": "wszystkim",
+      "nominative": "wszystko"
+    },
+    "lemma": "wszystko",
+    "morphology": {},
+    "part_of_speech": "pronoun",
+    "phrases_and_idioms": [
+      {
+        "pl": "wszystko jedno",
+        "ru": "всё равно"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "вшыстко"
+    },
+    "translations": {
+      "ru": "всё"
+    }
+  }
+}

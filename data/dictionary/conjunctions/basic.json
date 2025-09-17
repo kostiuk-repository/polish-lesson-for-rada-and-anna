@@ -1,70 +1,173 @@
 {
-  "i": {
-    "lemma": "i",
-    "part_of_speech": "conjunction",
-    "translations": { "ru": "и" },
-    "pronunciation": { 
-      "ru_transcription": "и",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+  "a": {
+    "applied_rules": [],
     "examples": [
-      { "pl": "Kawa i herbata.", "ru": "Кофе и чай.", "ru_transcription": "кава и хэрбата." },
-      { "pl": "Ty i ja.", "ru": "Ты и я.", "ru_transcription": "ты и я." }
+      {
+        "pl": "Lubię kawę, a nie herbatę.",
+        "ru": "Люблю кофе, а не чай.",
+        "ru_transcription": "лубЭм кавэ а нЭ хэрбатэ."
+      },
+      {
+        "pl": "Ty jesz, a ja piję.",
+        "ru": "Ты ешь, а я пью.",
+        "ru_transcription": "ты ешь а я пью."
+      }
     ],
+    "inflection": {},
+    "lemma": "a",
+    "morphology": {},
+    "part_of_speech": "conjunction",
     "phrases_and_idioms": [],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "а"
+    },
+    "translations": {
+      "ru": "а"
+    }
   },
   "ale": {
-    "lemma": "ale",
-    "part_of_speech": "conjunction",
-    "translations": { "ru": "но" },
-    "pronunciation": { 
-      "ru_transcription": "алЭ",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Chcę, ale nie mogę.", "ru": "Хочу, но не могу.", "ru_transcription": "хцэм алЭ нЭ могЭм." },
-      { "pl": "Jest drogo, ale smaczne.", "ru": "Дорого, но вкусно.", "ru_transcription": "ест дрого алЭ смачнэ." }
+      {
+        "pl": "Chcę, ale nie mogę.",
+        "ru": "Хочу, но не могу.",
+        "ru_transcription": "хцэм алЭ нЭ могЭм."
+      },
+      {
+        "pl": "Jest drogo, ale smaczne.",
+        "ru": "Дорого, но вкусно.",
+        "ru_transcription": "ест дрого алЭ смачнэ."
+      }
     ],
+    "inflection": {},
+    "lemma": "ale",
+    "morphology": {},
+    "part_of_speech": "conjunction",
     "phrases_and_idioms": [],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "алЭ"
+    },
+    "translations": {
+      "ru": "но"
+    }
+  },
+  "choć": {
+    "applied_rules": [
+      "ć"
+    ],
+    "examples": [
+      {
+        "pl": "Choć jestem zmęczony, idę.",
+        "ru": "Хотя я устал, иду.",
+        "ru_transcription": "хочь естэм змэнчоны идэм."
+      },
+      {
+        "pl": "Spróbuj, choć trochę.",
+        "ru": "Попробуй хотя бы немного.",
+        "ru_transcription": "спруБУй хочь трохэм."
+      }
+    ],
+    "inflection": {},
+    "lemma": "choć",
+    "morphology": {},
+    "part_of_speech": "conjunction",
+    "phrases_and_idioms": [
+      {
+        "pl": "choćby",
+        "ru": "хотя бы"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "хочь"
+    },
+    "translations": {
+      "ru": "хотя"
+    }
   },
   "czy": {
-    "lemma": "czy",
-    "part_of_speech": "conjunction",
-    "translations": { "ru": "ли, или" },
-    "pronunciation": { 
-      "ru_transcription": "чы",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Czy jesteś gotowy?", "ru": "Готов ли ты?", "ru_transcription": "чы естЭш готовы?" },
-      { "pl": "Kawa czy herbata?", "ru": "Кофе или чай?", "ru_transcription": "кава чы хэрбата?" }
+      {
+        "pl": "Czy jesteś gotowy?",
+        "ru": "Готов ли ты?",
+        "ru_transcription": "чы естЭш готовы?"
+      },
+      {
+        "pl": "Kawa czy herbata?",
+        "ru": "Кофе или чай?",
+        "ru_transcription": "кава чы хэрбата?"
+      }
     ],
+    "inflection": {},
+    "lemma": "czy",
+    "morphology": {},
+    "part_of_speech": "conjunction",
     "phrases_and_idioms": [],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "чы"
+    },
+    "translations": {
+      "ru": "ли, или"
+    }
+  },
+  "i": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Kawa i herbata.",
+        "ru": "Кофе и чай.",
+        "ru_transcription": "кава и хэрбата."
+      },
+      {
+        "pl": "Ty i ja.",
+        "ru": "Ты и я.",
+        "ru_transcription": "ты и я."
+      }
+    ],
+    "inflection": {},
+    "lemma": "i",
+    "morphology": {},
+    "part_of_speech": "conjunction",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "и"
+    },
+    "translations": {
+      "ru": "и"
+    }
   },
   "że": {
-    "lemma": "że",
-    "part_of_speech": "conjunction",
-    "translations": { "ru": "что" },
-    "pronunciation": { 
-      "ru_transcription": "жэ",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
-    "examples": [
-      { "pl": "Myślę, że to prawda.", "ru": "Думаю, что это правда.", "ru_transcription": "мышлЭм жэ то правда." },
-      { "pl": "Wiem, że przyjdziesz.", "ru": "Знаю, что ты придёшь.", "ru_transcription": "вЕм жэ пшыйдЗЕшь." }
+    "applied_rules": [
+      "ę"
     ],
+    "examples": [
+      {
+        "pl": "Myślę, że to prawda.",
+        "ru": "Думаю, что это правда.",
+        "ru_transcription": "мышлЭм жэ то правда."
+      },
+      {
+        "pl": "Wiem, że przyjdziesz.",
+        "ru": "Знаю, что ты придёшь.",
+        "ru_transcription": "вЕм жэ пшыйдЗЕшь."
+      }
+    ],
+    "inflection": {},
+    "lemma": "że",
+    "morphology": {},
+    "part_of_speech": "conjunction",
     "phrases_and_idioms": [],
-    "applied_rules": ["ę"]
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "жэ"
+    },
+    "translations": {
+      "ru": "что"
+    }
   }
 }

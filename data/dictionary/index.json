@@ -1,11 +1,10 @@
 {
   "meta": {
     "version": "1.0.0",
-    "last_updated": "2024-01-15",
-    "total_words": 245,
+    "last_updated": "2025-09-17",
+    "total_words": 129,
     "description": "Интерактивный словарь польского языка с произношением и примерами"
   },
-  
   "categories": {
     "verbs": {
       "name": "Глаголы",
@@ -13,71 +12,68 @@
       "themes": {
         "basic": {
           "file": "verbs/basic.json",
-          "words_count": 15,
+          "words_count": 17,
           "description": "Основные глаголы повседневного общения"
         },
         "restaurant": {
-          "file": "verbs/restaurant.json", 
-          "words_count": 12,
+          "file": "verbs/restaurant.json",
+          "words_count": 8,
           "description": "Глаголы для ресторана и кафе"
         },
         "shop": {
           "file": "verbs/shop.json",
-          "words_count": 10,
+          "words_count": 2,
           "description": "Глаголы для покупок и магазинов"
         }
       }
     },
-    
     "nouns": {
       "name": "Существительные",
       "description": "Польские существительные с падежными формами",
       "themes": {
         "basic": {
           "file": "nouns/basic.json",
-          "words_count": 25,
+          "words_count": 15,
           "description": "Основные существительные"
         },
         "restaurant": {
           "file": "nouns/restaurant.json",
-          "words_count": 18,
+          "words_count": 23,
           "description": "Существительные для ресторана"
         },
         "shop": {
           "file": "nouns/shop.json",
-          "words_count": 15,
+          "words_count": 2,
           "description": "Существительные для магазинов"
         },
         "family": {
           "file": "nouns/family.json",
-          "words_count": 12,
+          "words_count": 0,
           "description": "Семья и родственники"
         }
       }
     },
-    
     "adjectives": {
       "name": "Прилагательные",
       "description": "Польские прилагательные с формами склонения",
       "themes": {
         "basic": {
           "file": "adjectives/basic.json",
-          "words_count": 20,
+          "words_count": 4,
           "description": "Основные прилагательные"
         },
         "descriptive": {
           "file": "adjectives/descriptive.json",
-          "words_count": 25,
+          "words_count": 10,
           "description": "Описательные прилагательные"
         },
         "colors": {
-          "file": "adjectives/colors.json", 
-          "words_count": 12,
+          "file": "adjectives/colors.json",
+          "words_count": 1,
           "description": "Цвета"
         }
       }
     },
-    
     "adverbs": {
       "name": "Наречия",
       "description": "Польские наречия",
@@ -89,71 +85,131 @@
         },
         "time": {
           "file": "adverbs/time.json",
-          "words_count": 10,
+          "words_count": 0,
           "description": "Наречия времени"
         }
       }
     },
-    
     "pronouns": {
       "name": "Местоимения",
       "description": "Польские местоимения",
       "themes": {
         "personal": {
           "file": "pronouns/personal.json",
-          "words_count": 8,
+          "words_count": 3,
           "description": "Личные местоимения"
         },
         "possessive": {
           "file": "pronouns/possessive.json",
-          "words_count": 12,
+          "words_count": 0,
           "description": "Притяжательные местоимения"
+        },
+        "demonstrative": {
+          "file": "pronouns/demonstrative.json",
+          "words_count": 5,
+          "description": "Указательные местоимения"
         }
       }
     },
-    
     "prepositions": {
       "name": "Предлоги",
       "description": "Польские предлоги",
       "themes": {
         "basic": {
           "file": "prepositions/basic.json",
-          "words_count": 15,
+          "words_count": 8,
           "description": "Основные предлоги"
         }
       }
     },
-    
     "conjunctions": {
       "name": "Союзы",
       "description": "Польские союзы",
       "themes": {
         "basic": {
           "file": "conjunctions/basic.json",
-          "words_count": 10,
+          "words_count": 6,
           "description": "Основные союзы"
         }
       }
     },
-    
     "numbers": {
       "name": "Числительные",
       "description": "Польские числительные",
       "themes": {
         "cardinal": {
           "file": "numbers/cardinal.json",
-          "words_count": 20,
+          "words_count": 0,
           "description": "Количественные числительные"
         },
         "ordinal": {
           "file": "numbers/ordinal.json",
-          "words_count": 20,
+          "words_count": 0,
           "description": "Порядковые числительные"
+        },
+        "basic": {
+          "file": "numbers/basic.json",
+          "words_count": 3,
+          "description": "Основные числительные"
+        }
+      }
+    },
+    "modals": {
+      "name": "Модальные слова",
+      "description": "Польские модальные выражения",
+      "themes": {
+        "basic": {
+          "file": "modals/basic.json",
+          "words_count": 1,
+          "description": "Основные модальные слова"
+        }
+      }
+    },
+    "particles": {
+      "name": "Частицы",
+      "description": "Польские частицы",
+      "themes": {
+        "basic": {
+          "file": "particles/basic.json",
+          "words_count": 2,
+          "description": "Основные частицы"
+        }
+      }
+    },
+    "interjections": {
+      "name": "Междометия",
+      "description": "Польские междометия",
+      "themes": {
+        "basic": {
+          "file": "interjections/basic.json",
+          "words_count": 2,
+          "description": "Основные междометия"
+        }
+      }
+    },
+    "interrogatives": {
+      "name": "Вопросительные слова",
+      "description": "Польские вопросительные слова",
+      "themes": {
+        "basic": {
+          "file": "interrogatives/basic.json",
+          "words_count": 1,
+          "description": "Основные вопросительные слова"
+        }
+      }
+    },
+    "punctuation": {
+      "name": "Знаки препинания",
+      "description": "Польские знаки препинания",
+      "themes": {
+        "basic": {
+          "file": "punctuation/basic.json",
+          "words_count": 1,
+          "description": "Основные знаки препинания"
         }
       }
     }
   },
-  
   "tags": {
     "frequency": {
       "most_common": "Самые употребительные слова",
@@ -162,7 +218,7 @@
     },
     "difficulty": {
       "easy": "Легкие для запоминания",
-      "medium": "Средней сложности", 
+      "medium": "Средней сложности",
       "hard": "Сложные"
     },
     "topics": {
@@ -176,14 +232,12 @@
       "entertainment": "Развлечения"
     }
   },
-  
   "search_tips": [
     "Можно искать как по польскому, так и по русскому слову",
     "Поиск работает с частичными совпадениями",
     "Используйте фильтры для уточнения поиска",
     "Кликните на слово в диалоге для получения подробной информации"
   ],
-  
   "learning_features": {
     "pronunciation": {
       "enabled": true,
@@ -206,19 +260,20 @@
       "description": "Аудио произношение (планируется)"
     }
   },
-  
   "statistics": {
     "by_part_of_speech": {
-      "verbs": 37,
-      "nouns": 70,
-      "adjectives": 57,
-      "adverbs": 25,
-      "pronouns": 20,
-      "prepositions": 15,
-      "conjunctions": 10,
-      "numbers": 40,
-      "particles": 8,
-      "interjections": 3
+      "particle": 2,
+      "modal": 1,
+      "punctuation": 1,
+      "interjection": 2,
+      "pronoun": 8,
+      "adjective": 15,
+      "noun": 40,
+      "preposition": 8,
+      "adverb": 16,
+      "numeral": 3,
+      "conjunction": 6,
+      "verb": 27
     },
     "by_difficulty": {
       "A1": 120,
@@ -227,8 +282,16 @@
       "B2": 10
     },
     "most_searched": [
-      "być", "mieć", "chcieć", "móc", "prosić",
-      "stolik", "menu", "rachunek", "kawiarnia", "zupa"
+      "być",
+      "mieć",
+      "chcieć",
+      "móc",
+      "prosić",
+      "stolik",
+      "menu",
+      "rachunek",
+      "kawiarnia",
+      "zupa"
     ]
   }
 }

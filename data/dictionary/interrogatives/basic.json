@@ -1,0 +1,34 @@
+{
+  "jak": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Jak się masz?",
+        "ru": "Как дела?",
+        "ru_transcription": "як сЯ маш?"
+      },
+      {
+        "pl": "Jak to smakuje?",
+        "ru": "Как это на вкус?",
+        "ru_transcription": "як то смакУЕ?"
+      }
+    ],
+    "inflection": {},
+    "lemma": "jak",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "jak się masz",
+        "ru": "как дела"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "як"
+    },
+    "translations": {
+      "ru": "как"
+    }
+  }
+}

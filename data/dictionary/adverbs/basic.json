@@ -1,89 +1,443 @@
 {
-  "bardzo": {
-    "lemma": "bardzo",
-    "part_of_speech": "adverb",
-    "translations": { "ru": "очень" },
-    "pronunciation": { 
-      "ru_transcription": "бардзо",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+  "bardziej": {
+    "applied_rules": [],
     "examples": [
-      { "pl": "To jest bardzo dobre.", "ru": "Это очень хорошо.", "ru_transcription": "то ест бардзо добрэ." },
-      { "pl": "Bardzo mi miło.", "ru": "Очень приятно.", "ru_transcription": "бардзо ми миВО." }
+      {
+        "pl": "To jest bardziej skomplikowane.",
+        "ru": "Это более сложно.",
+        "ru_transcription": "то ест барДЗЕй скомпликОванэ."
+      },
+      {
+        "pl": "Bardziej mi się podoba.",
+        "ru": "Мне больше нравится.",
+        "ru_transcription": "барДЗЕй ми сЯ подоба."
+      }
     ],
+    "inflection": {},
+    "lemma": "bardziej",
+    "morphology": {},
+    "part_of_speech": "adverb",
     "phrases_and_idioms": [],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "барДЗЕй"
+    },
+    "translations": {
+      "ru": "больше"
+    }
+  },
+  "bardzo": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "To jest bardzo dobre.",
+        "ru": "Это очень хорошо.",
+        "ru_transcription": "то ест бардзо добрэ."
+      },
+      {
+        "pl": "Bardzo mi miło.",
+        "ru": "Очень приятно.",
+        "ru_transcription": "бардзо ми миВО."
+      }
+    ],
+    "inflection": {},
+    "lemma": "bardzo",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "бардзо"
+    },
+    "translations": {
+      "ru": "очень"
+    }
   },
   "dobrze": {
-    "lemma": "dobrze",
-    "part_of_speech": "adverb",
-    "translations": { "ru": "хорошо" },
-    "pronunciation": { 
-      "ru_transcription": "добжэ",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
-    "examples": [
-      { "pl": "Czuję się dobrze.", "ru": "Я чувствую себя хорошо.", "ru_transcription": "чуЁм сЯ добжэ." },
-      { "pl": "Bardzo dobrze!", "ru": "Очень хорошо!", "ru_transcription": "бардзо добжэ!" }
+    "applied_rules": [
+      "rz"
     ],
+    "examples": [
+      {
+        "pl": "Czuję się dobrze.",
+        "ru": "Я чувствую себя хорошо.",
+        "ru_transcription": "чуЁм сЯ добжэ."
+      },
+      {
+        "pl": "Bardzo dobrze!",
+        "ru": "Очень хорошо!",
+        "ru_transcription": "бардзо добжэ!"
+      }
+    ],
+    "inflection": {},
+    "lemma": "dobrze",
+    "morphology": {},
+    "part_of_speech": "adverb",
     "phrases_and_idioms": [],
-    "applied_rules": ["rz"]
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "добжэ"
+    },
+    "translations": {
+      "ru": "хорошо"
+    }
+  },
+  "jeszcze": {
+    "applied_rules": [
+      "sz",
+      "cz"
+    ],
+    "examples": [
+      {
+        "pl": "Jeszcze raz, proszę.",
+        "ru": "Ещё раз, пожалуйста.",
+        "ru_transcription": "ЕшчЭ раз прошэм."
+      },
+      {
+        "pl": "Czy jeszcze coś?",
+        "ru": "Ещё что-нибудь?",
+        "ru_transcription": "чы ЕшчЭ цошь?"
+      }
+    ],
+    "inflection": {},
+    "lemma": "jeszcze",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "jeszcze raz",
+        "ru": "ещё раз"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "ЕшчЭ"
+    },
+    "translations": {
+      "ru": "ещё"
+    }
   },
   "już": {
-    "lemma": "już",
-    "part_of_speech": "adverb",
-    "translations": { "ru": "уже" },
-    "pronunciation": { 
-      "ru_transcription": "юж",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
-    "examples": [
-      { "pl": "Już jestem w domu.", "ru": "Я уже дома.", "ru_transcription": "юж естэм в дому." },
-      { "pl": "Czy już skończyłeś?", "ru": "Ты уже закончил?", "ru_transcription": "чы юж сконьчыВЭш?" }
+    "applied_rules": [
+      "ż"
     ],
+    "examples": [
+      {
+        "pl": "Już jestem w domu.",
+        "ru": "Я уже дома.",
+        "ru_transcription": "юж естэм в дому."
+      },
+      {
+        "pl": "Czy już skończyłeś?",
+        "ru": "Ты уже закончил?",
+        "ru_transcription": "чы юж сконьчыВЭш?"
+      }
+    ],
+    "inflection": {},
+    "lemma": "już",
+    "morphology": {},
+    "part_of_speech": "adverb",
     "phrases_and_idioms": [],
-    "applied_rules": ["ż"]
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "юж"
+    },
+    "translations": {
+      "ru": "уже"
+    }
+  },
+  "kusząco": {
+    "applied_rules": [
+      "sz",
+      "ą"
+    ],
+    "examples": [
+      {
+        "pl": "To wygląda kusząco.",
+        "ru": "Это выглядит соблазнительно.",
+        "ru_transcription": "то выглОнда кушОнцо."
+      },
+      {
+        "pl": "Kusząco pachnie.",
+        "ru": "Соблазнительно пахнет.",
+        "ru_transcription": "кушОнцо пахнЭ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "kusząco",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "кушОнцо"
+    },
+    "translations": {
+      "ru": "соблазнительно"
+    }
+  },
+  "mniej": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Mniej soli, proszę.",
+        "ru": "Меньше соли, пожалуйста.",
+        "ru_transcription": "мнЕй соли прошэм."
+      },
+      {
+        "pl": "To kosztuje mniej.",
+        "ru": "Это стоит меньше.",
+        "ru_transcription": "то коштУЕ мнЕй."
+      }
+    ],
+    "inflection": {},
+    "lemma": "mniej",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "мнЕй"
+    },
+    "translations": {
+      "ru": "меньше"
+    }
+  },
+  "może": {
+    "applied_rules": [
+      "ż"
+    ],
+    "examples": [
+      {
+        "pl": "Może przyjdę jutro.",
+        "ru": "Возможно, приду завтра.",
+        "ru_transcription": "можЭ пшыйдЭм ютро."
+      },
+      {
+        "pl": "Może tak, może nie.",
+        "ru": "Может быть так, а может и нет.",
+        "ru_transcription": "можЭ так можЭ нЭ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "może",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "może być",
+        "ru": "может быть"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "можЭ"
+    },
+    "translations": {
+      "ru": "возможно"
+    }
+  },
+  "niestety": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Niestety nie mamy wolnych stolików.",
+        "ru": "К сожалению, у нас нет свободных столиков.",
+        "ru_transcription": "нЭстЭты нЭ мамы вольных столИкув."
+      },
+      {
+        "pl": "To niestety niemożliwe.",
+        "ru": "К сожалению, это невозможно.",
+        "ru_transcription": "то нЭстЭты нЭможлИвэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "niestety",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "нЭстЭты"
+    },
+    "translations": {
+      "ru": "к сожалению"
+    }
+  },
+  "oczywiście": {
+    "applied_rules": [
+      "cz",
+      "sz",
+      "ś",
+      "ć"
+    ],
+    "examples": [
+      {
+        "pl": "Oczywiście, że tak!",
+        "ru": "Конечно же, да!",
+        "ru_transcription": "очывИшчЕ жэ так!"
+      },
+      {
+        "pl": "To oczywiście możliwe.",
+        "ru": "Это, конечно, возможно.",
+        "ru_transcription": "то очывИшчЕ можлИвэ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "oczywiście",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "очывИшчЕ"
+    },
+    "translations": {
+      "ru": "конечно"
+    }
+  },
+  "ponownie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dziękuję ponownie.",
+        "ru": "Ещё раз благодарю.",
+        "ru_transcription": "дзЁнкуЕм поновНЕ."
+      },
+      {
+        "pl": "Czy możemy spotkać się ponownie?",
+        "ru": "Можем ли мы встретиться снова?",
+        "ru_transcription": "чы можемы споткАч сЯ поновНЕ?"
+      }
+    ],
+    "inflection": {},
+    "lemma": "ponownie",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "поновНЕ"
+    },
+    "translations": {
+      "ru": "повторно"
+    }
   },
   "tak": {
-    "lemma": "tak",
-    "part_of_speech": "adverb",
-    "translations": { "ru": "да, так" },
-    "pronunciation": { 
-      "ru_transcription": "так",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Tak, to prawda.", "ru": "Да, это правда.", "ru_transcription": "так то правда." },
-      { "pl": "Nie tak!", "ru": "Не так!", "ru_transcription": "нэ так!" }
+      {
+        "pl": "Tak, to prawda.",
+        "ru": "Да, это правда.",
+        "ru_transcription": "так то правда."
+      },
+      {
+        "pl": "Nie tak!",
+        "ru": "Не так!",
+        "ru_transcription": "нэ так!"
+      }
     ],
+    "inflection": {},
+    "lemma": "tak",
+    "morphology": {},
+    "part_of_speech": "adverb",
     "phrases_and_idioms": [
-      { "pl": "tak czy nie", "ru": "да или нет" }
+      {
+        "pl": "tak czy nie",
+        "ru": "да или нет"
+      }
     ],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "так"
+    },
+    "translations": {
+      "ru": "да, так"
+    }
+  },
+  "trochę": {
+    "applied_rules": [
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Trochę soli.",
+        "ru": "Немного соли.",
+        "ru_transcription": "трохЭм соли."
+      },
+      {
+        "pl": "Jestem trochę zmęczony.",
+        "ru": "Я немного устал.",
+        "ru_transcription": "естэм трохЭм змэнчоный."
+      }
+    ],
+    "inflection": {},
+    "lemma": "trochę",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "трохЭм"
+    },
+    "translations": {
+      "ru": "немного"
+    }
   },
   "tylko": {
-    "lemma": "tylko",
-    "part_of_speech": "adverb",
-    "translations": { "ru": "только" },
-    "pronunciation": { 
-      "ru_transcription": "тылько",
-      "key_forms": []
-    },
-    "morphology": {},
-    "inflection": {},
+    "applied_rules": [],
     "examples": [
-      { "pl": "Mam tylko pięć złotych.", "ru": "У меня только пять злотых.", "ru_transcription": "мам тылько пЯнч зВОтых." },
-      { "pl": "To tylko żart.", "ru": "Это только шутка.", "ru_transcription": "то тылько жарт." }
+      {
+        "pl": "Mam tylko pięć złotych.",
+        "ru": "У меня только пять злотых.",
+        "ru_transcription": "мам тылько пЯнч зВОтых."
+      },
+      {
+        "pl": "To tylko żart.",
+        "ru": "Это только шутка.",
+        "ru_transcription": "то тылько жарт."
+      }
     ],
+    "inflection": {},
+    "lemma": "tylko",
+    "morphology": {},
+    "part_of_speech": "adverb",
     "phrases_and_idioms": [],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "тылько"
+    },
+    "translations": {
+      "ru": "только"
+    }
+  },
+  "świetnie": {
+    "applied_rules": [
+      "ś"
+    ],
+    "examples": [
+      {
+        "pl": "Świetnie smakuje!",
+        "ru": "Отлично на вкус!",
+        "ru_transcription": "шьвЕтнЭ смакУЕ!"
+      },
+      {
+        "pl": "To brzmi świetnie.",
+        "ru": "Это звучит отлично.",
+        "ru_transcription": "то бжми шьвЕтнЭ."
+      }
+    ],
+    "inflection": {},
+    "lemma": "świetnie",
+    "morphology": {},
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "шьвЕтнЭ"
+    },
+    "translations": {
+      "ru": "отлично"
+    }
   }
 }

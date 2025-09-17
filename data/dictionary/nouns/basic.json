@@ -1,282 +1,808 @@
 {
   "chwila": {
-    "lemma": "chwila",
-    "part_of_speech": "noun",
-    "translations": { "ru": "момент, минутка" },
-    "pronunciation": { 
-      "ru_transcription": "хВИля",
-      "key_forms": []
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Poczekaj chwilę.",
+        "ru": "Подожди минутку.",
+        "ru_transcription": "почЭкай хВИлем."
+      },
+      {
+        "pl": "W tej chwili jestem zajęty.",
+        "ru": "В данный момент я занят.",
+        "ru_transcription": "в тэй хВИли естэм заЁнты."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "chwile",
+        "dative": "chwilom",
+        "genitive": "chwil",
+        "instrumental": "chwilami",
+        "locative": "chwilach",
+        "nominative": "chwile",
+        "vocative": "chwile"
+      },
+      "singular": {
+        "accusative": "chwilę",
+        "dative": "chwili",
+        "genitive": "chwili",
+        "instrumental": "chwilą",
+        "locative": "chwili",
+        "nominative": "chwila",
+        "vocative": "chwilo"
+      }
     },
+    "lemma": "chwila",
     "morphology": {
       "gender": "feminine"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "chwila",
-        "genitive": "chwili",
-        "dative": "chwili",
-        "accusative": "chwilę",
-        "instrumental": "chwilą",
-        "locative": "chwili",
-        "vocative": "chwilo"
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "na chwilę",
+        "ru": "на минутку"
       },
+      {
+        "pl": "w tej chwili",
+        "ru": "в данный момент"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "хВИля"
+    },
+    "translations": {
+      "ru": "момент, минутка"
+    }
+  },
+  "cytryna": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Dodaj cytrynę do herbaty.",
+        "ru": "Добавь лимон в чай.",
+        "ru_transcription": "додАй цытрЫнэ до хэрбаты."
+      },
+      {
+        "pl": "Ta cytryna jest kwaśna.",
+        "ru": "Этот лимон кислый.",
+        "ru_transcription": "та цытрЫна ест квашна."
+      }
+    ],
+    "inflection": {
       "plural": {
-        "nominative": "chwile",
-        "genitive": "chwil",
-        "dative": "chwilom",
-        "accusative": "chwile",
-        "instrumental": "chwilami",
-        "locative": "chwilach",
-        "vocative": "chwile"
+        "accusative": "cytryny",
+        "dative": "cytrynom",
+        "genitive": "cytryn",
+        "instrumental": "cytrynami",
+        "locative": "cytrynach",
+        "nominative": "cytryny",
+        "vocative": "cytryny"
+      },
+      "singular": {
+        "accusative": "cytrynę",
+        "dative": "cytrynie",
+        "genitive": "cytryny",
+        "instrumental": "cytryną",
+        "locative": "cytrynie",
+        "nominative": "cytryna",
+        "vocative": "cytryno"
       }
     },
+    "lemma": "cytryna",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "цытрЫна"
+    },
+    "translations": {
+      "ru": "лимон"
+    }
+  },
+  "dynia": {
+    "applied_rules": [
+      "ń",
+      "ą",
+      "ę"
+    ],
     "examples": [
-      { "pl": "Poczekaj chwilę.", "ru": "Подожди минутку.", "ru_transcription": "почЭкай хВИлем." },
-      { "pl": "W tej chwili jestem zajęty.", "ru": "В данный момент я занят.", "ru_transcription": "в тэй хВИли естэм заЁнты." }
+      {
+        "pl": "Zupa z dyni jest pyszna.",
+        "ru": "Тыквенный суп вкусный.",
+        "ru_transcription": "зупа з дыни ест пышна."
+      },
+      {
+        "pl": "Kupiłem dużą dynię.",
+        "ru": "Купил большую тыкву.",
+        "ru_transcription": "купиВЭм дужОм дыньэ."
+      }
     ],
-    "phrases_and_idioms": [
-      { "pl": "na chwilę", "ru": "на минутку" },
-      { "pl": "w tej chwili", "ru": "в данный момент" }
-    ],
-    "applied_rules": ["ą", "ę"]
+    "inflection": {
+      "plural": {
+        "accusative": "dynie",
+        "dative": "dyniom",
+        "genitive": "dyń",
+        "instrumental": "dyniami",
+        "locative": "dyniach",
+        "nominative": "dynie",
+        "vocative": "dynie"
+      },
+      "singular": {
+        "accusative": "dynię",
+        "dative": "dyni",
+        "genitive": "dyni",
+        "instrumental": "dynią",
+        "locative": "dyni",
+        "nominative": "dynia",
+        "vocative": "dynio"
+      }
+    },
+    "lemma": "dynia",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "дыНЯ"
+    },
+    "translations": {
+      "ru": "тыква"
+    }
   },
   "dzień": {
-    "lemma": "dzień",
-    "part_of_speech": "noun",
-    "translations": { "ru": "день" },
-    "pronunciation": { 
-      "ru_transcription": "джэнь",
-      "key_forms": []
+    "applied_rules": [
+      "ń"
+    ],
+    "examples": [
+      {
+        "pl": "Dobry dzień!",
+        "ru": "Добрый день!",
+        "ru_transcription": "добры джэнь!"
+      },
+      {
+        "pl": "Mam wolny dzień.",
+        "ru": "У меня выходной день.",
+        "ru_transcription": "мам вольны джэнь."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "dni",
+        "dative": "dniom",
+        "genitive": "dni",
+        "instrumental": "dniami",
+        "locative": "dniach",
+        "nominative": "dni",
+        "vocative": "dni"
+      },
+      "singular": {
+        "accusative": "dzień",
+        "dative": "dniowi",
+        "genitive": "dnia",
+        "instrumental": "dniem",
+        "locative": "dniu",
+        "nominative": "dzień",
+        "vocative": "dniu"
+      }
     },
+    "lemma": "dzień",
     "morphology": {
       "gender": "masculine_inanimate"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "dzień",
-        "genitive": "dnia",
-        "dative": "dniowi",
-        "accusative": "dzień",
-        "instrumental": "dniem",
-        "locative": "dniu",
-        "vocative": "dniu"
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "cały dzień",
+        "ru": "весь день"
       },
+      {
+        "pl": "dobry dzień",
+        "ru": "добрый день"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "джэнь"
+    },
+    "translations": {
+      "ru": "день"
+    }
+  },
+  "grzyb": {
+    "applied_rules": [
+      "rz",
+      "ó"
+    ],
+    "examples": [
+      {
+        "pl": "Lubię grzyby w sosie.",
+        "ru": "Люблю грибы в соусе.",
+        "ru_transcription": "лубЭм гжыбы в сошэ."
+      },
+      {
+        "pl": "Grzyby rosną w lesie.",
+        "ru": "Грибы растут в лесу.",
+        "ru_transcription": "гжыбы росном в лешэ."
+      }
+    ],
+    "inflection": {
       "plural": {
-        "nominative": "dni",
-        "genitive": "dni",
-        "dative": "dniom",
-        "accusative": "dni",
-        "instrumental": "dniami",
-        "locative": "dniach",
-        "vocative": "dni"
+        "accusative": "grzyby",
+        "dative": "grzybom",
+        "genitive": "grzybów",
+        "instrumental": "grzybami",
+        "locative": "grzybach",
+        "nominative": "grzyby",
+        "vocative": "grzyby"
+      },
+      "singular": {
+        "accusative": "grzyb",
+        "dative": "grzybowi",
+        "genitive": "grzyba",
+        "instrumental": "grzybem",
+        "locative": "grzybie",
+        "nominative": "grzyb",
+        "vocative": "grzybie"
       }
     },
-    "examples": [
-      { "pl": "Dobry dzień!", "ru": "Добрый день!", "ru_transcription": "добры джэнь!" },
-      { "pl": "Mam wolny dzień.", "ru": "У меня выходной день.", "ru_transcription": "мам вольны джэнь." }
-    ],
-    "phrases_and_idioms": [
-      { "pl": "cały dzień", "ru": "весь день" },
-      { "pl": "dobry dzień", "ru": "добрый день" }
-    ],
-    "applied_rules": ["ń"]
-  },
-  "minuta": {
-    "lemma": "minuta",
-    "part_of_speech": "noun",
-    "translations": { "ru": "минута" },
-    "pronunciation": { 
-      "ru_transcription": "миНУта",
-      "key_forms": []
+    "lemma": "grzyb",
+    "morphology": {
+      "gender": "masculine_inanimate"
     },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "гжыб"
+    },
+    "translations": {
+      "ru": "гриб"
+    }
+  },
+  "herbata": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Poproszę herbatę z cytryną.",
+        "ru": "Чай с лимоном, пожалуйста.",
+        "ru_transcription": "попрошэм хэрбатэм з цытрЫнОм."
+      },
+      {
+        "pl": "Ta herbata jest bardzo aromatyczna.",
+        "ru": "Этот чай очень ароматный.",
+        "ru_transcription": "та хэрбата ест бардзо ароматична."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "herbaty",
+        "dative": "herbatom",
+        "genitive": "herbat",
+        "instrumental": "herbatami",
+        "locative": "herbatach",
+        "nominative": "herbaty",
+        "vocative": "herbaty"
+      },
+      "singular": {
+        "accusative": "herbatę",
+        "dative": "herbacie",
+        "genitive": "herbaty",
+        "instrumental": "herbatą",
+        "locative": "herbacie",
+        "nominative": "herbata",
+        "vocative": "herbato"
+      }
+    },
+    "lemma": "herbata",
     "morphology": {
       "gender": "feminine"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "minuta",
-        "genitive": "minuty",
-        "dative": "minucie",
-        "accusative": "minutę",
-        "instrumental": "minutą",
-        "locative": "minucie",
-        "vocative": "minuto"
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "herbata zielona",
+        "ru": "зелёный чай"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "хэрБАта"
+    },
+    "translations": {
+      "ru": "чай"
+    }
+  },
+  "kawałek": {
+    "applied_rules": [
+      "ł",
+      "ó"
+    ],
+    "examples": [
+      {
+        "pl": "Poproszę kawałek tortu.",
+        "ru": "Кусочек торта, пожалуйста.",
+        "ru_transcription": "попрошэм каваВЭк торту."
       },
+      {
+        "pl": "Mały kawałek sera.",
+        "ru": "Маленький кусочек сыра.",
+        "ru_transcription": "мауый каваВЭк сэра."
+      }
+    ],
+    "inflection": {
       "plural": {
-        "nominative": "minuty",
-        "genitive": "minut",
-        "dative": "minutom",
-        "accusative": "minuty",
-        "instrumental": "minutami",
-        "locative": "minutach",
-        "vocative": "minuty"
+        "accusative": "kawałki",
+        "dative": "kawałkom",
+        "genitive": "kawałków",
+        "instrumental": "kawałkami",
+        "locative": "kawałkach",
+        "nominative": "kawałki",
+        "vocative": "kawałki"
+      },
+      "singular": {
+        "accusative": "kawałek",
+        "dative": "kawałkowi",
+        "genitive": "kawałka",
+        "instrumental": "kawałkiem",
+        "locative": "kawałku",
+        "nominative": "kawałek",
+        "vocative": "kawałku"
       }
     },
+    "lemma": "kawałek",
+    "morphology": {
+      "gender": "masculine_inanimate"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "каваВЭк"
+    },
+    "translations": {
+      "ru": "кусочек"
+    }
+  },
+  "koszyk": {
+    "applied_rules": [
+      "sz",
+      "ó"
+    ],
     "examples": [
-      { "pl": "Zostało pięć minut.", "ru": "Осталось пять минут.", "ru_transcription": "зостаўо пэнч минут." },
-      { "pl": "Minutę, proszę.", "ru": "Минутку, пожалуйста.", "ru_transcription": "минутЭм прошэм." }
+      {
+        "pl": "Koszyk na pieczywo.",
+        "ru": "Корзинка для хлеба.",
+        "ru_transcription": "кошЫк на пЕчыво."
+      },
+      {
+        "pl": "Pełny koszyk zakupów.",
+        "ru": "Полная корзина покупок.",
+        "ru_transcription": "пЭуны кошЫк закупув."
+      }
     ],
+    "inflection": {
+      "plural": {
+        "accusative": "koszyki",
+        "dative": "koszykom",
+        "genitive": "koszyków",
+        "instrumental": "koszykami",
+        "locative": "koszykach",
+        "nominative": "koszyki",
+        "vocative": "koszyki"
+      },
+      "singular": {
+        "accusative": "koszyk",
+        "dative": "koszykowi",
+        "genitive": "koszyka",
+        "instrumental": "koszykiem",
+        "locative": "koszyku",
+        "nominative": "koszyk",
+        "vocative": "koszyku"
+      }
+    },
+    "lemma": "koszyk",
+    "morphology": {
+      "gender": "masculine_inanimate"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "кошЫк"
+    },
+    "translations": {
+      "ru": "корзинка"
+    }
+  },
+  "minuta": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Zostało pięć minut.",
+        "ru": "Осталось пять минут.",
+        "ru_transcription": "зостаўо пэнч минут."
+      },
+      {
+        "pl": "Minutę, proszę.",
+        "ru": "Минутку, пожалуйста.",
+        "ru_transcription": "минутЭм прошэм."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "minuty",
+        "dative": "minutom",
+        "genitive": "minut",
+        "instrumental": "minutami",
+        "locative": "minutach",
+        "nominative": "minuty",
+        "vocative": "minuty"
+      },
+      "singular": {
+        "accusative": "minutę",
+        "dative": "minucie",
+        "genitive": "minuty",
+        "instrumental": "minutą",
+        "locative": "minucie",
+        "nominative": "minuta",
+        "vocative": "minuto"
+      }
+    },
+    "lemma": "minuta",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
     "phrases_and_idioms": [
-      { "pl": "co minutę", "ru": "каждую минуту" }
+      {
+        "pl": "co minutę",
+        "ru": "каждую минуту"
+      }
     ],
-    "applied_rules": ["ą", "ę"]
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "миНУта"
+    },
+    "translations": {
+      "ru": "минута"
+    }
+  },
+  "nadzieja": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Mam nadzieję, że przyjdziesz.",
+        "ru": "Надеюсь, что ты придёшь.",
+        "ru_transcription": "мам надЗЕем жэ пшыйдЗЕшь."
+      },
+      {
+        "pl": "Z nadzieją czekam.",
+        "ru": "Жду с надеждой.",
+        "ru_transcription": "з надЗЕём чэкам."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "nadzieje",
+        "dative": "nadziejom",
+        "genitive": "nadziei",
+        "instrumental": "nadziejami",
+        "locative": "nadziejach",
+        "nominative": "nadzieje",
+        "vocative": "nadzieje"
+      },
+      "singular": {
+        "accusative": "nadzieję",
+        "dative": "nadziei",
+        "genitive": "nadziei",
+        "instrumental": "nadzieją",
+        "locative": "nadziei",
+        "nominative": "nadzieja",
+        "vocative": "nadziejo"
+      }
+    },
+    "lemma": "nadzieja",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "mieć nadzieję",
+        "ru": "надеяться"
+      }
+    ],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "надЗЕя"
+    },
+    "translations": {
+      "ru": "надежда"
+    }
+  },
+  "nietolerancja": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Nietolerancja laktozy.",
+        "ru": "Непереносимость лактозы.",
+        "ru_transcription": "нЭтолЭранця лактОзы."
+      },
+      {
+        "pl": "Mam nietolerancję glutenu.",
+        "ru": "У меня непереносимость глютена.",
+        "ru_transcription": "мам нЭтолЭранцьем глутЭну."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "nietolerancje",
+        "dative": "nietolerancjom",
+        "genitive": "nietolerancji",
+        "instrumental": "nietolerancjami",
+        "locative": "nietolerancjach",
+        "nominative": "nietolerancje",
+        "vocative": "nietolerancje"
+      },
+      "singular": {
+        "accusative": "nietolerancję",
+        "dative": "nietolerancji",
+        "genitive": "nietolerancji",
+        "instrumental": "nietolerancją",
+        "locative": "nietolerancji",
+        "nominative": "nietolerancja",
+        "vocative": "nietolerancjo"
+      }
+    },
+    "lemma": "nietolerancja",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "нЭтолЭранця"
+    },
+    "translations": {
+      "ru": "непереносимость"
+    }
+  },
+  "odrobina": {
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Odrobina soli.",
+        "ru": "Чуточка соли.",
+        "ru_transcription": "одробИна соли."
+      },
+      {
+        "pl": "Tylko odrobina cukru.",
+        "ru": "Только чуточка сахара.",
+        "ru_transcription": "тылько одробИна цукру."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "odrobiny",
+        "dative": "odrobinom",
+        "genitive": "odrobin",
+        "instrumental": "odrobinami",
+        "locative": "odrobinach",
+        "nominative": "odrobiny",
+        "vocative": "odrobiny"
+      },
+      "singular": {
+        "accusative": "odrobinę",
+        "dative": "odrobinie",
+        "genitive": "odrobiny",
+        "instrumental": "odrobiną",
+        "locative": "odrobinie",
+        "nominative": "odrobina",
+        "vocative": "odrobino"
+      }
+    },
+    "lemma": "odrobina",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "одробИна"
+    },
+    "translations": {
+      "ru": "чуточка"
+    }
   },
   "okno": {
-    "lemma": "okno",
-    "part_of_speech": "noun",
-    "translations": { "ru": "окно" },
-    "pronunciation": { 
-      "ru_transcription": "окно",
-      "key_forms": []
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Otwórz okno, proszę.",
+        "ru": "Открой окно, пожалуйста.",
+        "ru_transcription": "отвуж окно прошэм."
+      },
+      {
+        "pl": "Stolik przy oknie.",
+        "ru": "Столик у окна.",
+        "ru_transcription": "столик пшы окьнэ."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "okna",
+        "dative": "oknom",
+        "genitive": "okien",
+        "instrumental": "oknami",
+        "locative": "oknach",
+        "nominative": "okna",
+        "vocative": "okna"
+      },
+      "singular": {
+        "accusative": "okno",
+        "dative": "oknu",
+        "genitive": "okna",
+        "instrumental": "oknem",
+        "locative": "oknie",
+        "nominative": "okno",
+        "vocative": "okno"
+      }
     },
+    "lemma": "okno",
     "morphology": {
       "gender": "neuter"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "okno",
-        "genitive": "okna",
-        "dative": "oknu",
-        "accusative": "okno",
-        "instrumental": "oknem",
-        "locative": "oknie",
-        "vocative": "okno"
-      },
-      "plural": {
-        "nominative": "okna",
-        "genitive": "okien",
-        "dative": "oknom",
-        "accusative": "okna",
-        "instrumental": "oknami",
-        "locative": "oknach",
-        "vocative": "okna"
-      }
-    },
-    "examples": [
-      { "pl": "Otwórz okno, proszę.", "ru": "Открой окно, пожалуйста.", "ru_transcription": "отвуж окно прошэм." },
-      { "pl": "Stolik przy oknie.", "ru": "Столик у окна.", "ru_transcription": "столик пшы окьнэ." }
-    ],
+    "part_of_speech": "noun",
     "phrases_and_idioms": [
-      { "pl": "przy oknie", "ru": "у окна" }
+      {
+        "pl": "przy oknie",
+        "ru": "у окна"
+      }
     ],
-    "applied_rules": []
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "окно"
+    },
+    "translations": {
+      "ru": "окно"
+    }
   },
   "opinia": {
-    "lemma": "opinia",
-    "part_of_speech": "noun",
-    "translations": { "ru": "мнение" },
-    "pronunciation": { 
-      "ru_transcription": "опиНЯ",
-      "key_forms": []
-    },
-    "morphology": {
-      "gender": "feminine"
-    },
-    "inflection": {
-      "singular": {
-        "nominative": "opinia",
-        "genitive": "opinii",
-        "dative": "opinii",
-        "accusative": "opinię",
-        "instrumental": "opinią",
-        "locative": "opinii",
-        "vocative": "opinio"
+    "applied_rules": [
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Jaka jest twoja opinia?",
+        "ru": "Какое твоё мнение?",
+        "ru_transcription": "яка ест твоя опиНЯ?"
       },
+      {
+        "pl": "Mam dobrą opinię o tej restauracji.",
+        "ru": "У меня хорошее мнение об этом ресторане.",
+        "ru_transcription": "мам добрОм опиньем о тэй рэстауРАцьи."
+      }
+    ],
+    "inflection": {
       "plural": {
-        "nominative": "opinie",
-        "genitive": "opinii",
-        "dative": "opiniom",
         "accusative": "opinie",
+        "dative": "opiniom",
+        "genitive": "opinii",
         "instrumental": "opiniami",
         "locative": "opiniach",
+        "nominative": "opinie",
         "vocative": "opinie"
+      },
+      "singular": {
+        "accusative": "opinię",
+        "dative": "opinii",
+        "genitive": "opinii",
+        "instrumental": "opinią",
+        "locative": "opinii",
+        "nominative": "opinia",
+        "vocative": "opinio"
       }
     },
-    "examples": [
-      { "pl": "Jaka jest twoja opinia?", "ru": "Какое твоё мнение?", "ru_transcription": "яка ест твоя опиНЯ?" },
-      { "pl": "Mam dobrą opinię o tej restauracji.", "ru": "У меня хорошее мнение об этом ресторане.", "ru_transcription": "мам добрОм опиньем о тэй рэстауРАцьи." }
-    ],
-    "phrases_and_idioms": [],
-    "applied_rules": ["ą", "ę"]
-  },
-  "nadzieja": {
-    "lemma": "nadzieja",
-    "part_of_speech": "noun",
-    "translations": { "ru": "надежда" },
-    "pronunciation": { 
-      "ru_transcription": "надЗЕя",
-      "key_forms": []
-    },
+    "lemma": "opinia",
     "morphology": {
       "gender": "feminine"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "nadzieja",
-        "genitive": "nadziei",
-        "dative": "nadziei",
-        "accusative": "nadzieję",
-        "instrumental": "nadzieją",
-        "locative": "nadziei",
-        "vocative": "nadziejo"
-      },
-      "plural": {
-        "nominative": "nadzieje",
-        "genitive": "nadziei",
-        "dative": "nadziejom",
-        "accusative": "nadzieje",
-        "instrumental": "nadziejami",
-        "locative": "nadziejach",
-        "vocative": "nadzieje"
-      }
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "опиНЯ"
     },
-    "examples": [
-      { "pl": "Mam nadzieję, że przyjdziesz.", "ru": "Надеюсь, что ты придёшь.", "ru_transcription": "мам надЗЕем жэ пшыйдЗЕшь." },
-      { "pl": "Z nadzieją czekam.", "ru": "Жду с надеждой.", "ru_transcription": "з надЗЕём чэкам." }
-    ],
-    "phrases_and_idioms": [
-      { "pl": "mieć nadzieję", "ru": "надеяться" }
-    ],
-    "applied_rules": ["ą", "ę"]
+    "translations": {
+      "ru": "мнение"
+    }
   },
   "woda": {
-    "lemma": "woda",
-    "part_of_speech": "noun",
-    "translations": { "ru": "вода" },
-    "pronunciation": { 
-      "ru_transcription": "вода",
-      "key_forms": []
+    "applied_rules": [
+      "ó",
+      "ą",
+      "ę"
+    ],
+    "examples": [
+      {
+        "pl": "Poproszę wodę.",
+        "ru": "Воды, пожалуйста.",
+        "ru_transcription": "попрошЭм водЭм."
+      },
+      {
+        "pl": "Woda gazowana czy niegazowana?",
+        "ru": "Вода газированная или негазированная?",
+        "ru_transcription": "вода газована чы нЭгазована?"
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "accusative": "wody",
+        "dative": "wodom",
+        "genitive": "wód",
+        "instrumental": "wodami",
+        "locative": "wodach",
+        "nominative": "wody",
+        "vocative": "wody"
+      },
+      "singular": {
+        "accusative": "wodę",
+        "dative": "wodzie",
+        "genitive": "wody",
+        "instrumental": "wodą",
+        "locative": "wodzie",
+        "nominative": "woda",
+        "vocative": "wodo"
+      }
     },
+    "lemma": "woda",
     "morphology": {
       "gender": "feminine"
     },
-    "inflection": {
-      "singular": {
-        "nominative": "woda",
-        "genitive": "wody",
-        "dative": "wodzie",
-        "accusative": "wodę",
-        "instrumental": "wodą",
-        "locative": "wodzie",
-        "vocative": "wodo"
-      },
-      "plural": {
-        "nominative": "wody",
-        "genitive": "wód",
-        "dative": "wodom",
-        "accusative": "wody",
-        "instrumental": "wodami",
-        "locative": "wodach",
-        "vocative": "wody"
-      }
-    },
-    "examples": [
-      { "pl": "Poproszę wodę.", "ru": "Воды, пожалуйста.", "ru_transcription": "попрошЭм водЭм." },
-      { "pl": "Woda gazowana czy niegazowana?", "ru": "Вода газированная или негазированная?", "ru_transcription": "вода газована чы нЭгазована?" }
-    ],
+    "part_of_speech": "noun",
     "phrases_and_idioms": [
-      { "pl": "woda mineralna", "ru": "минеральная вода" }
+      {
+        "pl": "woda mineralna",
+        "ru": "минеральная вода"
+      }
     ],
-    "applied_rules": ["ó", "ą", "ę"]
+    "pronunciation": {
+      "key_forms": [],
+      "ru_transcription": "вода"
+    },
+    "translations": {
+      "ru": "вода"
+    }
   }
 }
