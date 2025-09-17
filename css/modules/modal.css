@@ -444,3 +444,318 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .modal {
+    padding: var(--space-2);
+    align-items: flex-start;
+    padding-top: var(--space-4);
+  }
+  
+  .modal__content {
+    max-height: calc(100vh - var(--space-8));
+    width: calc(100vw - var(--space-4));
+    max-width: none;
+    border-radius: var(--radius-lg);
+  }
+  
+  .modal__header {
+    padding: var(--space-4) var(--space-5);
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  
+  .modal__title {
+    font-size: var(--font-size-xl);
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+  }
+  
+  .modal__body {
+    padding: var(--space-4);
+    max-height: calc(100vh - 200px);
+  }
+  
+  .modal__footer {
+    padding: var(--space-4) var(--space-5);
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .modal__controls {
+    order: 2;
+    margin-left: 0;
+    margin-top: var(--space-2);
+  }
+  
+  .modal__close {
+    order: 3;
+    margin-left: 0;
+    margin-top: var(--space-2);
+  }
+  
+  /* Слово в модальном окне */
+  .word-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .word-title {
+    font-size: var(--font-size-2xl);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .word-type-badge {
+    align-self: center;
+  }
+  
+  /* Табы в модальном окне */
+  .modal-tabs {
+    flex-wrap: wrap;
+    padding: 0 var(--space-2);
+    gap: var(--space-1);
+  }
+  
+  .modal-tab-button {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    flex: 1;
+    min-width: auto;
+    text-align: center;
+  }
+  
+  /* Контент модального окна */
+  .translation-section {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .translation-text {
+    font-size: var(--font-size-xl);
+    text-align: center;
+    margin-bottom: var(--space-3);
+  }
+  
+  .pronunciation {
+    padding: var(--space-3);
+    font-size: var(--font-size-base);
+    text-align: center;
+  }
+  
+  /* Примеры */
+  .examples-list {
+    gap: var(--space-3);
+  }
+  
+  .example-item {
+    padding: var(--space-3);
+  }
+  
+  .example-polish {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+  }
+  
+  .example-russian {
+    font-size: var(--font-size-sm);
+  }
+  
+  .example-transcription {
+    font-size: var(--font-size-xs);
+  }
+  
+  /* Связанные слова */
+  .related-words {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  
+  .related-word {
+    padding: var(--space-3);
+    text-align: center;
+  }
+  
+  /* Кнопки в модальном окне */
+  .modal__footer .btn {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  /* Таблицы склонений */
+  .conjugation-table {
+    font-size: var(--font-size-sm);
+    width: 100%;
+  }
+  
+  .conjugation-table th,
+  .conjugation-table td {
+    padding: var(--space-2);
+  }
+  
+  .conjugation-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .modal {
+    padding: var(--space-1);
+    padding-top: var(--space-2);
+  }
+  
+  .modal__content {
+    max-height: calc(100vh - var(--space-4));
+    width: calc(100vw - var(--space-2));
+    border-radius: var(--radius-base);
+  }
+  
+  .modal__header {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .modal__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .modal__body {
+    padding: var(--space-3);
+    max-height: calc(100vh - 120px);
+  }
+  
+  .modal__footer {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .word-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .translation-text {
+    font-size: var(--font-size-lg);
+  }
+  
+  .modal-tab-button {
+    font-size: var(--font-size-xs);
+    padding: var(--space-2);
+  }
+  
+  .conjugation-table {
+    font-size: var(--font-size-xs);
+  }
+  
+  .conjugation-table th,
+  .conjugation-table td {
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* Landscape режим на мобильных */
+@media (max-width: 768px) and (orientation: landscape) and (max-height: 500px) {
+  .modal {
+    align-items: center;
+    padding: var(--space-2);
+  }
+  
+  .modal__content {
+    max-height: 90vh;
+    max-width: 90vw;
+  }
+  
+  .modal__body {
+    max-height: calc(90vh - 120px);
+  }
+  
+  .modal__header {
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .modal__footer {
+    padding: var(--space-2) var(--space-4);
+    flex-direction: row;
+  }
+  
+  .modal__footer .btn {
+    width: auto;
+  }
+}
+
+/* Улучшенная прокрутка для мобильных */
+@media (max-width: 768px) {
+  .modal__body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-400) transparent;
+  }
+  
+  .modal__body::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .modal__body::-webkit-scrollbar-thumb {
+    background-color: var(--gray-400);
+    border-radius: 2px;
+  }
+}
+
+/* Предотвращение прокрутки фона на мобильных */
+.modal--open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Анимации для мобильных устройств */
+@media (max-width: 768px) {
+  .modal__content {
+    transform: scale(0.95) translateY(20px);
+  }
+  
+  .modal--open .modal__content {
+    transform: scale(1) translateY(0);
+  }
+  
+  .modal-enter {
+    animation: mobileModalEnter 0.3s ease-out;
+  }
+  
+  @keyframes mobileModalEnter {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+}
+
+/* Доступность на мобильных */
+@media (max-width: 768px) {
+  .modal__close,
+  .modal__control-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .modal-tab-button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  .related-word {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

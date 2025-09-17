@@ -15,6 +15,12 @@ export class ClickableWordsHandler {
   }
 
   createTooltip() {
+    // Удаляем существующий tooltip, если есть
+    const existing = document.querySelector('.quick-tooltip');
+    if (existing) {
+      existing.remove();
+    }
+    
     this.tooltip = document.createElement('div');
     this.tooltip.className = 'quick-tooltip';
     document.body.appendChild(this.tooltip);
@@ -45,6 +51,14 @@ export class ClickableWordsHandler {
         this.handleWordLeave(clickableWord);
       }
     }, true);
+
+    // Скрываем tooltip при движении мыши
+    this.container.addEventListener('mousemove', (e) => {
+      const clickableWord = e.target.closest('.clickable-word');
+      if (!clickableWord) {
+        this.hideQuickTooltip();
+      }
+    });
 
     // Обработчик клавиатуры для доступности
     this.container.addEventListener('keydown', (e) => {
@@ -87,29 +101,44 @@ export class ClickableWordsHandler {
 
   handleWordHover(wordElement) {
     wordElement.classList.add('word-hovered');
-    this.showQuickTooltip(wordElement);
+    
+    // Даем небольшую задержку перед показом tooltip
+    clearTimeout(this.hoverTimeout);
+    this.hoverTimeout = setTimeout(() => {
+      this.showQuickTooltip(wordElement);
+    }, 300);
   }
 
   handleWordLeave(wordElement) {
     wordElement.classList.remove('word-hovered');
-    this.hideQuickTooltip();
+    clearTimeout(this.hoverTimeout);
+    
+    // Задержка перед скрытием tooltip
+    clearTimeout(this.hideTimeout);
+    this.hideTimeout = setTimeout(() => {
+      this.hideQuickTooltip();
+    }, 100);
   }
 
   async getWordData(wordKey) {
-    // Сначала ищем в загруженном словаре
-    let wordData = this.dictionary.getWord(wordKey);
-
-    if (!wordData && typeof this.dictionary?.loadAdditionalWordData === 'function') {
-      // Если не найдено, пытаемся загрузить дополнительные данные
-      try {
-        await this.dictionary.loadAdditionalWordData(wordKey);
-        wordData = this.dictionary.getWord(wordKey);
-      } catch (error) {
-        console.warn('Не удалось загрузить дополнительные данные для слова:', wordKey);
-      }
+    if (!this.dictionary) {
+      console.warn('Словарь не инициализирован');
+      return null;
     }
-    
-    return wordData;
+
+    try {
+      // Убеждаемся, что словарь инициализирован
+      if (!this.dictionary.isInitialized) {
+        await this.dictionary.init();
+      }
+
+      // Получаем данные слова
+      const wordData = await this.dictionary.getWord(wordKey);
+      return wordData;
+    } catch (error) {
+      console.error('Ошибка получения данных слова:', error);
+      return null;
+    }
   }
 
   showBasicWordInfo(wordKey, wordElement) {
@@ -153,29 +182,58 @@ export class ClickableWordsHandler {
   }
 
   showQuickTooltip(wordElement) {
-    const translation = wordElement.dataset.translation;
-    if (!translation || translation === 'Нет перевода') {
+    if (!this.tooltip) return;
+
+    let translation = wordElement.dataset.translation;
+    
+    // Если нет перевода в атрибуте, пробуем получить из title
+    if (!translation || translation === 'Загрузка...' || translation === 'Нет перевода') {
+      translation = wordElement.getAttribute('title');
+    }
+    
+    if (!translation || translation === 'Нет перевода' || translation === 'Загрузка...') {
       this.tooltip.classList.remove('quick-tooltip--visible');
       return;
     }
 
     this.tooltip.textContent = translation;
+    
+    // Позиционируем tooltip
     const rect = wordElement.getBoundingClientRect();
+    const tooltipRect = this.tooltip.getBoundingClientRect();
+    
+    let top = rect.top - tooltipRect.height - 10;
+    let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+    
+    // Проверяем, не выходит ли tooltip за границы экрана
+    const margin = 10;
+    if (left < margin) {
+      left = margin;
+    } else if (left + tooltipRect.width > window.innerWidth - margin) {
+      left = window.innerWidth - tooltipRect.width - margin;
+    }
+    
+    if (top < margin) {
+      top = rect.bottom + 10; // Показываем снизу, если не помещается сверху
+    }
 
-    // Position tooltip above the word
-    const top = rect.top - this.tooltip.offsetHeight - 8; // 8px gap
-    const left = rect.left + (rect.width / 2) - (this.tooltip.offsetWidth / 2);
-
-    this.tooltip.style.top = `${top}px`;
-    this.tooltip.style.left = `${left}px`;
+    this.tooltip.style.top = `${top + window.scrollY}px`;
+    this.tooltip.style.left = `${left + window.scrollX}px`;
     this.tooltip.classList.add('quick-tooltip--visible');
   }
 
   hideQuickTooltip() {
-    this.tooltip.classList.remove('quick-tooltip--visible');
+    if (this.tooltip) {
+      this.tooltip.classList.remove('quick-tooltip--visible');
+    }
   }
 
   highlightWord(wordElement) {
+    // Убираем предыдущие выделения
+    if (this.activeWord) {
+      this.removeWordHighlight(this.activeWord);
+    }
+    
     wordElement.classList.add('word-highlight-animation');
     this.activeWord = wordElement;
   }
@@ -184,7 +242,9 @@ export class ClickableWordsHandler {
     if (wordElement) {
       wordElement.classList.remove('word-highlight-animation');
     }
-    this.activeWord = null;
+    if (this.activeWord === wordElement) {
+      this.activeWord = null;
+    }
   }
 
   trackWordClick(wordKey) {
@@ -290,13 +350,14 @@ export class ClickableWordsHandler {
   }
 
   destroy() {
+    // Очищаем таймауты
+    clearTimeout(this.hoverTimeout);
+    clearTimeout(this.hideTimeout);
+    
     // Удаляем активные тултипы
-    const tooltips = document.querySelectorAll('.quick-tooltip');
-    tooltips.forEach(tooltip => {
-      if (tooltip.parentNode) {
-        tooltip.parentNode.removeChild(tooltip);
-      }
-    });
+    if (this.tooltip && this.tooltip.parentNode) {
+      this.tooltip.parentNode.removeChild(this.tooltip);
+    }
 
     // Очищаем активные выделения
     if (this.activeWord) {
@@ -309,9 +370,7 @@ export class ClickableWordsHandler {
     this.container = null;
     this.dictionary = null;
     this.modal = null;
-    if (this.tooltip) {
-        this.tooltip.remove();
-    }
+    this.tooltip = null;
   }
 
   getStoredEvents() {

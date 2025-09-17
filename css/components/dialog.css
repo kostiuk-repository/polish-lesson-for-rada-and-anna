@@ -372,3 +372,172 @@
     display: none; /* Скрываем подсказки на мобильных */
   }
 }
+
+@media (max-width: 768px) {
+  .dialog-line {
+    padding: var(--space-4);
+    margin-bottom: var(--space-3);
+    border-radius: var(--radius-base);
+  }
+
+  .dialog-text {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+  }
+  
+  .dialog-speaker {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+  }
+  
+  .dialog-characters {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  
+  .dialog-controls {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: stretch;
+    padding: var(--space-3);
+  }
+  
+  .clickable-word {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    margin: 1px 2px;
+    display: inline-block;
+    border-radius: var(--radius-sm);
+  }
+  
+  /* Улучшаем читаемость на маленьких экранах */
+  .dialog-text .clickable-word {
+    word-break: break-word;
+  }
+  
+  /* Убираем tooltips на мобильных устройствах */
+  .quick-tooltip {
+    display: none;
+  }
+  
+  /* Увеличиваем размер кнопок для сенсорного ввода */
+  .audio-play-btn {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Адаптивная сетка для диалогов */
+  .dialog-container {
+    margin-bottom: var(--space-6);
+  }
+  
+  .dialog-translation {
+    padding-top: var(--space-2);
+    font-size: var(--font-size-sm);
+  }
+  
+  /* Улучшенный переключатель переводов */
+  .translation-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .toggle-switch {
+    width: 50px;
+    height: 28px;
+  }
+  
+  .toggle-switch::after {
+    width: 24px;
+    height: 24px;
+    top: 2px;
+    left: 2px;
+  }
+  
+  .toggle-switch--active::after {
+    transform: translateX(22px);
+  }
+  
+  /* Вертикальная прокрутка для длинных слов */
+  .clickable-word {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .lesson-header-box {
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+  
+  .lesson-header-box h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-3);
+  }
+  
+  .lesson-header-box p {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-4);
+  }
+  
+  .lesson-tags {
+    gap: var(--space-2);
+    justify-content: center;
+  }
+  
+  .tag {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1) var(--space-2);
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .dialog-line {
+    padding: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+  
+  .dialog-speaker {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .dialog-text {
+    font-size: var(--font-size-sm);
+  }
+  
+  .clickable-word {
+    font-size: var(--font-size-sm);
+    padding: 2px var(--space-1);
+    margin: 1px;
+  }
+  
+  .audio-play-btn {
+    width: 36px;
+    height: 36px;
+    font-size: var(--font-size-sm);
+  }
+  
+  .dialog-translation {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Landscape ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+  .dialog-line {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .lesson-header-box {
+    padding: var(--space-4);
+  }
+  
+  .lesson-header-box h1 {
+    font-size: var(--font-size-2xl);
+  }
+}

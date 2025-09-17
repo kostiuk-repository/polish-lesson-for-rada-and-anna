@@ -15,6 +15,7 @@ export class LessonComponent {
     
     this.lessonData = null;
     this.lessonId = null;
+    this.categoryId = null;
     this.tabs = null;
     this.exercises = null;
     this.clickableWords = null;
@@ -40,6 +41,9 @@ export class LessonComponent {
       
       // Загружаем данные урока
       this.lessonData = await this.api.getLesson(this.lessonId);
+      
+      // Получаем categoryId из каталога
+      await this.getCategoryId();
       
       console.log('✅ Данные урока загружены:', this.lessonData.title);
       
@@ -69,6 +73,21 @@ export class LessonComponent {
     return match ? match[1] : null;
   }
 
+  async getCategoryId() {
+    try {
+      const catalog = await this.api.getCatalog();
+      for (const category of catalog.categories) {
+        const lesson = category.lessons.find(l => l.id === this.lessonId);
+        if (lesson) {
+          this.categoryId = category.id;
+          break;
+        }
+      }
+    } catch (error) {
+      console.warn('Не удалось получить ID категории:', error);
+    }
+  }
+
   renderLesson() {
     // Обновляем заголовок страницы
     document.title = `${this.lessonData.title} - Polish Learning Hub`;
@@ -92,10 +111,16 @@ export class LessonComponent {
     const tags = (this.lessonData.tags || [])
       .map(tag => `<span class="tag">#${tag}</span>`)
       .join('');
+
+    // Правильная ссылка назад
+    const backLink = this.categoryId ? `#/categories/${this.categoryId}` : '#/categories';
       
     return `
       <header class="lesson-header-box">
-        <a href="#/categories" class="btn btn--outline mb-4" data-router-link>&larr; Назад к урокам</a>
+        <a href="${backLink}" class="btn btn--outline mb-4" data-router-link>
+          <i class="fas fa-arrow-left"></i>
+          Назад к урокам
+        </a>
         <h1>${this.lessonData.title}</h1>
         <p>${this.lessonData.description}</p>
         <div class="lesson-tags">
@@ -211,13 +236,17 @@ export class LessonComponent {
     return this.lessonData.content
       .map((line, index) => {
         const wordsHTML = (line.words || [])
-          .map(word => `
-            <span class="clickable-word" 
-                  data-word-key="${word.wordKey}"
-                  data-translation="${this.getWordTranslation(word.wordKey)}">
-              ${word.text}
-            </span>
-          `)
+          .map(word => {
+            const translation = this.getWordTranslation(word.wordKey);
+            return `
+              <span class="clickable-word" 
+                    data-word-key="${word.wordKey}"
+                    data-translation="${translation}"
+                    title="${translation}">
+                ${word.text}
+              </span>
+            `;
+          })
           .join(' ');
           
         return `
@@ -339,15 +368,16 @@ export class LessonComponent {
 
   getWordTranslation(wordKey) {
     if (!this.dictionary || !wordKey) {
-      return 'Нет перевода';
+      return 'Загрузка...';
     }
     
     try {
-      const wordData = this.dictionary.getWord(wordKey);
+      // Синхронное получение данных слова
+      const wordData = this.dictionary.dictionary.get(this.dictionary.normalizeWord(wordKey));
       return wordData?.translations?.ru || 'Нет перевода';
     } catch (error) {
       console.warn('Ошибка получения перевода для слова:', wordKey, error);
-      return 'Нет перевода';
+      return 'Ошибка загрузки';
     }
   }
 
