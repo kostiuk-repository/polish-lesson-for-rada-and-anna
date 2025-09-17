@@ -6,12 +6,11 @@ export class Router {
     }
 
     navigateTo(path) {
-        history.pushState(null, null, path);
-        this.handleRouteChange();
+        window.location.hash = path;
     }
 
     handleRouteChange() {
-        const path = window.location.pathname;
+        const path = window.location.hash.substring(1) || '/';
         const currentRoute = this.routes.find(route => {
             const routePathSegments = route.path.split('/').filter(Boolean);
             const currentPathSegments = path.split('/').filter(Boolean);
@@ -44,7 +43,7 @@ export class Router {
         const navLinks = document.querySelectorAll('.app-nav a');
         navLinks.forEach(link => {
             const linkPath = link.getAttribute('href');
-            const isActive = (currentPath === linkPath) || (currentPath.startsWith(linkPath) && linkPath !== '/');
+            const isActive = (currentPath === linkPath.substring(1)) || (currentPath.startsWith(linkPath.substring(1)) && linkPath !== '#/');
             link.classList.toggle('active', isActive);
         });
         if (currentPath === '/') {

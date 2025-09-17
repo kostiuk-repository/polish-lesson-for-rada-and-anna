@@ -31,7 +31,7 @@ class App {
             const link = e.target.closest('a');
             if (link && link.matches('[data-router-link]')) {
                 e.preventDefault();
-                const targetUrl = link.getAttribute('href');
+                const targetUrl = link.getAttribute('href').substring(1);
                 this.router.navigateTo(targetUrl);
             }
         });
