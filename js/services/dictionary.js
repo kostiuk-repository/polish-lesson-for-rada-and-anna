@@ -262,4 +262,22 @@ export class DictionaryService {
 
     return stats;
   }
+
+  getPartOfSpeechName(pos) {
+    const names = {
+      'verb': 'Глагол',
+      'noun': 'Существительное',
+      'adjective': 'Прилагательное',
+      'adverb': 'Наречие',
+      'pronoun': 'Местоимение',
+      'preposition': 'Предлог',
+      'conjunction': 'Союз',
+      'particle': 'Частица',
+      'modal': 'Модальное слово',
+      'interjection': 'Междометие',
+      'numeral': 'Числительное',
+      'punctuation': 'Знак препинания'
+    };
+    return names[pos] || pos;
+  }
 }

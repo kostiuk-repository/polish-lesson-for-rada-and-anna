@@ -137,46 +137,6 @@
   transform: translateY(0);
 }
 
-/* Всплывающие подсказки для слов */
-.clickable-word::after {
-  content: attr(data-translation);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--gray-800);
-  color: var(--white);
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-base);
-  font-size: var(--font-size-xs);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-fast);
-  z-index: 100;
-  margin-bottom: var(--space-2);
-}
-
-.clickable-word::before {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid transparent;
-  border-top-color: var(--gray-800);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-fast);
-  z-index: 100;
-  margin-bottom: 2px;
-}
-
-.clickable-word:hover::after,
-.clickable-word:hover::before {
-  opacity: 1;
-}
-
 /* Кликабельные предложения */
 .clickable-sentence {
   cursor: pointer;

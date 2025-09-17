@@ -6,6 +6,7 @@
 /* Список табов */
 .tabs__list {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 2px solid var(--gray-200);
   margin-bottom: var(--space-8);
   overflow-x: auto;
@@ -198,6 +199,50 @@
 .tabs__button--active .tabs__badge {
   background-color: var(--primary-color);
   color: var(--white);
+}
+
+/* Стиль "Нагетсів" (Chips) */
+.tabs--chips .tabs__list {
+  border-bottom: none;
+  background-color: transparent;
+  padding: 0;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.tabs--chips .tabs__button {
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  color: var(--gray-700);
+  border-radius: var(--radius-full); /* Повністю круглі краї */
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.tabs--chips .tabs__button:hover {
+  background-color: var(--gray-100);
+  box-shadow: none;
+}
+
+.tabs--chips .tabs__button--active {
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+
+/* Іконка галочки для активного "нагетса" */
+.tabs--chips .tabs__button--active::before {
+  content: '✓';
+  font-weight: bold;
+  margin-right: var(--space-2);
+  color: var(--primary-dark);
 }
 
 /* Анимации */

@@ -258,7 +258,7 @@ export class LessonComponent {
     this.tabs = new TabsComponent(this.container.querySelector('[data-tabs]'));
     
     // Инициализируем модальное окно
-    this.modal = new ModalComponent();
+    this.modal = new ModalComponent({ dictionary: this.dictionary });
     
     // Инициализируем упражнения
     const exercisesContainer = this.container.querySelector('.exercises-container');

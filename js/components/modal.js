@@ -1,5 +1,6 @@
 export class ModalComponent {
-  constructor() {
+  constructor({ dictionary }) {
+    this.dictionary = dictionary; // Залежність від DictionaryService
     this.modal = null;
     this.isOpen = false;
     this.currentContent = null;
@@ -15,7 +16,6 @@ export class ModalComponent {
   }
 
   createModal() {
-    // Создаем модальное окно, если его еще нет
     this.modal = document.getElementById('modal');
     
     if (!this.modal) {
@@ -49,16 +49,13 @@ export class ModalComponent {
           </header>
           
           <div class="modal__body" id="modal-body">
-            <!-- Контент будет добавлен динамически -->
-          </div>
+            </div>
           
           <footer class="modal__footer" id="modal-footer" style="display: none;">
-            <!-- Кнопки действий -->
-          </footer>
+            </footer>
         </div>
       `;
       
-      // Добавляем в контейнер для модальных окон
       let modalsContainer = document.getElementById('modals-container');
       if (!modalsContainer) {
         modalsContainer = document.createElement('div');
@@ -70,34 +67,24 @@ export class ModalComponent {
   }
 
   setupEventListeners() {
-    // Закрытие по клику на оверлей
     this.modal.addEventListener('click', (e) => {
       if (e.target === this.modal) {
         this.close();
       }
     });
 
-    // Закрытие по кнопке X
     const closeBtn = this.modal.querySelector('.modal__close');
     closeBtn.addEventListener('click', () => this.close());
 
-    // Кнопка закладок
     const bookmarkBtn = this.modal.querySelector('.bookmark-btn');
     bookmarkBtn.addEventListener('click', () => this.toggleBookmark());
 
-    // Кнопка аудио
     const audioBtn = this.modal.querySelector('.audio-btn');
     audioBtn.addEventListener('click', () => this.playAudio());
 
-    // Обработка клавиатуры
     this.modal.addEventListener('keydown', (e) => this.handleKeyDown(e));
   }
 
-  /**
-   * Открывает модальное окно со словарной статьей
-   * @param {Object} wordData - данные слова
-   * @param {Object} options - дополнительные опции
-   */
   showWord(wordData, options = {}) {
     const content = this.generateWordContent(wordData);
     
@@ -110,10 +97,6 @@ export class ModalComponent {
     });
   }
 
-  /**
-   * Открывает модальное окно с произвольным контентом
-   * @param {Object} config - конфигурация модального окна
-   */
   open(config) {
     const {
       title = '',
@@ -124,50 +107,32 @@ export class ModalComponent {
       wordData = null
     } = config;
 
-    // Сохраняем текущий фокус
     this.focusedElementBeforeModal = document.activeElement;
     this.onCloseCallback = onClose;
     this.currentContent = { wordData, ...config };
 
-    // Устанавливаем контент
     this.setTitle(title);
     this.setContent(content);
     this.setFooter(footer);
     this.setSize(size);
-
-    // Обновляем кнопки в заголовке
     this.updateHeaderButtons(wordData);
 
-    // Показываем модальное окно
     this.modal.classList.add('modal--open');
     this.modal.setAttribute('aria-hidden', 'false');
     this.isOpen = true;
 
-    // Фокусируемся на модальном окне
     this.focusModal();
-
-    // Блокируем прокрутку страницы
     document.body.style.overflow = 'hidden';
-
-    // Запускаем анимацию
     this.modal.querySelector('.modal__content').classList.add('modal-enter');
   }
 
-  /**
-   * Закрывает модальное окно
-   */
   close() {
     if (!this.isOpen) return;
 
-    // Запускаем анимацию выхода
     const content = this.modal.querySelector('.modal__content');
     content.classList.add('modal-exit');
 
     setTimeout(() => {
-      // Перед тем как скрыть модальное окно aria-hidden="true",
-      // убеждаемся, что фокус не остаётся внутри модального окна.
-      // Если до модального окна был сохранён фокус — восстановим его.
-      // В противном случае уберём фокус у текущего элемента.
       if (this.focusedElementBeforeModal) {
         try {
           this.focusedElementBeforeModal.focus();
@@ -175,7 +140,6 @@ export class ModalComponent {
           // ignore
         }
       } else if (document.activeElement && this.modal.contains(document.activeElement)) {
-        // Если нет сохранённого элемента, явно убираем фокус с элементов внутри модалки
         try {
           document.activeElement.blur();
         } catch (e) {
@@ -186,27 +150,19 @@ export class ModalComponent {
       this.modal.classList.remove('modal--open');
       this.modal.setAttribute('aria-hidden', 'true');
       this.isOpen = false;
-
-      // Восстанавливаем прокрутку
       document.body.style.overflow = '';
-
-      // Очищаем анимационные классы
       content.classList.remove('modal-enter', 'modal-exit');
 
-      // Вызываем callback
       if (this.onCloseCallback) {
         this.onCloseCallback();
         this.onCloseCallback = null;
       }
-
-      // Очищаем данные
       this.currentContent = null;
     }, 300);
   }
 
   setTitle(title) {
-    const titleElement = this.modal.querySelector('#modal-title');
-    titleElement.textContent = title;
+    this.modal.querySelector('#modal-title').textContent = title;
   }
 
   setContent(content) {
@@ -221,7 +177,6 @@ export class ModalComponent {
 
   setFooter(footer) {
     const footerElement = this.modal.querySelector('#modal-footer');
-    
     if (footer) {
       footerElement.innerHTML = footer;
       footerElement.style.display = 'flex';
@@ -232,11 +187,7 @@ export class ModalComponent {
 
   setSize(size) {
     const content = this.modal.querySelector('.modal__content');
-    
-    // Удаляем существующие классы размеров
     content.classList.remove('modal--small', 'modal--large', 'modal--full');
-    
-    // Добавляем новый класс размера
     if (size !== 'default') {
       content.classList.add(`modal--${size}`);
     }
@@ -247,15 +198,11 @@ export class ModalComponent {
     const audioBtn = this.modal.querySelector('.audio-btn');
 
     if (wordData) {
-      // Показываем кнопки для словарных статей
       bookmarkBtn.style.display = 'flex';
       audioBtn.style.display = 'flex';
-
-      // Проверяем, добавлено ли слово в закладки
       const isBookmarked = this.isWordBookmarked(wordData.lemma);
       bookmarkBtn.classList.toggle('active', isBookmarked);
     } else {
-      // Скрываем кнопки для обычных модальных окон
       bookmarkBtn.style.display = 'none';
       audioBtn.style.display = 'none';
     }
@@ -269,7 +216,7 @@ export class ModalComponent {
       <div class="word-details">
         ${this.generateWordHeader(wordData)}
         
-        <nav class="tabs tabs--card" data-tabs="word-details-tabs">
+        <nav class="tabs tabs--chips" data-tabs="word-details-tabs">
           <div class="tabs__list" role="tablist">
             <button class="tabs__button tabs__button--active" role="tab" data-tab="base">База</button>
             <button class="tabs__button" role="tab" data-tab="examples">Примеры</button>
@@ -298,7 +245,7 @@ export class ModalComponent {
     return `
       <div class="word-header">
         <h3 class="word-title">${wordData.lemma}</h3>
-        <span class="word-type-badge">${this.getPartOfSpeechName(wordData.part_of_speech)}</span>
+        <span class="word-type-badge">${this.dictionary.getPartOfSpeechName(wordData.part_of_speech)}</span>
       </div>
     `;
   }
@@ -336,15 +283,13 @@ export class ModalComponent {
     const tenses = Object.keys(wordData.inflection);
     if (tenses.length === 0) return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
     
-    // Создаем "нагетсы" (вложенные табы)
     const tenseTabs = tenses.map((tense, index) => `
       <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${tense}">${this.getTenseName(tense)}</button>
     `).join('');
 
-    // Создаем контент для каждого "нагетса"
     const tenseContents = tenses.map((tense, index) => {
       const forms = wordData.inflection[tense];
-      if (Object.keys(forms).length === 0) return ''; // Пропускаем пустые секции (например, imperative для некоторых глаголов)
+      if (Object.keys(forms).length === 0) return '';
       
       const formsTable = `
         <table class="conjugation-table table--compact">
@@ -368,7 +313,7 @@ export class ModalComponent {
 
     return `
       <div class="inflection-container">
-        <nav class="tabs tabs--card" data-tabs="inflection-tabs">
+        <nav class="tabs tabs--chips" data-tabs="inflection-tabs">
           <div class="tabs__list" role="tablist">
             ${tenseTabs}
           </div>
@@ -406,7 +351,6 @@ export class ModalComponent {
     return `<div class="declension-container">${tableHTML}</div>`;
   }
 
-  // Вспомогательные функции для названий
   getTenseName(tenseKey) {
     const names = {
       'present': 'Настоящее',
@@ -427,7 +371,6 @@ export class ModalComponent {
       'masculine': 'Мужской род',
       'feminine': 'Женский род',
       'neuter': 'Средний род',
-      // Fallback for tense-like categories (if ever used here)
       'present': 'Настоящее время',
       'past_masc': 'Прошедшее время (муж.)',
       'past_fem': 'Прошедшее время (жен.)',
@@ -437,18 +380,14 @@ export class ModalComponent {
     return names[category] || this.capitalize(category);
   }
 
-  // Consolidated getFormName for both verb-person keys and case/form names
   getFormName(form) {
     const names = {
-      // Verb person keys (pronouns)
       'sg1': 'ja', 'sg2': 'ty', 'sg3': 'on/ona/ono',
       'pl1': 'my', 'pl2': 'wy', 'pl3': 'oni/one',
-      // Grammatical cases / forms
       'nominative': 'Именительный', 'genitive': 'Родительный',
       'dative': 'Дательный', 'accusative': 'Винительный',
       'instrumental': 'Творительный', 'locative': 'Предложный',
       'vocative': 'Звательный',
-      // Alternative short labels often used for person-number (kept as fallback)
       '1sg': '1л. ед.ч.', '2sg': '2л. ед.ч.', '3sg': '3л. ед.ч.',
       '1pl': '1л. мн.ч.', '2pl': '2л. мн.ч.', '3pl': '3л. мн.ч.'
     };
@@ -480,7 +419,6 @@ export class ModalComponent {
       return;
     }
 
-    // Trap focus внутри модального окна
     if (e.key === 'Tab') {
       this.trapFocus(e);
     }
@@ -506,7 +444,6 @@ export class ModalComponent {
   playAudio() {
     if (!this.currentContent?.wordData) return;
     const word = this.currentContent.wordData.lemma;
-    // Вызываем сервис озвучки
     if (window.PolishApp && window.PolishApp.speech) {
       window.PolishApp.speech.speak(word);
     } else {
@@ -554,19 +491,5 @@ export class ModalComponent {
     }
     this.modal = null;
     this.isOpen = false;
-  }
-
-  getPartOfSpeechName(pos) {
-    const names = {
-      'verb': 'Глагол',
-      'noun': 'Существительное',
-      'adjective': 'Прилагательное',
-      'adverb': 'Наречие',
-      'pronoun': 'Местоимение',
-      'preposition': 'Предлог',
-      'conjunction': 'Союз',
-      'particle': 'Частица'
-    };
-    return names[pos] || pos;
   }
 }
