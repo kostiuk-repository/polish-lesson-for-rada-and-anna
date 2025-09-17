@@ -206,16 +206,16 @@ export class LessonComponent {
 
   generateCharactersHTML() {
     if (!this.lessonData.characters) return '';
-    
+
     const charactersHTML = this.lessonData.characters
       .map(char => `
-        <div class="dialog-character">
-          <h4 class="dialog-character__name">${char.name}</h4>
-          <p class="dialog-character__translation">${char.translation}</p>
+        <div class="dialog-character-card dialog-character">
+          <div class="dialog-character-card__name">${char.name}</div>
+          <div class="dialog-character-card__translation">${char.translation}</div>
         </div>
       `)
       .join('');
-      
+
     return `
       <div class="dialog-characters">
         ${charactersHTML}
@@ -264,7 +264,7 @@ export class LessonComponent {
             </div>
             
             <div class="dialog-translation">
-              <p class="text-transcription">${line.transcription || ''}</p>
+              <p class="text-transcription">${line.transcryption || ''}</p>
               <p class="text-russian">${line.translation}</p>
             </div>
           </div>

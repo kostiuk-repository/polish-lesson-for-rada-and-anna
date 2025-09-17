@@ -94,44 +94,80 @@
   max-width: none;
   border-radius: var(--radius-lg);
   margin: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .modal__header {
-  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: linear-gradient(135deg, var(--gray-50), var(--white));
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .modal__title {
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-dark);
   flex: 1;
   min-width: 0;
   word-break: break-word;
 }
 
 .modal__body {
-  padding: var(--space-4);
-  max-height: calc(100vh - 200px);
+  flex: 1;
+  padding: var(--space-4) var(--space-5);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--white);
 }
 
 .modal__footer {
-  padding: var(--space-4) var(--space-5);
+  display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--gray-100);
+  background: var(--gray-50);
 }
 
 .modal__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   order: 2;
-  margin-left: 0;
-  margin-top: var(--space-2);
+  margin-left: auto;
 }
 
 .modal__close {
   order: 3;
-  margin-left: 0;
-  margin-top: var(--space-2);
+  margin-left: auto;
   min-width: 44px;
   min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.modal__close:hover {
+  background: var(--primary-color);
+  color: var(--white);
 }
 
 /* Табы на мобильных */
@@ -162,6 +198,108 @@
   gap: var(--space-4);
 }
 
+.word-details,
+.sentence-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.word-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.word-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-dark);
+}
+
+.word-type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: rgba(221, 184, 146, 0.2);
+  color: var(--secondary-color);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-section {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.translation-section,
+.original-text,
+.translated-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.translation-text,
+.text-polish {
+  font-size: var(--font-size-lg);
+  color: var(--primary-dark);
+}
+
+.text-russian {
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+}
+
+.examples-list,
+.word-breakdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.example-item,
+.word-breakdown-list li {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-base);
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  color: var(--gray-700);
+  line-height: var(--line-height-relaxed);
+}
+
+.pronunciation,
+.pronunciation-guide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--gray-700);
+}
+
+.pronunciation-guide .pronunciation-tips {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.example-polish,
+.word-breakdown-list strong {
+  color: var(--primary-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
 .tabs__button {
   min-height: 44px;
   padding: var(--space-3) var(--space-4);
@@ -183,6 +321,51 @@
   grid-template-columns: 1fr;
   gap: var(--space-4);
   padding: var(--space-2) 0;
+  overflow: visible;
+}
+
+/* Карточки участников диалога на мобильных */
+.dialog-characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+  padding: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.dialog-character-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.dialog-character-card.dialog-character {
+  padding: var(--space-4);
+  text-align: left;
+}
+
+.dialog-character-card:active,
+.dialog-character-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.dialog-character-card__name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--primary-dark);
+}
+
+.dialog-character-card__translation {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
 }
 
 
