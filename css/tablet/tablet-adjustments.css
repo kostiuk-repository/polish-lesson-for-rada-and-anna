@@ -326,6 +326,23 @@ html {
   font-size: var(--font-size-base);
 }
 
+.exercises-container {
+  gap: var(--space-6);
+}
+
+.tabs__content-wrapper {
+  margin-top: var(--space-5);
+}
+
+.matching__container {
+  flex-direction: row;
+  gap: var(--space-4);
+}
+
+.matching__column {
+  flex: 1;
+}
+
 /* ===== CLICKABLE ELEMENTS ADJUSTMENTS ===== */
 .clickable-word {
   padding: 3px 6px;

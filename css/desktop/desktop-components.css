@@ -83,6 +83,7 @@
   background-color: var(--primary-light);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  color: var(--white);
 }
 
 .btn--primary:active {
@@ -208,8 +209,9 @@
   min-height: 320px;
   padding: var(--space-6);
   gap: var(--space-6);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .category-card::before {
@@ -231,7 +233,7 @@
 
 .category-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.18);
 }
 
 .category-card .card-icon {
@@ -329,10 +331,44 @@
   position: relative;
 }
 
+.dialog-speaker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-3);
+}
+
+.dialog-speaker-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-dark);
+  letter-spacing: 0.01em;
+}
+
+.dialog-translation {
+  display: none;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--gray-100);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--gray-600);
+}
+
+.show-translations .dialog-translation {
+  display: block;
+}
+
 .dialog-line:hover {
   box-shadow: var(--shadow-lg);
   transform: translateX(4px);
   border-left-width: 6px;
+}
+
+.tabs__content-wrapper {
+  margin-top: var(--space-5);
+  gap: var(--space-6);
 }
 
 .dialog-controls {
@@ -391,6 +427,59 @@
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
   z-index: 10;
+}
+
+/* ===== EXERCISES ===== */
+.exercises-container {
+  gap: var(--space-6);
+}
+
+.exercise {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.exercise__question {
+  padding: var(--space-4);
+}
+
+.exercise__actions {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.exercise__btn {
+  min-width: 160px;
+  padding: var(--space-3) var(--space-5);
+}
+
+.multiple-choice__options {
+  gap: var(--space-3);
+}
+
+.multiple-choice__option {
+  padding: var(--space-4);
+}
+
+.matching__container {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.matching__column {
+  flex: 1;
+}
+
+.matching__item {
+  padding: var(--space-3) var(--space-4);
+}
+
+.translation__input textarea {
+  min-height: 160px;
 }
 
 /* ===== TABLES ===== */
