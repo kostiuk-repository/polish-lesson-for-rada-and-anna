@@ -5,35 +5,43 @@ import { ClickableWordsHandler } from '../ui/clickable-words.js';
 import { DialogLinesHandler } from '../ui/dialog-lines.js';
 
 export class LessonComponent {
-  constructor({ container, lessonId, api, dictionary, speech, storage }) {
-    if (!container) {
-      throw new Error('Контейнер урока не найден');
-    }
+  constructor({ container, api, dictionary, speech, storage, modal }) {
     this.container = container;
-    this.lessonId = lessonId;
     this.api = api;
     this.dictionary = dictionary;
     this.speech = speech;
     this.storage = storage;
+    this.modal = modal;
     
     this.lessonData = null;
+    this.lessonId = null;
     this.tabs = null;
-    this.modal = null;
     this.exercises = null;
     this.clickableWords = null;
     this.dialogLines = null;
-    this.currentlyPlaying = {
-        button: null,
-        text: ''
-    };
-    this.isDialogPlaying = false;
   }
 
   async render() {
+    console.log('📖 LessonComponent: начинаем рендер');
+    
+    // Получаем ID урока из URL
+    this.lessonId = this.getLessonIdFromUrl();
+    
+    if (!this.lessonId) {
+      console.error('❌ ID урока не найден в URL');
+      this.renderError('ID урока не указан');
+      return;
+    }
+
     this.container.innerHTML = `<div class="loader-container"><div class="loader-spinner"></div></div>`;
+    
     try {
+      console.log('📚 Загружаем урок:', this.lessonId);
+      
       // Загружаем данные урока
       this.lessonData = await this.api.getLesson(this.lessonId);
+      
+      console.log('✅ Данные урока загружены:', this.lessonData.title);
       
       // Рендерим урок
       this.renderLesson();
@@ -47,11 +55,18 @@ export class LessonComponent {
       // Отслеживаем прогресс
       this.trackLessonStart();
       
-      console.log('✅ Урок відрендерен:', this.lessonId);
+      console.log('✅ Урок успешно отрендерен');
+      
     } catch (error) {
       console.error('❌ Ошибка рендеринга урока:', error);
       this.renderError(error.message);
     }
+  }
+
+  getLessonIdFromUrl() {
+    const hash = window.location.hash;
+    const match = hash.match(/#\/lesson\/(.+)$/);
+    return match ? match[1] : null;
   }
 
   renderLesson() {
@@ -74,13 +89,13 @@ export class LessonComponent {
   }
 
   generateHeaderHTML() {
-    const tags = this.lessonData.tags
+    const tags = (this.lessonData.tags || [])
       .map(tag => `<span class="tag">#${tag}</span>`)
       .join('');
       
     return `
       <header class="lesson-header-box">
-        <a href="#/categories/${this.lessonData.categoryId || 'restaurant'}" class="btn btn--outline mb-4">&larr; Назад до уроків</a>
+        <a href="#/categories" class="btn btn--outline mb-4" data-router-link>&larr; Назад к урокам</a>
         <h1>${this.lessonData.title}</h1>
         <p>${this.lessonData.description}</p>
         <div class="lesson-tags">
@@ -106,14 +121,14 @@ export class LessonComponent {
                   data-tab="grammar">
             <i class="fas fa-book"></i>
             Грамматика
-            <span class="tabs__badge">${this.lessonData.grammar?.length || 0}</span>
+            <span class="tabs__badge">${(this.lessonData.grammar || []).length}</span>
           </button>
           <button class="tabs__button" 
                   role="tab" 
                   data-tab="exercises">
             <i class="fas fa-dumbbell"></i>
             Упражнения
-            <span class="tabs__badge">${this.lessonData.exercises?.length || 0}</span>
+            <span class="tabs__badge">${(this.lessonData.exercises || []).length}</span>
           </button>
         </div>
       </nav>
@@ -135,7 +150,9 @@ export class LessonComponent {
   }
 
   generateDialogHTML() {
-    if (!this.lessonData.content) return '<p>Нет диалога для отображения</p>';
+    if (!this.lessonData.content) {
+      return '<p>Нет диалога для отображения</p>';
+    }
     
     const charactersHTML = this.generateCharactersHTML();
     const dialogHTML = this.generateDialogLinesHTML();
@@ -193,7 +210,7 @@ export class LessonComponent {
   generateDialogLinesHTML() {
     return this.lessonData.content
       .map((line, index) => {
-        const wordsHTML = line.words
+        const wordsHTML = (line.words || [])
           .map(word => `
             <span class="clickable-word" 
                   data-word-key="${word.wordKey}"
@@ -233,7 +250,9 @@ export class LessonComponent {
   }
 
   generateGrammarHTML() {
-    if (!this.lessonData.grammar || this.lessonData.grammar.length === 0) return '<p>Для этого урока нет грамматических тем.</p>';
+    if (!this.lessonData.grammar || this.lessonData.grammar.length === 0) {
+      return '<p>Для этого урока нет грамматических тем.</p>';
+    }
     
     return this.lessonData.grammar
       .map(topic => `
@@ -248,38 +267,50 @@ export class LessonComponent {
   }
 
   generateExercisesHTML() {
-      if (!this.lessonData.exercises || this.lessonData.exercises.length === 0) return '<p>Для этого урока нет упражнений.</p>';
-    
-      return `<div class="exercises-container" data-exercises='${JSON.stringify(this.lessonData.exercises)}'></div>`;
+    if (!this.lessonData.exercises || this.lessonData.exercises.length === 0) {
+      return '<p>Для этого урока нет упражнений.</p>';
+    }
+
+    return `<div class="exercises-container" data-exercises='${JSON.stringify(this.lessonData.exercises)}'></div>`;
   }
 
   initializeComponents() {
-    // Инициализируем табы
-    this.tabs = new TabsComponent(this.container.querySelector('[data-tabs]'));
+    console.log('🔧 Инициализируем компоненты урока');
     
-    // Инициализируем модальное окно
-    this.modal = new ModalComponent({ dictionary: this.dictionary });
+    // Инициализируем табы
+    const tabsElement = this.container.querySelector('[data-tabs]');
+    if (tabsElement) {
+      this.tabs = new TabsComponent(tabsElement);
+    }
     
     // Инициализируем упражнения
     const exercisesContainer = this.container.querySelector('.exercises-container');
-    if (exercisesContainer && this.lessonData.exercises.length > 0) {
-      const exercisesData = JSON.parse(exercisesContainer.dataset.exercises);
-      this.exercises = new ExercisesComponent(exercisesContainer, exercisesData);
+    if (exercisesContainer && this.lessonData.exercises && this.lessonData.exercises.length > 0) {
+      try {
+        const exercisesData = JSON.parse(exercisesContainer.dataset.exercises);
+        this.exercises = new ExercisesComponent(exercisesContainer, exercisesData);
+      } catch (error) {
+        console.error('Ошибка инициализации упражнений:', error);
+      }
     }
     
     // Инициализируем обработчики кликабельных элементов
-    this.clickableWords = new ClickableWordsHandler({
-      container: this.container,
-      dictionary: this.dictionary,
-      modal: this.modal
-    });
+    if (this.dictionary && this.modal) {
+      this.clickableWords = new ClickableWordsHandler({
+        container: this.container,
+        dictionary: this.dictionary,
+        modal: this.modal
+      });
+    }
     
-    this.dialogLines = new DialogLinesHandler({
-      container: this.container,
-      modal: this.modal,
-      speech: this.speech,
-      dictionary: this.dictionary
-    });
+    if (this.modal && this.speech && this.dictionary) {
+      this.dialogLines = new DialogLinesHandler({
+        container: this.container,
+        modal: this.modal,
+        speech: this.speech,
+        dictionary: this.dictionary
+      });
+    }
   }
 
   setupEventListeners() {
@@ -307,8 +338,17 @@ export class LessonComponent {
   }
 
   getWordTranslation(wordKey) {
-    const wordData = this.dictionary.getWord(wordKey);
-    return wordData?.translations?.ru || 'Нет перевода';
+    if (!this.dictionary || !wordKey) {
+      return 'Нет перевода';
+    }
+    
+    try {
+      const wordData = this.dictionary.getWord(wordKey);
+      return wordData?.translations?.ru || 'Нет перевода';
+    } catch (error) {
+      console.warn('Ошибка получения перевода для слова:', wordKey, error);
+      return 'Нет перевода';
+    }
   }
 
   toggleTranslations(show) {
@@ -326,9 +366,8 @@ export class LessonComponent {
   }
 
   async playAudio(text, button) {
-    if (!this.speech || this.currentlyPlaying.button) return;
+    if (!this.speech || !text) return;
 
-    this.currentlyPlaying = { button, text };
     button.classList.add('audio-play-btn--playing');
 
     try {
@@ -337,43 +376,55 @@ export class LessonComponent {
       console.error('Ошибка воспроизведения аудио:', error);
     } finally {
       button.classList.remove('audio-play-btn--playing');
-      this.currentlyPlaying = { button: null, text: '' };
     }
   }
 
   async playAllDialog(playButton) {
-    // TODO: Implement sequential playback for all dialog lines.
-  }
-
-  stopAllDialog(playButton) {
-    // TODO: Implement stopping logic for bulk dialog playback.
+    console.log('🎵 Воспроизведение всего диалога пока не реализовано');
   }
 
   trackLessonStart() {
-    // TODO: Implement lesson start tracking analytics.
+    if (this.storage && this.lessonId) {
+      try {
+        this.storage.updateLessonProgress(this.lessonId, {
+          started: true,
+          lastAccessed: Date.now()
+        });
+      } catch (error) {
+        console.warn('Не удалось отследить начало урока:', error);
+      }
+    }
   }
 
   renderError(message) {
-      if (this.container) {
-        this.container.innerHTML = `
-          <div class="error-message">
-            <h3>Ошибка загрузки урока</h3>
-            <p>${message}</p>
-            <a href="#/categories" class="btn btn--primary">
+    console.error('💥 Рендерим ошибку урока:', message);
+    
+    if (this.container) {
+      this.container.innerHTML = `
+        <div class="error-message">
+          <h3>Ошибка загрузки урока</h3>
+          <p>${message}</p>
+          <div class="error-actions">
+            <a href="#/categories" class="btn btn--primary" data-router-link>
               Вернуться к категориям
             </a>
+            <button onclick="window.location.reload()" class="btn btn--outline">
+              Обновить страницу
+            </button>
           </div>
-        `;
-      }
+        </div>
+      `;
+    }
   }
 
   destroy() {
-    if (this.tabs) this.tabs.destroy();
-    if (this.modal) this.modal.destroy();
-    if (this.exercises) this.exercises.destroy();
-    if (this.clickableWords) this.clickableWords.destroy();
-    if (this.dialogLines) this.dialogLines.destroy();
+    if (this.tabs) this.tabs.destroy?.();
+    if (this.exercises) this.exercises.destroy?.();
+    if (this.clickableWords) this.clickableWords.destroy?.();
+    if (this.dialogLines) this.dialogLines.destroy?.();
     
-    this.container.innerHTML = '';
+    if (this.container) {
+      this.container.innerHTML = '';
+    }
   }
 }
