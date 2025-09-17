@@ -1,1 +1,89 @@
-{}
+{
+  "bardzo": {
+    "lemma": "bardzo",
+    "part_of_speech": "adverb",
+    "translations": { "ru": "очень" },
+    "pronunciation": { 
+      "ru_transcription": "бардзо",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "To jest bardzo dobre.", "ru": "Это очень хорошо.", "ru_transcription": "то ест бардзо добрэ." },
+      { "pl": "Bardzo mi miło.", "ru": "Очень приятно.", "ru_transcription": "бардзо ми миВО." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "dobrze": {
+    "lemma": "dobrze",
+    "part_of_speech": "adverb",
+    "translations": { "ru": "хорошо" },
+    "pronunciation": { 
+      "ru_transcription": "добжэ",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Czuję się dobrze.", "ru": "Я чувствую себя хорошо.", "ru_transcription": "чуЁм сЯ добжэ." },
+      { "pl": "Bardzo dobrze!", "ru": "Очень хорошо!", "ru_transcription": "бардзо добжэ!" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["rz"]
+  },
+  "już": {
+    "lemma": "już",
+    "part_of_speech": "adverb",
+    "translations": { "ru": "уже" },
+    "pronunciation": { 
+      "ru_transcription": "юж",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Już jestem w domu.", "ru": "Я уже дома.", "ru_transcription": "юж естэм в дому." },
+      { "pl": "Czy już skończyłeś?", "ru": "Ты уже закончил?", "ru_transcription": "чы юж сконьчыВЭш?" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ż"]
+  },
+  "tak": {
+    "lemma": "tak",
+    "part_of_speech": "adverb",
+    "translations": { "ru": "да, так" },
+    "pronunciation": { 
+      "ru_transcription": "так",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Tak, to prawda.", "ru": "Да, это правда.", "ru_transcription": "так то правда." },
+      { "pl": "Nie tak!", "ru": "Не так!", "ru_transcription": "нэ так!" }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "tak czy nie", "ru": "да или нет" }
+    ],
+    "applied_rules": []
+  },
+  "tylko": {
+    "lemma": "tylko",
+    "part_of_speech": "adverb",
+    "translations": { "ru": "только" },
+    "pronunciation": { 
+      "ru_transcription": "тылько",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Mam tylko pięć złotych.", "ru": "У меня только пять злотых.", "ru_transcription": "мам тылько пЯнч зВОтых." },
+      { "pl": "To tylko żart.", "ru": "Это только шутка.", "ru_transcription": "то тылько жарт." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  }
+}

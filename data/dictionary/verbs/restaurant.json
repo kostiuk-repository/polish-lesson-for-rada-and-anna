@@ -3,16 +3,195 @@
     "lemma": "zamawiać",
     "part_of_speech": "verb",
     "translations": { "ru": "заказывать" },
+    "pronunciation": { 
+      "ru_transcription": "замавЯч",
+      "key_forms": [
+        { "pl": "zamawiam", "ru": "замаВЯМ" },
+        { "pl": "zamawiasz", "ru": "замаВЯШЬ" },
+        { "pl": "zamawia", "ru": "замаВЯ" }
+      ]
+    },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "zamawiam", "sg2": "zamawiasz", "sg3": "zamawia", "pl1": "zamawiamy", "pl2": "zamawiacie", "pl3": "zamawiają" },
+      "past_masc": { "sg1": "zamawiałem", "sg2": "zamawiałeś", "sg3": "zamawiał", "pl1": "zamawialiśmy", "pl2": "zamawialiście", "pl3": "zamawiali" },
+      "past_fem": { "sg1": "zamawiałam", "sg2": "zamawiałaś", "sg3": "zamawiała", "pl1": "zamawiałyśmy", "pl2": "zamawiałyście", "pl3": "zamawiały" },
+      "past_neut": { "sg3": "zamawiało" },
+      "future": { "sg1": "będę zamawiał/zamawiała", "sg2": "będziesz zamawiał/zamawiała", "sg3": "będzie zamawiał/zamawiała", "pl1": "będziemy zamawiali", "pl2": "będziecie zamawiali", "pl3": "będą zamawiali" },
+      "imperative": { "sg2": "zamawiaj", "pl1": "zamawiajmy", "pl2": "zamawiajcie" }
+    },
     "examples": [
-      { "pl": "Chciałbym zamówić stolik.", "ru": "Я хотел бы заказать столик." }
-    ]
+      { "pl": "Zamawiam zupę.", "ru": "Заказываю суп.", "ru_transcription": "замаВЯМ зупэм." },
+      { "pl": "Co Pan zamawia?", "ru": "Что Вы заказываете?", "ru_transcription": "цо пан замаВЯ?" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ą"]
   },
-  "płacić": {
-    "lemma": "płacić",
+  "podawać": {
+    "lemma": "podawać",
     "part_of_speech": "verb",
-    "translations": { "ru": "платить" },
+    "translations": { "ru": "подавать" },
+    "pronunciation": { 
+      "ru_transcription": "подаВАч",
+      "key_forms": [
+        { "pl": "podaję", "ru": "подаЁм" },
+        { "pl": "podajesz", "ru": "подаЕШЬ" },
+        { "pl": "podaje", "ru": "подаЕ" }
+      ]
+    },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "podaję", "sg2": "podajesz", "sg3": "podaje", "pl1": "podajemy", "pl2": "podajecie", "pl3": "podają" },
+      "past_masc": { "sg1": "podawałem", "sg2": "podawałeś", "sg3": "podawał", "pl1": "podawaliśmy", "pl2": "podawaliście", "pl3": "podawali" },
+      "past_fem": { "sg1": "podawałam", "sg2": "podawałaś", "sg3": "podawała", "pl1": "podawałyśmy", "pl2": "podawałyście", "pl3": "podawały" },
+      "past_neut": { "sg3": "podawało" },
+      "future": { "sg1": "będę podawał/podawała", "sg2": "będziesz podawał/podawała", "sg3": "będzie podawał/podawała", "pl1": "będziemy podawali", "pl2": "będziecie podawali", "pl3": "będą podawali" },
+      "imperative": { "sg2": "podawaj", "pl1": "podawajmy", "pl2": "podawajcie" }
+    },
     "examples": [
-      { "pl": "Czy mogę zapłacić kartą?", "ru": "Могу ли я заплатить картой?" }
-    ]
+      { "pl": "Kelner podaje kawę.", "ru": "Официант подаёт кофе.", "ru_transcription": "кэльнэр подаЕ кавэм." },
+      { "pl": "Podaję na stół.", "ru": "Подаю на стол.", "ru_transcription": "подаЁм на стул." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "podawać do stołu", "ru": "подавать к столу" }
+    ],
+    "applied_rules": ["ą"]
+  },
+  "podać": {
+    "lemma": "podać",
+    "part_of_speech": "verb",
+    "translations": { "ru": "подать" },
+    "pronunciation": { 
+      "ru_transcription": "подач",
+      "key_forms": [
+        { "pl": "podam", "ru": "подАМ" },
+        { "pl": "podasz", "ru": "подАШЬ" },
+        { "pl": "poda", "ru": "подА" }
+      ]
+    },
+    "morphology": {
+      "aspect": "perfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": {},
+      "past_masc": { "sg1": "podałem", "sg2": "podałeś", "sg3": "podał", "pl1": "podaliśmy", "pl2": "podaliście", "pl3": "podali" },
+      "past_fem": { "sg1": "podałam", "sg2": "podałaś", "sg3": "podała", "pl1": "podałyśmy", "pl2": "podałyście", "pl3": "podały" },
+      "past_neut": { "sg3": "podało" },
+      "future": { "sg1": "podam", "sg2": "podasz", "sg3": "poda", "pl1": "podamy", "pl2": "podacie", "pl3": "podadzą" },
+      "imperative": { "sg2": "podaj", "pl1": "podajmy", "pl2": "podajcie" }
+    },
+    "examples": [
+      { "pl": "Podam ci menu.", "ru": "Подам тебе меню.", "ru_transcription": "подАМ ци мэню." },
+      { "pl": "Proszę podać rachunek.", "ru": "Подайте, пожалуйста, счёт.", "ru_transcription": "прошэм подач рахунэк." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "podać rękę", "ru": "подать руку" }
+    ],
+    "applied_rules": ["ć", "ł", "ą"]
+  },
+  "polecać": {
+    "lemma": "polecać",
+    "part_of_speech": "verb",
+    "translations": { "ru": "рекомендовать" },
+    "pronunciation": { 
+      "ru_transcription": "полЭцач",
+      "key_forms": [
+        { "pl": "polecam", "ru": "полЭцам" },
+        { "pl": "polecasz", "ru": "полЭцашь" },
+        { "pl": "poleca", "ru": "полЭца" }
+      ]
+    },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "polecam", "sg2": "polecasz", "sg3": "poleca", "pl1": "polecamy", "pl2": "polecacie", "pl3": "polecają" },
+      "past_masc": { "sg1": "polecałem", "sg2": "polecałeś", "sg3": "polecał", "pl1": "polecaliśmy", "pl2": "polecaliście", "pl3": "polecali" },
+      "past_fem": { "sg1": "polecałam", "sg2": "polecałaś", "sg3": "polecała", "pl1": "polecałyśmy", "pl2": "polecałyście", "pl3": "polecały" },
+      "past_neut": { "sg3": "polecało" },
+      "future": { "sg1": "będę polecał/polecała", "sg2": "będziesz polecał/polecała", "sg3": "będzie polecał/polecała", "pl1": "będziemy polecali", "pl2": "będziecie polecali", "pl3": "będą polecali" },
+      "imperative": { "sg2": "polecaj", "pl1": "polecajmy", "pl2": "polecajcie" }
+    },
+    "examples": [
+      { "pl": "Polecam tę restaurację.", "ru": "Рекомендую этот ресторан.", "ru_transcription": "полЭцам тэм рэстауРАцьем." },
+      { "pl": "Co Pan poleca?", "ru": "Что Вы рекомендуете?", "ru_transcription": "цо пан полЭца?" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ć", "ą"]
+  },
+  "smakować": {
+    "lemma": "smakować",
+    "part_of_speech": "verb",
+    "translations": { "ru": "быть на вкус" },
+    "pronunciation": { 
+      "ru_transcription": "смакОвач",
+      "key_forms": [
+        { "pl": "smakuje", "ru": "смакУЕ" },
+        { "pl": "smakują", "ru": "смакУЁ" }
+      ]
+    },
+    "morphology": {
+      "aspect": "imperfective",
+      "transitivity": "intransitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": { "sg1": "smakuję", "sg2": "smakujesz", "sg3": "smakuje", "pl1": "smakujemy", "pl2": "smakujecie", "pl3": "smakują" },
+      "past_masc": { "sg1": "smakowałem", "sg2": "smakowałeś", "sg3": "smakował", "pl1": "smakowaliśmy", "pl2": "smakowaliście", "pl3": "smakowali" },
+      "past_fem": { "sg1": "smakowałam", "sg2": "smakowałaś", "sg3": "smakowała", "pl1": "smakowałyśmy", "pl2": "smakowałyście", "pl3": "smakowały" },
+      "past_neut": { "sg3": "smakowało" },
+      "future": { "sg1": "będę smakował/smakowała", "sg2": "będziesz smakował/smakowała", "sg3": "będzie smakował/smakowała", "pl1": "będziemy smakowali", "pl2": "będziecie smakowali", "pl3": "będą smakowali" },
+      "imperative": {}
+    },
+    "examples": [
+      { "pl": "To smakuje wybornie.", "ru": "Это вкусно на вкус.", "ru_transcription": "то смакУЕ выборьнэ." },
+      { "pl": "Jak Ci smakuje?", "ru": "Как тебе на вкус?", "ru_transcription": "як ци смакУЕ?" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "spróbować": {
+    "lemma": "spróbować",
+    "part_of_speech": "verb",
+    "translations": { "ru": "попробовать" },
+    "pronunciation": { 
+      "ru_transcription": "спрубОвач",
+      "key_forms": [
+        { "pl": "spróbuję", "ru": "спрубУЕм" },
+        { "pl": "spróbujesz", "ru": "спрубУЕшь" },
+        { "pl": "spróbuje", "ru": "спрубУЕ" }
+      ]
+    },
+    "morphology": {
+      "aspect": "perfective",
+      "transitivity": "transitive",
+      "reflexive": false
+    },
+    "inflection": {
+      "present": {},
+      "past_masc": { "sg1": "spróbowałem", "sg2": "spróbowałeś", "sg3": "spróbował", "pl1": "spróbowaliśmy", "pl2": "spróbowaliście", "pl3": "spróbowali" },
+      "past_fem": { "sg1": "spróbowałam", "sg2": "spróbowałaś", "sg3": "spróbowała", "pl1": "spróbowałyśmy", "pl2": "spróbowałyście", "pl3": "spróbowały" },
+      "past_neut": { "sg3": "spróbowało" },
+      "future": { "sg1": "spróbuję", "sg2": "spróbujesz", "sg3": "spróbuje", "pl1": "spróbujemy", "pl2": "spróbujecie", "pl3": "spróbują" },
+      "imperative": { "sg2": "spróbuj", "pl1": "spróbujmy", "pl2": "spróbujcie" }
+    },
+    "examples": [
+      { "pl": "Spróbuję tego deseru.", "ru": "Попробую этот десерт.", "ru_transcription": "спрубУЕм тэго дэСЭру." },
+      { "pl": "Spróbuj tej zupy!", "ru": "Попробуй этот суп!", "ru_transcription": "спруБУй тэй зупы!" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ó", "ą"]
   }
 }

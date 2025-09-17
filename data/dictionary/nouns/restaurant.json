@@ -3,207 +3,272 @@
     "lemma": "kawiarnia",
     "part_of_speech": "noun",
     "translations": { "ru": "кофейня" },
-    "pronunciation": { "ru_transcription": "каварнья" },
-    "morphology": { 
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "declension_type": "1st"
+    "pronunciation": { 
+      "ru_transcription": "кавярНЯ",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "feminine"
     },
     "inflection": {
-      "nom_sg": "kawiarnia", "gen_sg": "kawiarni", "dat_sg": "kawiarni", "acc_sg": "kawiarnię", "ins_sg": "kawiarnią", "loc_sg": "kawiarni", "voc_sg": "kawiarni",
-      "nom_pl": "kawiarnie", "gen_pl": "kawiarni", "dat_pl": "kawiarniom", "acc_pl": "kawiarnie", "ins_pl": "kawiarniami", "loc_pl": "kawiarniach", "voc_pl": "kawiarnie"
+      "singular": {
+        "nominative": "kawiarnia",
+        "genitive": "kawiarni",
+        "dative": "kawiarni",
+        "accusative": "kawiarnię",
+        "instrumental": "kawiarnią",
+        "locative": "kawiarni",
+        "vocative": "kawiarniu"
+      },
+      "plural": {
+        "nominative": "kawiarnie",
+        "genitive": "kawiarń",
+        "dative": "kawiarniom",
+        "accusative": "kawiarnie",
+        "instrumental": "kawiarniami",
+        "locative": "kawiarniach",
+        "vocative": "kawiarnie"
+      }
     },
     "examples": [
-      { "pl": "Witam w kawiarni!", "ru": "Добро пожаловать в кофейню!" },
-      { "pl": "Ta kawiarnia ma dobre kawy.", "ru": "В этой кофейне хорошие кофе." }
+      { "pl": "Idziemy do kawiarni.", "ru": "Идём в кофейню.", "ru_transcription": "идЗЕмы до кавярни." },
+      { "pl": "Ta kawiarnia ma dobrą kawę.", "ru": "В этой кофейне хороший кофе.", "ru_transcription": "та кавярНЯ ма добрОм кавэм." }
     ],
-    "applied_rules": ["ę", "ą", "ni"]
+    "phrases_and_idioms": [],
+    "applied_rules": ["ą", "ę", "ń"]
   },
-
-  "stolik": {
-    "lemma": "stolik",
-    "part_of_speech": "noun",
-    "translations": { "ru": "столик" },
-    "pronunciation": { "ru_transcription": "столик" },
-    "morphology": { 
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
-    },
-    "inflection": {
-      "nom_sg": "stolik", "gen_sg": "stolika", "dat_sg": "stolikowi", "acc_sg": "stolik", "ins_sg": "stolikiem", "loc_sg": "stoliku", "voc_sg": "stoliku",
-      "nom_pl": "stoliki", "gen_pl": "stolików", "dat_pl": "stolikom", "acc_pl": "stoliki", "ins_pl": "stolikami", "loc_pl": "stolikach", "voc_pl": "stoliki"
-    },
-    "examples": [
-      { "pl": "Poproszę stolik dla dwóch osób.", "ru": "Пожалуйста, столик на двоих." },
-      { "pl": "Czy jest wolny stolik przy oknie?", "ru": "Есть ли свободный столик у окна?" }
-    ],
-    "applied_rules": []
-  },
-
   "menu": {
     "lemma": "menu",
     "part_of_speech": "noun",
     "translations": { "ru": "меню" },
-    "pronunciation": { "ru_transcription": "мэню" },
-    "morphology": { 
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "declension_type": "indeclinable"
+    "pronunciation": { 
+      "ru_transcription": "мэню",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "neuter"
     },
     "inflection": {
-      "all_forms": "menu"
+      "singular": {
+        "nominative": "menu",
+        "genitive": "menu",
+        "dative": "menu",
+        "accusative": "menu",
+        "instrumental": "menu",
+        "locative": "menu",
+        "vocative": "menu"
+      },
+      "plural": {
+        "nominative": "menu",
+        "genitive": "menu",
+        "dative": "menu",
+        "accusative": "menu",
+        "instrumental": "menu",
+        "locative": "menu",
+        "vocative": "menu"
+      }
     },
     "examples": [
-      { "pl": "Mogłabym prosić o menu?", "ru": "Могла бы я попросить меню?" },
-      { "pl": "Oto menu i woda.", "ru": "Вот меню и вода." }
+      { "pl": "Poproszę menu.", "ru": "Меню, пожалуйста.", "ru_transcription": "попрошЭм мэню." },
+      { "pl": "Czy mają menu w języku polskim?", "ru": "У них есть меню на польском языке?", "ru_transcription": "чы маём мэню в ЕнзЫку польским?" }
     ],
+    "phrases_and_idioms": [],
     "applied_rules": []
   },
-
-  "rachunek": {
-    "lemma": "rachunek",
-    "part_of_speech": "noun",
-    "translations": { "ru": "счет" },
-    "pronunciation": { "ru_transcription": "рахунэк" },
-    "morphology": { 
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
-    },
-    "inflection": {
-      "nom_sg": "rachunek", "gen_sg": "rachunku", "dat_sg": "rachunkowi", "acc_sg": "rachunek", "ins_sg": "rachunkiem", "loc_sg": "rachunku", "voc_sg": "rachunku",
-      "nom_pl": "rachunki", "gen_pl": "rachunków", "dat_pl": "rachunkom", "acc_pl": "rachunki", "ins_pl": "rachunkami", "loc_pl": "rachunkach", "voc_pl": "rachunki"
-    },
-    "examples": [
-      { "pl": "Czy mogę prosić o rachunek?", "ru": "Могу я попросить счет?" },
-      { "pl": "Czy podać rachunek?", "ru": "Подать ли счет?" }
-    ],
-    "applied_rules": ["ch"]
-  },
-
-  "zupa": {
-    "lemma": "zupa",
-    "part_of_speech": "noun",
-    "translations": { "ru": "суп" },
-    "pronunciation": { "ru_transcription": "зупа" },
-    "morphology": { 
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
-    },
-    "inflection": {
-      "nom_sg": "zupa", "gen_sg": "zupy", "dat_sg": "zupie", "acc_sg": "zupę", "ins_sg": "zupą", "loc_sg": "zupie", "voc_sg": "zupo",
-      "nom_pl": "zupy", "gen_pl": "zup", "dat_pl": "zupom", "acc_pl": "zupy", "ins_pl": "zupami", "loc_pl": "zupach", "voc_pl": "zupy"
-    },
-    "examples": [
-      { "pl": "Poproszę zupę krem z dyni.", "ru": "Пожалуйста, суп-крем из тыквы." },
-      { "pl": "Zupa jest bardzo aromatyczna.", "ru": "Суп очень ароматный." }
-    ],
-    "applied_rules": ["ę", "ą"]
-  },
-
-  "risotto": {
-    "lemma": "risotto",
-    "part_of_speech": "noun",
-    "translations": { "ru": "ризотто" },
-    "pronunciation": { "ru_transcription": "ризотто" },
-    "morphology": { 
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "declension_type": "indeclinable"
-    },
-    "inflection": {
-      "all_forms": "risotto"
-    },
-    "examples": [
-      { "pl": "Ja chciałabym risotto z grzybami.", "ru": "Я бы хотела ризотто с грибами." },
-      { "pl": "Risotto jest delikatne i kremowe.", "ru": "Ризотто нежное и кремовое." }
-    ],
-    "applied_rules": []
-  },
-
-  "woda": {
-    "lemma": "woda",
-    "part_of_speech": "noun",
-    "translations": { "ru": "вода" },
-    "pronunciation": { "ru_transcription": "вода" },
-    "morphology": { 
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
-    },
-    "inflection": {
-      "nom_sg": "woda", "gen_sg": "wody", "dat_sg": "wodzie", "acc_sg": "wodę", "ins_sg": "wodą", "loc_sg": "wodzie", "voc_sg": "wodo",
-      "nom_pl": "wody", "gen_pl": "wód", "dat_pl": "wodom", "acc_pl": "wody", "ins_pl": "wodami", "loc_pl": "wodach", "voc_pl": "wody"
-    },
-    "examples": [
-      { "pl": "I wodę gazowaną z cytryną.", "ru": "И газированную воду с лимоном." },
-      { "pl": "Oto menu i woda.", "ru": "Вот меню и вода." }
-    ],
-    "applied_rules": ["ę", "ą", "dz"]
-  },
-
-  "herbata": {
-    "lemma": "herbata",
-    "part_of_speech": "noun",
-    "translations": { "ru": "чай" },
-    "pronunciation": { "ru_transcription": "хэрбата" },
-    "morphology": { 
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
-    },
-    "inflection": {
-      "nom_sg": "herbata", "gen_sg": "herbaty", "dat_sg": "herbacie", "acc_sg": "herbatę", "ins_sg": "herbatą", "loc_sg": "herbacie", "voc_sg": "herbato",
-      "nom_pl": "herbaty", "gen_pl": "herbat", "dat_pl": "herbatom", "acc_pl": "herbaty", "ins_pl": "herbatami", "loc_pl": "herbatach", "voc_pl": "herbaty"
-    },
-    "examples": [
-      { "pl": "Dwie herbaty zielone.", "ru": "Два зеленых чая." },
-      { "pl": "Lubię pić herbatę rano.", "ru": "Я люблю пить чай утром." }
-    ],
-    "applied_rules": ["ę", "ą"]
-  },
-
   "deser": {
     "lemma": "deser",
     "part_of_speech": "noun",
     "translations": { "ru": "десерт" },
-    "pronunciation": { "ru_transcription": "дэсэр" },
-    "morphology": { 
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
+    "pronunciation": { 
+      "ru_transcription": "дэсэр",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "masculine_inanimate"
     },
     "inflection": {
-      "nom_sg": "deser", "gen_sg": "deseru", "dat_sg": "deserowi", "acc_sg": "deser", "ins_sg": "deserem", "loc_sg": "deserze", "voc_sg": "deserze",
-      "nom_pl": "desery", "gen_pl": "deserów", "dat_pl": "deserom", "acc_pl": "desery", "ins_pl": "deserami", "loc_pl": "deserach", "voc_pl": "desery"
+      "singular": {
+        "nominative": "deser",
+        "genitive": "deseru",
+        "dative": "deserowi",
+        "accusative": "deser",
+        "instrumental": "deserem",
+        "locative": "deserze",
+        "vocative": "deserze"
+      },
+      "plural": {
+        "nominative": "desery",
+        "genitive": "deserów",
+        "dative": "deserom",
+        "accusative": "desery",
+        "instrumental": "deserami",
+        "locative": "deserach",
+        "vocative": "desery"
+      }
     },
     "examples": [
-      { "pl": "Na deser polecam tartę cytrynową.", "ru": "На десерт рекомендую лимонный тарт." },
-      { "pl": "Deser był rewelacją.", "ru": "Десерт был откровением." }
+      { "pl": "Na deser chcę lody.", "ru": "На десерт хочу мороженое.", "ru_transcription": "на дэсэр хцэм льоды." },
+      { "pl": "Jaki deser Pan poleca?", "ru": "Какой десерт Вы рекомендуете?", "ru_transcription": "яки дэсэр пан полЭца?" }
     ],
-    "applied_rules": ["rz"]
+    "phrases_and_idioms": [],
+    "applied_rules": ["ó"]
   },
-
+  "zupa": {
+    "lemma": "zupa",
+    "part_of_speech": "noun",
+    "translations": { "ru": "суп" },
+    "pronunciation": { 
+      "ru_transcription": "зупа",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "feminine"
+    },
+    "inflection": {
+      "singular": {
+        "nominative": "zupa",
+        "genitive": "zupy",
+        "dative": "zupie",
+        "accusative": "zupę",
+        "instrumental": "zupą",
+        "locative": "zupie",
+        "vocative": "zupo"
+      },
+      "plural": {
+        "nominative": "zupy",
+        "genitive": "zup",
+        "dative": "zupom",
+        "accusative": "zupy",
+        "instrumental": "zupami",
+        "locative": "zupach",
+        "vocative": "zupy"
+      }
+    },
+    "examples": [
+      { "pl": "Zamawiam zupę pomidorową.", "ru": "Заказываю томатный суп.", "ru_transcription": "замаВЯм зупЭм помидорОвОм." },
+      { "pl": "Ta zupa jest bardzo smaczna.", "ru": "Этот суп очень вкусный.", "ru_transcription": "та зупа ест бардзо смачна." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ą", "ę"]
+  },
+  "stolik": {
+    "lemma": "stolik",
+    "part_of_speech": "noun",
+    "translations": { "ru": "столик" },
+    "pronunciation": { 
+      "ru_transcription": "столик",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "masculine_inanimate"
+    },
+    "inflection": {
+      "singular": {
+        "nominative": "stolik",
+        "genitive": "stolika",
+        "dative": "stolikowi",
+        "accusative": "stolik",
+        "instrumental": "stolikiem",
+        "locative": "stoliku",
+        "vocative": "stoliku"
+      },
+      "plural": {
+        "nominative": "stoliki",
+        "genitive": "stolików",
+        "dative": "stolikom",
+        "accusative": "stoliki",
+        "instrumental": "stolikami",
+        "locative": "stolikach",
+        "vocative": "stoliki"
+      }
+    },
+    "examples": [
+      { "pl": "Rezerwuję stolik na dwóch.", "ru": "Бронирую столик на двоих.", "ru_transcription": "рэзэрвуЭм столик на двух." },
+      { "pl": "Czy jest wolny stolik?", "ru": "Есть свободный столик?", "ru_transcription": "чы ест вольны столик?" }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "rezerwować stolik", "ru": "бронировать столик" }
+    ],
+    "applied_rules": ["ó"]
+  },
+  "rachunek": {
+    "lemma": "rachunek",
+    "part_of_speech": "noun",
+    "translations": { "ru": "счёт" },
+    "pronunciation": { 
+      "ru_transcription": "рахунэк",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "masculine_inanimate"
+    },
+    "inflection": {
+      "singular": {
+        "nominative": "rachunek",
+        "genitive": "rachunku",
+        "dative": "rachunkowi",
+        "accusative": "rachunek",
+        "instrumental": "rachunkiem",
+        "locative": "rachunku",
+        "vocative": "rachunku"
+      },
+      "plural": {
+        "nominative": "rachunki",
+        "genitive": "rachunków",
+        "dative": "rachunkom",
+        "accusative": "rachunki",
+        "instrumental": "rachunkami",
+        "locative": "rachunkach",
+        "vocative": "rachunki"
+      }
+    },
+    "examples": [
+      { "pl": "Poproszę rachunek.", "ru": "Счёт, пожалуйста.", "ru_transcription": "попрошЭм рахунэк." },
+      { "pl": "Rachunek wynosi 50 złotych.", "ru": "Счёт составляет 50 злотых.", "ru_transcription": "рахунэк выноси 50 зВОтых." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "płacić rachunek", "ru": "оплачивать счёт" }
+    ],
+    "applied_rules": ["ó"]
+  },
   "napiwek": {
     "lemma": "napiwek",
     "part_of_speech": "noun",
     "translations": { "ru": "чаевые" },
-    "pronunciation": { "ru_transcription": "напивэк" },
-    "morphology": { 
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "declension_type": "hard"
+    "pronunciation": { 
+      "ru_transcription": "напИвэк",
+      "key_forms": []
+    },
+    "morphology": {
+      "gender": "masculine_inanimate"
     },
     "inflection": {
-      "nom_sg": "napiwek", "gen_sg": "napiwku", "dat_sg": "napiwkowi", "acc_sg": "napiwek", "ins_sg": "napiwkiem", "loc_sg": "napiwku", "voc_sg": "napiwku",
-      "nom_pl": "napiwki", "gen_pl": "napiwków", "dat_pl": "napiwkom", "acc_pl": "napiwki", "ins_pl": "napiwkami", "loc_pl": "napiwkach", "voc_pl": "napiwki"
+      "singular": {
+        "nominative": "napiwek",
+        "genitive": "napiwku",
+        "dative": "napiwkowi",
+        "accusative": "napiwek",
+        "instrumental": "napiwkiem",
+        "locative": "napiwku",
+        "vocative": "napiwku"
+      },
+      "plural": {
+        "nominative": "napiwki",
+        "genitive": "napiwków",
+        "dative": "napiwkom",
+        "accusative": "napiwki",
+        "instrumental": "napiwkami",
+        "locative": "napiwkach",
+        "vocative": "napiwki"
+      }
     },
     "examples": [
-      { "pl": "Zostawiamy napiwek.", "ru": "Мы оставляем чаевые." },
-      { "pl": "Napiwek nie jest obowiązkowy.", "ru": "Чаевые не обязательны." }
+      { "pl": "Zostawiam napiwek.", "ru": "Оставляю чаевые.", "ru_transcription": "зоставЯм напИвэк." },
+      { "pl": "Napiwek już jest wliczony.", "ru": "Чаевые уже включены.", "ru_transcription": "напИвэк юж ест влИчоны." }
     ],
-    "applied_rules": []
+    "phrases_and_idioms": [
+      { "pl": "zostawiać napiwek", "ru": "оставлять чаевые" }
+    ],
+    "applied_rules": ["ó"]
   }
 }

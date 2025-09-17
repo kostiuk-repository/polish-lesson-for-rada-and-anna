@@ -1,1 +1,54 @@
-{}
+{
+  "zielony": {
+    "lemma": "zielony",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "зелёный" },
+    "pronunciation": { 
+      "ru_transcription": "зЕлёны",
+      "key_forms": [
+        { "pl": "zielona", "ru": "зЕлёна" },
+        { "pl": "zielone", "ru": "зЕлёнэ" }
+      ]
+    },
+    "morphology": {
+      "gradable": true
+    },
+    "inflection": {
+      "masculine": {
+        "nominative": "zielony",
+        "genitive": "zielonego",
+        "dative": "zielonemu",
+        "accusative": "zielony/zielonego",
+        "instrumental": "zielonym",
+        "locative": "zielonym",
+        "vocative": "zielony"
+      },
+      "feminine": {
+        "nominative": "zielona",
+        "genitive": "zielonej",
+        "dative": "zielonej",
+        "accusative": "zieloną",
+        "instrumental": "zieloną",
+        "locative": "zielonej",
+        "vocative": "zielona"
+      },
+      "neuter": {
+        "nominative": "zielone",
+        "genitive": "zielonego",
+        "dative": "zielonemu",
+        "accusative": "zielone",
+        "instrumental": "zielonym",
+        "locative": "zielonym",
+        "vocative": "zielone"
+      }
+    },
+    "examples": [
+      { "pl": "Lubię zieloną herbatę.", "ru": "Люблю зелёный чай.", "ru_transcription": "лубЭм зЕлёнОм хэрбатЭм." },
+      { "pl": "To jest zielone jabłko.", "ru": "Это зелёное яблоко.", "ru_transcription": "то ест зЕлёнэ яблко." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "zielona herbata", "ru": "зелёный чай" }
+    ],
+    "applied_rules": ["ą"]
+  }
+}

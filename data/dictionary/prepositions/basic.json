@@ -1,1 +1,80 @@
-{}
+{
+  "na": {
+    "lemma": "na",
+    "part_of_speech": "preposition",
+    "translations": { "ru": "на" },
+    "pronunciation": { 
+      "ru_transcription": "на",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Książka jest na stole.", "ru": "Книга на столе.", "ru_transcription": "кшёжка ест на столэ." },
+      { "pl": "Idę na pocztę.", "ru": "Иду на почту.", "ru_transcription": "идЭм на почтЭм." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "na pewno", "ru": "наверняка" },
+      { "pl": "na przykład", "ru": "например" }
+    ],
+    "applied_rules": []
+  },
+  "w": {
+    "lemma": "w",
+    "part_of_speech": "preposition",
+    "translations": { "ru": "в" },
+    "pronunciation": { 
+      "ru_transcription": "в",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Jestem w domu.", "ru": "Я дома.", "ru_transcription": "естэм в дому." },
+      { "pl": "W poniedziałek mam lekcje.", "ru": "В понедельник у меня уроки.", "ru_transcription": "в понЭдзяВЭк мам лЭкцЕ." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "w końcu", "ru": "наконец" },
+      { "pl": "w ogóle", "ru": "вообще" }
+    ],
+    "applied_rules": []
+  },
+  "do": {
+    "lemma": "do",
+    "part_of_speech": "preposition",
+    "translations": { "ru": "к, до, в" },
+    "pronunciation": { 
+      "ru_transcription": "до",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Idę do sklepu.", "ru": "Иду в магазин.", "ru_transcription": "идЭм до склЭпу." },
+      { "pl": "Od rana do wieczora.", "ru": "С утра до вечера.", "ru_transcription": "од рана до вЭчора." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "do widzenia", "ru": "до свидания" }
+    ],
+    "applied_rules": []
+  },
+  "z": {
+    "lemma": "z",
+    "part_of_speech": "preposition",
+    "translations": { "ru": "с, из" },
+    "pronunciation": { 
+      "ru_transcription": "з",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Idę z przyjacielem.", "ru": "Иду с другом.", "ru_transcription": "идЭм з пшыяцЕлем." },
+      { "pl": "Wracam z pracy.", "ru": "Возвращаюсь с работы.", "ru_transcription": "врацам з працы." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "z przyjemnością", "ru": "с удовольствием" }
+    ],
+    "applied_rules": []
+  }
+}

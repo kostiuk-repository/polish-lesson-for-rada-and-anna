@@ -2,11 +2,206 @@
   "dobry": {
     "lemma": "dobry",
     "part_of_speech": "adjective",
-    "translations": { "ru": "хороший" }
+    "translations": { "ru": "хороший" },
+    "pronunciation": { 
+      "ru_transcription": "добры",
+      "key_forms": [
+        { "pl": "dobra", "ru": "добра" },
+        { "pl": "dobre", "ru": "добрэ" }
+      ]
+    },
+    "morphology": {
+      "gradable": true
+    },
+    "inflection": {
+      "masculine": {
+        "nominative": "dobry",
+        "genitive": "dobrego",
+        "dative": "dobremu",
+        "accusative": "dobry/dobrego",
+        "instrumental": "dobrym",
+        "locative": "dobrym",
+        "vocative": "dobry"
+      },
+      "feminine": {
+        "nominative": "dobra",
+        "genitive": "dobrej",
+        "dative": "dobrej",
+        "accusative": "dobrą",
+        "instrumental": "dobrą",
+        "locative": "dobrej",
+        "vocative": "dobra"
+      },
+      "neuter": {
+        "nominative": "dobre",
+        "genitive": "dobrego",
+        "dative": "dobremu",
+        "accusative": "dobre",
+        "instrumental": "dobrym",
+        "locative": "dobrym",
+        "vocative": "dobre"
+      }
+    },
+    "examples": [
+      { "pl": "To jest dobry pomysł.", "ru": "Это хорошая идея.", "ru_transcription": "то ест добры помысЯ." },
+      { "pl": "Mam dobrą kawę.", "ru": "У меня хороший кофе.", "ru_transcription": "мам добрОм кавЭм." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "dobry dzień", "ru": "добрый день" },
+      { "pl": "w dobrej formie", "ru": "в хорошей форме" }
+    ],
+    "applied_rules": ["ą"]
   },
-  "nowy": {
-    "lemma": "nowy",
+  "świetny": {
+    "lemma": "świetny",
     "part_of_speech": "adjective",
-    "translations": { "ru": "новый" }
+    "translations": { "ru": "отличный" },
+    "pronunciation": { 
+      "ru_transcription": "шьвЕтны",
+      "key_forms": [
+        { "pl": "świetna", "ru": "шьвЕтна" },
+        { "pl": "świetne", "ru": "шьвЕтнэ" }
+      ]
+    },
+    "morphology": {
+      "gradable": true
+    },
+    "inflection": {
+      "masculine": {
+        "nominative": "świetny",
+        "genitive": "świetnego",
+        "dative": "świetnemu",
+        "accusative": "świetny/świetnego",
+        "instrumental": "świetnym",
+        "locative": "świetnym",
+        "vocative": "świetny"
+      },
+      "feminine": {
+        "nominative": "świetna",
+        "genitive": "świetnej",
+        "dative": "świetnej",
+        "accusative": "świetną",
+        "instrumental": "świetną",
+        "locative": "świetnej",
+        "vocative": "świetna"
+      },
+      "neuter": {
+        "nominative": "świetne",
+        "genitive": "świetnego",
+        "dative": "świetnemu",
+        "accusative": "świetne",
+        "instrumental": "świetnym",
+        "locative": "świetnym",
+        "vocative": "świetne"
+      }
+    },
+    "examples": [
+      { "pl": "To jest świetny pomysł.", "ru": "Это отличная идея.", "ru_transcription": "то ест шьвЕтны помысЯ." },
+      { "pl": "Mamy świetną pogodę.", "ru": "У нас отличная погода.", "ru_transcription": "мамы шьвЕтнОм погодЭм." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ś", "ą"]
+  },
+  "słodki": {
+    "lemma": "słodki",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "сладкий" },
+    "pronunciation": { 
+      "ru_transcription": "сВОдки",
+      "key_forms": [
+        { "pl": "słodka", "ru": "сВОдка" },
+        { "pl": "słodkie", "ru": "сВОдкЕ" }
+      ]
+    },
+    "morphology": {
+      "gradable": true
+    },
+    "inflection": {
+      "masculine": {
+        "nominative": "słodki",
+        "genitive": "słodkiego",
+        "dative": "słodkiemu",
+        "accusative": "słodki/słodkiego",
+        "instrumental": "słodkim",
+        "locative": "słodkim",
+        "vocative": "słodki"
+      },
+      "feminine": {
+        "nominative": "słodka",
+        "genitive": "słodkiej",
+        "dative": "słodkiej",
+        "accusative": "słodką",
+        "instrumental": "słodką",
+        "locative": "słodkiej",
+        "vocative": "słodka"
+      },
+      "neuter": {
+        "nominative": "słodkie",
+        "genitive": "słodkiego",
+        "dative": "słodkiemu",
+        "accusative": "słodkie",
+        "instrumental": "słodkim",
+        "locative": "słodkim",
+        "vocative": "słodkie"
+      }
+    },
+    "examples": [
+      { "pl": "Ten deser jest bardzo słodki.", "ru": "Этот десерт очень сладкий.", "ru_transcription": "тэн дэсэр ест бардзо сВОдки." },
+      { "pl": "Lubię słodką kawę.", "ru": "Люблю сладкий кофе.", "ru_transcription": "лубЭм сВОдкОм кавЭм." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ł", "ą"]
+  },
+  "wolny": {
+    "lemma": "wolny",
+    "part_of_speech": "adjective",
+    "translations": { "ru": "свободный" },
+    "pronunciation": { 
+      "ru_transcription": "вольны",
+      "key_forms": [
+        { "pl": "wolna", "ru": "вольна" },
+        { "pl": "wolne", "ru": "вольнэ" }
+      ]
+    },
+    "morphology": {
+      "gradable": false
+    },
+    "inflection": {
+      "masculine": {
+        "nominative": "wolny",
+        "genitive": "wolnego",
+        "dative": "wolnemu",
+        "accusative": "wolny/wolnego",
+        "instrumental": "wolnym",
+        "locative": "wolnym",
+        "vocative": "wolny"
+      },
+      "feminine": {
+        "nominative": "wolna",
+        "genitive": "wolnej",
+        "dative": "wolnej",
+        "accusative": "wolną",
+        "instrumental": "wolną",
+        "locative": "wolnej",
+        "vocative": "wolna"
+      },
+      "neuter": {
+        "nominative": "wolne",
+        "genitive": "wolnego",
+        "dative": "wolnemu",
+        "accusative": "wolne",
+        "instrumental": "wolnym",
+        "locative": "wolnym",
+        "vocative": "wolne"
+      }
+    },
+    "examples": [
+      { "pl": "Czy ten stolik jest wolny?", "ru": "Этот столик свободен?", "ru_transcription": "чы тэн столик ест вольны?" },
+      { "pl": "Mam wolny czas.", "ru": "У меня свободное время.", "ru_transcription": "мам вольны час." }
+    ],
+    "phrases_and_idioms": [
+      { "pl": "wolny dzień", "ru": "выходной день" }
+    ],
+    "applied_rules": ["ą"]
   }
 }

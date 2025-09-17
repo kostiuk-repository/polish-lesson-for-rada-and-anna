@@ -1,1 +1,70 @@
-{}
+{
+  "i": {
+    "lemma": "i",
+    "part_of_speech": "conjunction",
+    "translations": { "ru": "и" },
+    "pronunciation": { 
+      "ru_transcription": "и",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Kawa i herbata.", "ru": "Кофе и чай.", "ru_transcription": "кава и хэрбата." },
+      { "pl": "Ty i ja.", "ru": "Ты и я.", "ru_transcription": "ты и я." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "ale": {
+    "lemma": "ale",
+    "part_of_speech": "conjunction",
+    "translations": { "ru": "но" },
+    "pronunciation": { 
+      "ru_transcription": "алЭ",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Chcę, ale nie mogę.", "ru": "Хочу, но не могу.", "ru_transcription": "хцэм алЭ нЭ могЭм." },
+      { "pl": "Jest drogo, ale smaczne.", "ru": "Дорого, но вкусно.", "ru_transcription": "ест дрого алЭ смачнэ." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "czy": {
+    "lemma": "czy",
+    "part_of_speech": "conjunction",
+    "translations": { "ru": "ли, или" },
+    "pronunciation": { 
+      "ru_transcription": "чы",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Czy jesteś gotowy?", "ru": "Готов ли ты?", "ru_transcription": "чы естЭш готовы?" },
+      { "pl": "Kawa czy herbata?", "ru": "Кофе или чай?", "ru_transcription": "кава чы хэрбата?" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "że": {
+    "lemma": "że",
+    "part_of_speech": "conjunction",
+    "translations": { "ru": "что" },
+    "pronunciation": { 
+      "ru_transcription": "жэ",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {},
+    "examples": [
+      { "pl": "Myślę, że to prawda.", "ru": "Думаю, что это правда.", "ru_transcription": "мышлЭм жэ то правда." },
+      { "pl": "Wiem, że przyjdziesz.", "ru": "Знаю, что ты придёшь.", "ru_transcription": "вЕм жэ пшыйдЗЕшь." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ę"]
+  }
+}

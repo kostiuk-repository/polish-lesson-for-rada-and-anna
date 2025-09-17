@@ -1,1 +1,73 @@
-{}
+{
+  "ja": {
+    "lemma": "ja",
+    "part_of_speech": "pronoun",
+    "translations": { "ru": "я" },
+    "pronunciation": { 
+      "ru_transcription": "я",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {
+      "nominative": "ja",
+      "genitive": "mnie",
+      "dative": "mi/mnie",
+      "accusative": "mnie",
+      "instrumental": "mną",
+      "locative": "mnie"
+    },
+    "examples": [
+      { "pl": "Ja jestem studentem.", "ru": "Я студент.", "ru_transcription": "я естэм студЭнтэм." },
+      { "pl": "Daj mi to.", "ru": "Дай мне это.", "ru_transcription": "дай ми то." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ą"]
+  },
+  "on": {
+    "lemma": "on",
+    "part_of_speech": "pronoun",
+    "translations": { "ru": "он" },
+    "pronunciation": { 
+      "ru_transcription": "он",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {
+      "nominative": "on",
+      "genitive": "go/jego",
+      "dative": "mu/jemu",
+      "accusative": "go/jego",
+      "instrumental": "nim",
+      "locative": "nim"
+    },
+    "examples": [
+      { "pl": "On jest nauczycielem.", "ru": "Он учитель.", "ru_transcription": "он ест научыцЕлем." },
+      { "pl": "Widzę go.", "ru": "Вижу его.", "ru_transcription": "видзЭм го." }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": []
+  },
+  "się": {
+    "lemma": "się",
+    "part_of_speech": "pronoun",
+    "translations": { "ru": "себя" },
+    "pronunciation": { 
+      "ru_transcription": "сЯ",
+      "key_forms": []
+    },
+    "morphology": {},
+    "inflection": {
+      "genitive": "siebie",
+      "dative": "sobie",
+      "accusative": "się/siebie",
+      "instrumental": "sobą",
+      "locative": "sobie"
+    },
+    "examples": [
+      { "pl": "Czuję się dobrze.", "ru": "Я чувствую себя хорошо.", "ru_transcription": "чуЁм сЯ добжэ." },
+      { "pl": "Myj się!", "ru": "Мойся!", "ru_transcription": "мый сЯ!" }
+    ],
+    "phrases_and_idioms": [],
+    "applied_rules": ["ę", "ą"]
+  }
+}
