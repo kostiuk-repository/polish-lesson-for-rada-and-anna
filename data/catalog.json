@@ -4,6 +4,8 @@
       "id": "restaurant",
       "title": "Ресторан",
       "description": "Все, что связано с заказом еды, общением с официантом и посещением кафе.",
+      "icon": "fas fa-utensils",
+      "color": "orange",
       "lessons": [
         {
           "id": "restaurant-dialogue-1",
@@ -27,6 +29,8 @@
       "id": "shop",
       "title": "Магазин",
       "description": "Покупки, общение с продавцом, возврат товара.",
+      "icon": "fas fa-shopping-bag",
+      "color": "blue",
       "lessons": [
         {
           "id": "shop-dialogue-1",

@@ -73,6 +73,76 @@
   transition: opacity var(--transition-base);
 }
 
+.category-card {
+  min-height: 260px;
+  border: none;
+  color: var(--white);
+  position: relative;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+  border-radius: var(--radius-xl);
+  opacity: 0.8;
+  transition: opacity var(--transition-base);
+}
+
+.category-card:hover::before {
+  opacity: 1;
+}
+
+/* Цвета для разных категорий */
+.category-card--orange { --gradient: linear-gradient(135deg, #ff9a8b 0%, #ff6a88 100%); }
+.category-card--blue { --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+/* Можно добавлять новые цвета по аналогии */
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(5px);
+}
+
+.category-card .card-content h4 {
+  color: var(--white);
+  font-size: var(--font-size-3xl);
+}
+
+.category-card .card-content p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-6);
+}
+
+.category-card .card-footer {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--font-weight-medium);
+}
+
+.category-card .arrow-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.category-card:hover .arrow-icon {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
 /* Декорации по типам */
 .lesson-card[data-type="dialogue"] .card-decoration {
   background-color: var(--primary-color);

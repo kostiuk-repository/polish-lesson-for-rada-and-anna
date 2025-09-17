@@ -10,15 +10,11 @@ export class CatalogComponent {
     try {
       this.catalog = await this.api.getCatalog();
       const catalogHTML = this.generateCatalogHTML();
+      // Старый <header> был полностью удален отсюда
       this.container.innerHTML = `
-        <header class="page-header">
-            <div class="container">
-                <h1>Категорії</h1>
-                <p class="page-subtitle">Виберіть тему для вивчення</p>
-            </div>
-        </header>
         <section class="catalog-section">
             <div class="container">
+                <h1 class="section-title">Категорії</h1>
                 <div class="cards-grid">
                     ${catalogHTML}
                 </div>
@@ -38,7 +34,10 @@ export class CatalogComponent {
 
   generateCategoryCardHTML(category) {
     return `
-      <a href="#/categories/${category.id}" class="card category-card">
+      <a href="#/categories/${category.id}" class="card category-card category-card--${category.color}">
+        <div class="card-icon">
+          <i class="${category.icon}"></i>
+        </div>
         <div class="card-content">
           <h4>${category.title}</h4>
           <p>${category.description}</p>
