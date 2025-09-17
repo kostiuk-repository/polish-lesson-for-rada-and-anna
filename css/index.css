@@ -1,33 +1,364 @@
-/* css/index.css - Главный файл стилей */
+/* css/index.css - Главный файл стилей Polish Learning Hub */
+
+/* ===== FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Базовые стили (общие для всех устройств) */
-@import 'base/variables.css';
-@import 'base/reset.css';
+/* ===== MOBILE FIRST BASE ===== */
+/* Базовые стили для мобильных устройств - загружаются первыми */
+@import 'mobile/mobile-base.css';
+@import 'mobile/mobile-components.css';
+@import 'mobile/mobile-layout.css';
 
-/* Компоненты (с адаптивностью) */
-@import 'components/buttons.css';
-@import 'components/cards.css';
-@import 'components/forms.css';
-@import 'components/modal.css';
-@import 'components/tabs.css';
+/* ===== TABLET ADJUSTMENTS ===== */
+/* Корректировки для планшетов */
+@import 'tablet/tablet-adjustments.css';
 
-/* Лейаут */
-@import 'layout/container.css';
-@import 'layout/header.css';
+/* ===== DESKTOP ENHANCEMENTS ===== */
+/* Улучшенные стили для десктопов */
+@import 'desktop/desktop-base.css';
+@import 'desktop/desktop-components.css';
+@import 'desktop/desktop-layout.css';
 
-/* Утилиты */
+/* ===== UNIVERSAL UTILITIES ===== */
+/* Универсальные утилиты, которые работают на всех устройствах */
+@import 'utils/animations.css';
 @import 'utils/utilities.css';
 
-/* Мобильные стили (до 768px) */
-@import 'mobile/mobile-base.css' screen and (max-width: 768px);
-@import 'mobile/mobile-components.css' screen and (max-width: 768px);
-@import 'mobile/mobile-layout.css' screen and (max-width: 768px);
+/* ===== GLOBAL OVERRIDES ===== */
+/* Глобальные переопределения и исправления */
 
-/* Десктопные стили (от 769px) */
-@import 'desktop/desktop-base.css' screen and (min-width: 769px);
-@import 'desktop/desktop-components.css' screen and (min-width: 769px);
-@import 'desktop/desktop-layout.css' screen and (min-width: 769px);
+/* Улучшенная производительность прокрутки */
+* {
+  -webkit-overflow-scrolling: touch;
+}
 
-/* Планшетные стили (641px - 1024px) */
-@import 'tablet/tablet-adjustments.css' screen and (min-width: 641px) and (max-width: 1024px);
+/* Сглаживание шрифтов на всех устройствах */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Улучшенный focus для всех интерактивных элементов */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Убираем tap highlight на всех сенсорных устройствах */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Обеспечиваем минимальную высоту для touch targets */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.tabs__button,
+.clickable-word {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ===== THEME SUPPORT ===== */
+/* Базовая поддержка темной темы (для будущего развития) */
+@media (prefers-color-scheme: dark) {
+  /* Пока оставляем светлую тему, но подготавливаем структуру */
+  :root {
+    /* В будущем здесь будут переменные для темной темы */
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+/* Поддержка пользователей с ограниченными возможностями */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Убираем hover эффекты для таких пользователей */
+  .card:hover,
+  .btn:hover,
+  .lesson-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ===== HIGH CONTRAST ===== */
+/* Поддержка высококонтрастного режима */
+@media (prefers-contrast: high) {
+  .btn,
+  .card,
+  .form__input,
+  .form__textarea,
+  .form__select {
+    border: 2px solid currentColor;
+  }
+  
+  .clickable-word {
+    border: 1px solid currentColor;
+    background-color: transparent;
+  }
+  
+  .nav-link::after {
+    height: 3px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+/* Оптимизация для печати */
+@media print {
+  /* Скрываем ненужные для печати элементы */
+  .app-header,
+  .main-nav,
+  .btn,
+  .modal,
+  .notifications-container,
+  .audio-play-btn,
+  .toggle-switch,
+  .search-field {
+    display: none !important;
+  }
+  
+  /* Оптимизируем макет для печати */
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+    background: white;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .page-header {
+    page-break-after: avoid;
+    border-bottom: 2px solid black;
+    background: white !important;
+    padding: 1cm 0;
+  }
+  
+  .lesson-card,
+  .dialog-line,
+  .grammar-topic {
+    page-break-inside: avoid;
+    margin-bottom: 0.5cm;
+    box-shadow: none !important;
+    border: 1px solid black;
+  }
+  
+  /* Показываем ссылки */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: black;
+  }
+  
+  /* Улучшаем читаемость */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  p, blockquote {
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== ERROR STATES ===== */
+/* Стили для состояний ошибок, которые должны быть заметны на всех устройствах */
+.error-message,
+.error-container {
+  background-color: var(--error-bg) !important;
+  color: var(--error-color) !important;
+  border: 2px solid var(--error-color) !important;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.success-message {
+  background-color: var(--success-bg) !important;
+  color: var(--success-color) !important;
+  border: 2px solid var(--success-color) !important;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+/* ===== LOADING STATES ===== */
+/* Универсальные стили загрузки */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: var(--space-8);
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--gray-200);
+  border-top-color: var(--primary-color);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== NOTIFICATION SYSTEM ===== */
+/* Система уведомлений */
+.notifications-container {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: var(--z-tooltip);
+  max-width: 400px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .notifications-container {
+    top: var(--space-2);
+    right: var(--space-2);
+    left: var(--space-2);
+    max-width: none;
+  }
+}
+
+.notification {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+  box-shadow: var(--shadow-xl);
+  border-left: 4px solid var(--info-color);
+  pointer-events: auto;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.notification--success {
+  border-left-color: var(--success-color);
+}
+
+.notification--warning {
+  border-left-color: var(--warning-color);
+}
+
+.notification--error {
+  border-left-color: var(--error-color);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== PLACEHOLDER STATES ===== */
+/* Стили для placeholder контента */
+.placeholder-page {
+  padding: var(--space-12) var(--space-4);
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-700);
+  margin-bottom: var(--space-4);
+}
+
+.placeholder-text {
+  font-size: var(--font-size-lg);
+  color: var(--gray-500);
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ===== DEBUG HELPERS ===== */
+/* Помощники для отладки (только в development) */
+/* Раскомментируйте для отладки макета */
+/*
+.debug * {
+  outline: 1px solid red !important;
+}
+
+.debug .container {
+  outline: 2px solid blue !important;
+}
+
+.debug .grid {
+  outline: 2px solid green !important;
+}
+*/
+
+/* ===== FINAL UTILITIES ===== */
+/* Финальные утилиты с высоким приоритетом */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+/* Оптимизации производительности */
+img {
+  content-visibility: auto;
+}
+
+.cards-grid {
+  contain: layout style paint;
+}
+
+.modal__content {
+  contain: layout style;
+}
+
+/* ===== END OF FILE ===== */

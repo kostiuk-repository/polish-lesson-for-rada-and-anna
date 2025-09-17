@@ -1,0 +1,536 @@
+/* css/desktop/desktop-components.css - Компоненты для десктопных устройств */
+
+@media (min-width: 1024px) {
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-base);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Размеры кнопок для десктопа */
+.btn--small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.btn--large {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-lg);
+}
+
+.btn--extra-large {
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--font-size-xl);
+}
+
+/* Варианты кнопок с улучшенными hover эффектами */
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background-color: var(--secondary-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn--outline:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background-color: var(--gray-100);
+  transform: scale(1.02);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+/* Карточки уроков с улучшенным дизайном */
+.lesson-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  min-height: 280px;
+  cursor: pointer;
+}
+
+.lesson-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.lesson-card:hover .card-decoration {
+  opacity: 0.1;
+  transform: scale(1.1);
+}
+
+.lesson-card:hover .arrow-icon {
+  color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+/* Содержимое карточки */
+.card-content h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--gray-700);
+}
+
+.card-content p {
+  font-size: var(--font-size-base);
+  color: var(--gray-500);
+  flex-grow: 1;
+  margin-bottom: var(--space-5);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Подвал карточки */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Декоративные элементы */
+.card-decoration {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-full);
+  opacity: 0.05;
+  transition: all var(--transition-base);
+}
+
+/* Категории карточек */
+.category-card {
+  min-height: 320px;
+  border: none;
+  color: var(--white);
+  position: relative;
+  cursor: pointer;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+  border-radius: var(--radius-xl);
+  opacity: 0.8;
+  transition: opacity var(--transition-base);
+}
+
+.category-card:hover::before {
+  opacity: 1;
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ===== FORMS ===== */
+.form__input,
+.form__textarea,
+.form__select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-base);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background-color: var(--white);
+  transition: all var(--transition-base);
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: scale(1.01);
+}
+
+.form__input:hover,
+.form__textarea:hover,
+.form__select:hover {
+  border-color: var(--gray-300);
+}
+
+/* ===== TABS ===== */
+.tabs__button {
+  background: none;
+  border: none;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-500);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all var(--transition-base);
+  margin-bottom: -2px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tabs__button:hover {
+  color: var(--gray-700);
+  background-color: var(--gray-50);
+  transform: translateY(-1px);
+}
+
+.tabs__button--active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: var(--gray-50);
+}
+
+/* ===== DIALOG COMPONENTS ===== */
+.dialog-line {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+  border-left: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.dialog-line:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateX(4px);
+  border-left-width: 6px;
+}
+
+.clickable-word {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  background-color: rgba(221, 184, 146, 0.15);
+  border-bottom: 1px dashed var(--secondary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.clickable-word:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  border-bottom-style: solid;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+
+/* ===== TABLES ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: var(--font-size-base);
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+  vertical-align: top;
+}
+
+.table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table tbody tr:hover {
+  background-color: var(--secondary-light);
+  transform: scale(1.01);
+  transition: all var(--transition-fast);
+}
+
+/* ===== LABELS & BADGES ===== */
+.label {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+}
+
+.label:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MODAL IMPROVEMENTS ===== */
+.modal__content {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transform: scale(0.9) translateY(20px);
+  transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal--open .modal__content {
+  transform: scale(1) translateY(0);
+}
+
+.modal__header {
+  padding: var(--space-6) var(--space-8);
+  border-bottom: 1px solid var(--gray-200);
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+}
+
+.modal__control-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-base);
+}
+
+.modal__control-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+/* ===== SEARCH COMPONENTS ===== */
+.search-field {
+  position: relative;
+  width: 300px;
+}
+
+.search-field__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--gray-200);
+  background-color: var(--gray-50);
+  transition: all var(--transition-base);
+}
+
+.search-field__input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: scale(1.02);
+}
+
+.search-field__input:hover {
+  border-color: var(--gray-300);
+  background-color: var(--white);
+}
+
+/* ===== TOOLTIPS ===== */
+.quick-tooltip {
+  position: fixed;
+  background-color: var(--gray-800);
+  color: var(--white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  z-index: var(--z-tooltip);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-lg);
+}
+
+.quick-tooltip--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quick-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--gray-800);
+}
+
+/* ===== ANIMATIONS & INTERACTIONS ===== */
+@keyframes subtle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.hover-lift:hover {
+  animation: subtle-bounce 0.3s ease;
+}
+
+.hover-pulse:hover {
+  animation: gentle-pulse 0.6s ease infinite;
+}
+
+/* Улучшенные focus состояния */
+.form__input:focus,
+.form__textarea:focus,
+.btn:focus-visible,
+.tabs__button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Улучшенные disabled состояния */
+.btn:disabled,
+.form__input:disabled,
+.form__textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Плавные переходы для всех интерактивных элементов */
+.btn,
+.card,
+.form__input,
+.tabs__button,
+.clickable-word,
+.dialog-line {
+  transition: all var(--transition-base);
+}
+
+}
+
+/* ===== LARGE DESKTOP ENHANCEMENTS (1440px+) ===== */
+@media (min-width: 1440px) {
+  .btn--large {
+    padding: var(--space-5) var(--space-10);
+    font-size: var(--font-size-xl);
+  }
+  
+  .card {
+    padding: var(--space-8);
+  }
+  
+  .lesson-card {
+    min-height: 320px;
+  }
+  
+  .search-field {
+    width: 350px;
+  }
+}

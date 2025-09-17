@@ -1,0 +1,488 @@
+/* css/tablet/tablet-adjustments.css - Корректировки для планшетов */
+
+/* ===== TABLET SPECIFIC ADJUSTMENTS (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+/* ===== TYPOGRAPHY ADJUSTMENTS ===== */
+:root {
+  /* Промежуточные размеры шрифтов между мобильными и десктопными */
+  --font-size-xs: 0.7rem;     /* 11px */
+  --font-size-sm: 0.8rem;     /* 13px */
+  --font-size-base: 0.95rem;  /* 15px */
+  --font-size-lg: 1.05rem;    /* 17px */
+  --font-size-xl: 1.2rem;     /* 19px */
+  --font-size-2xl: 1.4rem;    /* 22px */
+  --font-size-3xl: 1.7rem;    /* 27px */
+  --font-size-4xl: 2rem;      /* 32px */
+  --font-size-5xl: 2.5rem;    /* 40px */
+  
+  /* Планшетные отступы */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* Планшетные тени */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-base: 0 3px 6px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 18px 30px rgba(0, 0, 0, 0.15);
+}
+
+html {
+  font-size: 15px; /* Промежуточный базовый размер */
+}
+
+/* ===== LAYOUT ADJUSTMENTS ===== */
+.container {
+  padding: 0 var(--space-4);
+}
+
+.page-header {
+  padding: var(--space-12) 0 var(--space-8) 0;
+}
+
+.page-header h1 {
+  font-size: var(--font-size-4xl);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-lg);
+}
+
+.main-content {
+  padding: var(--space-6) 0;
+}
+
+/* ===== NAVIGATION ADJUSTMENTS ===== */
+.app-nav {
+  gap: var(--space-4);
+}
+
+.nav-link {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.category-header__container {
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.category-header__title {
+  font-size: var(--font-size-3xl);
+  text-align: center;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ===== GRID ADJUSTMENTS ===== */
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.grid--3,
+.grid--4,
+.grid--5,
+.grid--6 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* ===== BUTTON ADJUSTMENTS ===== */
+.btn {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
+}
+
+.btn--large {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-lg);
+}
+
+.btn--small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+/* ===== CARD ADJUSTMENTS ===== */
+.card {
+  padding: var(--space-5);
+}
+
+.lesson-card {
+  min-height: 240px;
+}
+
+.lesson-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-content h4 {
+  font-size: var(--font-size-xl);
+}
+
+.card-content p {
+  font-size: var(--font-size-sm);
+}
+
+/* ===== FORM ADJUSTMENTS ===== */
+.form__input,
+.form__textarea,
+.form__select {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+}
+
+.form__group--horizontal,
+.form__group--triple {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.filters-container {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.filter-group {
+  min-width: auto;
+}
+
+/* ===== DIALOG ADJUSTMENTS ===== */
+.dialog-line {
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.dialog-text {
+  font-size: var(--font-size-base);
+}
+
+.dialog-speaker {
+  font-size: var(--font-size-base);
+}
+
+.dialog-controls {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.dialog-characters {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ===== TABS ADJUSTMENTS ===== */
+.tabs__button {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
+}
+
+.tabs--vertical {
+  flex-direction: column;
+}
+
+.tabs--vertical .tabs__list {
+  flex-direction: row;
+  border-right: none;
+  border-bottom: 2px solid var(--gray-200);
+  margin-right: 0;
+  margin-bottom: var(--space-6);
+  min-width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs--vertical .tabs__list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs--vertical .tabs__button {
+  border-right: none;
+  border-bottom: 3px solid transparent;
+  margin-right: 0;
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.tabs--vertical .tabs__button--active {
+  border-right-color: transparent;
+  border-bottom-color: var(--primary-color);
+}
+
+/* ===== TABLE ADJUSTMENTS ===== */
+.table {
+  font-size: var(--font-size-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+}
+
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== MODAL ADJUSTMENTS ===== */
+.modal {
+  padding: var(--space-4);
+  align-items: flex-start;
+  padding-top: var(--space-8);
+}
+
+.modal__content {
+  max-height: calc(100vh - var(--space-16));
+  max-width: 90vw;
+}
+
+.modal__header {
+  padding: var(--space-5) var(--space-6);
+}
+
+.modal__title {
+  font-size: var(--font-size-xl);
+}
+
+.modal__body {
+  padding: var(--space-6);
+}
+
+.modal__footer {
+  padding: var(--space-5) var(--space-6);
+}
+
+/* ===== LESSON SPECIFIC ADJUSTMENTS ===== */
+.lesson-header-box {
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.lesson-header-box h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.lesson-header-box p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-6);
+}
+
+.lesson-tags {
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* ===== EXERCISE ADJUSTMENTS ===== */
+.exercise {
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.exercise__title {
+  font-size: var(--font-size-xl);
+}
+
+.exercise__actions {
+  flex-direction: row;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.exercise__btn {
+  min-width: 120px;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
+}
+
+/* ===== CLICKABLE ELEMENTS ADJUSTMENTS ===== */
+.clickable-word {
+  padding: 3px 6px;
+  font-size: var(--font-size-base);
+  margin: 1px 2px;
+}
+
+.clickable-word:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== SIDEBAR ADJUSTMENTS ===== */
+.layout-sidebar,
+.layout-sidebar--right {
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.sidebar {
+  position: static;
+  margin-bottom: var(--space-6);
+}
+
+/* ===== TOUCH IMPROVEMENTS ===== */
+.btn,
+.tabs__button,
+.clickable-word,
+.nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+  min-height: 44px;
+}
+
+/* ===== ORIENTATION SPECIFIC ===== */
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .lesson-header-box {
+    padding: var(--space-6);
+  }
+  
+  .dialog-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+  .page-header {
+    padding: var(--space-8) 0 var(--space-6) 0;
+  }
+  
+  .page-header h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .modal {
+    align-items: center;
+    padding: var(--space-4);
+  }
+  
+  .modal__content {
+    max-height: 85vh;
+  }
+  
+  .lesson-header-box {
+    padding: var(--space-6) var(--space-8);
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* ===== SPECIFIC TABLET SIZES ===== */
+
+/* Standard Tablet (768px - 900px) */
+@media (min-width: 768px) and (max-width: 900px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+/* Large Tablet (901px - 1023px) */
+@media (min-width: 901px) and (max-width: 1023px) {
+  .container {
+    max-width: 900px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-6);
+  }
+  
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .category-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ===== ACCESSIBILITY ON TABLETS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .lesson-card:hover,
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .btn,
+  .card,
+  .form__input {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ===== PRINT ADJUSTMENTS FOR TABLETS ===== */
+@media print {
+  .tabs__list {
+    flex-direction: column;
+  }
+  
+  .tabs__button {
+    padding: var(--space-2);
+    font-size: var(--font-size-sm);
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+}

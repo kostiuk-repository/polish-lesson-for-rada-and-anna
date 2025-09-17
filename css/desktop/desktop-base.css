@@ -1,0 +1,339 @@
+/* css/desktop/desktop-base.css - Базовые стили для десктопных устройств */
+
+/* ===== DESKTOP VARIABLES ===== */
+@media (min-width: 1024px) {
+  :root {
+    /* Десктопная типографика - увеличенные размеры */
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem;  /* 14px */
+    --font-size-base: 1rem;    /* 16px */
+    --font-size-lg: 1.125rem;  /* 18px */
+    --font-size-xl: 1.25rem;   /* 20px */
+    --font-size-2xl: 1.5rem;   /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem;  /* 36px */
+    --font-size-5xl: 3rem;     /* 48px */
+    
+    /* Десктопные отступы - более просторные */
+    --space-1: 0.25rem;  /* 4px */
+    --space-2: 0.5rem;   /* 8px */
+    --space-3: 0.75rem;  /* 12px */
+    --space-4: 1rem;     /* 16px */
+    --space-5: 1.25rem;  /* 20px */
+    --space-6: 1.5rem;   /* 24px */
+    --space-8: 2rem;     /* 32px */
+    --space-10: 2.5rem;  /* 40px */
+    --space-12: 3rem;    /* 48px */
+    --space-16: 4rem;    /* 64px */
+    --space-20: 5rem;    /* 80px */
+    
+    /* Десктопные радиусы */
+    --radius-sm: 0.375rem;
+    --radius-base: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    
+    /* Десктопные тени - более выразительные */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 15px 40px rgba(0, 0, 0, 0.15);
+    
+    /* Более плавные переходы для десктопа */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+  }
+}
+
+/* ===== DESKTOP RESET & BASE ===== */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; /* Стандартный размер для десктопа */
+    line-height: var(--line-height-normal);
+  }
+
+  body {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    overflow-x: auto; /* Разрешаем горизонтальную прокрутку если нужно */
+  }
+
+  /* Улучшенная типографика для десктопа */
+  h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin-bottom: var(--space-4);
+  }
+
+  h2 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
+  }
+
+  h3 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-4);
+  }
+
+  h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-4);
+  }
+
+  h5 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-4);
+  }
+
+  h6 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-4);
+  }
+
+  /* Параграфы с увеличенными отступами */
+  p {
+    margin: 0 0 var(--space-4) 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Списки с увеличенными отступами */
+  ul, ol {
+    margin: var(--space-4) 0;
+    padding-left: var(--space-6);
+  }
+
+  li {
+    margin-bottom: var(--space-2);
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Код с увеличенными отступами */
+  pre {
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+
+  /* Hover эффекты для десктопа */
+  a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+  }
+
+  button:hover {
+    transition: all var(--transition-base);
+  }
+
+  /* Скрытие элементов на десктопе */
+  .desktop-hidden {
+    display: none !important;
+  }
+
+  /* Показ только на десктопе */
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+
+  /* Улучшенный фокус для клавиатурной навигации */
+  *:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Стили для больших заголовков */
+  .hero-title {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    margin-bottom: var(--space-6);
+  }
+
+  .section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-8);
+    text-align: center;
+  }
+
+  /* Лид параграф */
+  .text-lead {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-relaxed);
+    color: var(--gray-600);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Цитаты */
+  blockquote {
+    margin: var(--space-6) 0;
+    padding: var(--space-4) var(--space-6);
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--gray-50);
+    font-style: italic;
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+  }
+
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: var(--space-3);
+    font-size: var(--font-size-base);
+    color: var(--gray-500);
+    font-style: normal;
+  }
+
+  blockquote cite::before {
+    content: '— ';
+  }
+
+  /* Горизонтальная линия */
+  hr {
+    border: none;
+    height: 1px;
+    background-color: var(--gray-200);
+    margin: var(--space-8) 0;
+  }
+
+  /* Специальные стили для изучения языка на десктопе */
+  .text-polish {
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-color);
+    letter-spacing: 0.01em;
+    font-size: 1.1em; /* Немного крупнее на десктопе */
+  }
+
+  .text-russian {
+    color: var(--gray-600);
+    font-style: italic;
+    font-size: var(--font-size-base);
+  }
+
+  .text-transcription {
+    font-family: 'Times New Roman', serif;
+    color: var(--info-color);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Утилиты выравнивания для десктопа */
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  /* Утилиты размеров текста */
+  .text-xs { font-size: var(--font-size-xs); }
+  .text-sm { font-size: var(--font-size-sm); }
+  .text-base { font-size: var(--font-size-base); }
+  .text-lg { font-size: var(--font-size-lg); }
+  .text-xl { font-size: var(--font-size-xl); }
+  .text-2xl { font-size: var(--font-size-2xl); }
+  .text-3xl { font-size: var(--font-size-3xl); }
+  .text-4xl { font-size: var(--font-size-4xl); }
+  .text-5xl { font-size: var(--font-size-5xl); }
+
+  /* Утилиты весов шрифта */
+  .font-light { font-weight: 300; }
+  .font-normal { font-weight: var(--font-weight-normal); }
+  .font-medium { font-weight: var(--font-weight-medium); }
+  .font-semibold { font-weight: var(--font-weight-semibold); }
+  .font-bold { font-weight: var(--font-weight-bold); }
+
+  /* Утилиты высоты строк */
+  .leading-none { line-height: 1; }
+  .leading-tight { line-height: var(--line-height-tight); }
+  .leading-normal { line-height: var(--line-height-normal); }
+  .leading-relaxed { line-height: var(--line-height-relaxed); }
+
+  /* Декоративные элементы */
+  .mark {
+    background-color: var(--warning-bg);
+    color: var(--warning-color);
+    padding: 2px 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Улучшенная читаемость длинного текста */
+  .readable-text {
+    max-width: 65ch; /* Оптимальная длина строки для чтения */
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Плавная прокрутка */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Селекция текста */
+  ::selection {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  ::-moz-selection {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+}
+
+/* ===== LARGE DESKTOP (1440px+) ===== */
+@media (min-width: 1440px) {
+  :root {
+    --font-size-5xl: 3.5rem; /* 56px */
+    --font-size-4xl: 2.5rem; /* 40px */
+    --font-size-3xl: 2rem;   /* 32px */
+  }
+  
+  html {
+    font-size: 18px; /* Увеличенный базовый размер для больших экранов */
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+/* ===== ULTRA WIDE (1920px+) ===== */
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
