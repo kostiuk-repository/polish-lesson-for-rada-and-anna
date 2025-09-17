@@ -341,15 +341,15 @@ export class LessonComponent {
   }
 
   async playAllDialog(playButton) {
-    // implementation
+    // TODO: Implement sequential playback for all dialog lines.
   }
 
   stopAllDialog(playButton) {
-    // implementation
+    // TODO: Implement stopping logic for bulk dialog playback.
   }
-  
+
   trackLessonStart() {
-    // implementation
+    // TODO: Implement lesson start tracking analytics.
   }
 
   renderError(message) {

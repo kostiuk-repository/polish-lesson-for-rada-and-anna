@@ -60,6 +60,9 @@ export class StorageService {
       },
       lesson_progress: {},
       word_bookmarks: [],
+      word_notes: {},
+      word_progress: {},
+      study_list: [],
       user_events: [],
       exercise_results: {},
       study_statistics: {
@@ -327,6 +330,103 @@ export class StorageService {
     return this.get('word_bookmarks', []);
   }
 
+  // Методы для заметок и прогресса слов
+
+  getWordNotes(word) {
+    const notes = this.get('word_notes', {});
+    return notes[word] || '';
+  }
+
+  saveWordNotes(word, note) {
+    const notes = this.get('word_notes', {});
+
+    if (note && note.trim()) {
+      notes[word] = note;
+    } else {
+      delete notes[word];
+    }
+
+    this.set('word_notes', notes);
+  }
+
+  getWordProgress(word) {
+    const progress = this.get('word_progress', {});
+    const defaults = {
+      viewCount: 0,
+      practiceCount: 0,
+      lastPracticeScore: null,
+      lastPracticeDate: null,
+      isKnown: false,
+      markedKnownDate: null,
+      lastUpdate: null
+    };
+
+    return {
+      ...defaults,
+      ...(progress[word] || {})
+    };
+  }
+
+  updateWordProgress(word, updates = {}) {
+    const allProgress = this.get('word_progress', {});
+    const current = allProgress[word] || {};
+    const defaults = {
+      viewCount: 0,
+      practiceCount: 0,
+      lastPracticeScore: null,
+      lastPracticeDate: null,
+      isKnown: false,
+      markedKnownDate: null,
+      lastUpdate: null
+    };
+
+    const merged = {
+      ...defaults,
+      ...current,
+      ...updates,
+      lastUpdate: Date.now()
+    };
+
+    allProgress[word] = merged;
+    this.set('word_progress', allProgress);
+
+    if (!current.isKnown && merged.isKnown) {
+      this.updateStudyStatistics('word', { word });
+    }
+
+    return merged;
+  }
+
+  addToStudyList(word, entry = {}) {
+    const studyList = this.get('study_list', []);
+    const existingIndex = studyList.findIndex(item => item.word === word);
+    const baseData = {
+      word,
+      ...entry
+    };
+
+    if (existingIndex >= 0) {
+      const existing = studyList[existingIndex];
+      studyList[existingIndex] = {
+        ...existing,
+        ...baseData,
+        dateAdded: existing.dateAdded || baseData.dateAdded || Date.now(),
+        lastUpdated: Date.now()
+      };
+    } else {
+      studyList.push({
+        dateAdded: baseData.dateAdded || Date.now(),
+        ...baseData
+      });
+    }
+
+    this.set('study_list', studyList);
+  }
+
+  getStudyList() {
+    return this.get('study_list', []);
+  }
+
   // Методы для аналитики и событий
 
   /**
@@ -525,8 +625,11 @@ export class StorageService {
     
     const keys = [
       'user_preferences',
-      'lesson_progress', 
+      'lesson_progress',
       'word_bookmarks',
+      'word_notes',
+      'word_progress',
+      'study_list',
       'exercise_results',
       'study_statistics'
     ];
@@ -555,7 +658,10 @@ export class StorageService {
       const keys = [
         'user_preferences',
         'lesson_progress',
-        'word_bookmarks', 
+        'word_bookmarks',
+        'word_notes',
+        'word_progress',
+        'study_list',
         'exercise_results',
         'study_statistics'
       ];

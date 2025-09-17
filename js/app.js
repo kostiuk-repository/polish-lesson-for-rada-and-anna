@@ -49,26 +49,40 @@ class PolishLearningApp {
   
   setupNavigation() {
       const nav = document.getElementById('main-navigation');
+      if (!nav) {
+        console.warn('Main navigation element не найден.');
+        return;
+      }
+
       nav.addEventListener('click', (e) => {
-          const tab = e.target.closest('[data-tab-link]');
-          if (tab) {
-              // Update active tab style
-              nav.querySelectorAll('.tabs__button').forEach(t => t.classList.remove('tabs__button--active'));
-              tab.classList.add('tabs__button--active');
-              
-              this.router.navigate(tab.dataset.tabLink);
+          const link = e.target.closest('[data-nav-link]');
+          if (!link) {
+              return;
+          }
+
+          e.preventDefault();
+
+          const targetPath = link.dataset.navLink;
+          if (targetPath) {
+              this.router.navigate(targetPath);
+              this.updateActiveTab(targetPath);
           }
       });
+
       // Set active tab on page load
       window.addEventListener('hashchange', () => this.updateActiveTab());
       this.updateActiveTab();
   }
-  
-  updateActiveTab() {
-      const path = this.router.getCurrentPath().split('/')[0] || 'categories';
+
+  updateActiveTab(forcedPath) {
       const nav = document.getElementById('main-navigation');
-      nav.querySelectorAll('.tabs__button').forEach(t => {
-          t.classList.toggle('tabs__button--active', t.dataset.tabLink === path);
+      if (!nav) {
+        return;
+      }
+
+      const path = forcedPath || this.router.getCurrentPath().split('/')[0] || 'categories';
+      nav.querySelectorAll('[data-nav-link]').forEach(link => {
+          link.classList.toggle('active', link.dataset.navLink === path);
       });
   }
 

@@ -452,11 +452,16 @@ export class SpeechService {
    */
   getUsageStats() {
     const stats = JSON.parse(localStorage.getItem('speechUsageStats') || '{}');
+    const totalRequests = stats.totalRequests || 0;
+    const totalCharacters = stats.totalCharacters || 0;
+
     return {
-      totalSpeechRequests: stats.totalRequests || 0,
-      totalCharactersSpoken: stats.totalCharacters || 0,
-      averageTextLength: stats.totalRequests > 0 ? 
-        Math.round((stats.totalCharacters || 0) / stats.totalRequests) : 0,
+      totalRequests,
+      totalCharacters,
+      totalSpeechRequests: totalRequests,
+      totalCharactersSpoken: totalCharacters,
+      averageTextLength: totalRequests > 0 ?
+        Math.round(totalCharacters / totalRequests) : 0,
       lastUsed: stats.lastUsed || null
     };
   }
@@ -466,13 +471,15 @@ export class SpeechService {
    * @param {string} text - произнесенный текст
    */
   updateUsageStats(text) {
-    const stats = this.getUsageStats();
-    stats.totalRequests++;
-    stats.totalCharacters += text.length;
-    stats.lastUsed = Date.now();
-    
+    const stats = JSON.parse(localStorage.getItem('speechUsageStats') || '{}');
+    const updatedStats = {
+      totalRequests: (stats.totalRequests || 0) + 1,
+      totalCharacters: (stats.totalCharacters || 0) + text.length,
+      lastUsed: Date.now()
+    };
+
     try {
-      localStorage.setItem('speechUsageStats', JSON.stringify(stats));
+      localStorage.setItem('speechUsageStats', JSON.stringify(updatedStats));
     } catch (error) {
       console.warn('Не удалось сохранить статистику использования:', error);
     }

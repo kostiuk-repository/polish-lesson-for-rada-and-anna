@@ -488,15 +488,6 @@ export class ModalComponent {
     }
   }
 
-  removeFromBookmarks(word) {
-    const bookmarks = JSON.parse(localStorage.getItem('wordBookmarks') || '[]');
-    const index = bookmarks.indexOf(word);
-    if (index > -1) {
-      bookmarks.splice(index, 1);
-      localStorage.setItem('wordBookmarks', JSON.stringify(bookmarks));
-    }
-  }
-
   destroy() {
     if (this.modal && this.modal.parentNode) {
       this.modal.parentNode.removeChild(this.modal);
