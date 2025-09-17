@@ -318,7 +318,19 @@ export class LessonComponent {
   }
 
   async playAudio(text, button) {
-    // implementation
+    if (!this.speech || this.currentlyPlaying.button) return;
+
+    this.currentlyPlaying = { button, text };
+    button.classList.add('audio-play-btn--playing');
+
+    try {
+      await this.speech.speak(text);
+    } catch (error) {
+      console.error('Ошибка воспроизведения аудио:', error);
+    } finally {
+      button.classList.remove('audio-play-btn--playing');
+      this.currentlyPlaying = { button: null, text: '' };
+    }
   }
 
   async playAllDialog(playButton) {
