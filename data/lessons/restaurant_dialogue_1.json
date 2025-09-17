@@ -13,215 +13,518 @@
       "speaker": "Kelner",
       "sentence": "Dzień dobry, witam w kawiarni! Czy Panie mają rezerwację?",
       "translation": "Добрый день, приветствую в кофейне! Есть ли у вас бронь?",
-      "words": [{"text": "Dzień", "wordKey": "dzień"}, {"text": "dobry,", "wordKey": "dobry"}, {"text": "witam", "wordKey": "witać"}, {"text": "w", "wordKey": "w"}, {"text": "kawiarni!", "wordKey": "kawiarnia"}, {"text": "Czy", "wordKey": "czy"}, {"text": "Panie", "wordKey": "panie"}, {"text": "mają", "wordKey": "mieć"}, {"text": "rezerwację?", "wordKey": "rezerwacja"}]
+      "transcryption": "ДЖЕНЬ ДОБры, вИтам в кавьярни! Чи ПАне МАён резерВАцйэ?",
+      "words": [
+        { "text": "Dzień", "wordKey": "dzień" },
+        { "text": "dobry,", "wordKey": "dobry" },
+        { "text": "witam", "wordKey": "witać" },
+        { "text": "w", "wordKey": "w" },
+        { "text": "kawiarni!", "wordKey": "kawiarnia" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "Panie", "wordKey": "panie" },
+        { "text": "mają", "wordKey": "mieć" },
+        { "text": "rezerwację?", "wordKey": "rezerwacja" }
+      ]
     },
     {
       "speaker": "Radosława",
       "sentence": "Dzień dobry, niestety nie mamy. Czy jest wolny stolik przy oknie?",
       "translation": "Добрый день, к сожалению, нет. Есть ли свободный столик у окна?",
-      "words": [{"text": "Dzień", "wordKey": "dzień"}, {"text": "dobry,", "wordKey": "dobry"}, {"text": "niestety", "wordKey": "niestety"}, {"text": "nie", "wordKey": "nie"}, {"text": "mamy.", "wordKey": "mieć"}, {"text": "Czy", "wordKey": "czy"}, {"text": "jest", "wordKey": "być"}, {"text": "wolny", "wordKey": "wolny"}, {"text": "stolik", "wordKey": "stolik"}, {"text": "przy", "wordKey": "przy"}, {"text": "oknie?", "wordKey": "okno"}]
+      "transcryption": "ДЖЕНЬ ДОБры, внесТЕты не МАМы. Чи есть ВОЛьны СТОлик пшы ОКне?",
+      "words": [
+        { "text": "Dzień", "wordKey": "dzień" },
+        { "text": "dobry,", "wordKey": "dobry" },
+        { "text": "niestety", "wordKey": "niestety" },
+        { "text": "nie", "wordKey": "nie" },
+        { "text": "mamy.", "wordKey": "mieć" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "wolny", "wordKey": "wolny" },
+        { "text": "stolik", "wordKey": "stolik" },
+        { "text": "przy", "wordKey": "przy" },
+        { "text": "oknie?", "wordKey": "okno" }
+      ]
     },
     {
       "speaker": "Kelner",
       "sentence": "Tak, zapraszam, proszę usiąść.",
       "translation": "Да, приглашаю, пожалуйста, присаживайтесь.",
-      "words": [{"text": "Tak,", "wordKey": "tak"}, {"text": "zapraszam,", "wordKey": "zapraszać"}, {"text": "proszę", "wordKey": "prosić"}, {"text": "usiąść.", "wordKey": "usiąść"}]
+      "transcryption": "Так, запРАшам, ПРОше уСЁнщьчь.",
+      "words": [
+        { "text": "Tak,", "wordKey": "tak" },
+        { "text": "zapraszam,", "wordKey": "zapraszać" },
+        { "text": "proszę", "wordKey": "prosić" },
+        { "text": "usiąść.", "wordKey": "usiąść" }
+      ]
     },
     {
       "speaker": "Anna",
       "sentence": "Mogłabym prosić o menu?",
       "translation": "Могла бы я попросить меню?",
-      "words": [{"text": "Mogłabym", "wordKey": "móc"}, {"text": "prosić", "wordKey": "prosić"}, {"text": "o", "wordKey": "o"}, {"text": "menu?", "wordKey": "menu"}]
+      "transcryption": "МОглабым ПРОсичь о менЮ?",
+      "words": [
+        { "text": "Mogłabym", "wordKey": "móc" },
+        { "text": "prosić", "wordKey": "prosić" },
+        { "text": "o", "wordKey": "o" },
+        { "text": "menu?", "wordKey": "menu" }
+      ]
     },
     {
       "speaker": "Radosława",
       "sentence": "I wodę gazowaną z cytryną, proszę.",
       "translation": "И газированную воду с лимоном, пожалуйста.",
-      "words": [{"text": "I", "wordKey": "i"}, {"text": "wodę", "wordKey": "woda"}, {"text": "gazowaną", "wordKey": "gazowany"}, {"text": "z", "wordKey": "z"}, {"text": "cytryną,", "wordKey": "cytryna"}, {"text": "proszę.", "wordKey": "prosić"}]
+      "transcryption": "И ВОдэ газоВАНон з цыТрынон, ПРОше.",
+      "words": [
+        { "text": "I", "wordKey": "i" },
+        { "text": "wodę", "wordKey": "woda" },
+        { "text": "gazowaną", "wordKey": "gazowany" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "cytryną,", "wordKey": "cytryna" },
+        { "text": "proszę.", "wordKey": "prosić" }
+      ]
     },
     {
       "speaker": "Kelner",
       "sentence": "Już podaję.",
       "translation": "Уже подаю.",
-      "words": [{"text": "Już", "wordKey": "już"}, {"text": "podaję.", "wordKey": "podawać"}]
+      "transcryption": "ЮЖ подАе.",
+      "words": [
+        { "text": "Już", "wordKey": "już" },
+        { "text": "podaję.", "wordKey": "podawać" }
+      ]
     },
     {
       "speaker": "Kelner",
       "sentence": "Proszę bardzo, oto menu i woda. Czy Panie chcą już zamawiać?",
       "translation": "Пожалуйста, вот меню и вода. Вы хотите уже заказывать?",
-      "words": [{"text": "Proszę", "wordKey": "prosić"}, {"text": "bardzo,", "wordKey": "bardzo"}, {"text": "oto", "wordKey": "oto"}, {"text": "menu", "wordKey": "menu"}, {"text": "i", "wordKey": "i"}, {"text": "woda.", "wordKey": "woda"}, {"text": "Czy", "wordKey": "czy"}, {"text": "Panie", "wordKey": "panie"}, {"text": "chcą", "wordKey": "chcieć"}, {"text": "już", "wordKey": "już"}, {"text": "zamawiać?", "wordKey": "zamawiać"}]
+      "transcryption": "ПРОше БАРдзо, Ото менЮ и ВОда. Чи ПАне хцОн уж замАВячь?",
+      "words": [
+        { "text": "Proszę", "wordKey": "prosić" },
+        { "text": "bardzo,", "wordKey": "bardzo" },
+        { "text": "oto", "wordKey": "oto" },
+        { "text": "menu", "wordKey": "menu" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "woda.", "wordKey": "woda" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "Panie", "wordKey": "panie" },
+        { "text": "chcą", "wordKey": "chcieć" },
+        { "text": "już", "wordKey": "już" },
+        { "text": "zamawiać?", "wordKey": "zamawiać" }
+      ]
     },
     {
       "speaker": "Anna",
       "sentence": "Potrzebujemy jeszcze chwilę.",
       "translation": "Нам нужно еще минутку.",
-      "words": [{"text": "Potrzebujemy", "wordKey": "potrzebować"}, {"text": "jeszcze", "wordKey": "jeszcze"}, {"text": "chwilę.", "wordKey": "chwila"}]
+      "transcryption": "ПотржэБУемы Ещче ХФИЛэ.",
+      "words": [
+        { "text": "Potrzebujemy", "wordKey": "potrzebować" },
+        { "text": "jeszcze", "wordKey": "jeszcze" },
+        { "text": "chwilę.", "wordKey": "chwila" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Oczywiście, wrócę za kilka minut.",
-        "translation": "Конечно, я вернусь через несколько минут.",
-        "words": [{"text": "Oczywiście,", "wordKey": "oczywiście"}, {"text": "wrócę", "wordKey": "wrócić"}, {"text": "za", "wordKey": "za"}, {"text": "kilka", "wordKey": "kilka"}, {"text": "minut.", "wordKey": "minuta"}]
+      "speaker": "Kelner",
+      "sentence": "Oczywiście, wrócę za kilka minut.",
+      "translation": "Конечно, я вернусь через несколько минут.",
+      "transcryption": "ОчевИще, ВРУце за КИЛька МИнут.",
+      "words": [
+        { "text": "Oczywiście,", "wordKey": "oczywiście" },
+        { "text": "wrócę", "wordKey": "wrócić" },
+        { "text": "za", "wordKey": "za" },
+        { "text": "kilka", "wordKey": "kilka" },
+        { "text": "minut.", "wordKey": "minuta" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Czy mogę przyjąć zamówienie?",
-        "translation": "Могу ли я принять заказ?",
-        "words": [{"text": "Czy", "wordKey": "czy"}, {"text": "mogę", "wordKey": "móc"}, {"text": "przyjąć", "wordKey": "przyjąć"}, {"text": "zamówienie?", "wordKey": "zamówienie"}]
+      "speaker": "Kelner",
+      "sentence": "Czy mogę przyjąć zamówienie?",
+      "translation": "Могу ли я принять заказ?",
+      "transcryption": "Чи МОгэ пшыЙОНЧь замуВЕНе?",
+      "words": [
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "mogę", "wordKey": "móc" },
+        { "text": "przyjąć", "wordKey": "przyjąć" },
+        { "text": "zamówienie?", "wordKey": "zamówienie" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "Poproszę zupę krem z dyni. Czy jest w niej śmietana? Mam nietolerancję laktozy.",
-        "translation": "Пожалуйста, суп-крем из тыквы. В нем есть сметана? У меня непереносимость лактозы.",
-        "words": [{"text": "Poproszę", "wordKey": "prosić"}, {"text": "zupę", "wordKey": "zupa"}, {"text": "krem", "wordKey": "krem"}, {"text": "z", "wordKey": "z"}, {"text": "dyni.", "wordKey": "dynia"}, {"text": "Czy", "wordKey": "czy"}, {"text": "jest", "wordKey": "być"}, {"text": "w", "wordKey": "w"}, {"text": "niej", "wordKey": "on"}, {"text": "śmietana?", "wordKey": "śmietana"}, {"text": "Mam", "wordKey": "mieć"}, {"text": "nietolerancję", "wordKey": "nietolerancja"}, {"text": "laktozy.", "wordKey": "laktoza"}]
+      "speaker": "Radosława",
+      "sentence": "Poproszę zupę krem z dyni. Czy jest w niej śmietana? Mam nietolerancję laktozy.",
+      "translation": "Пожалуйста, суп-крем из тыквы. В нем есть сметана? У меня непереносимость лактозы.",
+      "transcryption": "ПопРОше ЗУпэ крем з Дыни. Чи есть в ней ШМьетАна? Мам ниеТолэРАнцйэ лакТОЗы.",
+      "words": [
+        { "text": "Poproszę", "wordKey": "prosić" },
+        { "text": "zupę", "wordKey": "zupa" },
+        { "text": "krem", "wordKey": "krem" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "dyni.", "wordKey": "dynia" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "w", "wordKey": "w" },
+        { "text": "niej", "wordKey": "on" },
+        { "text": "śmietana?", "wordKey": "śmietana" },
+        { "text": "Mam", "wordKey": "mieć" },
+        { "text": "nietolerancję", "wordKey": "nietolerancja" },
+        { "text": "laktozy.", "wordKey": "laktoza" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Tak, ale możemy przygotować wersję z mlekiem kokosowym.",
-        "translation": "Да, но мы можем приготовить версию с кокосовым молоком.",
-        "words": [{"text": "Tak,", "wordKey": "tak"}, {"text": "ale", "wordKey": "ale"}, {"text": "możemy", "wordKey": "móc"}, {"text": "przygotować", "wordKey": "przygotować"}, {"text": "wersję", "wordKey": "wersja"}, {"text": "z", "wordKey": "z"}, {"text": "mlekiem", "wordKey": "mleko"}, {"text": "kokosowym.", "wordKey": "kokosowy"}]
+      "speaker": "Kelner",
+      "sentence": "Tak, ale możemy przygotować wersję z mlekiem kokosowym.",
+      "translation": "Да, но мы можем приготовить версию с кокосовым молоком.",
+      "transcryption": "Так, Алы можемы пшыготовАвачь ВЕРсйэ з МЛЕкьем кокосОвым.",
+      "words": [
+        { "text": "Tak,", "wordKey": "tak" },
+        { "text": "ale", "wordKey": "ale" },
+        { "text": "możemy", "wordKey": "móc" },
+        { "text": "przygotować", "wordKey": "przygotować" },
+        { "text": "wersję", "wordKey": "wersja" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "mlekiem", "wordKey": "mleko" },
+        { "text": "kokosowym.", "wordKey": "kokosowy" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "Bardzo dobrze, poproszę tę wersję.",
-        "translation": "Очень хорошо, я попрошу эту версию.",
-        "words": [{"text": "Bardzo", "wordKey": "bardzo"}, {"text": "dobrze,", "wordKey": "dobrze"}, {"text": "poproszę", "wordKey": "prosić"}, {"text": "tę", "wordKey": "ten"}, {"text": "wersję.", "wordKey": "wersja"}]
+      "speaker": "Radosława",
+      "sentence": "Bardzo dobrze, poproszę tę wersję.",
+      "translation": "Очень хорошо, я попрошу эту версию.",
+      "transcryption": "БАРдзо ДОбрже, попРОше тэ ВЕРсйэ.",
+      "words": [
+        { "text": "Bardzo", "wordKey": "bardzo" },
+        { "text": "dobrze,", "wordKey": "dobrze" },
+        { "text": "poproszę", "wordKey": "prosić" },
+        { "text": "tę", "wordKey": "ten" },
+        { "text": "wersję.", "wordKey": "wersja" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Ja chciałabym risotto z grzybami. Czy można dodać mniej sera?",
-        "translation": "Я бы хотела ризотто с грибами. Можно добавить меньше сыра?",
-        "words": [{"text": "Ja", "wordKey": "ja"}, {"text": "chciałabym", "wordKey": "chcieć"}, {"text": "risotto", "wordKey": "risotto"}, {"text": "z", "wordKey": "z"}, {"text": "grzybami.", "wordKey": "grzyb"}, {"text": "Czy", "wordKey": "czy"}, {"text": "można", "wordKey": "można"}, {"text": "dodać", "wordKey": "dodać"}, {"text": "mniej", "wordKey": "mniej"}, {"text": "sera?", "wordKey": "ser"}]
+      "speaker": "Anna",
+      "sentence": "Ja chciałabym risotto z grzybami. Czy można dodać mniej sera?",
+      "translation": "Я бы хотела ризотто с грибами. Можно добавить меньше сыра?",
+      "transcryption": "Я хчАлабым рисОтто з гжыБАми. Чи МОжна ДОдачь Мней СЕра?",
+      "words": [
+        { "text": "Ja", "wordKey": "ja" },
+        { "text": "chciałabym", "wordKey": "chcieć" },
+        { "text": "risotto", "wordKey": "risotto" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "grzybami.", "wordKey": "grzyb" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "można", "wordKey": "można" },
+        { "text": "dodać", "wordKey": "dodać" },
+        { "text": "mniej", "wordKey": "mniej" },
+        { "text": "sera?", "wordKey": "ser" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Oczywiście, damy tylko odrobinę parmezanu.",
-        "translation": "Конечно, мы дадим только немного пармезана.",
-        "words": [{"text": "Oczywiście,", "wordKey": "oczywiście"}, {"text": "damy", "wordKey": "dać"}, {"text": "tylko", "wordKey": "tylko"}, {"text": "odrobinę", "wordKey": "odrobina"}, {"text": "parmezanu.", "wordKey": "parmezan"}]
+      "speaker": "Kelner",
+      "sentence": "Oczywiście, damy tylko odrobinę parmezanu.",
+      "translation": "Конечно, мы дадим только немного пармезана.",
+      "transcryption": "ОчевИще, ДАМы ТЫлько одроБИНэ пармэЗАНу.",
+      "words": [
+        { "text": "Oczywiście,", "wordKey": "oczywiście" },
+        { "text": "damy", "wordKey": "dać" },
+        { "text": "tylko", "wordKey": "tylko" },
+        { "text": "odrobinę", "wordKey": "odrobina" },
+        { "text": "parmezanu.", "wordKey": "parmezan" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Świetnie.",
-        "translation": "Отлично.",
-        "words": [{"text": "Świetnie.", "wordKey": "świetnie"}]
+      "speaker": "Anna",
+      "sentence": "Świetnie.",
+      "translation": "Отлично.",
+      "transcryption": "ШФЬЕТне.",
+      "words": [
+        { "text": "Świetnie.", "wordKey": "świetnie" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "A może do tego jeszcze koszyk pieczywa?",
-        "translation": "А может, к этому еще корзинку хлеба?",
-        "words": [{"text": "A", "wordKey": "a"}, {"text": "może", "wordKey": "może"}, {"text": "do", "wordKey": "do"}, {"text": "tego", "wordKey": "to"}, {"text": "jeszcze", "wordKey": "jeszcze"}, {"text": "koszyk", "wordKey": "koszyk"}, {"text": "pieczywa?", "wordKey": "pieczywo"}]
+      "speaker": "Radosława",
+      "sentence": "A może do tego jeszcze koszyk pieczywa?",
+      "translation": "А может, к этому еще корзинку хлеба?",
+      "transcryption": "А МОже до ТЭго Ещче КОжык пьеЧИва?",
+      "words": [
+        { "text": "A", "wordKey": "a" },
+        { "text": "może", "wordKey": "może" },
+        { "text": "do", "wordKey": "do" },
+        { "text": "tego", "wordKey": "to" },
+        { "text": "jeszcze", "wordKey": "jeszcze" },
+        { "text": "koszyk", "wordKey": "koszyk" },
+        { "text": "pieczywa?", "wordKey": "pieczywo" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Tak, już dopisuję. Czy coś do picia?",
-        "translation": "Да, уже дописываю. Что-нибудь выпить?",
-        "words": [{"text": "Tak,", "wordKey": "tak"}, {"text": "już", "wordKey": "już"}, {"text": "dopisuję.", "wordKey": "dopisywać"}, {"text": "Czy", "wordKey": "czy"}, {"text": "coś", "wordKey": "coś"}, {"text": "do", "wordKey": "do"}, {"text": "picia?", "wordKey": "picie"}]
+      "speaker": "Kelner",
+      "sentence": "Tak, już dopisuję. Czy coś do picia?",
+      "translation": "Да, уже дописываю. Что-нибудь выпить?",
+      "transcryption": "Так, юЖ доПИсуе. Чи цощ до ПИча?",
+      "words": [
+        { "text": "Tak,", "wordKey": "tak" },
+        { "text": "już", "wordKey": "już" },
+        { "text": "dopisuję.", "wordKey": "dopisywać" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "coś", "wordKey": "coś" },
+        { "text": "do", "wordKey": "do" },
+        { "text": "picia?", "wordKey": "picie" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Dwie herbaty zielone.",
-        "translation": "Два зеленых чая.",
-        "words": [{"text": "Dwie", "wordKey": "dwa"}, {"text": "herbaty", "wordKey": "herbata"}, {"text": "zielone.", "wordKey": "zielony"}]
+      "speaker": "Anna",
+      "sentence": "Dwie herbaty zielone.",
+      "translation": "Два зеленых чая.",
+      "transcryption": "Двье херБАТы зелЁнэ.",
+      "words": [
+        { "text": "Dwie", "wordKey": "dwa" },
+        { "text": "herbaty", "wordKey": "herbata" },
+        { "text": "zielone.", "wordKey": "zielony" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Dobrze, dziękuję.",
-        "translation": "Хорошо, спасибо.",
-        "words": [{"text": "Dobrze,", "wordKey": "dobrze"}, {"text": "dziękuję.", "wordKey": "dziękować"}]
+      "speaker": "Kelner",
+      "sentence": "Dobrze, dziękuję.",
+      "translation": "Хорошо, спасибо.",
+      "transcryption": "ДОбрже, дженьКУе.",
+      "words": [
+        { "text": "Dobrze,", "wordKey": "dobrze" },
+        { "text": "dziękuję.", "wordKey": "dziękować" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Jak smakuje?",
-        "translation": "Как вам на вкус?",
-        "words": [{"text": "Jak", "wordKey": "jak"}, {"text": "smakuje?", "wordKey": "smakować"}]
+      "speaker": "Kelner",
+      "sentence": "Jak smakuje?",
+      "translation": "Как вам на вкус?",
+      "transcryption": "Як смакУе?",
+      "words": [
+        { "text": "Jak", "wordKey": "jak" },
+        { "text": "smakuje?", "wordKey": "smakować" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "Zupa jest bardzo aromatyczna, świetna z mlekiem kokosowym.",
-        "translation": "Суп очень ароматный, отличный с кокосовым молоком.",
-        "words": [{"text": "Zupa", "wordKey": "zupa"}, {"text": "jest", "wordKey": "być"}, {"text": "bardzo", "wordKey": "bardzo"}, {"text": "aromatyczna,", "wordKey": "aromatyczny"}, {"text": "świetna", "wordKey": "świetny"}, {"text": "z", "wordKey": "z"}, {"text": "mlekiem", "wordKey": "mleko"}, {"text": "kokosowym.", "wordKey": "kokosowy"}]
+      "speaker": "Radosława",
+      "sentence": "Zupa jest bardzo aromatyczna, świetna z mlekiem kokosowym.",
+      "translation": "Суп очень ароматный, отличный с кокосовым молоком.",
+      "transcryption": "ЗУпа есть БАРдзо аромаТЫчна, ШФЬЕТна з МЛЕкьем кокосОвым.",
+      "words": [
+        { "text": "Zupa", "wordKey": "zupa" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "bardzo", "wordKey": "bardzo" },
+        { "text": "aromatyczna,", "wordKey": "aromatyczny" },
+        { "text": "świetna", "wordKey": "świetny" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "mlekiem", "wordKey": "mleko" },
+        { "text": "kokosowym.", "wordKey": "kokosowy" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Risotto jest delikatne i kremowe.",
-        "translation": "Ризотто нежное и кремовое.",
-        "words": [{"text": "Risotto", "wordKey": "risotto"}, {"text": "jest", "wordKey": "być"}, {"text": "delikatne", "wordKey": "delikatny"}, {"text": "i", "wordKey": "i"}, {"text": "kremowe.", "wordKey": "kremowy"}]
+      "speaker": "Anna",
+      "sentence": "Risotto jest delikatne i kremowe.",
+      "translation": "Ризотто нежное и кремовое.",
+      "transcryption": "РизОтто есть деликАТнэ и креМОВэ.",
+      "words": [
+        { "text": "Risotto", "wordKey": "risotto" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "delikatne", "wordKey": "delikatny" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "kremowe.", "wordKey": "kremowy" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Bardzo się cieszę. Na deser polecam tartę cytrynową – to nasza specjalność dnia.",
-        "translation": "Я очень рад. На десерт рекомендую лимонный тарт - это наше фирменное блюдо дня.",
-        "words": [{"text": "Bardzo", "wordKey": "bardzo"}, {"text": "się", "wordKey": "się"}, {"text": "cieszę.", "wordKey": "cieszyć"}, {"text": "Na", "wordKey": "na"}, {"text": "deser", "wordKey": "deser"}, {"text": "polecam", "wordKey": "polecać"}, {"text": "tartę", "wordKey": "tarta"}, {"text": "cytrynową", "wordKey": "cytrynowy"}, {"text": "–", "wordKey": "–"}, {"text": "to", "wordKey": "to"}, {"text": "nasza", "wordKey": "nasz"}, {"text": "specjalność", "wordKey": "specjalność"}, {"text": "dnia.", "wordKey": "dzień"}]
+      "speaker": "Kelner",
+      "sentence": "Bardzo się cieszę. Na deser polecam tartę cytrynową – to nasza specjalność dnia.",
+      "translation": "Я очень рад. На десерт рекомендую лимонный тарт - это наше фирменное блюдо дня.",
+      "transcryption": "БАРдзо се ЧЕше. На ДЕзер полЕцам ТАРтэ цытрынОВон – то НАша спецяЛЬНОщь ДНЯ.",
+      "words": [
+        { "text": "Bardzo", "wordKey": "bardzo" },
+        { "text": "się", "wordKey": "się" },
+        { "text": "cieszę.", "wordKey": "cieszyć" },
+        { "text": "Na", "wordKey": "na" },
+        { "text": "deser", "wordKey": "deser" },
+        { "text": "polecam", "wordKey": "polecać" },
+        { "text": "tartę", "wordKey": "tarta" },
+        { "text": "cytrynową", "wordKey": "cytrynowy" },
+        { "text": "–", "wordKey": "–" },
+        { "text": "to", "wordKey": "to" },
+        { "text": "nasza", "wordKey": "nasz" },
+        { "text": "specjalność", "wordKey": "specjalność" },
+        { "text": "dnia.", "wordKey": "dzień" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "To brzmi kusząco, poproszę jeden kawałek.",
-        "translation": "Это звучит заманчиво, я попрошу один кусочек.",
-        "words": [{"text": "To", "wordKey": "to"}, {"text": "brzmi", "wordKey": "brzmieć"}, {"text": "kusząco,", "wordKey": "kusząco"}, {"text": "poproszę", "wordKey": "prosić"}, {"text": "jeden", "wordKey": "jeden"}, {"text": "kawałek.", "wordKey": "kawałek"}]
+      "speaker": "Radosława",
+      "sentence": "To brzmi kusząco, poproszę jeden kawałek.",
+      "translation": "Это звучит заманчиво, я попрошу один кусочек.",
+      "transcryption": "То БЖми куШОНцо, попРОше Едэн каВАвэк.",
+      "words": [
+        { "text": "To", "wordKey": "to" },
+        { "text": "brzmi", "wordKey": "brzmieć" },
+        { "text": "kusząco,", "wordKey": "kusząco" },
+        { "text": "poproszę", "wordKey": "prosić" },
+        { "text": "jeden", "wordKey": "jeden" },
+        { "text": "kawałek.", "wordKey": "kawałek" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Ja też spróbuję.",
-        "translation": "Я тоже попробую.",
-        "words": [{"text": "Ja", "wordKey": "ja"}, {"text": "też", "wordKey": "też"}, {"text": "spróbuję.", "wordKey": "spróbować"}]
+      "speaker": "Anna",
+      "sentence": "Ja też spróbuję.",
+      "translation": "Я тоже попробую.",
+      "transcryption": "Я тэж спруБУе.",
+      "words": [
+        { "text": "Ja", "wordKey": "ja" },
+        { "text": "też", "wordKey": "też" },
+        { "text": "spróbuję.", "wordKey": "spróbować" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Czy podać rachunek?",
-        "translation": "Подать ли счет?",
-        "words": [{"text": "Czy", "wordKey": "czy"}, {"text": "podać", "wordKey": "podać"}, {"text": "rachunek?", "wordKey": "rachunek"}]
+      "speaker": "Kelner",
+      "sentence": "Czy podać rachunek?",
+      "translation": "Подать ли счет?",
+      "transcryption": "Чи ПОДачь раХУнэк?",
+      "words": [
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "podać", "wordKey": "podać" },
+        { "text": "rachunek?", "wordKey": "rachunek" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Tak, prosimy.",
-        "translation": "Да, пожалуйста.",
-        "words": [{"text": "Tak,", "wordKey": "tak"}, {"text": "prosimy.", "wordKey": "prosić"}]
+      "speaker": "Anna",
+      "sentence": "Tak, prosimy.",
+      "translation": "Да, пожалуйста.",
+      "transcryption": "Так, проСИмы.",
+      "words": [
+        { "text": "Tak,", "wordKey": "tak" },
+        { "text": "prosimy.", "wordKey": "prosić" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Mam nadzieję, że wszystko smakowało.",
-        "translation": "Надеюсь, все было вкусно.",
-        "words": [{"text": "Mam", "wordKey": "mieć"}, {"text": "nadzieję,", "wordKey": "nadzieja"}, {"text": "że", "wordKey": "że"}, {"text": "wszystko", "wordKey": "wszystko"}, {"text": "smakowało.", "wordKey": "smakować"}]
+      "speaker": "Kelner",
+      "sentence": "Mam nadzieję, że wszystko smakowało.",
+      "translation": "Надеюсь, все было вкусно.",
+      "transcryption": "Мам надЗЕе, же ВШЫстко смакоВАОло.",
+      "words": [
+        { "text": "Mam", "wordKey": "mieć" },
+        { "text": "nadzieję,", "wordKey": "nadzieja" },
+        { "text": "że", "wordKey": "że" },
+        { "text": "wszystko", "wordKey": "wszystko" },
+        { "text": "smakowało.", "wordKey": "smakować" }
+      ]
     },
     {
-        "speaker": "Anna",
-        "sentence": "Risotto było bardzo dobre, tylko mogłoby być trochę bardziej gorące.",
-        "translation": "Ризотто было очень хорошим, только могло бы быть немного горячее.",
-        "words": [{"text": "Risotto", "wordKey": "risotto"}, {"text": "było", "wordKey": "być"}, {"text": "bardzo", "wordKey": "bardzo"}, {"text": "dobre,", "wordKey": "dobry"}, {"text": "tylko", "wordKey": "tylko"}, {"text": "mogłoby", "wordKey": "móc"}, {"text": "być", "wordKey": "być"}, {"text": "trochę", "wordKey": "trochę"}, {"text": "bardziej", "wordKey": "bardziej"}, {"text": "gorące.", "wordKey": "gorący"}]
+      "speaker": "Anna",
+      "sentence": "Risotto było bardzo dobre, tylko mogłoby być trochę bardziej gorące.",
+      "translation": "Ризотто было очень хорошим, только могло бы быть немного горячее.",
+      "transcryption": "РизОтто БЫво БАРдзо ДОбже, ТЫлько МОгло бы бычь ТРОхэ БАРдзей гоРОнце.",
+      "words": [
+        { "text": "Risotto", "wordKey": "risotto" },
+        { "text": "było", "wordKey": "być" },
+        { "text": "bardzo", "wordKey": "bardzo" },
+        { "text": "dobre,", "wordKey": "dobry" },
+        { "text": "tylko", "wordKey": "tylko" },
+        { "text": "mogłoby", "wordKey": "móc" },
+        { "text": "być", "wordKey": "być" },
+        { "text": "trochę", "wordKey": "trochę" },
+        { "text": "bardziej", "wordKey": "bardziej" },
+        { "text": "gorące.", "wordKey": "gorący" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "Zupa była przepyszna, a deser – rewelacja, choć dla mnie odrobinę za słodki.",
-        "translation": "Суп был восхитительным, а десерт - откровение, хотя для меня немного слишком сладкий.",
-        "words": [{"text": "Zupa", "wordKey": "zupa"}, {"text": "była", "wordKey": "być"}, {"text": "przepyszna,", "wordKey": "przepyszny"}, {"text": "a", "wordKey": "a"}, {"text": "deser", "wordKey": "deser"}, {"text": "–", "wordKey": "–"}, {"text": "rewelacja,", "wordKey": "rewelacja"}, {"text": "choć", "wordKey": "choć"}, {"text": "dla", "wordKey": "dla"}, {"text": "mnie", "wordKey": "ja"}, {"text": "odrobinę", "wordKey": "odrobina"}, {"text": "za", "wordKey": "za"}, {"text": "słodki.", "wordKey": "słodki"}]
+      "speaker": "Radosława",
+      "sentence": "Zupa była przepyszna, a deser – rewelacja, choć dla mnie odrobinę za słodki.",
+      "translation": "Суп был восхитительным, а десерт - откровение, хотя для меня немного слишком сладкий.",
+      "transcryption": "ЗУпа была пшэПЫшна, а ДЕзер – рэвэЛАцйа, хоть для МНЕ одроБИНэ за Слодьки.",
+      "words": [
+        { "text": "Zupa", "wordKey": "zupa" },
+        { "text": "była", "wordKey": "być" },
+        { "text": "przepyszna,", "wordKey": "przepyszny" },
+        { "text": "a", "wordKey": "a" },
+        { "text": "deser", "wordKey": "deser" },
+        { "text": "–", "wordKey": "–" },
+        { "text": "rewelacja,", "wordKey": "rewelacja" },
+        { "text": "choć", "wordKey": "choć" },
+        { "text": "dla", "wordKey": "dla" },
+        { "text": "mnie", "wordKey": "ja" },
+        { "text": "odrobinę", "wordKey": "odrobina" },
+        { "text": "za", "wordKey": "za" },
+        { "text": "słodki.", "wordKey": "słodki" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Dziękuję za opinie.",
-        "translation": "Спасибо за отзывы.",
-        "words": [{"text": "Dziękuję", "wordKey": "dziękować"}, {"text": "za", "wordKey": "za"}, {"text": "opinie.", "wordKey": "opinia"}]
+      "speaker": "Kelner",
+      "sentence": "Dziękuję za opinie.",
+      "translation": "Спасибо за отзывы.",
+      "transcryption": "ДЖеньКУе за опИНье.",
+      "words": [
+        { "text": "Dziękuję", "wordKey": "dziękować" },
+        { "text": "za", "wordKey": "za" },
+        { "text": "opinie.", "wordKey": "opinia" }
+      ]
     },
     {
-        "speaker": "Radosława",
-        "sentence": "Oto zapłata i zostawiamy napiwek.",
-        "translation": "Вот оплата, и мы оставляем чаевые.",
-        "words": [{"text": "Oto", "wordKey": "oto"}, {"text": "zapłata", "wordKey": "zapłata"}, {"text": "i", "wordKey": "i"}, {"text": "zostawiamy", "wordKey": "zostawiać"}, {"text": "napiwek.", "wordKey": "napiwek"}]
+      "speaker": "Radosława",
+      "sentence": "Oto zapłata i zostawiamy napiwek.",
+      "translation": "Вот оплата, и мы оставляем чаевые.",
+      "transcryption": "Ото запВЛАТа и зостаВЯмы НАпивэк.",
+      "words": [
+        { "text": "Oto", "wordKey": "oto" },
+        { "text": "zapłata", "wordKey": "zapłata" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "zostawiamy", "wordKey": "zostawiać" },
+        { "text": "napiwek.", "wordKey": "napiwek" }
+      ]
     },
     {
-        "speaker": "Kelner",
-        "sentence": "Bardzo dziękuję i zapraszam ponownie!",
-        "translation": "Большое спасибо и приглашаю снова!",
-        "words": [{"text": "Bardzo", "wordKey": "bardzo"}, {"text": "dziękuję", "wordKey": "dziękować"}, {"text": "i", "wordKey": "i"}, {"text": "zapraszam", "wordKey": "zapraszać"}, {"text": "ponownie!", "wordKey": "ponownie"}]
+      "speaker": "Kelner",
+      "sentence": "Bardzo dziękuję i zapraszam ponownie!",
+      "translation": "Большое спасибо и приглашаю снова!",
+      "transcryption": "БАРдзо дженьКУе и запРАшам поНОвье!",
+      "words": [
+        { "text": "Bardzo", "wordKey": "bardzo" },
+        { "text": "dziękuję", "wordKey": "dziękować" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "zapraszam", "wordKey": "zapraszać" },
+        { "text": "ponownie!", "wordKey": "ponownie" }
+      ]
     }
   ],
   "grammar": [
     {
       "title": "Narzędnik (Творительный падеж)",
-      "content": "<p>Отвечает на вопросы 'z kim? z czym?' (с кем? с чем?). Используется для описания инструмента действия или компании.</p><ul><li>woda <b>z cytryną</b></li><li>risotto <b>z grzybami</b></li><li>zupa <b>z mlekiem kokosowym</b></li></ul>"
+      "content": "<p>Отвечает на вопросы 'z kim? z czym?' (с кем? с чем?). Описание инструмента, ингредиента или компании.</p><ul><li>woda <b>z cytryną</b></li><li>risotto <b>z grzybami</b></li><li>zupa <b>z mlekiem kokosowym</b></li></ul>"
     },
     {
       "title": "Tryb przypuszczający (Условное наклонение)",
-      "content": "<p>Используется для вежливых просьб и выражения желаний.</p><ul><li><b>Mogłabym</b> prosić o menu? (Я могла бы попросить меню?)</li><li><b>Chciałabym</b> risotto. (Я хотела бы ризотто.)</li><li>Mogłoby być trochę bardziej gorące. (Могло бы быть немного горячее.)</li></ul>"
+      "content": "<p>Вежливые просьбы и пожелания: формы с -by.</p><ul><li><b>Mogłabym</b> prosić o menu?</li><li><b>Chciałabym</b> risotto.</li><li>Mogłoby być trochę bardziej gorące.</li></ul>"
+    },
+    {
+      "title": "Biernik (Винительный падеж) — что заказываем",
+      "content": "<p>После глаголов типа <i>jeść, pić, zamawiać, prosić</i> обычно винительный: <i>poproszę</i> <b>zupę</b>, <i>polecam</i> <b>tartę cytrynową</b>.</p><ul><li><b>zupę</b> krem</li><li><b>tartę</b> cytrynową</li><li><b>herbatę</b> zieloną</li></ul>"
+    },
+    {
+      "title": "Pytania ogólne с «Czy»",
+      "content": "<p><b>Czy</b> + утверждение → общий вопрос.</p><ul><li><b>Czy</b> Panie mają rezerwację?</li><li><b>Czy</b> można dodać mniej sera?</li></ul>"
+    },
+    {
+      "title": "Formy grzecznościowe: Pan/Pani/Panie",
+      "content": "<p><i>Pan</i> (к мужчине), <i>Pani</i> (к женщине), <i>Panie</i> (к нескольким женщинам). Глагол в 3 л. мн.ч.: <i>Czy <b>Panie chcą</b> zamawiać?</i></p>"
+    },
+    {
+      "title": "Liczebniki и счёт с существительными",
+      "content": "<p>Форма существительного зависит от числительного.</p><ul><li><b>dwie herbaty</b> (2 + мн.ч. счетная форма)</li><li><b>jeden kawałek</b>, <b>trzy kawałki</b></li></ul>"
+    },
+    {
+      "title": "Już vs jeszcze",
+      "content": "<p><b>już</b> — уже, <b>jeszcze</b> — ещё.</p><ul><li><i>Już podaję.</i></li><li><i>Potrzebujemy jeszcze chwilę.</i></li></ul>"
+    },
+    {
+      "title": "Modalne: móc / chcieć",
+      "content": "<p><b>móc</b> — «мочь», <b>chcieć</b> — «хотеть».</p><ul><li><i>Czy <b>mogę</b> przyjąć zamówienie?</i></li><li><i><b>Chciałabym</b> risotto.</i></li></ul>"
+    },
+    {
+      "title": "Przyimki и падежи",
+      "content": "<ul><li><b>z</b> + творит.: z cytryną, z grzybami</li><li><b>przy</b> + местн.: przy oknie</li><li><b>do</b> + родит.: do tego</li></ul>"
+    },
+    {
+      "title": "Степени сравнения и согласование прилагательных",
+      "content": "<p><i>gorący → bardziej gorący</i>. Прилагательное согласуется: <i>risotto jest <b>delikatne</b> i <b>kremowe</b></i>.</p>"
     }
   ],
   "exercises": [
@@ -229,10 +532,155 @@
       "type": "fill-blank",
       "title": "Uzupełnij luki (Заполните пропуски)",
       "questions": [
-        {"sentence": ["Czy jest wolny", {"blank": "stolik"}, "przy oknie?"], "id": 1},
-        {"sentence": ["Mam", {"blank": "nietolerancję"}, "laktozy."], "id": 2},
-        {"sentence": ["Na deser polecam", {"blank": "tartę"}, "cytrynową."], "id": 3},
-        {"sentence": ["Oto zapłata i zostawiamy", {"blank": "napiwek"}, "."], "id": 4}
+        { "sentence": ["Czy jest wolny", { "blank": "stolik" }, "przy oknie?"], "id": 1 },
+        { "sentence": ["Mam", { "blank": "nietolerancję" }, "laktozy."], "id": 2 },
+        { "sentence": ["Na deser polecam", { "blank": "tartę" }, "cytrynową."], "id": 3 },
+        { "sentence": ["Oto zapłata i zostawiamy", { "blank": "napiwek" }, "."], "id": 4 },
+        { "sentence": ["Poproszę", { "blank": "zupę" }, "krem z dyni."], "id": 5 },
+        { "sentence": ["Dwie", { "blank": "herbaty" }, "zielone, proszę."], "id": 6 }
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "title": "Wybierz poprawną odpowiedź (Выберите правильный ответ)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Jak grzecznie poprosić o menu?",
+          "options": [
+            "Daj menu!",
+            "Proszę o menu.",
+            "Dawaj menu teraz."
+          ],
+          "answer": "Proszę o menu."
+        },
+        {
+          "id": 2,
+          "question": "Które zdanie to pytanie ogólne?",
+          "options": [
+            "Panie mają rezerwację.",
+            "Czy Panie mają rezerwację?",
+            "Panie mają rezerwację!"
+          ],
+          "answer": "Czy Panie mają rezerwację?"
+        },
+        {
+          "id": 3,
+          "question": "Wybierz poprawną formę po liczebniku 2:",
+          "options": [
+            "dwie herbata",
+            "dwie herbaty",
+            "dwa herbaty"
+          ],
+          "answer": "dwie herbaty"
+        },
+        {
+          "id": 4,
+          "question": "Które zdanie wyraża uprzejmą prośbę?",
+          "options": [
+            "Chcę risotto.",
+            "Poproszę risotto.",
+            "Daj risotto."
+          ],
+          "answer": "Poproszę risotto."
+        },
+        {
+          "id": 5,
+          "question": "Po którym przyimku użyjemy miejscownika (Locativus)?",
+          "options": ["z", "przy", "do"],
+          "answer": "przy"
+        }
+      ]
+    },
+    {
+      "type": "reorder",
+      "title": "Ułóż kolejność (Расставьте порядок действий у столика)",
+      "instructions": "Соберите логичный порядок реплик при заказе.",
+      "items": [
+        "Proszę bardzo, oto menu i woda.",
+        "Czy Panie chcą już zamawiać?",
+        "Poproszę zupę krem z dyni.",
+        "Dobrze, dziękuję."
+      ],
+      "solution": [0, 1, 2, 3]
+    },
+    {
+      "type": "transform",
+      "title": "Przekształć na tryb przypuszczający (Преобразуйте в вежливую форму)",
+      "questions": [
+        {
+          "id": 1,
+          "from": "Chcę risotto.",
+          "to": "Chciałabym risotto."
+        },
+        {
+          "id": 2,
+          "from": "Daj menu.",
+          "to": "Czy mogłabym prosić o menu?"
+        },
+        {
+          "id": 3,
+          "from": "Podaj rachunek.",
+          "to": "Czy mógłby Pan podać rachunek?"
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "title": "Wybierz poprawny przypadek (Выберите правильный падеж после предлога)",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Po «z» (с) используем творительный.",
+          "base": "cytryna",
+          "options": ["z cytryna", "z cytrynę", "z cytryną"],
+          "answer": "z cytryną"
+        },
+        {
+          "id": 2,
+          "prompt": "Po «przy» (у, возле) используем местный.",
+          "base": "okno",
+          "options": ["przy okno", "przy oknie", "przy okna"],
+          "answer": "przy oknie"
+        },
+        {
+          "id": 3,
+          "prompt": "Po «do» (к, в) используем родительный.",
+          "base": "kawiarnia",
+          "options": ["do kawiarnia", "do kawiarni", "do kawiarnię"],
+          "answer": "do kawiarni"
+        }
+      ]
+    },
+    {
+      "type": "translate",
+      "title": "Przetłumacz na polski (Переведите на польский)",
+      "questions": [
+        {
+          "id": 1,
+          "ru": "Мы хотели бы заказать два зелёных чая.",
+          "pl_answer": "Chciałybyśmy zamówić dwie herbaty zielone."
+        },
+        {
+          "id": 2,
+          "ru": "Пожалуйста, суп-крем из тыквы без сливок.",
+          "pl_answer": "Poproszę zupę krem z dyni bez śmietany."
+        },
+        {
+          "id": 3,
+          "ru": "Можно чуть меньше сыра?",
+          "pl_answer": "Czy można dodać mniej sera?"
+        },
+        {
+          "id": 4,
+          "ru": "Подадите счёт?",
+          "pl_answer": "Czy poda Pan/Pani rachunek?"
+        },
+        {
+          "id": 5,
+          "ru": "Спасибо большое и до скорой встречи!",
+          "pl_answer": "Bardzo dziękuję i do zobaczenia wkrótce!"
+        }
       ]
     }
   ]
