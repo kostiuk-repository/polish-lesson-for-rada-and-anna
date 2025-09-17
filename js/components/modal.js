@@ -164,14 +164,28 @@ export class ModalComponent {
     content.classList.add('modal-exit');
 
     setTimeout(() => {
+      // Перед тем как скрыть модальное окно aria-hidden="true",
+      // убеждаемся, что фокус не остаётся внутри модального окна.
+      // Если до модального окна был сохранён фокус — восстановим его.
+      // В противном случае уберём фокус у текущего элемента.
+      if (this.focusedElementBeforeModal) {
+        try {
+          this.focusedElementBeforeModal.focus();
+        } catch (e) {
+          // ignore
+        }
+      } else if (document.activeElement && this.modal.contains(document.activeElement)) {
+        // Если нет сохранённого элемента, явно убираем фокус с элементов внутри модалки
+        try {
+          document.activeElement.blur();
+        } catch (e) {
+          // ignore
+        }
+      }
+
       this.modal.classList.remove('modal--open');
       this.modal.setAttribute('aria-hidden', 'true');
       this.isOpen = false;
-
-      // Восстанавливаем фокус
-      if (this.focusedElementBeforeModal) {
-        this.focusedElementBeforeModal.focus();
-      }
 
       // Восстанавливаем прокрутку
       document.body.style.overflow = '';
@@ -540,5 +554,19 @@ export class ModalComponent {
     }
     this.modal = null;
     this.isOpen = false;
+  }
+
+  getPartOfSpeechName(pos) {
+    const names = {
+      'verb': 'Глагол',
+      'noun': 'Существительное',
+      'adjective': 'Прилагательное',
+      'adverb': 'Наречие',
+      'pronoun': 'Местоимение',
+      'preposition': 'Предлог',
+      'conjunction': 'Союз',
+      'particle': 'Частица'
+    };
+    return names[pos] || pos;
   }
 }
