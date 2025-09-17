@@ -215,34 +215,42 @@
   border: 1px solid var(--gray-300);
   background-color: var(--white);
   color: var(--gray-700);
-  border-radius: var(--radius-full); /* Повністю круглі краї */
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--font-size-sm);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-5); /* Збільшені відступи */
+  font-size: var(--font-size-base); /* Збільшений шрифт */
   font-weight: var(--font-weight-medium);
   margin-bottom: 0;
   line-height: 1;
   display: flex;
   align-items: center;
+  gap: var(--space-2); /* Відступ між іконкою та текстом */
+  transition: all var(--transition-fast);
 }
 
 .tabs--chips .tabs__button:hover {
   background-color: var(--gray-100);
+  border-color: var(--gray-400);
   box-shadow: none;
 }
 
 .tabs--chips .tabs__button--active {
-  background-color: var(--secondary-light);
-  color: var(--primary-dark);
-  border-color: var(--secondary-color);
-  box-shadow: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
 }
 
-/* Іконка галочки для активного "нагетса" */
+/* Іконка-галочка для активного "нагетса" (використовуємо SVG) */
 .tabs--chips .tabs__button--active::before {
-  content: '✓';
-  font-weight: bold;
-  margin-right: var(--space-2);
-  color: var(--primary-dark);
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/svg%3e");
+  mask-size: contain;
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/svg%3e");
+  -webkit-mask-size: contain;
 }
 
 /* Анимации */

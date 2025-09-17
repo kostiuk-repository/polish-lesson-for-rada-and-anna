@@ -92,7 +92,7 @@ export class LessonComponent {
 
   generateTabsHTML() {
     return `
-      <nav class="tabs lesson-tabs" data-tabs="lesson-tabs">
+      <nav class="tabs tabs--chips" data-tabs="lesson-tabs">
         <div class="tabs__list" role="tablist">
           <button class="tabs__button tabs__button--active" 
                   role="tab" 

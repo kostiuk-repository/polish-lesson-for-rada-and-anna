@@ -1,3 +1,5 @@
+import { TabsComponent } from '../ui/tabs.js';
+
 export class ModalComponent {
   constructor({ dictionary }) {
     this.dictionary = dictionary; // Залежність від DictionaryService
@@ -172,6 +174,10 @@ export class ModalComponent {
     } else {
       bodyElement.innerHTML = '';
       bodyElement.appendChild(content);
+    }
+    const tabsInsideModal = bodyElement.querySelectorAll('[data-tabs]');
+    if (tabsInsideModal.length > 0) {
+      tabsInsideModal.forEach(tabContainer => new TabsComponent(tabContainer));
     }
   }
 
