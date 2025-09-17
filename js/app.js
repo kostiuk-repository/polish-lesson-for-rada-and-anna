@@ -11,10 +11,10 @@ import { CategoryComponent } from './components/category.js';
 class App {
     constructor() {
         this.api = new API('data/');
-        this.dictionary = new DictionaryService(this.api);
-        this.speech = new SpeechService();
-        this.storage = new StorageService();
-        this.modal = new ModalComponent({ dictionary: this.dictionary });
+        this.dictionary = null;
+        this.speech = null;
+        this.storage = null;
+        this.modal = null;
         
         // Исправляем ID элемента
         this.rootElement = document.getElementById('page-container');
@@ -52,15 +52,16 @@ class App {
     }
 
     async initServices() {
-        this.api = new ApiService();
+        // Инициализируем сервисы в правильном порядке
         this.storage = new StorageService();
-        this.speechService = new SpeechService();
-        this.dictionaryService = new DictionaryService(this.api);
-        this.modal = new Modal('modal');
+        this.speech = new SpeechService();
+        this.dictionary = new DictionaryService(this.api);
+        this.modal = new ModalComponent({ dictionary: this.dictionary });
 
+        // Инициализируем асинхронные сервисы
         await Promise.all([
-            this.speechService.init(),
-            this.dictionaryService.init()
+            this.speech.init(),
+            this.dictionary.init()
         ]);
     }
 
@@ -123,13 +124,12 @@ class App {
     showCategory(categoryId) {
         console.log('📂 Показываем категорию:', categoryId);
         try {
-            if (!this.categoryComponent) {
-                this.categoryComponent = new CategoryComponent({
-                    container: this.rootElement,
-                    api: this.api,
-                    categoryId: categoryId
-                });
-            }
+            // Создаем новый компонент для каждой категории
+            this.categoryComponent = new CategoryComponent({
+                container: this.rootElement,
+                api: this.api,
+                categoryId: categoryId
+            });
             return this.categoryComponent.render();
         } catch (error) {
             console.error('Ошибка показа категории:', error);
@@ -140,17 +140,16 @@ class App {
     showLesson(lessonId) {
         console.log('📖 Показываем урок:', lessonId);
         try {
-            if (!this.lessonComponent) {
-                this.lessonComponent = new LessonComponent({
-                    container: this.rootElement,
-                    api: this.api,
-                    dictionary: this.dictionary,
-                    modal: this.modal,
-                    speech: this.speech,
-                    storage: this.storage
-                });
-            }
-            return this.lessonComponent.render(); // Изменено с loadAndRender на render
+            // Создаем новый компонент для каждого урока
+            this.lessonComponent = new LessonComponent({
+                container: this.rootElement,
+                api: this.api,
+                dictionary: this.dictionary,
+                modal: this.modal,
+                speech: this.speech,
+                storage: this.storage
+            });
+            return this.lessonComponent.render();
         } catch (error) {
             console.error('Ошибка показа урока:', error);
             this.showError('Ошибка загрузки урока');

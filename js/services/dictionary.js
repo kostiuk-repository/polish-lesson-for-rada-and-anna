@@ -14,29 +14,38 @@ export class DictionaryService {
     if (this.initializationPromise) {
       return this.initializationPromise;
     }
+    
     this.initializationPromise = (async () => {
       try {
-        console.log('🔄 Початок ініціалізації DictionaryService...');
+        console.log('🔄 Начало инициализации DictionaryService...');
+        
+        // Загружаем фонетические правила и индекс словаря
         const [phoneticRules, dictionaryIndex] = await Promise.all([
           this.api.getPhoneticRules(),
-          this.api.getDictionaryIndex()
+          this.api.getDictionary()
         ]);
-        for (const rule of phoneticRules) {
-          this.phoneticRules.set(rule.letter, rule.pronunciation);
+        
+        // Загружаем фонетические правила
+        if (phoneticRules && Array.isArray(phoneticRules)) {
+          for (const rule of phoneticRules) {
+            this.phoneticRules.set(rule.letter, rule.pronunciation);
+          }
         }
         console.log(`✅ Фонетичні правила завантажено: ${this.phoneticRules.size} шт.`);
-        const dictionaryFiles = Object.values(dictionaryIndex).flat();
-        const dictionaries = await Promise.all(
-          dictionaryFiles.map(file => this.api.getDictionaryFile(file))
-        );
-        for (const dict of dictionaries) {
-          for (const [word, data] of Object.entries(dict)) {
+        
+        // Загружаем основной словарь
+        if (dictionaryIndex && typeof dictionaryIndex === 'object') {
+          for (const [word, data] of Object.entries(dictionaryIndex)) {
             const normalizedWord = this.normalizeWord(word);
             if (!this.dictionary.has(normalizedWord)) {
-              this.dictionary.set(normalizedWord, data);
+              this.dictionary.set(normalizedWord, {
+                lemma: word,
+                ...data
+              });
             }
           }
         }
+        
         this.isInitialized = true;
         console.log(`✅ DictionaryService успішно ініціалізовано. Всього слів: ${this.dictionary.size}`);
       } catch (error) {
@@ -46,6 +55,7 @@ export class DictionaryService {
         this.initializationPromise = null;
       }
     })();
+    
     return this.initializationPromise;
   }
 
@@ -54,6 +64,7 @@ export class DictionaryService {
       const words = await this.api.getDictionaryCategory(category, theme);
       for (const [key, wordData] of Object.entries(words)) {
         this.dictionary.set(key.toLowerCase(), {
+          lemma: key,
           ...wordData,
           category,
           theme
@@ -70,14 +81,17 @@ export class DictionaryService {
       await this.init();
     }
     const normalizedWord = this.normalizeWord(word);
-    return this.dictionary.get(normalizedWord) || null;
+    const wordData = this.dictionary.get(normalizedWord);
+    return wordData || null;
   }
 
   searchWords(query, limit = 10) {
     const normalizedQuery = query.toLowerCase().trim();
     const results = [];
+    
     for (const [key, wordData] of this.dictionary) {
       if (results.length >= limit) break;
+      
       if (key.includes(normalizedQuery)) {
         results.push({
           key,
@@ -87,6 +101,7 @@ export class DictionaryService {
         });
         continue;
       }
+      
       if (wordData.translations?.ru?.toLowerCase().includes(normalizedQuery)) {
         results.push({
           key,
@@ -96,6 +111,7 @@ export class DictionaryService {
         });
       }
     }
+    
     return results.sort((a, b) => b.relevance - a.relevance);
   }
 
@@ -111,13 +127,15 @@ export class DictionaryService {
       'cie', 'sie', 'zie', 'nie',
       'ci', 'si', 'zi', 'ni'
     ];
+    
     for (const ruleKey of ruleOrder) {
       const rule = this.phoneticRules.get(ruleKey);
       if (rule) {
         const regex = new RegExp(ruleKey, 'gi');
-        transcription = transcription.replace(regex, rule.ru);
+        transcription = transcription.replace(regex, rule.ru || rule);
       }
     }
+    
     return transcription;
   }
 
@@ -125,6 +143,7 @@ export class DictionaryService {
     if (wordData.pronunciation?.ru_transcription) {
       return wordData.pronunciation;
     }
+    
     const transcription = this.applyPhoneticRules(wordData.lemma);
     return {
       ru_transcription: transcription,
@@ -140,9 +159,11 @@ export class DictionaryService {
   getRelatedWords(word) {
     const wordData = this.getWord(word);
     if (!wordData) return [];
+    
     const related = [];
     const samePOS = this.getWordsByPartOfSpeech(wordData.part_of_speech);
     related.push(...samePOS.slice(0, 5));
+    
     return related;
   }
 
@@ -177,14 +198,22 @@ export class DictionaryService {
       byCategory: {},
       byTheme: {}
     };
+    
     for (const [key, wordData] of this.dictionary) {
-      stats.byPartOfSpeech[wordData.part_of_speech] = 
-        (stats.byPartOfSpeech[wordData.part_of_speech] || 0) + 1;
-      stats.byCategory[wordData.category] = 
-        (stats.byCategory[wordData.category] || 0) + 1;
-      stats.byTheme[wordData.theme] = 
-        (stats.byTheme[wordData.theme] || 0) + 1;
+      if (wordData.part_of_speech) {
+        stats.byPartOfSpeech[wordData.part_of_speech] = 
+          (stats.byPartOfSpeech[wordData.part_of_speech] || 0) + 1;
+      }
+      if (wordData.category) {
+        stats.byCategory[wordData.category] = 
+          (stats.byCategory[wordData.category] || 0) + 1;
+      }
+      if (wordData.theme) {
+        stats.byTheme[wordData.theme] = 
+          (stats.byTheme[wordData.theme] || 0) + 1;
+      }
     }
+    
     return stats;
   }
 
