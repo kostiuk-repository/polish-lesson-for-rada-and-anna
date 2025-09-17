@@ -223,7 +223,8 @@ export class LessonComponent {
             </div>
             
             <div class="dialog-translation">
-              ${line.translation}
+              <p class="text-transcription">${line.transcryption || ''}</p>
+              <p class="text-russian">${line.translation}</p>
             </div>
           </div>
         `;

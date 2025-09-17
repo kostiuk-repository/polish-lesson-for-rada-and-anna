@@ -104,6 +104,15 @@
   animation: fadeIn var(--transition-base);
 }
 
+.dialog-translation p {
+  margin: 0; /* Скидаємо стандартний відступ параграфа */
+}
+
+.dialog-translation .text-transcription {
+  margin-bottom: var(--space-2); /* Додаємо відступ знизу для транскрипції */
+  font-style: italic; /* Робимо стиль схожим на переклад */
+}
+
 /* Кликабельные элементы в диалоге */
 .clickable-word {
   cursor: pointer;
