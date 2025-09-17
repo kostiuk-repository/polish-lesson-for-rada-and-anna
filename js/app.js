@@ -1,4 +1,3 @@
-// Главный файл приложения
 import { Router } from './core/router.js';
 import { API } from './core/api.js';
 import { DictionaryService } from './services/dictionary.js';
@@ -13,20 +12,19 @@ class PolishLearningApp {
     this.speech = new SpeechService();
     this.storage = new StorageService();
     this.currentComponent = null;
+    this.pageContainer = document.getElementById('page-container');
 
     this.init();
   }
 
   async init() {
     try {
-      // Инициализируем сервисы
       await this.dictionary.init();
       await this.speech.init();
       
-      // Настраиваем роутинг
       this.setupRouting();
-      
-      // Запускаем роутер
+      this.setupNavigation();
+
       this.router.start();
       
       console.log('✅ Polish Learning App инициализирован');
@@ -35,88 +33,77 @@ class PolishLearningApp {
       this.showError('Ошибка загрузки приложения');
     }
   }
-
-  showPage(page) {
-    const catalogSection = document.getElementById('catalog-section');
-    const lessonSection = document.getElementById('lesson-section');
-    const pageHeader = document.getElementById('page-header');
-
-    if (page === 'catalog') {
-      catalogSection.style.display = 'block';
-      pageHeader.style.display = 'block';
-      lessonSection.style.display = 'none';
-    } else if (page === 'lesson') {
-      catalogSection.style.display = 'none';
-      pageHeader.style.display = 'none';
-      lessonSection.style.display = 'block';
-    }
-  }
-
+  
   setupRouting() {
-    // Главная страница - каталог
-    this.router.addRoute('', () => this.loadCatalogPage());
-    this.router.addRoute('catalog', () => this.loadCatalogPage());
-    
-    // Страница урока
+    this.router.addRoute('', () => this.router.navigate('categories', true));
+    this.router.addRoute('categories', () => this.loadCatalogPage());
+    this.router.addRoute('categories/:id', (params) => this.loadCategoryPage(params.id));
     this.router.addRoute('lesson/:id', (params) => this.loadLessonPage(params.id));
-    
-    // Страница словаря (будущее)
     this.router.addRoute('dictionary', () => this.loadDictionaryPage());
+  }
+  
+  setupNavigation() {
+      const nav = document.getElementById('main-navigation');
+      nav.addEventListener('click', (e) => {
+          const tab = e.target.closest('[data-tab-link]');
+          if (tab) {
+              this.router.navigate(tab.dataset.tabLink);
+          }
+      });
   }
 
   async loadCatalogPage() {
     this.destroyCurrentComponent();
-    this.showPage('catalog'); // Показываем нужную страницу
     const { CatalogComponent } = await import('./components/catalog.js');
-    const catalog = new CatalogComponent({
-      api: this.api,
-      storage: this.storage
+    this.currentComponent = new CatalogComponent({ 
+        container: this.pageContainer, 
+        api: this.api 
     });
-    this.currentComponent = catalog;
-    await catalog.render();
+    await this.currentComponent.render();
+  }
+  
+  async loadCategoryPage(categoryId) {
+    this.destroyCurrentComponent();
+    const { CategoryComponent } = await import('./components/category.js');
+    this.currentComponent = new CategoryComponent({
+        container: this.pageContainer,
+        api: this.api,
+        categoryId: categoryId
+    });
+    await this.currentComponent.render();
   }
 
   async loadLessonPage(lessonId) {
     this.destroyCurrentComponent();
-    this.showPage('lesson'); // Показываем нужную страницу
     const { LessonComponent } = await import('./components/lesson.js');
-    const lesson = new LessonComponent({
+    this.currentComponent = new LessonComponent({
+      container: this.pageContainer,
       lessonId,
       api: this.api,
       dictionary: this.dictionary,
       speech: this.speech,
       storage: this.storage
     });
-    this.currentComponent = lesson;
-    await lesson.render();
+    await this.currentComponent.render();
   }
 
   async loadDictionaryPage() {
-    // Для будущего функционала
-    console.log('Dictionary page - coming soon!');
+    this.destroyCurrentComponent();
+    this.pageContainer.innerHTML = '<h1>Словарь (в разработке)</h1>';
   }
 
   showError(message) {
-    document.body.innerHTML = `
-      <div class="error-container">
-        <h2>Произошла ошибка</h2>
-        <p>${message}</p>
-        <button onclick="location.reload()">Перезагрузить</button>
-      </div>
-    `;
+    this.pageContainer.innerHTML = `<div class="error-container"><h2>Произошла ошибка</h2><p>${message}</p></div>`;
   }
 
   destroyCurrentComponent() {
     if (this.currentComponent && typeof this.currentComponent.destroy === 'function') {
       this.currentComponent.destroy();
     }
+    this.pageContainer.innerHTML = '';
   }
 }
 
-// Экспортируем для глобального использования
-window.PolishLearningApp = PolishLearningApp;
-
-// Запускаем приложение после загрузки DOM
 document.addEventListener('DOMContentLoaded', () => {
   window.PolishApp = new PolishLearningApp();
 });

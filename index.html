@@ -5,103 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polish Learning Hub</title>
     
-    <!-- Стили -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
     
-    <!-- Мета-теги для SEO -->
     <meta name="description" content="Изучение польского языка через диалоги и упражнения">
     <meta name="keywords" content="польский язык, изучение, диалоги, упражнения">
     
-    <!-- Prefetch для ускорения загрузки -->
     <link rel="prefetch" href="data/catalog.json">
-    <link rel="prefetch" href="data/dictionary/verbs/basic.json">
 </head>
 <body>
-    <!-- Основной контейнер приложения -->
     <div id="app" class="app">
-        <!-- Навигация (для будущего функционала) -->
-        <nav id="main-navigation" class="main-nav" style="display: none;">
+        <nav id="main-navigation" class="main-nav">
             <div class="nav-container">
                 <a href="#" class="nav-brand">Polish Hub</a>
-                <ul class="nav-menu">
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#dictionary">Словарь</a></li>
-                    <li><a href="#progress">Прогресс</a></li>
-                </ul>
+                <div class="tabs tabs--card">
+                    <div class="tabs__list">
+                        <button class="tabs__button tabs__button--active" data-tab-link="categories">Категорії</button>
+                        <button class="tabs__button" data-tab-link="dictionary">Словник</button>
+                    </div>
+                </div>
             </div>
         </nav>
 
-        <!-- Основной контент -->
         <main id="main-content" class="main-content">
-            <!-- Заголовок страницы -->
-            <header id="page-header" class="page-header">
-                <div class="container">
-                    <h1>Каталог уроков</h1>
-                    <p class="page-subtitle">Выберите тему для изучения польского языка</p>
+            
+            <div id="page-container">
                 </div>
-            </header>
 
-            <!-- Фильтры (для будущего функционала) -->
-            <section id="filters-section" class="filters-section" style="display: none;">
-                <div class="container">
-                    <div class="filters-container">
-                        <div class="filter-group">
-                            <label for="level-filter">Уровень:</label>
-                            <select id="level-filter" class="filter-select">
-                                <option value="all">Все уровни</option>
-                                <option value="A1">A1 - Начальный</option>
-                                <option value="A2">A2 - Элементарный</option>
-                                <option value="B1">B1 - Средний</option>
-                                <option value="B2">B2 - Продвинутый</option>
-                            </select>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <label for="type-filter">Тип:</label>
-                            <select id="type-filter" class="filter-select">
-                                <option value="all">Все типы</option>
-                                <option value="dialogue">Диалоги</option>
-                                <option value="review">Отзывы</option>
-                                <option value="text">Тексты</option>
-                                <option value="exercise">Упражнения</option>
-                            </select>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <label for="search-input">Поиск:</label>
-                            <input type="text" id="search-input" class="search-input" placeholder="Поиск по урокам...">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Контейнер для каталога уроков -->
-            <section id="catalog-section" class="catalog-section">
-                <div class="container">
-                    <div id="catalog-container" class="catalog-container">
-                        <!-- Loader будет показан до загрузки -->
-                        <div class="loader-container">
-                            <div class="loader">
-                                <div class="loader-spinner"></div>
-                                <p>Загрузка каталога...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Контейнер для урока (будет показан при переходе к уроку) -->
-            <section id="lesson-section" class="lesson-section" style="display: none;">
-                <div class="container">
-                    <div id="lesson-container" class="lesson-container">
-                        <!-- Контент урока будет загружен динамически -->
-                    </div>
-                </div>
-            </section>
         </main>
 
-        <!-- Подвал -->
         <footer id="main-footer" class="main-footer">
             <div class="container">
                 <p>&copy; 2024 Polish Learning Hub. Изучайте польский с удовольствием!</p>
@@ -109,13 +41,10 @@
         </footer>
     </div>
 
-    <!-- Модальные окна (будут добавлены динамически) -->
     <div id="modals-container"></div>
 
-    <!-- Уведомления -->
     <div id="notifications-container" class="notifications-container"></div>
 
-    <!-- Скрипты -->
     <script type="module" src="js/app.js"></script>
 </body>
 </html>

@@ -5,13 +5,7 @@ export class Router {
     this.isStarted = false;
   }
 
-  /**
-   * Добавляет новый маршрут
-   * @param {string} pattern - паттерн маршрута (например, 'lesson/:id')
-   * @param {Function} handler - обработчик маршрута
-   */
   addRoute(pattern, handler) {
-    // Преобразуем паттерн в регулярное выражение
     const paramNames = [];
     const regexPattern = pattern
       .replace(/:([^\/]+)/g, (match, paramName) => {
@@ -30,40 +24,29 @@ export class Router {
     });
   }
 
-  /**
-   * Переходит к указанному маршруту
-   * @param {string} path - путь для перехода
-   * @param {boolean} replace - заменить текущую запись в истории
-   */
   navigate(path, replace = false) {
     if (replace) {
-      history.replaceState(null, '', `#${path}`);
+      history.replaceState(null, '', `#/${path}`);
     } else {
-      history.pushState(null, '', `#${path}`);
+      history.pushState(null, '', `#/${path}`);
     }
     this.handleRoute(path);
   }
 
-  /**
-   * Обрабатывает текущий маршрут
-   */
   handleRoute(path = null) {
     if (path === null) {
       path = this.getCurrentPath();
     }
 
-    // Ищем подходящий маршрут
     for (const [pattern, route] of this.routes) {
       const match = path.match(route.regex);
       
       if (match) {
-        // Извлекаем параметры
         const params = {};
         route.paramNames.forEach((name, index) => {
           params[name] = match[index + 1];
         });
 
-        // Обновляем текущий маршрут
         this.currentRoute = {
           path,
           pattern,
@@ -71,7 +54,6 @@ export class Router {
           handler: route.handler
         };
 
-        // Вызываем обработчик
         try {
           route.handler(params, path);
         } catch (error) {
@@ -82,69 +64,30 @@ export class Router {
       }
     }
 
-    // Маршрут не найден
-    console.warn(`Маршрут не найден: ${path}`);
     this.handleNotFound(path);
   }
 
-  /**
-   * Получает текущий путь из hash
-   */
   getCurrentPath() {
-    const hash = window.location.hash;
-    return hash.startsWith('#') ? hash.slice(1) : '';
+    return window.location.hash.slice(2) || ''; // Убираем #/
   }
 
-  /**
-   * Обработчик для несуществующих маршрутов
-   */
   handleNotFound(path) {
-    console.log(`Перенаправление с ${path} на главную страницу`);
-    this.navigate('', true);
+    console.warn(`Маршрут не найден: ${path}, перенаправляем на главную.`);
+    this.navigate('categories', true);
   }
 
-  /**
-   * Запускает роутер
-   */
   start() {
     if (this.isStarted) return;
 
-    // Обрабатываем изменения в браузере
-    window.addEventListener('hashchange', () => {
-      this.handleRoute();
-    });
-
-    // Обрабатываем кнопки назад/вперед
-    window.addEventListener('popstate', () => {
-      this.handleRoute();
-    });
-
-    // Обрабатываем текущий маршрут
+    window.addEventListener('hashchange', () => this.handleRoute());
+    window.addEventListener('popstate', () => this.handleRoute());
+    
     this.handleRoute();
-
     this.isStarted = true;
   }
 
-  /**
-   * Останавливает роутер
-   */
   stop() {
     this.isStarted = false;
-    window.removeEventListener('hashchange', this.handleRoute);
-    window.removeEventListener('popstate', this.handleRoute);
-  }
-
-  /**
-   * Получает текущий маршрут
-   */
-  getCurrentRoute() {
-    return this.currentRoute;
-  }
-
-  /**
-   * Проверяет, соответствует ли текущий маршрут паттерну
-   */
-  isCurrentRoute(pattern) {
-    return this.currentRoute && this.currentRoute.pattern === pattern;
+    // remove listeners
   }
 }
