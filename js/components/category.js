@@ -30,8 +30,10 @@ export class CategoryComponent {
       <header class="category-header">
         <div class="container category-header__container">
           <a href="#/categories" class="btn btn--outline btn--icon-left">
-            <i class="fas fa-arrow-left"></i>
-            <span>Назад</span>
+            <span class="btn__icon" aria-hidden="true">
+              <i class="fas fa-arrow-left"></i>
+            </span>
+            <span class="btn__label">Назад</span>
           </a>
           <h1 class="category-header__title">${this.category.title}</h1>
           <div class="search-field">

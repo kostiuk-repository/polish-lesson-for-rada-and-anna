@@ -175,14 +175,18 @@ export class LessonComponent {
           <div class="translation-toggle">
             <label>
               <input type="checkbox" id="show-translations" class="sr-only">
-              <span class="toggle-switch" role="switch" aria-checked="false"></span>
-              <span>Показать переводы</span>
+              <span class="toggle-switch" role="switch" aria-checked="false" data-state="off"></span>
+              <span class="translation-toggle__state" data-state="off">Выкл</span>
+              <span class="translation-toggle__label">Показать переводы</span>
             </label>
           </div>
-          
+
           <div class="audio-controls">
-            <button class="btn btn--primary btn--icon" id="play-all-dialog" title="Воспроизвести весь диалог">
-              <i class="fas fa-play"></i>
+            <button class="btn btn--primary btn--icon-left" id="play-all-dialog" type="button" title="Воспроизвести весь диалог">
+              <span class="btn__icon" aria-hidden="true">
+                <i class="fas fa-play"></i>
+              </span>
+              <span class="btn__label">Воспроизвести диалог</span>
             </button>
           </div>
         </div>
@@ -242,10 +246,12 @@ export class LessonComponent {
             
             <div class="dialog-speaker">
               ${line.speaker}
-              <button class="audio-play-btn" 
+              <button class="audio-play-btn"
                       data-text="${line.sentence}"
-                      title="Озвучить">
-                <i class="fas fa-volume-up"></i>
+                      title="Озвучить"
+                      aria-label="Озвучить реплику"
+                      type="button">
+                <i class="fas fa-volume-up" aria-hidden="true"></i>
               </button>
             </div>
             
@@ -377,6 +383,7 @@ export class LessonComponent {
       translationToggle.addEventListener('change', (e) => {
         this.toggleTranslations(e.target.checked);
       });
+      this.toggleTranslations(translationToggle.checked);
     }
     
     // Аудио кнопки
@@ -397,14 +404,21 @@ export class LessonComponent {
   toggleTranslations(show) {
     const dialogContainer = this.container.querySelector('.dialog-container');
     const toggleSwitch = this.container.querySelector('.toggle-switch');
+    const stateLabel = this.container.querySelector('.translation-toggle__state');
 
     if (dialogContainer) {
       dialogContainer.classList.toggle('show-translations', show);
     }
-    
+
     if (toggleSwitch) {
       toggleSwitch.classList.toggle('toggle-switch--active', show);
-      toggleSwitch.setAttribute('aria-checked', show);
+      toggleSwitch.setAttribute('aria-checked', show ? 'true' : 'false');
+      toggleSwitch.dataset.state = show ? 'on' : 'off';
+    }
+
+    if (stateLabel) {
+      stateLabel.dataset.state = show ? 'on' : 'off';
+      stateLabel.textContent = show ? 'Вкл' : 'Выкл';
     }
   }
 

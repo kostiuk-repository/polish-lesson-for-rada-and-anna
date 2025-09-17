@@ -157,10 +157,15 @@ export class Router {
             } else if (normalizedLinkPath !== '/' && currentPath.startsWith(normalizedLinkPath)) {
                 isActive = true;
             }
-            
+
             link.classList.toggle('active', isActive);
+            if (isActive) {
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
+            }
         });
-        
+
         console.log('🎨 Навигация обновлена для:', currentPath);
     }
 

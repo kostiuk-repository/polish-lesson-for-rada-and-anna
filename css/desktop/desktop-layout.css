@@ -61,47 +61,50 @@
 }
 
 .app-nav {
-  display: flex;
-  gap: var(--space-6);
+  display: inline-flex;
+  gap: var(--space-4);
   align-items: center;
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   color: var(--gray-600);
   text-decoration: none;
-  padding: var(--space-3) var(--space-4);
-  position: relative;
-  transition: all var(--transition-base);
-  border-radius: var(--radius-base);
+  border-radius: var(--radius-full);
+  background-color: var(--white);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-base),
+              color var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-base);
 }
 
-.nav-link:hover {
-  color: var(--primary-color);
-  background-color: var(--gray-50);
-  transform: translateY(-1px);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-4);
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transform: translateX(-50%);
-  transition: width var(--transition-base) ease-out;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 80%;
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--primary-dark);
+  background-color: var(--secondary-light);
+  border-color: rgba(139, 69, 19, 0.25);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .nav-link.active {
-  color: var(--primary-color);
-  font-weight: var(--font-weight-semibold);
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.nav-link.active:focus-visible {
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== MAIN CONTENT ===== */
