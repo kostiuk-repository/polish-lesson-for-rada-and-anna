@@ -1,97 +1,58 @@
 export class Router {
-  constructor() {
-    this.routes = new Map();
-    this.currentRoute = null;
-    this.isStarted = false;
-  }
-
-  addRoute(pattern, handler) {
-    const paramNames = [];
-    const regexPattern = pattern
-      .replace(/:([^\/]+)/g, (match, paramName) => {
-        paramNames.push(paramName);
-        return '([^/]+)';
-      })
-      .replace(/\//g, '\\/');
-    
-    const regex = new RegExp(`^${regexPattern}$`);
-    
-    this.routes.set(pattern, {
-      regex,
-      handler,
-      paramNames,
-      pattern
-    });
-  }
-
-  navigate(path, replace = false) {
-    if (replace) {
-      history.replaceState(null, '', `#/${path}`);
-    } else {
-      history.pushState(null, '', `#/${path}`);
-    }
-    this.handleRoute(path);
-  }
-
-  handleRoute(path = null) {
-    if (path === null) {
-      path = this.getCurrentPath();
+    constructor(routes, rootElement) {
+        this.routes = routes;
+        this.rootElement = rootElement;
+        window.addEventListener('popstate', () => this.handleRouteChange());
     }
 
-    for (const [pattern, route] of this.routes) {
-      const match = path.match(route.regex);
-      
-      if (match) {
-        const params = {};
-        route.paramNames.forEach((name, index) => {
-          params[name] = match[index + 1];
+    navigateTo(path) {
+        history.pushState(null, null, path);
+        this.handleRouteChange();
+    }
+
+    handleRouteChange() {
+        const path = window.location.pathname;
+        const currentRoute = this.routes.find(route => {
+            const routePathSegments = route.path.split('/').filter(Boolean);
+            const currentPathSegments = path.split('/').filter(Boolean);
+            if (routePathSegments.length !== currentPathSegments.length) {
+                return false;
+            }
+            const params = {};
+            const match = routePathSegments.every((segment, i) => {
+                if (segment.startsWith(':')) {
+                    params[segment.substring(1)] = currentPathSegments[i];
+                    return true;
+                }
+                return segment === currentPathSegments[i];
+            });
+            if (match) {
+                route.params = params;
+            }
+            return match;
         });
 
-        this.currentRoute = {
-          path,
-          pattern,
-          params,
-          handler: route.handler
-        };
-
-        try {
-          route.handler(params, path);
-        } catch (error) {
-          console.error(`Ошибка в обработчике маршрута ${pattern}:`, error);
+        if (currentRoute) {
+            currentRoute.render(currentRoute.params);
+        } else {
+            this.rootElement.innerHTML = '<h1>404 - Сторінку не знайдено</h1>';
         }
-        
-        return;
-      }
+        this.updateActiveNav(path);
     }
-
-    this.handleNotFound(path);
-  }
-
-  getCurrentPath() {
-    return window.location.hash.slice(2) || ''; // Убираем #/
-  }
-
-  handleNotFound(path) {
-    console.warn(`Маршрут не найден: ${path}, перенаправляем на главную.`);
-    this.navigate('categories', true);
-  }
-
-  start() {
-    if (this.isStarted) return;
-
-    window.addEventListener('hashchange', () => this.handleRoute());
-    window.addEventListener('popstate', () => this.handleRoute());
     
-    this.handleRoute();
-    this.isStarted = true;
-  }
-
-  stop() {
-    if (!this.isStarted) {
-      return;
+    updateActiveNav(currentPath) {
+        const navLinks = document.querySelectorAll('.app-nav a');
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            const isActive = (currentPath === linkPath) || (currentPath.startsWith(linkPath) && linkPath !== '/');
+            link.classList.toggle('active', isActive);
+        });
+        if (currentPath === '/') {
+            navLinks.forEach(link => link.classList.remove('active'));
+        }
     }
 
-    // TODO: Implement router teardown logic (remove listeners, cleanup state).
-    this.isStarted = false;
-  }
+    start() {
+        this.handleRouteChange();
+    }
 }
