@@ -188,35 +188,6 @@
   background-color: var(--error-bg);
 }
 
-.multiple-choice__radio {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--gray-300);
-  border-radius: var(--radius-full);
-  position: relative;
-  flex-shrink: 0;
-}
-
-.multiple-choice__option--selected .multiple-choice__radio {
-  border-color: var(--primary-color);
-}
-
-.multiple-choice__option--selected .multiple-choice__radio::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--primary-color);
-}
-
-.multiple-choice__text {
-  font-size: var(--font-size-base);
-  color: var(--gray-700);
-}
-
 /* Сопоставление */
 .matching__container {
   display: grid;
@@ -462,5 +433,52 @@
   
   .exercise__btn {
     min-width: auto;
+  }
+}
+
+/* Множественный выбор */
+.multiple-choice__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.multiple-choice__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.multiple-choice__option:hover {
+  border-color: var(--primary-color);
+  background-color: var(--gray-50);
+}
+
+.multiple-choice__option--selected {
+  border-color: var(--primary-color);
+  background-color: var(--secondary-light);
+}
+
+.multiple-choice__option--correct {
+  border-color: var(--success-color);
+  background-color: var(--success-bg);
+}
+
+.multiple-choice__option--incorrect {
+  border-color: var(--error-color);
+  background-color: var(--error-bg);
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .multiple-choice__option {
+    padding: var(--space-3);
+    font-size: var(--font-size-sm);
   }
 }

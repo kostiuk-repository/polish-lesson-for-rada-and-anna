@@ -286,34 +286,4 @@
     padding: var(--space-3) var(--space-4);
     font-size: var(--font-size-base);
   }
-  
-  .lesson-tabs .tabs__button {
-    padding: var(--space-3) var(--space-5);
-    font-size: var(--font-size-base);
-  }
-  
-  .tabs--vertical {
-    flex-direction: column;
-  }
-  
-  .tabs--vertical .tabs__list {
-    flex-direction: row;
-    border-right: none;
-    border-bottom: 2px solid var(--gray-200);
-    margin-right: 0;
-    margin-bottom: var(--space-6);
-    min-width: auto;
-  }
-  
-  .tabs--vertical .tabs__button {
-    border-right: none;
-    border-bottom: 3px solid transparent;
-    margin-right: 0;
-    margin-bottom: -2px;
-  }
-  
-  .tabs--vertical .tabs__button--active {
-    border-right-color: transparent;
-    border-bottom-color: var(--primary-color);
-  }
 }

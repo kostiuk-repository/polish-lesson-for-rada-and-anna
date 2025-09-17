@@ -76,7 +76,7 @@
   justify-content: center;
 }
 
-/* Таблица склонений/спряжений */
+/* Таблица склонений/спряжених */
 .conjugation-table {
   max-width: 500px;
   width: 100%;
@@ -311,5 +311,14 @@
     font-size: var(--font-size-xs);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .table--compact th,
+  .table--compact td {
+    padding: var(--space-2);
+    font-size: var(--font-size-xs);
   }
 }

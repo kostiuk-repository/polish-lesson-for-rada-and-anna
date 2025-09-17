@@ -286,3 +286,10 @@
     gap: var(--space-3);
   }
 }
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .grid--sidebar {
+    grid-template-columns: 1fr;
+  }
+}

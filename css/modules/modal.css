@@ -386,6 +386,12 @@
 }
 
 /* Адаптивность */
+@media (max-width: 640px) {
+  .modal {
+    padding: var(--space-2);
+  }
+}
+
 @media (max-width: 768px) {
   .modal {
     padding: var(--space-2);

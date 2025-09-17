@@ -41,48 +41,22 @@
     gap: var(--space-4);
   }
   
-  .grid--2,
-  .grid--3,
-  .grid--4,
-  .grid--5,
-  .grid--6 {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-  
   /* Flex утилиты для мобильных */
   .sm\:flex-col {
     flex-direction: column;
   }
   
-  .sm\:items-stretch {
-    align-items: stretch;
-  }
-  
-  .sm\:justify-center {
-    justify-content: center;
-  }
-  
   /* Отступы для мобильных */
   .sm\:p-4 { padding: var(--space-4); }
-  .sm\:px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
-  .sm\:py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
-  .sm\:m-4 { margin: var(--space-4); }
-  .sm\:mx-4 { margin-left: var(--space-4); margin-right: var(--space-4); }
-  .sm\:my-4 { margin-top: var(--space-4); margin-bottom: var(--space-4); }
   
   /* Размеры для мобильных */
   .sm\:w-full { width: 100%; }
-  .sm\:h-auto { height: auto; }
   
   /* Текст для мобильных */
   .sm\:text-center { text-align: center; }
-  .sm\:text-sm { font-size: var(--font-size-sm); }
-  .sm\:text-base { font-size: var(--font-size-base); }
   
   /* Скрытие элементов на мобильных */
   .sm\:hidden { display: none; }
-  .sm\:block { display: block; }
   
   /* Карточки на мобильных */
   .lesson-card {
@@ -95,90 +69,15 @@
     font-size: var(--font-size-base);
   }
   
-  .btn--large {
-    padding: var(--space-4) var(--space-5);
-    font-size: var(--font-size-base);
-  }
-  
-  /* Табы на мобильных */
-  .tabs__button {
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--font-size-sm);
-  }
-  
-  /* Диалоги на мобильных */
-  .dialog-line {
-    padding: var(--space-4);
-    margin-bottom: var(--space-3);
-  }
-  
-  .dialog-speaker {
-    font-size: var(--font-size-base);
-  }
-  
-  .dialog-text {
-    font-size: var(--font-size-base);
-  }
-  
   /* Формы на мобильных */
   .form__group--horizontal,
   .form__group--triple {
     grid-template-columns: 1fr;
   }
-  
-  /* Таблицы на мобильных */
-  .table--responsive {
-    min-width: 100%;
-  }
-  
-  .table--stacked {
-    border: none;
-    box-shadow: none;
-  }
-  
-  .table--stacked thead {
-    display: none;
-  }
-  
-  .table--stacked tbody,
-  .table--stacked tr,
-  .table--stacked td {
-    display: block;
-    width: 100%;
-  }
-  
-  .table--stacked tr {
-    background-color: var(--white);
-    border-radius: var(--radius-base);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: var(--space-4);
-    padding: var(--space-4);
-  }
-  
-  .table--stacked td {
-    text-align: left !important;
-    padding: var(--space-2) 0;
-    border-bottom: 1px solid var(--gray-100);
-  }
-  
-  .table--stacked td:last-child {
-    border-bottom: none;
-  }
-  
-  .table--stacked td::before {
-    content: attr(data-label);
-    font-weight: var(--font-weight-semibold);
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: var(--space-1);
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
 }
 
-/* Планшеты (641px - 1024px) */
-@media (min-width: 641px) and (max-width: 1024px) {
+/* Планшеты и десктопы (641px и выше) */
+@media (min-width: 641px) {
   .container {
     padding: 0 var(--space-4);
   }
