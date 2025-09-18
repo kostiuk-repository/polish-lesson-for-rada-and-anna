@@ -1,0 +1,723 @@
+{
+  "id": "restaurant-dialogue-3",
+  "title": "Po jodze: instagramowe klimaty jak na Bali",
+  "description": "Dwie koleżanki po jodze szukają fotogenicznego miejsca w Warszawie z klimatem jak na Bali. Sprawdzają godziny, proszą o stolik w \"instagram corner\", zamawiają tropikalne napoje i roślinne miski, robią zdjęcia, korygują słodycz, biorą mały deser, proszą o zapakowanie na wynos i płacą z napiwkiem.",
+  "tags": ["jedzenie", "Warszawa", "po_jodze", "instagramowe", "wegańskie", "bezglutenowe"],
+  "characters": [
+    { "name": "Kelner", "translation": "Официант" },
+    { "name": "Radosława", "translation": "Радослава" },
+    { "name": "Anna", "translation": "Анна" }
+  ],
+  "content": [
+    {
+      "speaker": "Radosława",
+      "sentence": "Wyszłyśmy z jogi. Masz ochotę na coś lekkiego i ładnego do zdjęć?",
+      "translation": "Мы вышли с йоги. Хочешь что-то лёгкое и красивое для фото?",
+      "transcryption": "ВЫшлышмы з ЙОги. Маш охОтэ на чощ лЕккего и Уаднего до зДЗеньч?",
+      "words": [
+        { "text": "Wyszłyśmy", "wordKey": "wyjść" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "jogi.", "wordKey": "joga" },
+        { "text": "Masz", "wordKey": "mieć" },
+        { "text": "ochotę", "wordKey": "ochota" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "coś", "wordKey": "coś" },
+        { "text": "lekkiego", "wordKey": "lekki" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "ładnego", "wordKey": "ładny" },
+        { "text": "do", "wordKey": "do" },
+        { "text": "zdjęć?", "wordKey": "zdjęcie" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Tak! Chcę coś jak na Bali — klimat, rośliny, neony.",
+      "translation": "Да! Хочу что-то как на Бали — атмосфера, растения, неон.",
+      "transcryption": "Так! Хчэ чощ як на БАЛи — КЛИмат, роШЛИНы, неОНы.",
+      "words": [
+        { "text": "Tak!", "wordKey": "tak" },
+        { "text": "Chcę", "wordKey": "chcieć" },
+        { "text": "coś", "wordKey": "coś" },
+        { "text": "jak", "wordKey": "jak" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "Bali", "wordKey": "Bali" },
+        { "text": "klimat,", "wordKey": "klimat" },
+        { "text": "rośliny,", "wordKey": "roślina" },
+        { "text": "neony.", "wordKey": "neon" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Może Tropical Smoothie Bar albo roślinne bistro z tarasem?",
+      "translation": "Может Tropical Smoothie Bar или растительное бистро с террасой?",
+      "transcryption": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро з таРАсэм?",
+      "words": [
+        { "text": "Może", "wordKey": "może" },
+        { "text": "Tropical", "wordKey": "Tropical" },
+        { "text": "Smoothie", "wordKey": "Smoothie" },
+        { "text": "Bar", "wordKey": "Bar" },
+        { "text": "albo", "wordKey": "albo" },
+        { "text": "roślinne", "wordKey": "roślinny" },
+        { "text": "bistro", "wordKey": "bistro" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "tarasem?", "wordKey": "taras" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Sprawdzę godziny. Czy dziś jesteście otwarci?",
+      "translation": "Проверю часы. Вы сегодня открыты?",
+      "transcryption": "СправДжэ годЗИны. Чи джьш естешче отВАРчи?",
+      "words": [
+        { "text": "Sprawdzę", "wordKey": "sprawdzać" },
+        { "text": "godziny.", "wordKey": "godzina" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "dziś", "wordKey": "dziś" },
+        { "text": "jesteście", "wordKey": "być" },
+        { "text": "otwarci?", "wordKey": "otworzyć" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Dzień dobry, dziś czynne do 21. Są wolne stoliki przy roślinach.",
+      "translation": "Добрый день, сегодня открыто до 21. Есть свободные столики у растений.",
+      "transcryption": "Джень ДОбры, джьш ЧЫНнэ до двадцЯстэj пьершэй. Сон ВОЛьнэ СТОлики пшы рошЛИнах.",
+      "words": [
+        { "text": "Dzień", "wordKey": "dzień" },
+        { "text": "dobry,", "wordKey": "dobry" },
+        { "text": "dziś", "wordKey": "dziś" },
+        { "text": "czynne", "wordKey": "czynny" },
+        { "text": "do", "wordKey": "do" },
+        { "text": "21.", "wordKey": "21" },
+        { "text": "Są", "wordKey": "być" },
+        { "text": "wolne", "wordKey": "wolny" },
+        { "text": "stoliki", "wordKey": "stolik" },
+        { "text": "przy", "wordKey": "przy" },
+        { "text": "roślinach.", "wordKey": "roślina" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Super, idziemy. Poprosimy stolik przy oknie.",
+      "translation": "Супер, идём. Попросим столик у окна.",
+      "transcryption": "СУпер, иДЗЕмы. ПопроСИмы СТОлик пшы Окне.",
+      "words": [
+        { "text": "Super,", "wordKey": "super" },
+        { "text": "idziemy.", "wordKey": "iść" },
+        { "text": "Poprosimy", "wordKey": "prosić" },
+        { "text": "stolik", "wordKey": "stolik" },
+        { "text": "przy", "wordKey": "przy" },
+        { "text": "oknie.", "wordKey": "okno" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Zapraszam, proszę usiąść tutaj, światło jest ładne.",
+      "translation": "Прошу, садитесь здесь, свет красивый.",
+      "transcryption": "ЗапРАшам, ПРОше усЁнщь тУтай, ШФЬЯтло есть Уаднэ.",
+      "words": [
+        { "text": "Zapraszam,", "wordKey": "zapraszać" },
+        { "text": "proszę", "wordKey": "prosić" },
+        { "text": "usiąść", "wordKey": "usiąść" },
+        { "text": "tutaj,", "wordKey": "tutaj" },
+        { "text": "światło", "wordKey": "światło" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "ładne.", "wordKey": "ładny" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Najpierw napoje: wodę kokosową i matcha latte bez cukru, proszę.",
+      "translation": "Сначала напитки: кокосовую воду и матча-латте без сахара, пожалуйста.",
+      "transcryption": "НАЙперв напОйе: ВОдэ кокосОВон и МАча латтэ без ЦУкру, ПРОше.",
+      "words": [
+        { "text": "Najpierw", "wordKey": "najpierw" },
+        { "text": "napoje:", "wordKey": "napój" },
+        { "text": "wodę", "wordKey": "woda" },
+        { "text": "kokosową", "wordKey": "kokosowy" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "matcha", "wordKey": "matcha" },
+        { "text": "latte", "wordKey": "latte" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "cukru,", "wordKey": "cukier" },
+        { "text": "proszę.", "wordKey": "prosić" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "A dla mnie lemoniada mango, ale bez syropu.",
+      "translation": "А мне лимонад манго, но без сиропа.",
+      "transcryption": "А для МНЕ лэмонЯда МАНго, але без сыРОпу.",
+      "words": [
+        { "text": "A", "wordKey": "a" },
+        { "text": "dla", "wordKey": "dla" },
+        { "text": "mnie", "wordKey": "ja" },
+        { "text": "lemoniada", "wordKey": "lemoniada" },
+        { "text": "mango,", "wordKey": "mango" },
+        { "text": "ale", "wordKey": "ale" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "syropu.", "wordKey": "syrop" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Jasne. Czy podać w kokosie? Mamy też słomki papierowe.",
+      "translation": "Конечно. Подать в кокосе? У нас есть бумажные соломинки.",
+      "transcryption": "Яснэ. Чи ПОДачь в коКОсе? МАМы тэш СЛОМки папьеРОвэ.",
+      "words": [
+        { "text": "Jasne.", "wordKey": "jasny" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "podać", "wordKey": "podać" },
+        { "text": "w", "wordKey": "w" },
+        { "text": "kokosie?", "wordKey": "kokos" },
+        { "text": "Mamy", "wordKey": "mieć" },
+        { "text": "też", "wordKey": "też" },
+        { "text": "słomki", "wordKey": "słomka" },
+        { "text": "papierowe.", "wordKey": "papierowy" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Tak, jeśli się da, ładnie do zdjęcia, proszę.",
+      "translation": "Да, если можно, красиво для фото, пожалуйста.",
+      "transcryption": "Так, Если се да, Уадне до зДЗенча, ПРОше.",
+      "words": [
+        { "text": "Tak,", "wordKey": "tak" },
+        { "text": "jeśli", "wordKey": "jeśli" },
+        { "text": "się", "wordKey": "się" },
+        { "text": "da,", "wordKey": "dać" },
+        { "text": "ładnie", "wordKey": "ładny" },
+        { "text": "do", "wordKey": "do" },
+        { "text": "zdjęcia,", "wordKey": "zdjęcie" },
+        { "text": "proszę.", "wordKey": "prosić" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Poproszę acai bowl bez glutenu i bez orzechów.",
+      "translation": "Пожалуйста, асаи-боул без глютена и без орехов.",
+      "transcryption": "ПопРОше аСАЙ бОул без глюТЭна и без оЖЕхув.",
+      "words": [
+        { "text": "Poproszę", "wordKey": "prosić" },
+        { "text": "acai", "wordKey": "acai" },
+        { "text": "bowl", "wordKey": "bowl" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "glutenu", "wordKey": "gluten" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "orzechów.", "wordKey": "orzech" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Ja buddha bowl z tofu. Czy sos zawiera miód albo mleko?",
+      "translation": "Мне будда-боул с тофу. Соус содержит мёд или молоко?",
+      "transcryption": "Я Будда бОул з ТОфу. Чи сос завЬЕра мьот альбо мЛЕко?",
+      "words": [
+        { "text": "Ja", "wordKey": "ja" },
+        { "text": "buddha", "wordKey": "buddha" },
+        { "text": "bowl", "wordKey": "bowl" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "tofu.", "wordKey": "tofu" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "sos", "wordKey": "sos" },
+        { "text": "zawiera", "wordKey": "zawierać" },
+        { "text": "miód", "wordKey": "miód" },
+        { "text": "albo", "wordKey": "albo" },
+        { "text": "mleko?", "wordKey": "mleko" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Sos jest roślinny, bez mleka i bez miodu. Możemy dodać więcej owoców.",
+      "translation": "Соус растительный, без молока и без мёда. Мы можем добавить больше фруктов.",
+      "transcryption": "Сос есть рошЛИНны, без мЛЕка и без мьОду. МожЕмы ДОдачь Вьенцей оВОцуф.",
+      "words": [
+        { "text": "Sos", "wordKey": "sos" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "roślinny,", "wordKey": "roślinny" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "mleka", "wordKey": "mleko" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "bez", "wordKey": "bez" },
+        { "text": "miodu.", "wordKey": "miód" },
+        { "text": "Możemy", "wordKey": "móc" },
+        { "text": "dodać", "wordKey": "dodać" },
+        { "text": "więcej", "wordKey": "więcej" },
+        { "text": "owoców.", "wordKey": "owoc" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Świetnie, proszę więcej mango i truskawek.",
+      "translation": "Отлично, пожалуйста, больше манго и клубники.",
+      "transcryption": "ШФЬЕТне, ПРОше ВьЕНцей МАНго и труСкавэк.",
+      "words": [
+        { "text": "Świetnie,", "wordKey": "świetny" },
+        { "text": "proszę", "wordKey": "prosić" },
+        { "text": "więcej", "wordKey": "więcej" },
+        { "text": "mango", "wordKey": "mango" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "truskawek.", "wordKey": "truskawka" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Już dopisuję. Napoje za chwilę.",
+      "translation": "Уже записываю. Напитки через минутку.",
+      "transcryption": "ЮЖ допиСУе. НапОйе за ХФИЛэ.",
+      "words": [
+        { "text": "Już", "wordKey": "już" },
+        { "text": "dopisuję.", "wordKey": "dopisywać" },
+        { "text": "Napoje", "wordKey": "napój" },
+        { "text": "za", "wordKey": "za" },
+        { "text": "chwilę.", "wordKey": "chwila" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Proszę bardzo, kokos i lemoniada. Czy zrobić zdjęcie?",
+      "translation": "Пожалуйста: кокос и лимонад. Сделать фото?",
+      "transcryption": "ПРОше БАРдзо, коКОс и лэмонЯда. Чи зРОбичь зДЗеньче?",
+      "words": [
+        { "text": "Proszę", "wordKey": "prosić" },
+        { "text": "bardzo,", "wordKey": "bardzo" },
+        { "text": "kokos", "wordKey": "kokos" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "lemoniada.", "wordKey": "lemoniada" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "zrobić", "wordKey": "zrobić" },
+        { "text": "zdjęcie?", "wordKey": "zdjęcie" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Poprosimy! Jeszcze jedno, uśmiech!",
+      "translation": "Пожалуйста! Ещё одно, улыбка!",
+      "transcryption": "ПопроСИмы! Ещче Едно, ушМЕХ!",
+      "words": [
+        { "text": "Poprosimy!", "wordKey": "prosić" },
+        { "text": "Jeszcze", "wordKey": "jeszcze" },
+        { "text": "jedno,", "wordKey": "jeden" },
+        { "text": "uśmiech!", "wordKey": "uśmiech" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Gotowe. Dania zaraz będą.",
+      "translation": "Готово. Блюда скоро будут.",
+      "transcryption": "ГоТОвэ. ДАня ЗАРаз БЭндон.",
+      "words": [
+        { "text": "Gotowe.", "wordKey": "gotowy" },
+        { "text": "Dania", "wordKey": "danie" },
+        { "text": "zaraz", "wordKey": "zaraz" },
+        { "text": "będą.", "wordKey": "być" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Wygląda pięknie. Świeże, lekkie, aromatyczne.",
+      "translation": "Выглядит красиво. Свежо, легко, ароматно.",
+      "transcryption": "ВыГЛёнда ПЕНкне. ШФЬЕже, ЛЕКкье, ароМаТычне.",
+      "words": [
+        { "text": "Wygląda", "wordKey": "wyglądać" },
+        { "text": "pięknie.", "wordKey": "piękny" },
+        { "text": "Świeże,", "wordKey": "świeży" },
+        { "text": "lekkie,", "wordKey": "lekki" },
+        { "text": "aromatyczne.", "wordKey": "aromatyczny" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Trochę za słodkie. Czy można mniej granoli?",
+      "translation": "Немного слишком сладко. Можно меньше гранолы?",
+      "transcryption": "ТРОхэ за Слодке. Чи МОжна Мней граНОли?",
+      "words": [
+        { "text": "Trochę", "wordKey": "trochę" },
+        { "text": "za", "wordKey": "za" },
+        { "text": "słodkie.", "wordKey": "słodki" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "można", "wordKey": "można" },
+        { "text": "mniej", "wordKey": "mniej" },
+        { "text": "granoli?", "wordKey": "granola" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Oczywiście, już zabieram i zmniejszę porcję granoli.",
+      "translation": "Конечно, уже забираю и уменьшу порцию гранолы.",
+      "transcryption": "ОчыВИще, юж забЬЕрам и змНЬЕше ПОРцйэ граНОли.",
+      "words": [
+        { "text": "Oczywiście,", "wordKey": "oczywiście" },
+        { "text": "już", "wordKey": "już" },
+        { "text": "zabieram", "wordKey": "zabierać" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "zmniejszę", "wordKey": "zmniejszyć" },
+        { "text": "porcję", "wordKey": "porcja" },
+        { "text": "granoli.", "wordKey": "granola" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Spróbuj mojego mango, a ja spróbuję Twojej truskawki.",
+      "translation": "Попробуй моего манго, а я попробую твою клубнику.",
+      "transcryption": "СпробУй моЕго МАНго, а я спроБУе ТВОей труСкавки.",
+      "words": [
+        { "text": "Spróbuj", "wordKey": "spróbować" },
+        { "text": "mojego", "wordKey": "mój" },
+        { "text": "mango,", "wordKey": "mango" },
+        { "text": "a", "wordKey": "a" },
+        { "text": "ja", "wordKey": "ja" },
+        { "text": "spróbuję", "wordKey": "spróbować" },
+        { "text": "Twojej", "wordKey": "twój" },
+        { "text": "truskawki.", "wordKey": "truskawka" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Smakuje jak na Bali! Klimat jest naprawdę instagramowy.",
+      "translation": "На вкус как на Бали! Атмосфера действительно «инстаграмная».",
+      "transcryption": "СмакУе як на БАЛи! КЛИмат есть наПРАвдэ инстаграМОВы.",
+      "words": [
+        { "text": "Smakuje", "wordKey": "smakować" },
+        { "text": "jak", "wordKey": "jak" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "Bali!", "wordKey": "Bali" },
+        { "text": "Klimat", "wordKey": "klimat" },
+        { "text": "jest", "wordKey": "być" },
+        { "text": "naprawdę", "wordKey": "naprawdę" },
+        { "text": "instagramowy.", "wordKey": "instagramowy" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "A na deser? Może tapioka z mango na pół?",
+      "translation": "А на десерт? Может тапиока с манго пополам?",
+      "transcryption": "А на ДЕзэр? МОже тапьОка з МАНго на Пул?",
+      "words": [
+        { "text": "A", "wordKey": "a" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "deser?", "wordKey": "deser" },
+        { "text": "Może", "wordKey": "może" },
+        { "text": "tapioka", "wordKey": "tapioka" },
+        { "text": "z", "wordKey": "z" },
+        { "text": "mango", "wordKey": "mango" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "pół?", "wordKey": "pół" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Mamy mały sernik kokosowy i tapiokę. Co wybieracie?",
+      "translation": "У нас есть маленький кокосовый чизкейк и тапиока. Что выбираете?",
+      "transcryption": "МАМы МАлы СЕРник кокосОВы и тапьОкэ. Цо выбеРАчэ?",
+      "words": [
+        { "text": "Mamy", "wordKey": "mieć" },
+        { "text": "mały", "wordKey": "mały" },
+        { "text": "sernik", "wordKey": "sernik" },
+        { "text": "kokosowy", "wordKey": "kokosowy" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "tapiokę.", "wordKey": "tapioka" },
+        { "text": "Co", "wordKey": "co" },
+        { "text": "wybieracie?", "wordKey": "wybierać" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Poprosimy tapiokę na pół, proszę zapakować część na wynos.",
+      "translation": "Пожалуйста, тапиоку пополам, и упакуйте часть с собой.",
+      "transcryption": "ПопроСИмы тапьОкэ на Пул, ПРОше запакОвачь ЧЭНщь на ВЫнос.",
+      "words": [
+        { "text": "Poprosimy", "wordKey": "prosić" },
+        { "text": "tapiokę", "wordKey": "tapioka" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "pół,", "wordKey": "pół" },
+        { "text": "proszę", "wordKey": "prosić" },
+        { "text": "zapakować", "wordKey": "zapakować" },
+        { "text": "część", "wordKey": "część" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "wynos.", "wordKey": "wynos" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Jasne. Czy podać rachunek teraz czy po deserze?",
+      "translation": "Конечно. Подать счёт сейчас или после десерта?",
+      "transcryption": "Яснэ. Чи ПОДачь раХУнек ТЭраз чи по ДЕзэрже?",
+      "words": [
+        { "text": "Jasne.", "wordKey": "jasny" },
+        { "text": "Czy", "wordKey": "czy" },
+        { "text": "podać", "wordKey": "podać" },
+        { "text": "rachunek", "wordKey": "rachunek" },
+        { "text": "teraz", "wordKey": "teraz" },
+        { "text": "czy", "wordKey": "czy" },
+        { "text": "po", "wordKey": "po" },
+        { "text": "deserze?", "wordKey": "deser" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Po deserze, dziękujemy. A potem płacimy kartą i zostawiamy napiwek.",
+      "translation": "После десерта, спасибо. А потом платим картой и оставляем чаевые.",
+      "transcryption": "По ДЕзэрже, дженьКУЕмы. А ПОтэм пуаЧИмы КАРтон и зостаВЯмы НАпивэк.",
+      "words": [
+        { "text": "Po", "wordKey": "po" },
+        { "text": "deserze,", "wordKey": "deser" },
+        { "text": "dziękujemy.", "wordKey": "dziękować" },
+        { "text": "A", "wordKey": "a" },
+        { "text": "potem", "wordKey": "potem" },
+        { "text": "płacimy", "wordKey": "płacić" },
+        { "text": "kartą", "wordKey": "karta" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "zostawiamy", "wordKey": "zostawiać" },
+        { "text": "napiwek.", "wordKey": "napiwek" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Jak smakowała tapioka?",
+      "translation": "Как на вкус тапиока?",
+      "transcryption": "Як смакоВАЛа тапьОка?",
+      "words": [
+        { "text": "Jak", "wordKey": "jak" },
+        { "text": "smakowała", "wordKey": "smakować" },
+        { "text": "tapioka?", "wordKey": "tapioka" }
+      ]
+    },
+    {
+      "speaker": "Radosława",
+      "sentence": "Delikatna i kremowa, ale mogłaby być mniej słodka.",
+      "translation": "Нежная и кремовая, но могла бы быть менее сладкой.",
+      "transcryption": "ДэлиКАТна и креМОВа, але МОгла бы быть Мней Слодька.",
+      "words": [
+        { "text": "Delikatna", "wordKey": "delikatny" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "kremowa,", "wordKey": "kremowy" },
+        { "text": "ale", "wordKey": "ale" },
+        { "text": "mogłaby", "wordKey": "móc" },
+        { "text": "być", "wordKey": "być" },
+        { "text": "mniej", "wordKey": "mniej" },
+        { "text": "słodka.", "wordKey": "słodki" }
+      ]
+    },
+    {
+      "speaker": "Anna",
+      "sentence": "Wszystko było ładne na zdjęciach. Oznaczę was na stories.",
+      "translation": "Всё было красиво на фото. Я отмечу вас в сторис.",
+      "transcryption": "ВШЫстко было Уадне на зДЗеньчах. ОжНАчэ вас на сторис.",
+      "words": [
+        { "text": "Wszystko", "wordKey": "wszystko" },
+        { "text": "było", "wordKey": "być" },
+        { "text": "ładne", "wordKey": "ładny" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "zdjęciach.", "wordKey": "zdjęcie" },
+        { "text": "Oznaczę", "wordKey": "oznaczyć" },
+        { "text": "was", "wordKey": "wy" },
+        { "text": "na", "wordKey": "na" },
+        { "text": "stories.", "wordKey": "stories" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Bardzo dziękuję. Zapakuję resztę i już przynoszę rachunek.",
+      "translation": "Большое спасибо. Упакую остаток и уже приношу счёт.",
+      "transcryption": "БАРдзо дженьКУе. ЗапакУе РЭштэ и юж пшыНОшэ раХУнек.",
+      "words": [
+        { "text": "Bardzo", "wordKey": "bardzo" },
+        { "text": "dziękuję.", "wordKey": "dziękować" },
+        { "text": "Zapakuję", "wordKey": "zapakować" },
+        { "text": "resztę", "wordKey": "reszta" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "już", "wordKey": "już" },
+        { "text": "przynoszę", "wordKey": "przynosić" },
+        { "text": "rachunek.", "wordKey": "rachunek" }
+      ]
+    },
+    {
+      "speaker": "Kelner",
+      "sentence": "Miłego wieczoru i zapraszamy ponownie!",
+      "translation": "Хорошего вечера и приглашаем снова!",
+      "transcryption": "МиУего вЬЕчору и запраШАМы поНОвне!",
+      "words": [
+        { "text": "Miłego", "wordKey": "miły" },
+        { "text": "wieczoru", "wordKey": "wieczór" },
+        { "text": "i", "wordKey": "i" },
+        { "text": "zapraszamy", "wordKey": "zapraszać" },
+        { "text": "ponownie!", "wordKey": "ponownie" }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Prośby grzeczne i „instagramowe” detale",
+      "content": "<p>Formuły: <i>Poproszę…</i>, <i>Czy można…?</i>, <i>Czy zrobić zdjęcie?</i>, <i>ładnie do zdjęcia</i>.</p><ul><li><i>Poproszę wodę kokosową.</i></li><li><i>Czy można bez syropu?</i></li><li><i>Czy zrobić zdjęcie?</i></li></ul>"
+    },
+    {
+      "title": "Bez + dopełniacz (родительный): ograniczenia w składzie",
+      "content": "<p>Po <b>bez</b> używamy dopełniacza.</p><ul><li><i>bez</i> cukru, <i>bez</i> glutenu, <i>bez</i> orzechów, <i>bez</i> miodu</li></ul>"
+    },
+    {
+      "title": "Miejsca i światło: przy, w, na, przy oknie",
+      "content": "<p>Fotogeniczne miejsca:</p><ul><li><b>przy</b> oknie (у окна)</li><li><b>w</b> bistro (в бистро)</li><li><b>na</b> tarasie (на террасе)</li></ul>"
+    },
+    {
+      "title": "Pytania ogólne z «Czy»",
+      "content": "<p><b>Czy</b> + orzeczenie → pytanie.</p><ul><li><i>Czy dziś jesteście otwarci?</i></li><li><i>Czy można mniej granoli?</i></li></ul>"
+    },
+    {
+      "title": "Słowa-klucze mówienia codziennego",
+      "content": "<p>Używaj często: <i>tak, nie, proszę, dziękuję, może, super, ładnie, jeszcze, już, trochę, bardzo, tutaj, tam</i>.</p>"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill-blank",
+      "title": "Uzupełnij luki (Заполните пропуски)",
+      "questions": [
+        { "sentence": ["Masz ochotę na coś", { "blank": "lekkiego" }, "i ładnego do zdjęć?"], "id": 1 },
+        { "sentence": ["Czy dziś jesteście", { "blank": "otwarci" }, "?"], "id": 2 },
+        { "sentence": ["Poproszę wodę kokosową", { "blank": "bez" }, "cukru."], "id": 3 },
+        { "sentence": ["Czy można", { "blank": "mniej" }, "granoli?"], "id": 4 },
+        { "sentence": ["Poprosimy", { "blank": "tapiokę" }, "na pół."], "id": 5 },
+        { "sentence": ["Czy można", { "blank": "zapakować" }, "na wynos?"], "id": 6 }
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "title": "Wybierz poprawną odpowiedź (Выберите правильный ответ)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Jak uprzejmie poprosić o zdjęcie?",
+          "options": [
+            "Zrób zdjęcie.",
+            "Czy zrobić zdjęcie, proszę?",
+            "Zdjęcie teraz!"
+          ],
+          "answer": "Czy zrobić zdjęcie, proszę?"
+        },
+        {
+          "id": 2,
+          "question": "Które zdanie poprawnie używa «bez»?",
+          "options": [
+            "bez cukier",
+            "bez cukru",
+            "bez cukrem"
+          ],
+          "answer": "bez cukru"
+        },
+        {
+          "id": 3,
+          "question": "Jak zapytać o godziny?",
+          "options": [
+            "Chcę godziny.",
+            "Sprawdzę godziny.",
+            "Godziny są."
+          ],
+          "answer": "Sprawdzę godziny."
+        },
+        {
+          "id": 4,
+          "question": "Jak poprosić o mniej słodyczy?",
+          "options": [
+            "Mniej.",
+            "Czy można mniej słodko?",
+            "Daj mniej słodko."
+          ],
+          "answer": "Czy można mniej słodko?"
+        },
+        {
+          "id": 5,
+          "question": "Gdzie usiąść, żeby było dobre światło?",
+          "options": [
+            "przy oknie",
+            "do okna",
+            "na okno"
+          ],
+          "answer": "przy oknie"
+        }
+      ]
+    },
+    {
+      "type": "reorder",
+      "title": "Ułóż kolejność (От йоги до десерту)",
+      "instructions": "Расставьте логичный порядок реплик.",
+      "items": [
+        "Sprawdzę godziny. Czy dziś jesteście otwarci?",
+        "Poprosimy stolik przy oknie.",
+        "Poproszę acai bowl bez glutenu.",
+        "Czy zrobić zdjęcie?",
+        "Poprosimy tapiokę na pół.",
+        "Płacimy kartą i zostawiamy napiwek."
+      ],
+      "solution": [0, 1, 2, 3, 4, 5]
+    },
+    {
+      "type": "transform",
+      "title": "Przekształć na grzeczną prośbę (Сделайте вежливо)",
+      "questions": [
+        { "id": 1, "from": "Zrób zdjęcie.", "to": "Czy zrobić zdjęcie, proszę?" },
+        { "id": 2, "from": "Zapakuj to.", "to": "Czy można zapakować to na wynos?" },
+        { "id": 3, "from": "Mniej granoli.", "to": "Czy można mniej granoli?" }
+      ]
+    },
+    {
+      "type": "cases",
+      "title": "Przypadki po przyimkach (Падежи после предлогов)",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Po «przy» (у, возле) — miejscownik.",
+          "base": "okno",
+          "options": ["przy okno", "przy oknie", "przy okna"],
+          "answer": "przy oknie"
+        },
+        {
+          "id": 2,
+          "prompt": "Po «w» (внутри) — miejscownik.",
+          "base": "bistro",
+          "options": ["w bistro", "w bistrze", "w bistrar"],
+          "answer": "w bistro"
+        },
+        {
+          "id": 3,
+          "prompt": "Po «bez» (без) — dopełniacz.",
+          "base": "miód",
+          "options": ["bez miód", "bez miodu", "bez miodem"],
+          "answer": "bez miodu"
+        }
+      ]
+    },
+    {
+      "type": "translate",
+      "title": "Przetłumacz na polski (Переведите на польский)",
+      "questions": [
+        {
+          "id": 1,
+          "ru": "Мы только что после йоги. Есть ли столик у окна?",
+          "pl_answer": "Jesteśmy po jodze. Czy jest stolik przy oknie?"
+        },
+        {
+          "id": 2,
+          "ru": "Пожалуйста, лимонад манго без сиропа.",
+          "pl_answer": "Poproszę lemoniadę mango bez syropu."
+        },
+        {
+          "id": 3,
+          "ru": "Можно немного меньше гранолы?",
+          "pl_answer": "Czy można mniej granoli?"
+        },
+        {
+          "id": 4,
+          "ru": "Сделаете нам фото, пожалуйста?",
+          "pl_answer": "Czy zrobi Pan/Pani nam zdjęcie, proszę?"
+        },
+        {
+          "id": 5,
+          "ru": "Упакуйте остаток с собой, пожалуйста.",
+          "pl_answer": "Czy można zapakować resztę na wynos, proszę?"
+        }
+      ]
+    }
+  ]
+}
