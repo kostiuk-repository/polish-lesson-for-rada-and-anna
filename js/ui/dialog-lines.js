@@ -80,15 +80,16 @@ export class DialogLinesHandler {
     const translation = sentenceElement.dataset.translation;
     const lineIndex = parseInt(dialogLine.dataset.lineIndex);
     
-    this.showSentenceDetails(sentenceElement, translation, lineIndex);
+    this.showSentenceDetails(sentenceElement, translation, lineIndex)
+      .catch(error => console.error('Failed to show sentence details', error));
     this.trackSentenceClick(lineIndex);
   }
 
-  showSentenceDetails(sentenceElement, translation, lineIndex) {
+  async showSentenceDetails(sentenceElement, translation, lineIndex) {
     const polishText = sentenceElement.textContent.trim();
     const speaker = sentenceElement.closest('.dialog-line').querySelector('.dialog-speaker').textContent.trim();
-    
-    const content = this.generateSentenceDetailsHTML({
+
+    const content = await this.generateSentenceDetailsHTML({
       polish: polishText,
       russian: translation,
       speaker,
@@ -121,16 +122,25 @@ export class DialogLinesHandler {
       }
   }
 
-  generateSentenceDetailsHTML({ polish, russian, speaker, lineIndex }) {
+  async generateSentenceDetailsHTML({ polish, russian, speaker, lineIndex }) {
     const words = Array.from(this.container.querySelectorAll(`[data-line-index="${lineIndex}"] .clickable-word`));
-    const wordAnalysisHTML = words.map(wordEl => {
+    const wordAnalysisItems = await Promise.all(words.map(async (wordEl) => {
         const word = wordEl.textContent.trim();
         const rawKey = wordEl.dataset.wordKey || word;
         const normalizedKey = rawKey.toLowerCase();
-        const wordData = this.dictionary?.getWord?.(rawKey) || this.dictionary?.getWord?.(normalizedKey) || null;
+        let wordData = null;
+
+        if (this.dictionary?.getWord) {
+          wordData = await this.dictionary.getWord(rawKey);
+          if (!wordData && normalizedKey !== rawKey) {
+            wordData = await this.dictionary.getWord(normalizedKey);
+          }
+        }
+
         const translation = wordData?.translations?.ru || 'Перевод не найден';
         return `<li><strong>${word}</strong> - ${translation}</li>`;
-    }).join('');
+    }));
+    const wordAnalysisHTML = wordAnalysisItems.join('');
 
     return `
       <div class="sentence-details">

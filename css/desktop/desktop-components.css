@@ -212,6 +212,23 @@
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
   cursor: pointer;
   overflow: hidden;
+  color: var(--white);
+}
+
+.category-card,
+.category-card h4,
+.category-card p,
+.category-card .card-footer,
+.category-card .card-footer span,
+.category-card .card-icon,
+.category-card .card-icon i,
+.category-card .arrow-icon {
+  color: var(--white);
+}
+
+.category-card .card-content p,
+.category-card .card-footer {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .category-card::before {
@@ -305,6 +322,22 @@
   margin-bottom: -2px;
   white-space: nowrap;
   position: relative;
+}
+
+.tabs__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 var(--space-2);
+  margin-left: var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
 }
 
 .tabs__button:hover {
@@ -850,6 +883,22 @@
   flex-direction: column;
   gap: var(--space-2);
   color: var(--gray-700);
+}
+
+.conjugation-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.conjugation-table th:first-child,
+.conjugation-table td:first-child {
+  width: 34%;
+}
+
+.conjugation-table th,
+.conjugation-table td {
+  width: 33%;
+  text-align: left;
 }
 
 .word-breakdown-list strong {
