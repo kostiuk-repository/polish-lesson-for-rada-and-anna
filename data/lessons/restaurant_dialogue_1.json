@@ -245,7 +245,7 @@
       "transcryption": "А МОже до ТЭго Ещче КОжык пьеЧИва?",
       "words": [
         { "text": "A", "wordKey": "a" },
-        { "text": "może", "wordKey": "może" },
+        { "text": "może", "wordKey": "móc" },
         { "text": "do", "wordKey": "do" },
         { "text": "tego", "wordKey": "to" },
         { "text": "jeszcze", "wordKey": "jeszcze" },
