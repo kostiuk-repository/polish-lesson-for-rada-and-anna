@@ -356,8 +356,8 @@ input[type="reset"],
 .conjugation-table th,
 .conjugation-table td {
   padding: var(--space-3) var(--space-4);
-  text-align: left;
-  vertical-align: top;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .conjugation-table thead th {
