@@ -1,0 +1,243 @@
+{
+  "latte": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Matcha latte bez cukru, proszę.",
+        "ru": "Матча-латте без сахара, пожалуйста.",
+        "ru_transcription": "МАча латтэ без ЦУкру, ПРОше."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "latte",
+        "genitive": "latte",
+        "dative": "latte",
+        "accusative": "latte",
+        "instrumental": "latte",
+        "locative": "latte",
+        "vocative": "latte"
+      }
+    },
+    "lemma": "latte",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "matcha latte",
+        "ru": "матча-латте"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "латтэ"
+    },
+    "translations": {
+      "ru": "латте"
+    }
+  },
+  "lemoniada": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "A dla mnie lemoniada mango, ale bez syropu.",
+        "ru": "А мне лимонад манго, но без сиропа.",
+        "ru_transcription": "А для МНЕ лэмонЯда МАНго, але без сыРОпу."
+      },
+      {
+        "pl": "Proszę bardzo, kokos i lemoniada.",
+        "ru": "Пожалуйста: кокос и лимонад.",
+        "ru_transcription": "ПРОше БАРдзо, коКОс и лэмонЯда."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "lemoniada",
+        "genitive": "lemoniady",
+        "dative": "lemoniadzie",
+        "accusative": "lemoniadę",
+        "instrumental": "lemoniadą",
+        "locative": "lemoniadzie",
+        "vocative": "lemoniado"
+      },
+      "plural": {
+        "nominative": "lemoniady",
+        "genitive": "lemoniad",
+        "dative": "lemoinadom",
+        "accusative": "lemoniady",
+        "instrumental": "lemoniadami",
+        "locative": "lemoniadach",
+        "vocative": "lemoniady"
+      }
+    },
+    "lemma": "lemoniada",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "lemoniada mango",
+        "ru": "лимонад манго"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "лэмонЯда"
+    },
+    "translations": {
+      "ru": "лимонад"
+    }
+  },
+  "lody": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Mamy sernik matcha i lody sezamowe.",
+        "ru": "У нас есть чизкейк матча и кунжутное мороженое.",
+        "ru_transcription": "МАМы СЕРник МАча и Лоды сэзамОВэ."
+      },
+      {
+        "pl": "I jedne lody sezamowe.",
+        "ru": "И одну порцию кунжутного мороженого.",
+        "ru_transcription": "И Еднэ ЛОды сэзамОВэ."
+      }
+    ],
+    "inflection": {
+      "plural": {
+        "nominative": "lody",
+        "genitive": "lodów",
+        "dative": "lodom",
+        "accusative": "lody",
+        "instrumental": "lodami",
+        "locative": "lodach",
+        "vocative": "lody"
+      }
+    },
+    "lemma": "lody",
+    "morphology": {
+      "gender": "masculine",
+      "plurale_tantum": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "lody sezamowe",
+        "ru": "кунжутное мороженое"
+      },
+      {
+        "pl": "lody waniliowe",
+        "ru": "ванильное мороженое"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ЛОды"
+    },
+    "translations": {
+      "ru": "мороженое"
+    }
+  },
+  "syrop": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Lemoniada mango, ale bez syropu.",
+        "ru": "Лимонад манго, но без сиропа.",
+        "ru_transcription": "лэмонЯда МАНго, але без сыРОпу."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "syrop",
+        "genitive": "syropu",
+        "dative": "syropowi",
+        "accusative": "syrop",
+        "instrumental": "syropem",
+        "locative": "syropie",
+        "vocative": "syropie"
+      },
+      "plural": {
+        "nominative": "syropy",
+        "genitive": "syropów",
+        "dative": "syropom",
+        "accusative": "syropy",
+        "instrumental": "syropami",
+        "locative": "syropach",
+        "vocative": "syropy"
+      }
+    },
+    "lemma": "syrop",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez syropu",
+        "ru": "без сиропа"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "сыРОп"
+    },
+    "translations": {
+      "ru": "сироп"
+    }
+  },
+  "kokos": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy podać w kokosie?",
+        "ru": "Подать в кокосе?",
+        "ru_transcription": "Чи ПОДачь в коКОсе?"
+      },
+      {
+        "pl": "Proszę bardzo, kokos i lemoniada.",
+        "ru": "Пожалуйста: кокос и лимонад.",
+        "ru_transcription": "ПРОше БАРдзо, коКОс и лэмонЯда."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "kokos",
+        "genitive": "kokosa",
+        "dative": "kokosowi",
+        "accusative": "kokos",
+        "instrumental": "kokosem",
+        "locative": "kokosie",
+        "vocative": "kokosie"
+      },
+      "plural": {
+        "nominative": "kokosy",
+        "genitive": "kokosów",
+        "dative": "kokosom",
+        "accusative": "kokosy",
+        "instrumental": "kokosami",
+        "locative": "kokosach",
+        "vocative": "kokosy"
+      }
+    },
+    "lemma": "kokos",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "w kokosie",
+        "ru": "в кокосе"
+      },
+      {
+        "pl": "mleko kokosowe",
+        "ru": "кокосовое молоко"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "коКОс"
+    },
+    "translations": {
+      "ru": "кокос"
+    }
+  }
+}

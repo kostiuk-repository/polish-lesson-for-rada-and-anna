@@ -1,0 +1,246 @@
+{
+  "burger": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Lubię ich burgery.",
+        "ru": "Люблю их бургеры.",
+        "ru_transcription": "ЛубьЕ их бурГЭры."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "burger",
+        "genitive": "burgera",
+        "dative": "burgerowi",
+        "accusative": "burger",
+        "instrumental": "burgerem",
+        "locative": "burgerze",
+        "vocative": "burgerze"
+      },
+      "plural": {
+        "nominative": "burgery",
+        "genitive": "burgerów",
+        "dative": "burgerom",
+        "accusative": "burgery",
+        "instrumental": "burgerami",
+        "locative": "burgerach",
+        "vocative": "burgery"
+      }
+    },
+    "lemma": "burger",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "burger wegański",
+        "ru": "веганский бургер"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "бурГЭр"
+    },
+    "translations": {
+      "ru": "бургер"
+    }
+  },
+  "matcha": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Matcha latte bez cukru, proszę.",
+        "ru": "Матча-латте без сахара, пожалуйста.",
+        "ru_transcription": "МАча латтэ без ЦУкру, ПРОше."
+      },
+      {
+        "pl": "Poproszę sernik matcha na pół.",
+        "ru": "Пожалуйста, чизкейк матча пополам.",
+        "ru_transcription": "ПопРОше СЕРник МАча на Пў."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "matcha",
+        "genitive": "matcha",
+        "dative": "matcha",
+        "accusative": "matcha",
+        "instrumental": "matcha",
+        "locative": "matcha",
+        "vocative": "matcha"
+      }
+    },
+    "lemma": "matcha",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "matcha latte",
+        "ru": "матча-латте"
+      },
+      {
+        "pl": "sernik matcha",
+        "ru": "чизкейк матча"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МАча"
+    },
+    "translations": {
+      "ru": "матча (зеленый чай)"
+    }
+  },
+  "miso": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Polecam miso ramen z tofu i kimchi.",
+        "ru": "Рекомендую мисо-рамен с тофу и кимчи.",
+        "ru_transcription": "ПолЕцам МИСо рамен з ТОфу и КИМчи."
+      },
+      {
+        "pl": "Poproszę miso ramen, średnio pikantny.",
+        "ru": "Пожалуйста, мисо-рамен, средней остроты.",
+        "ru_transcription": "ПопРОше МИСо рамен, СЬРЭднё пикАнтны."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "miso",
+        "genitive": "miso",
+        "dative": "miso",
+        "accusative": "miso",
+        "instrumental": "miso",
+        "locative": "miso",
+        "vocative": "miso"
+      }
+    },
+    "lemma": "miso",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "miso ramen",
+        "ru": "мисо-рамен"
+      },
+      {
+        "pl": "zupa miso",
+        "ru": "мисо-суп"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МИСо"
+    },
+    "translations": {
+      "ru": "мисо (соевая паста)"
+    }
+  },
+  "sernik": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Mamy mały sernik kokosowy i tapiokę.",
+        "ru": "У нас есть маленький кокосовый чизкейк и тапиока.",
+        "ru_transcription": "МАМы МАлы СЕРник кокосОВы и тапьОкэ."
+      },
+      {
+        "pl": "Poproszę sernik matcha na pół.",
+        "ru": "Пожалуйста, чизкейк матча пополам.",
+        "ru_transcription": "ПопРОше СЕРник МАча на Пў."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "sernik",
+        "genitive": "sernika",
+        "dative": "sernikowi",
+        "accusative": "sernik",
+        "instrumental": "sernikiem",
+        "locative": "serniku",
+        "vocative": "serniku"
+      },
+      "plural": {
+        "nominative": "serniki",
+        "genitive": "serników",
+        "dative": "sernikom",
+        "accusative": "serniki",
+        "instrumental": "sernikami",
+        "locative": "sernikach",
+        "vocative": "serniki"
+      }
+    },
+    "lemma": "sernik",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "sernik kokosowy",
+        "ru": "кокосовый чизкейк"
+      },
+      {
+        "pl": "sernik matcha",
+        "ru": "чизкейк матча"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СЕРник"
+    },
+    "translations": {
+      "ru": "чизкейк, творожный пирог"
+    }
+  },
+  "owoc": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Możemy dodać więcej owoców.",
+        "ru": "Мы можем добавить больше фруктов.",
+        "ru_transcription": "можемы ДОдачь ВьЕнцей оВОцуф."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "owoc",
+        "genitive": "owocu",
+        "dative": "owocowi",
+        "accusative": "owoc",
+        "instrumental": "owocem",
+        "locative": "owocu",
+        "vocative": "owocu"
+      },
+      "plural": {
+        "nominative": "owoce",
+        "genitive": "owoców",
+        "dative": "owocom",
+        "accusative": "owoce",
+        "instrumental": "owocami",
+        "locative": "owocach",
+        "vocative": "owoce"
+      }
+    },
+    "lemma": "owoc",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "świeże owoce",
+        "ru": "свежие фрукты"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "оВОц"
+    },
+    "translations": {
+      "ru": "фрукт"
+    }
+  }
+}

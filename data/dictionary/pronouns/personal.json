@@ -69,5 +69,107 @@
     ],
     "phrases_and_idioms": [],
     "applied_rules": ["ę", "ą"]
+  },
+  "ich": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Lubię ich burgery.",
+        "ru": "Люблю их бургеры.",
+        "ru_transcription": "ЛубьЕ их бурГЭры."
+      }
+    ],
+    "inflection": {
+      "genitive": "ich",
+      "dative": "im",
+      "accusative": "ich",
+      "instrumental": "nimi",
+      "locative": "nich"
+    },
+    "lemma": "oni/one",
+    "part_of_speech": "pronoun",
+    "pronoun_type": "personal",
+    "person": "third",
+    "number": "plural",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "их"
+    },
+    "translations": {
+      "ru": "их"
+    }
+  },
+  "oba": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Oba desery są domowe.",
+        "ru": "Оба десерта домашние.",
+        "ru_transcription": "Оба ДЕзэры сон домОВэ."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "oba",
+        "genitive": "obu",
+        "dative": "obu",
+        "accusative": "obu",
+        "instrumental": "oboma",
+        "locative": "obu"
+      },
+      "feminine": {
+        "nominative": "obie",
+        "genitive": "obu",
+        "dative": "obu",
+        "accusative": "obie",
+        "instrumental": "oboma",
+        "locative": "obu"
+      }
+    },
+    "lemma": "oba",
+    "part_of_speech": "pronoun",
+    "pronoun_type": "collective",
+    "phrases_and_idioms": [
+      {
+        "pl": "oba razem",
+        "ru": "оба вместе"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Оба"
+    },
+    "translations": {
+      "ru": "оба"
+    }
+  },
+  "wy": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Oznaczę was na stories.",
+        "ru": "Я отмечу вас в сторис.",
+        "ru_transcription": "ОжНАчэ вас на сторис."
+      }
+    ],
+    "inflection": {
+      "nominative": "wy",
+      "genitive": "was",
+      "dative": "wam",
+      "accusative": "was",
+      "instrumental": "wami",
+      "locative": "was"
+    },
+    "lemma": "wy",
+    "part_of_speech": "pronoun",
+    "pronoun_type": "personal",
+    "person": "second",
+    "number": "plural",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "вы"
+    },
+    "translations": {
+      "ru": "вы"
+    }
   }
 }

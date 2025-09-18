@@ -1,0 +1,294 @@
+{
+  "chodzić": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "To chodźmy na ramen na Muranowie.",
+        "ru": "Тогда пошли на рамен на Мурануве.",
+        "ru_transcription": "То ХОДьмы на РАМэн на МураНОвье."
+      }
+    ],
+    "inflection": {
+      "infinitive": "chodzić",
+      "present": {
+        "sg1": "chodzę",
+        "sg2": "chodzisz",
+        "sg3": "chodzi",
+        "pl1": "chodzimy",
+        "pl2": "chodzicie",
+        "pl3": "chodzą"
+      },
+      "past_masc": {
+        "sg1": "chodziłem",
+        "sg2": "chodziłeś",
+        "sg3": "chodził",
+        "pl1": "chodziliśmy",
+        "pl2": "chodziliście",
+        "pl3": "chodzili"
+      },
+      "past_fem": {
+        "sg1": "chodziłam",
+        "sg2": "chodziłaś",
+        "sg3": "chodziła",
+        "pl1": "chodziłyśmy",
+        "pl2": "chodziłyście",
+        "pl3": "chodziły"
+      },
+      "imperative": {
+        "sg2": "chodź",
+        "pl1": "chodźmy",
+        "pl2": "chodźcie"
+      }
+    },
+    "lemma": "chodzić",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "chodźmy",
+        "ru": "пошли"
+      },
+      {
+        "pl": "chodzić na spacer",
+        "ru": "ходить на прогулку"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "хОДжичь"
+    },
+    "translations": {
+      "ru": "ходить"
+    }
+  },
+  "oznaczyć": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Oznaczę was na stories.",
+        "ru": "Я отмечу вас в сторис.",
+        "ru_transcription": "ОжНАчэ вас на сторис."
+      }
+    ],
+    "inflection": {
+      "infinitive": "oznaczyć",
+      "present": {
+        "sg1": "oznaczę",
+        "sg2": "oznaczysz",
+        "sg3": "oznaczy",
+        "pl1": "oznaczymy",
+        "pl2": "oznaczycie",
+        "pl3": "oznaczą"
+      },
+      "past_masc": {
+        "sg1": "oznaczyłem",
+        "sg2": "oznaczyłeś",
+        "sg3": "oznaczył",
+        "pl1": "oznaczyliśmy",
+        "pl2": "oznaczyliście",
+        "pl3": "oznaczyli"
+      },
+      "past_fem": {
+        "sg1": "oznaczyłam",
+        "sg2": "oznaczyłaś",
+        "sg3": "oznaczyła",
+        "pl1": "oznaczyłyśmy",
+        "pl2": "oznaczyłyście",
+        "pl3": "oznaczyły"
+      }
+    },
+    "lemma": "oznaczyć",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "oznaczyć kogoś",
+        "ru": "отметить кого-то"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ожНАчичь"
+    },
+    "translations": {
+      "ru": "отметить, обозначить"
+    }
+  },
+  "pasować": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Bardzo mi pasują.",
+        "ru": "Мне очень нравится.",
+        "ru_transcription": "БАРдзо ми паСУйон."
+      }
+    ],
+    "inflection": {
+      "infinitive": "pasować",
+      "present": {
+        "sg1": "pasuję",
+        "sg2": "pasujesz",
+        "sg3": "pasuje",
+        "pl1": "pasujemy",
+        "pl2": "pasujecie",
+        "pl3": "pasują"
+      },
+      "past_masc": {
+        "sg1": "pasowałem",
+        "sg2": "pasowałeś",
+        "sg3": "pasował",
+        "pl1": "pasowaliśmy",
+        "pl2": "pasowaliście",
+        "pl3": "pasowali"
+      },
+      "past_fem": {
+        "sg1": "pasowałam",
+        "sg2": "pasowałaś",
+        "sg3": "pasowała",
+        "pl1": "pasowałyśmy",
+        "pl2": "pasowałyście",
+        "pl3": "pasowały"
+      }
+    },
+    "lemma": "pasować",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "pasuje mi to",
+        "ru": "мне это подходит"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "пасОвачь"
+    },
+    "translations": {
+      "ru": "подходить, нравиться"
+    }
+  },
+  "zamknąć": {
+    "applied_rules": ["ć", "ą"],
+    "examples": [
+      {
+        "pl": "Ojej, dziś jest zamknięte na Śródmieściu.",
+        "ru": "Ой, сегодня закрыто в центре.",
+        "ru_transcription": "ОйЕй, джьш есть замкНьентэ на ШрудмЕщчу."
+      }
+    ],
+    "inflection": {
+      "infinitive": "zamknąć",
+      "present": {
+        "sg1": "zamknę",
+        "sg2": "zamkniesz",
+        "sg3": "zamknie",
+        "pl1": "zamkniemy",
+        "pl2": "zamkniecie",
+        "pl3": "zamkną"
+      },
+      "past_masc": {
+        "sg1": "zamknąłem",
+        "sg2": "zamknąłeś",
+        "sg3": "zamknął",
+        "pl1": "zamknęliśmy",
+        "pl2": "zamknęliście",
+        "pl3": "zamknęli"
+      },
+      "past_fem": {
+        "sg1": "zamknęłam",
+        "sg2": "zamknęłaś",
+        "sg3": "zamknęła",
+        "pl1": "zamknęłyśmy",
+        "pl2": "zamknęłyście",
+        "pl3": "zamknęły"
+      },
+      "past_neut": {
+        "sg3": "zamknięte"
+      }
+    },
+    "lemma": "zamknąć",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "zamknięte na klucz",
+        "ru": "закрыто на ключ"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "замкНОНчь"
+    },
+    "translations": {
+      "ru": "закрыть"
+    }
+  },
+  "zrobić": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Czy zrobić zdjęcie?",
+        "ru": "Сделать фото?",
+        "ru_transcription": "Чи зРОбичь зДЗеньче?"
+      }
+    ],
+    "inflection": {
+      "infinitive": "zrobić",
+      "present": {
+        "sg1": "zrobię",
+        "sg2": "zrobisz",
+        "sg3": "zrobi",
+        "pl1": "zrobimy",
+        "pl2": "zrobicie",
+        "pl3": "zrobią"
+      },
+      "past_masc": {
+        "sg1": "zrobiłem",
+        "sg2": "zrobiłeś",
+        "sg3": "zrobił",
+        "pl1": "zrobiliśmy",
+        "pl2": "zrobiliście",
+        "pl3": "zrobili"
+      },
+      "past_fem": {
+        "sg1": "zrobiłam",
+        "sg2": "zrobiłaś",
+        "sg3": "zrobiła",
+        "pl1": "zrobiłyśmy",
+        "pl2": "zrobiłyście",
+        "pl3": "zrobiły"
+      }
+    },
+    "lemma": "zrobić",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "zrobić zdjęcie",
+        "ru": "сделать фото"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "зРОбичь"
+    },
+    "translations": {
+      "ru": "сделать"
+    }
+  }
+}

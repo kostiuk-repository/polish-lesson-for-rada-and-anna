@@ -1,0 +1,141 @@
+{
+  "dość": {
+    "applied_rules": ["ś"],
+    "examples": [
+      {
+        "pl": "Sernik jest kremowy, delikatny, ale dość słodki.",
+        "ru": "Чизкейк кремовый, нежный, но довольно сладкий.",
+        "ru_transcription": "СЕРник есть креМОВы, дэльикАТны, але дощь Слодьки."
+      }
+    ],
+    "lemma": "dość",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "dość dobry",
+        "ru": "довольно хороший"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "дощь"
+    },
+    "translations": {
+      "ru": "довольно, достаточно"
+    }
+  },
+  "więcej": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Czy da się dodać więcej warzyw i szczypiorku?",
+        "ru": "Можно добавить больше овощей и зелёного лука?",
+        "ru_transcription": "Чи да се ДОдачь Вьенцэй варыЖув и щчыПЁрку?"
+      },
+      {
+        "pl": "Proszę więcej mango i truskawek.",
+        "ru": "Пожалуйста, больше манго и клубники.",
+        "ru_transcription": "ПРОше ВьЕнцей МАНго и труСкавэк."
+      }
+    ],
+    "lemma": "więcej",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "o wiele więcej",
+        "ru": "намного больше"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ВЬЕнцей"
+    },
+    "translations": {
+      "ru": "больше"
+    }
+  },
+  "ładnie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Tak, jeśli się da, ładnie do zdjęcia, proszę.",
+        "ru": "Да, если можно, красиво для фото, пожалуйста.",
+        "ru_transcription": "Так, Если се да, Уадне до зДЗенча, ПРОше."
+      },
+      {
+        "pl": "Wszystko było ładne na zdjęciach.",
+        "ru": "Всё было красиво на фото.",
+        "ru_transcription": "ВШЫстко было Уадне на зДЗеньчах."
+      }
+    ],
+    "lemma": "ładnie",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "ładnie wyglądać",
+        "ru": "красиво выглядеть"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Уадне"
+    },
+    "translations": {
+      "ru": "красиво"
+    }
+  },
+  "razem": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Rachunek razem z napiwkiem czy osobno?",
+        "ru": "Счёт вместе с чаевыми или отдельно?",
+        "ru_transcription": "РаХУнэк Разэм з наПИфкьем чи осОбно?"
+      },
+      {
+        "pl": "Razem. Zostawiamy napiwek i płacimy kartą.",
+        "ru": "Вместе. Оставим чаевые и платим картой.",
+        "ru_transcription": "Разэм. ЗоставЯмы НАпивэк и пуаЧИмы КАРтон."
+      }
+    ],
+    "lemma": "razem",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "być razem",
+        "ru": "быть вместе"
+      },
+      {
+        "pl": "razem z kimś",
+        "ru": "вместе с кем-то"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "РАзэм"
+    },
+    "translations": {
+      "ru": "вместе"
+    }
+  },
+  "osobno": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Rachunek razem z napiwkiem czy osobno?",
+        "ru": "Счёт вместе с чаевыми или отдельно?",
+        "ru_transcription": "РаХУнэк Разэм з наПИфкьем чи осОбно?"
+      }
+    ],
+    "lemma": "osobno",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "płacić osobno",
+        "ru": "платить отдельно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "осОбно"
+    },
+    "translations": {
+      "ru": "отдельно"
+    }
+  }
+}

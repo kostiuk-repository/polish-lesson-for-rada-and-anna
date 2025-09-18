@@ -1,0 +1,262 @@
+{
+  "cukier": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Matcha latte bez cukru.",
+        "ru": "Матча-латте без сахара.",
+        "ru_transcription": "МАча латтэ bez ЦУкру."
+      },
+      {
+        "pl": "Dla mnie zielona herbata, bez cukru.",
+        "ru": "Мне зелёный чай, без сахара.",
+        "ru_transcription": "Для МНЕ зелЁна херБАта, bez ЦУкру."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "cukier",
+        "genitive": "cukru",
+        "dative": "cukrowi",
+        "accusative": "cukier",
+        "instrumental": "cukrem",
+        "locative": "cukrze",
+        "vocative": "cukrze"
+      }
+    },
+    "lemma": "cukier",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez cukru",
+        "ru": "bez сахара"
+      },
+      {
+        "pl": "cukier biały",
+        "ru": "белый сахар"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ЦУкер"
+    },
+    "translations": {
+      "ru": "сахар"
+    }
+  },
+  "jajko": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy makaron zawiera jajka?",
+        "ru": "Содержит ли лапша яйца?",
+        "ru_transcription": "Чи макАрон завьера Яйка?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "jajko",
+        "genitive": "jajka",
+        "dative": "jajku",
+        "accusative": "jajko",
+        "instrumental": "jajkiem",
+        "locative": "jajku",
+        "vocative": "jajko"
+      },
+      "plural": {
+        "nominative": "jajka",
+        "genitive": "jajek",
+        "dative": "jajkom",
+        "accusative": "jajka",
+        "instrumental": "jajkami",
+        "locative": "jajkach",
+        "vocative": "jajka"
+      }
+    },
+    "lemma": "jajko",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez jajek",
+        "ru": "bez яиц"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Яйко"
+    },
+    "translations": {
+      "ru": "яйцо"
+    }
+  },
+  "masło": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Bez masła i bez kości?",
+        "ru": "Bez масла и bez костей?",
+        "ru_transcription": "Bez МАСуа и bez КОщчи?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "masło",
+        "genitive": "masła",
+        "dative": "maśle",
+        "accusative": "masło",
+        "instrumental": "masłem",
+        "locative": "maśle",
+        "vocative": "masło"
+      }
+    },
+    "lemma": "masło",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez masła",
+        "ru": "bez масла"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МАСло"
+    },
+    "translations": {
+      "ru": "масло"
+    }
+  },
+  "miód": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Czy sos zawiera miód albo mleko?",
+        "ru": "Содержит ли соус мёд или молоко?",
+        "ru_transcription": "Чи сос завьера мьот альбо мЛЕко?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "miód",
+        "genitive": "miodu",
+        "dative": "miodowi",
+        "accusative": "miód",
+        "instrumental": "miodem",
+        "locative": "miodzie",
+        "vocative": "miodzie"
+      }
+    },
+    "lemma": "miód",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez miodu",
+        "ru": "bez мёда"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "мьот"
+    },
+    "translations": {
+      "ru": "мёд"
+    }
+  },
+  "mięso": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Nie chcę dziś mięsa.",
+        "ru": "Сегодня не хочу мяса.",
+        "ru_transcription": "Не хчэ джьш МЬЕНса."
+      },
+      {
+        "pl": "Smacznie i bez mięsa.",
+        "ru": "Вкусно и bez мяса.",
+        "ru_transcription": "СМАчне и bez МЬЕНса."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "mięso",
+        "genitive": "mięsa",
+        "dative": "mięsu",
+        "accusative": "mięso",
+        "instrumental": "mięsem",
+        "locative": "mięsie",
+        "vocative": "mięso"
+      }
+    },
+    "lemma": "mięso",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez mięsa",
+        "ru": "bez мяса"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МЬЕНсо"
+    },
+    "translations": {
+      "ru": "мясо"
+    }
+  },
+  "orzech": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę acai bowl bez glutenu i bez orzechów.",
+        "ru": "Пожалуйста, асаи-боул bez глютена и bez орехов.",
+        "ru_transcription": "ПопРОше аСАЙ бОул bez глюТЭна и bez оЖЕхув."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "orzech",
+        "genitive": "orzecha",
+        "dative": "orzechowi",
+        "accusative": "orzech",
+        "instrumental": "orzechem",
+        "locative": "orzechu",
+        "vocative": "orzechu"
+      },
+      "plural": {
+        "nominative": "orzechy",
+        "genitive": "orzechów",
+        "dative": "orzechom",
+        "accusative": "orzechy",
+        "instrumental": "orzechami",
+        "locative": "orzechach",
+        "vocative": "orzechy"
+      }
+    },
+    "lemma": "orzech",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez orzechów",
+        "ru": "bez орехов"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "оЖЕх"
+    },
+    "translations": {
+      "ru": "орех"
+    }
+  }
+}

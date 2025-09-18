@@ -1,0 +1,144 @@
+{
+  "może": {
+    "applied_rules": ["ż"],
+    "examples": [
+      {
+        "pl": "Może Tropical Smoothie Bar albo roślinne bistro?",
+        "ru": "Может Tropical Smoothie Bar или растительное бистро?",
+        "ru_transcription": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро?"
+      },
+      {
+        "pl": "A może do tego jeszcze koszyk pieczywa?",
+        "ru": "А может, к этому еще корзинку хлеба?",
+        "ru_transcription": "А МОже до ТЭго Ещче КОжык пьеЧИва?"
+      }
+    ],
+    "lemma": "może",
+    "part_of_speech": "particle",
+    "modal_type": "possibility",
+    "phrases_and_idioms": [
+      {
+        "pl": "może być",
+        "ru": "может быть"
+      },
+      {
+        "pl": "a może",
+        "ru": "а может"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МОже"
+    },
+    "translations": {
+      "ru": "может, может быть"
+    }
+  },
+  "chyba": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Chyba weźmiemy jeszcze deser.",
+        "ru": "Наверное, возьмём ещё десерт.",
+        "ru_transcription": "Хыба ВЭзьмЕмы Ещчэ ДЕзэр."
+      }
+    ],
+    "lemma": "chyba",
+    "part_of_speech": "particle",
+    "modal_type": "probability",
+    "phrases_and_idioms": [
+      {
+        "pl": "chyba tak",
+        "ru": "наверное, да"
+      },
+      {
+        "pl": "chyba nie",
+        "ru": "наверное, нет"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Хыба"
+    },
+    "translations": {
+      "ru": "наверное, пожалуй"
+    }
+  },
+  "buddha": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Ja buddha bowl z tofu.",
+        "ru": "Мне будда-боул с тофу.",
+        "ru_transcription": "Я Будда бОул з ТОфу."
+      }
+    ],
+    "lemma": "buddha",
+    "part_of_speech": "particle",
+    "usage_context": "food_naming",
+    "phrases_and_idioms": [
+      {
+        "pl": "buddha bowl",
+        "ru": "будда-боул"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Будда"
+    },
+    "translations": {
+      "ru": "будда (в названии блюда)"
+    }
+  },
+  "shoyu": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "A ja wezmę shoyu ramen.",
+        "ru": "А я возьму сёю-рамен.",
+        "ru_transcription": "А я ВЭзмэ ШОю рамен."
+      }
+    ],
+    "lemma": "shoyu",
+    "part_of_speech": "particle",
+    "usage_context": "food_naming",
+    "phrases_and_idioms": [
+      {
+        "pl": "shoyu ramen",
+        "ru": "сёю-рамен"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ШОю"
+    },
+    "translations": {
+      "ru": "сёю (тип соевого соуса)"
+    }
+  },
+  "raz": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Proszę mniej soli następnym razem.",
+        "ru": "В следующий раз поменьше соли.",
+        "ru_transcription": "ПРОше Мней Соли настЭнпным Разэм."
+      }
+    ],
+    "lemma": "raz",
+    "part_of_speech": "particle",
+    "usage_context": "temporal",
+    "phrases_and_idioms": [
+      {
+        "pl": "następnym razem",
+        "ru": "в следующий раз"
+      },
+      {
+        "pl": "tym razem",
+        "ru": "на этот раз"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "раз"
+    },
+    "translations": {
+      "ru": "раз"
+    }
+  }
+}

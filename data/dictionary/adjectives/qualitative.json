@@ -1,0 +1,325 @@
+{
+  "fajny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Serio fajna gra słów.",
+        "ru": "Правда, классная игра слов.",
+        "ru_transcription": "СЭрю файна гра слув."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "fajny",
+        "genitive": "fajnego",
+        "dative": "fajnemu",
+        "accusative": "fajny/fajnego",
+        "instrumental": "fajnym",
+        "locative": "fajnym"
+      },
+      "feminine": {
+        "nominative": "fajna",
+        "genitive": "fajnej",
+        "dative": "fajnej",
+        "accusative": "fajną",
+        "instrumental": "fajną",
+        "locative": "fajnej"
+      },
+      "neuter": {
+        "nominative": "fajne",
+        "genitive": "fajnego",
+        "dative": "fajnemu",
+        "accusative": "fajne",
+        "instrumental": "fajnym",
+        "locative": "fajnym"
+      }
+    },
+    "lemma": "fajny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "fajny facet",
+        "ru": "классный парень"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ФАЙны"
+    },
+    "translations": {
+      "ru": "классный, крутой"
+    }
+  },
+  "idealny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Tofu jest idealne.",
+        "ru": "Тофу идеальное.",
+        "ru_transcription": "ТОфу есть идеАЛьнэ."
+      },
+      {
+        "pl": "Bulion super, tofu idealne.",
+        "ru": "Бульон супер, тофу идеальное.",
+        "ru_transcription": "БУЛьон СУпер, ТОфу идеАЛьнэ."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "idealny",
+        "genitive": "idealnego",
+        "dative": "idealnemu",
+        "accusative": "idealny/idealnego",
+        "instrumental": "idealnym",
+        "locative": "idealnym"
+      },
+      "feminine": {
+        "nominative": "idealna",
+        "genitive": "idealnej",
+        "dative": "idealnej",
+        "accusative": "idealną",
+        "instrumental": "idealną",
+        "locative": "idealnej"
+      },
+      "neuter": {
+        "nominative": "idealne",
+        "genitive": "idealnego",
+        "dative": "idealnemu",
+        "accusative": "idealne",
+        "instrumental": "idealnym",
+        "locative": "idealnym"
+      }
+    },
+    "lemma": "idealny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "idealny moment",
+        "ru": "идеальный момент"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "идеАЛьны"
+    },
+    "translations": {
+      "ru": "идеальный"
+    }
+  },
+  "piękny": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Wygląda pięknie.",
+        "ru": "Выглядит красиво.",
+        "ru_transcription": "ВыГЛёнда ПЕНкне."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "piękny",
+        "genitive": "pięknego",
+        "dative": "pięknemu",
+        "accusative": "piękny/pięknego",
+        "instrumental": "pięknym",
+        "locative": "pięknym"
+      },
+      "feminine": {
+        "nominative": "piękna",
+        "genitive": "pięknej",
+        "dative": "pięknej",
+        "accusative": "piękną",
+        "instrumental": "piękną",
+        "locative": "pięknej"
+      },
+      "neuter": {
+        "nominative": "piękne",
+        "genitive": "pięknego",
+        "dative": "pięknemu",
+        "accusative": "piękne",
+        "instrumental": "pięknym",
+        "locative": "pięknym"
+      }
+    },
+    "lemma": "piękny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "piękne zdjęcie",
+        "ru": "красивое фото"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ПЕНкны"
+    },
+    "translations": {
+      "ru": "красивый, прекрасный"
+    }
+  },
+  "pyszny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Makaron świetny, deser pyszny.",
+        "ru": "Лапша отличная, десерт вкусный.",
+        "ru_transcription": "МакАрон ШФЬЕТны, ДЕзэр ПЫшны."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "pyszny",
+        "genitive": "pysznego",
+        "dative": "pysznemu",
+        "accusative": "pyszny/pysznego",
+        "instrumental": "pysznym",
+        "locative": "pysznym"
+      },
+      "feminine": {
+        "nominative": "pyszna",
+        "genitive": "pysznej",
+        "dative": "pysznej",
+        "accusative": "pyszną",
+        "instrumental": "pyszną",
+        "locative": "pysznej"
+      },
+      "neuter": {
+        "nominative": "pyszne",
+        "genitive": "pysznego",
+        "dative": "pysznemu",
+        "accusative": "pyszne",
+        "instrumental": "pysznym",
+        "locative": "pysznym"
+      }
+    },
+    "lemma": "pyszny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "pyszne jedzenie",
+        "ru": "вкусная еда"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ПЫшны"
+    },
+    "translations": {
+      "ru": "вкусный, восхитительный"
+    }
+  },
+  "spokojny": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Tam będzie spokojnie.",
+        "ru": "Там будет спокойно.",
+        "ru_transcription": "Там БУджэ спокОйне."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "spokojny",
+        "genitive": "spokojnego",
+        "dative": "spokojnemu",
+        "accusative": "spokojny/spokojnego",
+        "instrumental": "spokojnym",
+        "locative": "spokojnym"
+      },
+      "feminine": {
+        "nominative": "spokojna",
+        "genitive": "spokojnej",
+        "dative": "spokojnej",
+        "accusative": "spokojną",
+        "instrumental": "spokojną",
+        "locative": "spokojnej"
+      },
+      "neuter": {
+        "nominative": "spokojne",
+        "genitive": "spokojnego",
+        "dative": "spokojnemu",
+        "accusative": "spokojne",
+        "instrumental": "spokojnym",
+        "locative": "spokojnym"
+      }
+    },
+    "lemma": "spokojny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "spokojne miejsce",
+        "ru": "спокойное место"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "спокОЙны"
+    },
+    "translations": {
+      "ru": "спокойный"
+    }
+  },
+  "zabawny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Nazwa jest zabawna.",
+        "ru": "Название забавное.",
+        "ru_transcription": "НАзва есть заБАвна."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "zabawny",
+        "genitive": "zabawnego",
+        "dative": "zabaewnemu",
+        "accusative": "zabawny/zabawnego",
+        "instrumental": "zabawnym",
+        "locative": "zabawnym"
+      },
+      "feminine": {
+        "nominative": "zabawna",
+        "genitive": "zabawnej",
+        "dative": "zabawnej",
+        "accusative": "zabawną",
+        "instrumental": "zabawną",
+        "locative": "zabawnej"
+      },
+      "neuter": {
+        "nominative": "zabawne",
+        "genitive": "zabawnego",
+        "dative": "zabaewnemu",
+        "accusative": "zabawne",
+        "instrumental": "zabawnym",
+        "locative": "zabawnym"
+      }
+    },
+    "lemma": "zabawny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "zabawna historia",
+        "ru": "забавная история"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "заБАвны"
+    },
+    "translations": {
+      "ru": "забавный, смешной"
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "gra": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Serio fajna gra słów: krowa + warzywa.",
+        "ru": "Правда, классная игра слов: корова + овощи.",
+        "ru_transcription": "СЭрю файна гра слув: КРОва + варЖЫва."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "gra",
+        "genitive": "gry",
+        "dative": "grze",
+        "accusative": "grę",
+        "instrumental": "grą",
+        "locative": "grze",
+        "vocative": "gro"
+      },
+      "plural": {
+        "nominative": "gry",
+        "genitive": "gier",
+        "dative": "grom",
+        "accusative": "gry",
+        "instrumental": "grami",
+        "locative": "grach",
+        "vocative": "gry"
+      }
+    },
+    "lemma": "gra",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "gra słów",
+        "ru": "игра слов"
+      },
+      {
+        "pl": "gra w piłkę",
+        "ru": "игра в мяч"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "гра"
+    },
+    "translations": {
+      "ru": "игра"
+    }
+  },
+  "nazwa": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Nazwa jest zabawna.",
+        "ru": "Название забавное.",
+        "ru_transcription": "НАзва есть заБАвна."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "nazwa",
+        "genitive": "nazwy",
+        "dative": "nazwie",
+        "accusative": "nazwę",
+        "instrumental": "nazwą",
+        "locative": "nazwie",
+        "vocative": "nazwo"
+      },
+      "plural": {
+        "nominative": "nazwy",
+        "genitive": "nazw",
+        "dative": "nazwom",
+        "accusative": "nazwy",
+        "instrumental": "nazwami",
+        "locative": "nazwach",
+        "vocative": "nazwy"
+      }
+    },
+    "lemma": "nazwa",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "nazwa własna",
+        "ru": "собственное название"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "НАзва"
+    },
+    "translations": {
+      "ru": "название"
+    }
+  },
+  "opcja": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Nie, mamy bezjajeczną opcję.",
+        "ru": "Нет, есть безъяичный вариант.",
+        "ru_transcription": "Не, МАМы безяЕчнОн опцйэ."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "opcja",
+        "genitive": "opcji",
+        "dative": "opcji",
+        "accusative": "opcję",
+        "instrumental": "opcją",
+        "locative": "opcji",
+        "vocative": "opcjo"
+      },
+      "plural": {
+        "nominative": "opcje",
+        "genitive": "opcji",
+        "dative": "opcjom",
+        "accusative": "opcje",
+        "instrumental": "opcjami",
+        "locative": "opcjach",
+        "vocative": "opcje"
+      }
+    },
+    "lemma": "opcja",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bezjajeczna opcja",
+        "ru": "безъяичный вариант"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "опцйа"
+    },
+    "translations": {
+      "ru": "опция, вариант"
+    }
+  },
+  "poprawa": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Co było najlepsze, a co do poprawy?",
+        "ru": "Что было лучшим, а что стоит улучшить?",
+        "ru_transcription": "Цо Было найЛЕпше, а цо до попРАвы?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "poprawa",
+        "genitive": "poprawy",
+        "dative": "poprawie",
+        "accusative": "poprawę",
+        "instrumental": "poprawą",
+        "locative": "poprawie",
+        "vocative": "popravo"
+      }
+    },
+    "lemma": "poprawa",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "do poprawy",
+        "ru": "для улучшения"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "попРАва"
+    },
+    "translations": {
+      "ru": "улучшение, исправление"
+    }
+  },
+  "smak": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Bulion głęboki w smaku.",
+        "ru": "Бульон глубокий по вкусу.",
+        "ru_transcription": "БУЛьон глЭмБОки в СМАку."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "smak",
+        "genitive": "smaku",
+        "dative": "smakowi",
+        "accusative": "smak",
+        "instrumental": "smakiem",
+        "locative": "smaku",
+        "vocative": "smaku"
+      },
+      "plural": {
+        "nominative": "smaki",
+        "genitive": "smaków",
+        "dative": "smakom",
+        "accusative": "smaki",
+        "instrumental": "smakami",
+        "locative": "smakach",
+        "vocative": "smaki"
+      }
+    },
+    "lemma": "smak",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "w smaku",
+        "ru": "по вкусу"
+      },
+      {
+        "pl": "dobry smak",
+        "ru": "хороший вкус"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "смак"
+    },
+    "translations": {
+      "ru": "вкус"
+    }
+  },
+  "uśmiech": {
+    "applied_rules": ["ś"],
+    "examples": [
+      {
+        "pl": "Jeszcze jedno, uśmiech!",
+        "ru": "Ещё одно, улыбка!",
+        "ru_transcription": "Ещче Едно, ушМЕХ!"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "uśmiech",
+        "genitive": "uśmiechu",
+        "dative": "uśmiechowi",
+        "accusative": "uśmiech",
+        "instrumental": "uśmiechem",
+        "locative": "uśmiechu",
+        "vocative": "uśmiechu"
+      },
+      "plural": {
+        "nominative": "uśmiechy",
+        "genitive": "uśmiechów",
+        "dative": "uśmiechom",
+        "accusative": "uśmiechy",
+        "instrumental": "uśmiechami",
+        "locative": "uśmiechach",
+        "vocative": "uśmiechy"
+      }
+    },
+    "lemma": "uśmiech",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "szeroki uśmiech",
+        "ru": "широкая улыбка"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ушМЕх"
+    },
+    "translations": {
+      "ru": "улыбка"
+    }
+  }
+}
