@@ -1176,12 +1176,7 @@
     }
   },
   "przyjąć": {
-    "applied_rules": [
-      "rz",
-      "ą",
-      "ę",
-      "ł"
-    ],
+    "applied_rules": ["rz", "ą", "ę", "ł"],
     "examples": [
       {
         "pl": "Przyjmę zamówienie.",
@@ -1192,6 +1187,16 @@
         "pl": "Czy Pan przyjmie zaproszenie?",
         "ru": "Примете приглашение?",
         "ru_transcription": "чы пан пшыймЕ запрошЕнЕ?"
+      },
+      {
+        "pl": "Przyjmuję zamówienie (czas niedokonany).",
+        "ru": "Принимаю заказ (настоящее время от несовершенного вида).",
+        "ru_transcription": "пшыйМУйе замувЕнЕ."
+      },
+      {
+        "pl": "Sklep przyjmuje płatności kartą (teraz).",
+        "ru": "Магазин принимает оплату картой (сейчас).",
+        "ru_transcription": "склеп пшыйМУе пўатнощи карте̃."
       }
     ],
     "inflection": {
@@ -1227,36 +1232,33 @@
       "past_neut": {
         "sg3": "przyjęło"
       },
-      "present": {}
+      "present": {
+          "sg1": "przyjmuję",
+          "sg2": "przyjmujesz",
+          "sg3": "przyjmuje",
+          "pl1": "przyjmujemy",
+          "pl2": "przyjmujecie",
+          "pl3": "przyjmują"
+        }
     },
     "lemma": "przyjąć",
     "morphology": {
       "aspect": "perfective",
       "reflexive": false,
-      "transitivity": "transitive"
+      "transitivity": "transitive",
+      "imperfective_partner": "przyjmować"
     },
     "part_of_speech": "verb",
     "phrases_and_idioms": [],
     "pronunciation": {
       "key_forms": [
-        {
-          "pl": "przyjmę",
-          "ru": "пшыймЭм"
-        },
-        {
-          "pl": "przyjmiesz",
-          "ru": "пшыймЕшь"
-        },
-        {
-          "pl": "przyjmie",
-          "ru": "пшыймЕ"
-        }
+        { "pl": "przyjmę", "ru": "пшыймЭм" },
+        { "pl": "przyjmiesz", "ru": "пшыймЕшь" },
+        { "pl": "przyjmie", "ru": "пшыймЕ" }
       ],
       "ru_transcription": "пшыёнч"
     },
-    "translations": {
-      "ru": "принять"
-    }
+    "translations": { "ru": "принять" }
   },
   "usiąść": {
     "applied_rules": [
