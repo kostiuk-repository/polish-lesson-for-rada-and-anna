@@ -16,6 +16,22 @@
           "dataFile": "lessons/restaurant_dialogue_1.json"
         },
         {
+          "id": "restaurant-dialogue-2",
+          "title": "Назначение встречи и рамен в Варшаве",
+          "description": "Две подруги договариваются о встрече в Варшаве, выбирают место, заказывают еду и обсуждают ее.",
+          "level": "A2",
+          "type": "dialogue",
+          "dataFile": "lessons/restaurant-dialogue-2.json"
+        },
+        {
+          "id": "restaurant-dialogue-3",
+          "title": "После йоги: инстаграмные места в стиле Бали",
+          "description": "Подруги ищут фотогеничное место, делают заказ с учетом диетических ограничений и фотографируют еду.",
+          "level": "A2",
+          "type": "dialogue",
+          "dataFile": "lessons/restaurant-dialogue-3.json"
+        },
+        {
           "id": "restaurant-review-1",
           "title": "Отзыв о ресторане",
           "description": "Учимся читать и писать отзывы о заведениях.",
