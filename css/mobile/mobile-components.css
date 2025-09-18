@@ -3,8 +3,20 @@
 /* Диалоговые элементы на мобильных */
 .dialog-line {
   padding: var(--space-4);
-  margin-bottom: var(--space-3);
+  margin: 0;
   border-radius: var(--radius-base);
+}
+
+.dialog-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .dialog-speaker {
@@ -18,8 +30,16 @@
 }
 
 .dialog-speaker-name {
-  font-weight: var(--font-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background-color: rgba(221, 184, 146, 0.25);
   color: var(--primary-dark);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .dialog-text {
@@ -29,13 +49,33 @@
   overflow-wrap: break-word;
 }
 
+.clickable-sentence {
+  display: block;
+  cursor: pointer;
+  margin: 0 calc(-1 * var(--space-2));
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-fast);
+}
+
+.clickable-sentence:hover,
+.clickable-sentence:focus-within {
+  background-color: rgba(221, 184, 146, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.clickable-sentence:active {
+  transform: translateY(1px);
+}
+
 .dialog-translation {
   display: none;
   font-size: var(--font-size-sm);
   padding-top: var(--space-2);
   margin-top: var(--space-2);
   border-top: 1px solid var(--gray-100);
-  color: var(--gray-600);
+  color: var(--gray-700);
+  background-color: transparent;
   line-height: var(--line-height-relaxed);
 }
 
@@ -57,6 +97,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: rgba(221, 184, 146, 0.15);
+  border-bottom: 1px dashed var(--secondary-color);
+}
+
+.clickable-word:focus-visible,
+.clickable-word.word-hovered {
+  outline: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  border-bottom-style: solid;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Убираем tooltips на мобильных устройствах */
@@ -89,9 +143,9 @@
 }
 
 .modal__content {
-  max-height: calc(100vh - var(--space-8));
-  width: calc(100vw - var(--space-4));
-  max-width: none;
+  max-height: 90vh;
+  width: min(100%, calc(100vw - var(--space-4)));
+  max-width: 600px;
   border-radius: var(--radius-lg);
   margin: 0;
   background: var(--white);
@@ -128,8 +182,27 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
   background: var(--white);
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-100);
+}
+
+.modal-section__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-700);
+  margin-bottom: var(--space-1);
 }
 
 .modal__footer {
@@ -198,6 +271,10 @@
   gap: var(--space-4);
 }
 
+.tabs__content-wrapper--static {
+  gap: var(--space-4);
+}
+
 .word-details,
 .sentence-details {
   display: flex;
@@ -257,7 +334,10 @@
 
 .text-russian {
   font-size: var(--font-size-base);
-  color: var(--gray-600);
+  color: var(--gray-800);
+  font-style: normal;
+  font-weight: var(--font-weight-semibold);
+  background: transparent;
 }
 
 .examples-list,
@@ -281,6 +361,42 @@
   line-height: var(--line-height-relaxed);
 }
 
+.related-words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-3);
+}
+
+.related-word-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.related-word-item:hover,
+.related-word-item:focus-visible {
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.related-word-item .word-text {
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-dark);
+}
+
+.related-word-item .word-translation {
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+}
+
 .conjugation-table {
   width: 100%;
   table-layout: fixed;
@@ -288,13 +404,36 @@
 
 .conjugation-table th:first-child,
 .conjugation-table td:first-child {
-  width: 34%;
+  width: 45%;
 }
 
 .conjugation-table th,
 .conjugation-table td {
-  width: 33%;
-  text-align: left;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.inflection-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.inflection-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.conjugation-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 }
 
 .pronunciation,
@@ -1169,17 +1308,45 @@
   }
 
   .audio-play-btn {
-    width: 40px;
-    height: 40px;
-    font-size: var(--font-size-base);
-    min-width: 40px;
-    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--gray-200);
+    background-color: var(--gray-50);
+    color: var(--primary-color);
+    transition: all var(--transition-base);
+    cursor: pointer;
+  }
+
+  .audio-play-btn i {
+    font-size: 1.35rem;
+  }
+
+  .audio-play-btn:hover,
+  .audio-play-btn:focus-visible {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .audio-play-btn--playing {
+    background-color: var(--primary-color);
+    color: var(--white);
   }
 
 /* Заголовки уроков */
 .lesson-header-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
   padding: var(--space-5);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-7);
 }
 
 .lesson-header-box h1 {

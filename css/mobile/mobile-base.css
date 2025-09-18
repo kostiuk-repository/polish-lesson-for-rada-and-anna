@@ -344,13 +344,14 @@ pre code {
 }
 
 .text-russian {
-  color: var(--gray-600);
-  font-style: italic;
+  color: var(--gray-700);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
 }
 
 .text-transcription {
   font-family: 'Times New Roman', serif;
-  color: var(--info-color);
+  color: var(--gray-600);
   font-size: var(--font-size-xs);
   margin-bottom: var(--space-2);
 }

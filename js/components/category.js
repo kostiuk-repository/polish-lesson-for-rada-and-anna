@@ -29,7 +29,7 @@ export class CategoryComponent {
     return `
       <header class="category-header">
         <div class="container category-header__container">
-          <a href="#/categories" class="btn btn--outline btn--icon-left">
+          <a href="#/categories" class="btn btn--primary btn--large btn--icon-left" data-router-link>
             <span class="btn__icon" aria-hidden="true">
               <i class="fas fa-arrow-left"></i>
             </span>

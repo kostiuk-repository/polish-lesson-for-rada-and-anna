@@ -202,7 +202,18 @@ export class ModalComponent {
     return `<div class="translation-section">
               <div class="translation-text">${translation}</div>
               ${pronunciation ? `<div class="pronunciation">[${pronunciation}]</div>` : ''}
-            </div>`;
+      </div>`;
+  }
+
+  createTabsId(prefix, lemma = '') {
+    const normalizedLemma = (lemma || '')
+      .toString()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+    const uniqueSuffix = Math.random().toString(36).slice(2, 6);
+    const base = normalizedLemma || 'item';
+    return `${prefix}-${base}-${uniqueSuffix}`;
   }
 
   generateExamplesTabHTML(wordData) {
@@ -240,6 +251,8 @@ export class ModalComponent {
       return '<p class="text-muted text-center">Формы спряжения отсутствуют.</p>';
     }
 
+    const tabsId = this.createTabsId('conjugation', wordData.lemma);
+
     const formOrders = {
       present: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
       future: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3'],
@@ -251,66 +264,33 @@ export class ModalComponent {
       past_neut: ['sg1', 'sg2', 'sg3', 'pl1', 'pl2', 'pl3']
     };
 
-    const buildTableRows = (forms, order) => {
-      const processed = new Set();
-      const sections = [];
-
-      const appendSection = (title, matcher) => {
-        const orderedKeys = order.filter(key => matcher(key) && forms[key]);
-        const additionalKeys = Object.keys(forms)
-          .filter(key => matcher(key) && forms[key] && !orderedKeys.includes(key));
-        const keys = [...orderedKeys, ...additionalKeys].filter(key => !processed.has(key));
-
-        if (!keys.length) return;
-
-        sections.push(`
-          <tr class="conjugation-table__section">
-            <th class="conjugation-table__section-title" colspan="2">${title}</th>
-          </tr>
-        `);
-
-        keys.forEach((formKey) => {
-          processed.add(formKey);
-          sections.push(this.generateConjugationRow(formKey, forms[formKey]));
-        });
-      };
-
-      appendSection('Единственное число', key => key.startsWith('sg'));
-      appendSection('Множественное число', key => key.startsWith('pl'));
-
-      const remainingOrdered = order.filter(key => !processed.has(key) && forms[key]);
-      const remainingExtras = Object.keys(forms).filter(key => !processed.has(key) && forms[key]);
-      const remainingKeys = [...new Set([...remainingOrdered, ...remainingExtras])];
-
-      if (remainingKeys.length) {
-        sections.push(`
-          <tr class="conjugation-table__section">
-            <th class="conjugation-table__section-title" colspan="2">Дополнительные формы</th>
-          </tr>
-        `);
-
-        remainingKeys.forEach((formKey) => {
-          processed.add(formKey);
-          sections.push(this.generateConjugationRow(formKey, forms[formKey]));
-        });
-      }
-
-      return sections.join('');
-    };
-
     const tenseTabs = availableTenses
-      .map(({ key }, index) => `
-        <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}" role="tab" data-tab="${key}">${this.getTenseName(key)}</button>
-      `)
+      .map(({ key }, index) => {
+        const tabKey = `${tabsId}-${key}`;
+        const buttonId = `${tabKey}-tab`;
+        return `
+          <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}"
+                  type="button"
+                  role="tab"
+                  id="${buttonId}"
+                  aria-controls="${tabKey}"
+                  data-tab="${tabKey}"
+                  aria-selected="${index === 0}">
+            ${this.getTenseName(key)}
+          </button>
+        `;
+      })
       .join('');
 
     const tenseContents = availableTenses
       .map(({ key, forms }, index) => {
+        const tabKey = `${tabsId}-${key}`;
+        const labelId = `${tabKey}-tab`;
         const order = formOrders[key] || Object.keys(forms);
-        const rows = buildTableRows(forms, order);
+        const rows = this.buildConjugationRows(forms, order);
 
-        return `
-          <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}" data-content="${key}">
+        const tableContent = rows
+          ? `
             <div class="conjugation-table-wrapper">
               <table class="conjugation-table table--compact">
                 <thead>
@@ -319,24 +299,84 @@ export class ModalComponent {
                     <th scope="col">Форма</th>
                   </tr>
                 </thead>
-                <tbody>
-                  ${rows}
-                </tbody>
+                <tbody>${rows}</tbody>
               </table>
-            </div>
+            </div>`
+          : '<p class="text-muted text-center">Для этого времени нет доступных форм.</p>';
+
+        return `
+          <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}"
+               data-content="${tabKey}"
+               id="${tabKey}"
+               role="tabpanel"
+               aria-labelledby="${labelId}">
+            ${tableContent}
           </div>`;
       })
       .join('');
 
     return `
       <div class="inflection-container">
-        <nav class="tabs tabs--chips" data-tabs="inflection-tabs">
+        <nav class="tabs tabs--chips" data-tabs="${tabsId}">
           <div class="tabs__list" role="tablist">${tenseTabs}</div>
         </nav>
         <div class="inflection-content mt-4">
           <div class="tabs__content-wrapper">${tenseContents}</div>
         </div>
       </div>`;
+  }
+
+  buildConjugationRows(forms, order = []) {
+    if (!forms || typeof forms !== 'object') {
+      return '';
+    }
+
+    const orderedKeys = order.filter(key => this.hasInflectionData(forms[key]));
+    const fallbackKeys = Object.keys(forms)
+      .filter(key => this.hasInflectionData(forms[key]) && !orderedKeys.includes(key));
+    const keys = [...orderedKeys, ...fallbackKeys];
+
+    if (!keys.length) {
+      return '';
+    }
+
+    const sections = [];
+    const processed = new Set();
+
+    const appendSection = (title, predicate) => {
+      const sectionKeys = keys.filter(key => !processed.has(key) && predicate(key));
+      if (!sectionKeys.length) return;
+
+      sections.push(`
+        <tr class="conjugation-table__section">
+          <th class="conjugation-table__section-title" colspan="2">${title}</th>
+        </tr>
+      `);
+
+      sectionKeys.forEach((formKey) => {
+        processed.add(formKey);
+        sections.push(this.generateConjugationRow(formKey, forms[formKey]));
+      });
+    };
+
+    appendSection('Единственное число', key => key.startsWith('sg'));
+    appendSection('Множественное число', key => key.startsWith('pl'));
+
+    const remainingKeys = keys.filter(key => !processed.has(key));
+    if (remainingKeys.length) {
+      sections.push(`
+        <tr class="conjugation-table__section">
+          <th class="conjugation-table__section-title" colspan="2">Дополнительные формы</th>
+        </tr>
+      `);
+
+      remainingKeys.forEach((formKey) => {
+        processed.add(formKey);
+        sections.push(this.generateConjugationRow(formKey, forms[formKey]));
+      });
+    }
+
+    return sections.join('');
   }
 
   generateConjugationRow(formKey, value) {
@@ -351,70 +391,133 @@ export class ModalComponent {
   }
 
   generateDeclensionTabHTML(wordData) {
-    const singularForms = wordData.inflection?.singular || {};
-    const pluralForms = wordData.inflection?.plural || {};
+    const inflection = wordData.inflection || {};
+    const singularForms = inflection.singular || {};
+    const pluralForms = inflection.plural || {};
 
-    const hasSingular = this.hasInflectionData(singularForms);
-    const hasPlural = this.hasInflectionData(pluralForms);
+    const groups = [];
 
-    const caseOrder = ['nominative', 'genitive', 'dative', 'accusative', 'instrumental', 'locative', 'vocative'];
-    const additionalCases = [...new Set([
-      ...Object.keys(singularForms),
-      ...Object.keys(pluralForms)
-    ].filter(caseKey => !caseOrder.includes(caseKey)))];
-    const orderedCases = [...caseOrder, ...additionalCases];
+    if (this.hasInflectionData(singularForms)) {
+      groups.push({ key: 'singular', label: 'Единственное число', forms: singularForms });
+    }
 
-    const rows = orderedCases
-      .map((caseKey) => {
-        const singularValue = singularForms[caseKey];
-        const pluralValue = pluralForms[caseKey];
+    if (this.hasInflectionData(pluralForms)) {
+      groups.push({ key: 'plural', label: 'Множественное число', forms: pluralForms });
+    }
 
-        if (!singularValue && !pluralValue) {
-          return null;
-        }
+    const extraGroups = Object.entries(inflection)
+      .filter(([key, value]) => !['singular', 'plural'].includes(key) && value && typeof value === 'object' && !Array.isArray(value))
+      .map(([key, value]) => ({ key, label: this.formatInflectionGroupName(key), forms: value }))
+      .filter(group => this.hasInflectionData(group.forms));
 
-        const cells = [`<th scope="row" class="conjugation-table__label">${this.getFormName(caseKey)}</th>`];
+    if (!groups.length && this.hasInflectionData(inflection) && !Array.isArray(inflection)) {
+      groups.push({ key: 'all', label: 'Формы', forms: inflection });
+    }
 
-        if (hasSingular) {
-          const value = this.formatInflectionValue(singularValue);
-          cells.push(`<td class="conjugation-table__value">${value ? `<strong>${value}</strong>` : '<span class="text-muted">—</span>'}</td>`);
-        }
+    groups.push(...extraGroups);
 
-        if (hasPlural) {
-          const value = this.formatInflectionValue(pluralValue);
-          cells.push(`<td class="conjugation-table__value">${value ? `<strong>${value}</strong>` : '<span class="text-muted">—</span>'}</td>`);
-        }
-
-        return `<tr>${cells.join('')}</tr>`;
-      })
-      .filter(Boolean)
-      .join('');
-
-    if (!rows) {
+    if (!groups.length) {
       return '<p class="text-muted text-center">Формы склонения отсутствуют.</p>';
     }
 
-    const headerCells = ['<th scope="col">Падеж</th>'];
-    if (hasSingular) {
-      headerCells.push('<th scope="col">Единственное число</th>');
-    }
-    if (hasPlural) {
-      headerCells.push('<th scope="col">Множественное число</th>');
-    }
+    const caseOrder = ['nominative', 'genitive', 'dative', 'accusative', 'instrumental', 'locative', 'vocative'];
+
+    const tabsId = this.createTabsId('declension', wordData.lemma);
+    const hasTabs = groups.length > 1;
+
+    const tabsNav = hasTabs
+      ? `
+        <nav class="tabs tabs--chips" data-tabs="${tabsId}">
+          <div class="tabs__list" role="tablist">
+            ${groups
+              .map((group, index) => {
+                const tabKey = `${tabsId}-${group.key}`;
+                return `
+                  <button class="tabs__button ${index === 0 ? 'tabs__button--active' : ''}"
+                          type="button"
+                          role="tab"
+                          id="${tabKey}-tab"
+                          aria-controls="${tabKey}"
+                          data-tab="${tabKey}"
+                          aria-selected="${index === 0}">
+                    ${group.label}
+                  </button>`;
+              })
+              .join('')}
+          </div>
+        </nav>`
+      : '';
+
+    const content = groups
+      .map((group, index) => {
+        const rows = this.buildDeclensionRows(group.forms, caseOrder);
+        const table = rows
+          ? `
+            <div class="conjugation-table-wrapper">
+              <table class="conjugation-table table--striped table--compact">
+                <thead>
+                  <tr>
+                    <th scope="col">Падеж</th>
+                    <th scope="col">Форма</th>
+                  </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+              </table>
+            </div>`
+          : '<p class="text-muted text-center">Нет доступных форм для этого числа.</p>';
+
+        if (!hasTabs) {
+          return table;
+        }
+
+        const tabKey = `${tabsId}-${group.key}`;
+        return `
+          <div class="tabs__content ${index === 0 ? 'tabs__content--active' : ''}"
+               data-content="${tabKey}"
+               id="${tabKey}"
+               role="tabpanel"
+               aria-labelledby="${tabKey}-tab">
+            ${table}
+          </div>`;
+      })
+      .join('');
+
+    const contentWrapper = hasTabs
+      ? `<div class="tabs__content-wrapper">${content}</div>`
+      : `<div class="tabs__content-wrapper tabs__content-wrapper--static">${content}</div>`;
 
     return `
       <div class="inflection-container">
-        <div class="conjugation-table-wrapper">
-          <table class="conjugation-table table--striped table--compact">
-            <thead>
-              <tr>${headerCells.join('')}</tr>
-            </thead>
-            <tbody>
-              ${rows}
-            </tbody>
-          </table>
+        ${tabsNav}
+        <div class="inflection-content mt-4">
+          ${contentWrapper}
         </div>
       </div>`;
+  }
+
+  buildDeclensionRows(forms, baseOrder = []) {
+    if (!forms || typeof forms !== 'object') {
+      return '';
+    }
+
+    const additionalKeys = Object.keys(forms).filter(key => !baseOrder.includes(key));
+    const orderedCases = [...baseOrder, ...additionalKeys];
+
+    return orderedCases
+      .filter(caseKey => this.hasInflectionData(forms[caseKey]))
+      .map(caseKey => this.generateDeclensionRow(caseKey, forms[caseKey]))
+      .join('');
+  }
+
+  generateDeclensionRow(caseKey, value) {
+    const formattedValue = this.formatInflectionValue(value);
+    const displayValue = formattedValue ? `<strong>${formattedValue}</strong>` : '<span class="text-muted">—</span>';
+
+    return `
+      <tr>
+        <th scope="row" class="conjugation-table__label">${this.getFormName(caseKey)}</th>
+        <td class="conjugation-table__value">${displayValue}</td>
+      </tr>`;
   }
 
   hasInflectionData(inflection) {
@@ -448,6 +551,18 @@ export class ModalComponent {
   getTenseName(tenseKey) {
     const names = { present: 'Настоящее', past: 'Прошедшее', past_masc: 'Прошедшее (муж.)', past_fem: 'Прошедшее (жен.)', past_neut: 'Прошедшее (ср.)', future: 'Будущее', imperative: 'Повелительное', conditional: 'Условное' };
     return names[tenseKey] || this.capitalize(tenseKey);
+  }
+
+  formatInflectionGroupName(key) {
+    const numberNames = { singular: 'Единственное число', plural: 'Множественное число' };
+    if (numberNames[key]) {
+      return numberNames[key];
+    }
+
+    return key
+      .split('_')
+      .map(part => (part ? part.charAt(0).toUpperCase() + part.slice(1) : ''))
+      .join(' ');
   }
 
   getFormName(form) {

@@ -102,9 +102,11 @@ export class LessonComponent {
       
     return `
       <header class="lesson-header-box">
-        <a href="${backLink}" class="btn btn--outline mb-4" data-router-link>
-          <i class="fas fa-arrow-left"></i>
-          Назад к урокам
+        <a href="${backLink}" class="btn btn--outline btn--icon-left btn--large mb-4" data-router-link>
+          <span class="btn__icon" aria-hidden="true">
+            <i class="fas fa-arrow-left"></i>
+          </span>
+          <span class="btn__label">Назад к урокам</span>
         </a>
         <h1>${this.lessonData.title}</h1>
         <p>${this.lessonData.description}</p>
