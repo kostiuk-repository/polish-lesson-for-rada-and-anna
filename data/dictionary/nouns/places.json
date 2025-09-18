@@ -1,0 +1,263 @@
+{
+  "metro": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Blisko metra, smacznie i bez mięsa.",
+        "ru": "Близко к метро, вкусно и без мяса.",
+        "ru_transcription": "БЛИско МЭтра, СМАчне и bez МЬЕНса."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "metro",
+        "genitive": "metra",
+        "dative": "metru",
+        "accusative": "metro",
+        "instrumental": "metrem",
+        "locative": "metrze",
+        "vocative": "metro"
+      }
+    },
+    "lemma": "metro",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "blisko metra",
+        "ru": "близко к метро"
+      },
+      {
+        "pl": "stacja metra",
+        "ru": "станция метро"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МЭтро"
+    },
+    "translations": {
+      "ru": "метро"
+    }
+  },
+  "bistro": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może roślinne bistro z tarasem?",
+        "ru": "Может растительное бистро с террасой?",
+        "ru_transcription": "МОже рошЛИНнэ БИстро з таРАсэм?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "bistro",
+        "genitive": "bistro",
+        "dative": "bistro",
+        "accusative": "bistro",
+        "instrumental": "bistro",
+        "locative": "bistro",
+        "vocative": "bistro"
+      }
+    },
+    "lemma": "bistro",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "roślinne bistro",
+        "ru": "растительное бистро"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "БИстро"
+    },
+    "translations": {
+      "ru": "бистро"
+    }
+  },
+  "taras": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Roślinne bistro z tarasem.",
+        "ru": "Растительное бистро с террасой.",
+        "ru_transcription": "рошЛИНнэ БИстро з таРАсэм."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "taras",
+        "genitive": "tarasu",
+        "dative": "tarasowi",
+        "accusative": "taras",
+        "instrumental": "tarasem",
+        "locative": "tarasie",
+        "vocative": "tarasie"
+      },
+      "plural": {
+        "nominative": "tarasy",
+        "genitive": "tarasów",
+        "dative": "tarasom",
+        "accusative": "tarasy",
+        "instrumental": "tarasami",
+        "locative": "tarasach",
+        "vocative": "tarasy"
+      }
+    },
+    "lemma": "taras",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "na tarasie",
+        "ru": "на террасе"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "таРАс"
+    },
+    "translations": {
+      "ru": "терраса"
+    }
+  },
+  "wieczór": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Miłego wieczoru i zapraszamy ponownie!",
+        "ru": "Хорошего вечера и приглашаем снова!",
+        "ru_transcription": "МиУего вЬЕчору и запраШАМы поНОвне!"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "wieczór",
+        "genitive": "wieczoru",
+        "dative": "wieczorowi",
+        "accusative": "wieczór",
+        "instrumental": "wieczorem",
+        "locative": "wieczorze",
+        "vocative": "wieczorze"
+      },
+      "plural": {
+        "nominative": "wieczory",
+        "genitive": "wieczorów",
+        "dative": "wieczorom",
+        "accusative": "wieczory",
+        "instrumental": "wieczorami",
+        "locative": "wieczorach",
+        "vocative": "wieczory"
+      }
+    },
+    "lemma": "wieczór",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "miłego wieczoru",
+        "ru": "хорошего вечера"
+      },
+      {
+        "pl": "dzisiaj wieczorem",
+        "ru": "сегодня вечером"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ВЬЕчур"
+    },
+    "translations": {
+      "ru": "вечер"
+    }
+  },
+  "Muranów": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Proponuję Vegan Ramen Shop Muranów.",
+        "ru": "Предлагаю Vegan Ramen Shop Muranów.",
+        "ru_transcription": "ПропонУЕ Веган Рамен Шоп МураНув."
+      },
+      {
+        "pl": "To chodźmy na ramen na Muranowie.",
+        "ru": "Тогда пошли на рамен на Мурануве.",
+        "ru_transcription": "То ХОДьмы на РАМэн на МураНОвье."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Muranów",
+        "genitive": "Muranowa",
+        "dative": "Muranowowi",
+        "accusative": "Muranów",
+        "instrumental": "Muranowem",
+        "locative": "Muranowie",
+        "vocative": "Muranowie"
+      }
+    },
+    "lemma": "Muranów",
+    "morphology": {
+      "gender": "masculine",
+      "proper": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "na Muranowie",
+        "ru": "на Мурануве"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МураНув"
+    },
+    "translations": {
+      "ru": "Мурануф (район Варшавы)"
+    }
+  },
+  "Śródmieście": {
+    "applied_rules": ["ś", "ś"],
+    "examples": [
+      {
+        "pl": "Ojej, dziś jest zamknięte na Śródmieściu.",
+        "ru": "Ой, сегодня закрыто в центре.",
+        "ru_transcription": "ОйЕй, джьш есть замкНьентэ на ШрудмЕщчу."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Śródmieście",
+        "genitive": "Śródmieścia",
+        "dative": "Śródmieściu",
+        "accusative": "Śródmieście",
+        "instrumental": "Śródmieściem",
+        "locative": "Śródmieściu",
+        "vocative": "Śródmieście"
+      }
+    },
+    "lemma": "Śródmieście",
+    "morphology": {
+      "gender": "neuter",
+      "proper": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "na Śródmieściu",
+        "ru": "в центре города"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ШрудмЕщче"
+    },
+    "translations": {
+      "ru": "Центр города (район Варшавы)"
+    }
+  }
+}

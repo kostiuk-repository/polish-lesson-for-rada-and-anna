@@ -169,5 +169,64 @@
     "translations": {
       "ru": "что"
     }
+  },
+  "albo": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może Tropical Smoothie Bar albo roślinne bistro?",
+        "ru": "Может Tropical Smoothie Bar или растительное бистро?",
+        "ru_transcription": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро?"
+      },
+      {
+        "pl": "Czy sos zawiera miód albo mleko?",
+        "ru": "Содержит ли соус мёд или молоко?",
+        "ru_transcription": "Чи сос завьера мьот альбо мЛЕко?"
+      }
+    ],
+    "lemma": "albo",
+    "part_of_speech": "conjunction",
+    "conjunction_type": "disjunctive",
+    "phrases_and_idioms": [
+      {
+        "pl": "albo tak, albo tak",
+        "ru": "или так, или так"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "альбо"
+    },
+    "translations": {
+      "ru": "или"
+    }
+  },
+  "jeśli": {
+    "applied_rules": ["ś"],
+    "examples": [
+      {
+        "pl": "Tak, jeśli się da, ładnie do zdjęcia.",
+        "ru": "Да, если можно, красиво для фото.",
+        "ru_transcription": "Так, Если се да, Уадне до зДЗенча."
+      }
+    ],
+    "lemma": "jeśli",
+    "part_of_speech": "conjunction",
+    "conjunction_type": "conditional",
+    "phrases_and_idioms": [
+      {
+        "pl": "jeśli nie",
+        "ru": "если нет"
+      },
+      {
+        "pl": "nawet jeśli",
+        "ru": "даже если"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Ешьли"
+    },
+    "translations": {
+      "ru": "если"
+    }
   }
 }

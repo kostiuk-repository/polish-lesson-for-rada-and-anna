@@ -1,0 +1,165 @@
+{
+  "bowl": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę acai bowl bez glutenu.",
+        "ru": "Пожалуйста, асаи-боул без глютена.",
+        "ru_transcription": "ПопРОше аСАЙ бОул bez глюТЭна."
+      },
+      {
+        "pl": "Ja buddha bowl z tofu.",
+        "ru": "Мне будда-боул с тофу.",
+        "ru_transcription": "Я Будда бОул з ТОфу."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "bowl",
+        "genitive": "bowlu",
+        "dative": "bowlowi",
+        "accusative": "bowl",
+        "instrumental": "bowlem",
+        "locative": "bowlu",
+        "vocative": "bowlu"
+      },
+      "plural": {
+        "nominative": "bowle",
+        "genitive": "bowlów",
+        "dative": "bowlom",
+        "accusative": "bowle",
+        "instrumental": "bowlami",
+        "locative": "bowlach",
+        "vocative": "bowle"
+      }
+    },
+    "lemma": "bowl",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "acai bowl",
+        "ru": "асаи-боул"
+      },
+      {
+        "pl": "buddha bowl",
+        "ru": "будда-боул"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "бОул"
+    },
+    "translations": {
+      "ru": "боул, глубокая миска"
+    }
+  },
+  "słomka": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Mamy też słomki papierowe.",
+        "ru": "У нас есть бумажные соломинки.",
+        "ru_transcription": "МАМы тэш СЛОМки папьеРОвэ."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "słomka",
+        "genitive": "słomki",
+        "dative": "słomce",
+        "accusative": "słomkę",
+        "instrumental": "słomką",
+        "locative": "słomce",
+        "vocative": "słomko"
+      },
+      "plural": {
+        "nominative": "słomki",
+        "genitive": "słomek",
+        "dative": "słomkom",
+        "accusative": "słomki",
+        "instrumental": "słomkami",
+        "locative": "słomkach",
+        "vocative": "słomki"
+      }
+    },
+    "lemma": "słomka",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "słomka papierowa",
+        "ru": "бумажная соломинка"
+      },
+      {
+        "pl": "pić przez słomkę",
+        "ru": "пить через соломинку"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СЛОМка"
+    },
+    "translations": {
+      "ru": "соломинка"
+    }
+  },
+  "karta": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "A potem płacimy kartą i zostawiamy napiwek.",
+        "ru": "А потом платим картой и оставляем чаевые.",
+        "ru_transcription": "А ПОтэм пуаЧИмы КАРтон и зостаВЯмы НАпивэк."
+      },
+      {
+        "pl": "Oto karta i woda.",
+        "ru": "Вот меню и вода.",
+        "ru_transcription": "Ото КАРта и ВОда."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "karta",
+        "genitive": "karty",
+        "dative": "karcie",
+        "accusative": "kartę",
+        "instrumental": "kartą",
+        "locative": "karcie",
+        "vocative": "karto"
+      },
+      "plural": {
+        "nominative": "karty",
+        "genitive": "kart",
+        "dative": "kartom",
+        "accusative": "karty",
+        "instrumental": "kartami",
+        "locative": "kartach",
+        "vocative": "karty"
+      }
+    },
+    "lemma": "karta",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "płacić kartą",
+        "ru": "платить картой"
+      },
+      {
+        "pl": "karta menu",
+        "ru": "меню"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "КАРта"
+    },
+    "translations": {
+      "ru": "карта, меню"
+    }
+  }
+}

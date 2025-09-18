@@ -1,0 +1,284 @@
+{
+  "bezjajeczny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Nie, mamy bezjajeczną opcję.",
+        "ru": "Нет, есть безъяичный вариант.",
+        "ru_transcription": "Не, МАМы безяЕчнОн опцйэ."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "bezjajeczny",
+        "genitive": "bezjajecznego",
+        "dative": "bezjajecznemu",
+        "accusative": "bezjajeczny/bezjajecznego",
+        "instrumental": "bezjajecznym",
+        "locative": "bezjajecznym"
+      },
+      "feminine": {
+        "nominative": "bezjajeczna",
+        "genitive": "bezjajecznej",
+        "dative": "bezjajecznej",
+        "accusative": "bezjajeczną",
+        "instrumental": "bezjajeczną",
+        "locative": "bezjajecznej"
+      },
+      "neuter": {
+        "nominative": "bezjajeczne",
+        "genitive": "bezjajecznego",
+        "dative": "bezjajecznemu",
+        "accusative": "bezjajeczne",
+        "instrumental": "bezjajecznym",
+        "locative": "bezjajecznym"
+      }
+    },
+    "lemma": "bezjajeczny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "makaron bezjajeczny",
+        "ru": "лапша без яиц"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "безяЕчны"
+    },
+    "translations": {
+      "ru": "безъяичный"
+    }
+  },
+  "warzywny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Tak, warzywny z glonami i grzybami.",
+        "ru": "Да, овощной с водорослями и грибами.",
+        "ru_transcription": "Так, важЫвны з глОнами и гжЫБАми."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "warzywny",
+        "genitive": "warzywnego",
+        "dative": "warzywnemu",
+        "accusative": "warzywny/warzywnego",
+        "instrumental": "warzywnym",
+        "locative": "warzywnym"
+      },
+      "feminine": {
+        "nominative": "warzywna",
+        "genitive": "warzywnej",
+        "dative": "warzywnej",
+        "accusative": "warzywną",
+        "instrumental": "warzywną",
+        "locative": "warzywnej"
+      },
+      "neuter": {
+        "nominative": "warzywne",
+        "genitive": "warzywnego",
+        "dative": "warzywnemu",
+        "accusative": "warzywne",
+        "instrumental": "warzywnym",
+        "locative": "warzywnym"
+      }
+    },
+    "lemma": "warzywny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "bulion warzywny",
+        "ru": "овощной бульон"
+      },
+      {
+        "pl": "zupa warzywna",
+        "ru": "овощной суп"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "важЫвны"
+    },
+    "translations": {
+      "ru": "овощной"
+    }
+  },
+  "kokosowy": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Wodę kokosową i matcha latte.",
+        "ru": "Кокосовую воду и матча-латте.",
+        "ru_transcription": "ВОдэ кокосОВон и МАча латтэ."
+      },
+      {
+        "pl": "Mamy mały sernik kokosowy.",
+        "ru": "У нас есть маленький кокосовый чизкейк.",
+        "ru_transcription": "МАМы МАлы СЕРник кокосОВы."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "kokosowy",
+        "genitive": "kokosowego",
+        "dative": "kokosowemu",
+        "accusative": "kokosowy/kokosowego",
+        "instrumental": "kokosowym",
+        "locative": "kokosowym"
+      },
+      "feminine": {
+        "nominative": "kokosowa",
+        "genitive": "kokosowej",
+        "dative": "kokosowej",
+        "accusative": "kokosową",
+        "instrumental": "kokosową",
+        "locative": "kokosowej"
+      },
+      "neuter": {
+        "nominative": "kokosowe",
+        "genitive": "kokosowego",
+        "dative": "kokosowemu",
+        "accusative": "kokosowe",
+        "instrumental": "kokosowym",
+        "locative": "kokosowym"
+      }
+    },
+    "lemma": "kokosowy",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "mleko kokosowe",
+        "ru": "кокосовое молоко"
+      },
+      {
+        "pl": "woda kokosowa",
+        "ru": "кокосовая вода"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "кокосОВы"
+    },
+    "translations": {
+      "ru": "кокосовый"
+    }
+  },
+  "pikantny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę miso ramen, średnio pikantny.",
+        "ru": "Пожалуйста, мисо-рамен, средней остроты.",
+        "ru_transcription": "ПопРОше МИСо рамен, СЬРЭднё пикАнтны."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "pikantny",
+        "genitive": "pikantnego",
+        "dative": "pikantnemu",
+        "accusative": "pikantny/pikantnego",
+        "instrumental": "pikantnym",
+        "locative": "pikantnym"
+      },
+      "feminine": {
+        "nominative": "pikantna",
+        "genitive": "pikantnej",
+        "dative": "pikantnej",
+        "accusative": "pikantną",
+        "instrumental": "pikantną",
+        "locative": "pikantnej"
+      },
+      "neuter": {
+        "nominative": "pikantne",
+        "genitive": "pikantnego",
+        "dative": "pikantnemu",
+        "accusative": "pikantne",
+        "instrumental": "pikantnym",
+        "locative": "pikantnym"
+      }
+    },
+    "lemma": "pikantny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "średnio pikantny",
+        "ru": "средней остроты"
+      },
+      {
+        "pl": "bardzo pikantny",
+        "ru": "очень острый"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "пикАнтны"
+    },
+    "translations": {
+      "ru": "острый, пикантный"
+    }
+  },
+  "papierowy": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Mamy też słomki papierowe.",
+        "ru": "У нас есть бумажные соломинки.",
+        "ru_transcription": "МАМы тэш СЛОМки папьеРОвэ."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "papierowy",
+        "genitive": "papierowego",
+        "dative": "papierowemu",
+        "accusative": "papierowy/papierowego",
+        "instrumental": "papierowym",
+        "locative": "papierowym"
+      },
+      "feminine": {
+        "nominative": "papierowa",
+        "genitive": "papierowej",
+        "dative": "papierowej",
+        "accusative": "papierową",
+        "instrumental": "papierową",
+        "locative": "papierowej"
+      },
+      "neuter": {
+        "nominative": "papierowe",
+        "genitive": "papierowego",
+        "dative": "papierowemu",
+        "accusative": "papierowe",
+        "instrumental": "papierowym",
+        "locative": "papierowym"
+      }
+    },
+    "lemma": "papierowy",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "słomka papierowa",
+        "ru": "бумажная соломинка"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "папьеРОВы"
+    },
+    "translations": {
+      "ru": "бумажный"
+    }
+  }
+}

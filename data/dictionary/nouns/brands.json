@@ -1,0 +1,252 @@
+{
+  "Krowarzywa": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "A może Krowarzywa? Lubię ich burgery.",
+        "ru": "А может Krowarzywa? Люблю их бургеры.",
+        "ru_transcription": "А МОже Кроважыва? ЛубьЕ их бурГЭры."
+      },
+      {
+        "pl": "Serio fajna gra słów: krowa + warzywa.",
+        "ru": "Правда, классная игра слов: корова + овощи.",
+        "ru_transcription": "СЭрю файна гра слув: КРОва + варЖЫва."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Krowarzywa",
+        "genitive": "Krowarzywy",
+        "dative": "Krowarzywie",
+        "accusative": "Krowarzywę",
+        "instrumental": "Krowarzywą",
+        "locative": "Krowarzywie",
+        "vocative": "Krowarzywo"
+      }
+    },
+    "lemma": "Krowarzywa",
+    "morphology": {
+      "gender": "feminine",
+      "proper": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "burgery z Krowarzywy",
+        "ru": "бургеры из Кроважывы"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Кроважыва"
+    },
+    "translations": {
+      "ru": "Кроважыва (сеть веганских ресторанов)"
+    }
+  },
+  "Tropical": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może Tropical Smoothie Bar albo roślinne bistro?",
+        "ru": "Может Tropical Smoothie Bar или растительное бистро?",
+        "ru_transcription": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Tropical",
+        "genitive": "Tropical",
+        "dative": "Tropical",
+        "accusative": "Tropical",
+        "instrumental": "Tropical",
+        "locative": "Tropical",
+        "vocative": "Tropical"
+      }
+    },
+    "lemma": "Tropical",
+    "morphology": {
+      "gender": "neuter",
+      "proper": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "Tropical Smoothie Bar",
+        "ru": "Тропикал Смузи Бар"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Тропикал"
+    },
+    "translations": {
+      "ru": "Тропикал (название ресторана)"
+    }
+  },
+  "Smoothie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może Tropical Smoothie Bar albo roślinne bistro?",
+        "ru": "Может Tropical Smoothie Bar или растительное бистро?",
+        "ru_transcription": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Smoothie",
+        "genitive": "Smoothie",
+        "dative": "Smoothie",
+        "accusative": "Smoothie",
+        "instrumental": "Smoothie",
+        "locative": "Smoothie",
+        "vocative": "Smoothie"
+      }
+    },
+    "lemma": "Smoothie",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "smoothie bar",
+        "ru": "смузи-бар"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СмУти"
+    },
+    "translations": {
+      "ru": "смузи"
+    }
+  },
+  "Bar": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może Tropical Smoothie Bar albo roślinne bistro?",
+        "ru": "Может Tropical Smoothie Bar или растительное бистро?",
+        "ru_transcription": "МОже Тропикал СмУти Бар альбо рошЛИНнэ БИстро?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Bar",
+        "genitive": "Baru",
+        "dative": "Barowi",
+        "accusative": "Bar",
+        "instrumental": "Barem",
+        "locative": "Barze",
+        "vocative": "Barze"
+      },
+      "plural": {
+        "nominative": "Bary",
+        "genitive": "Barów",
+        "dative": "Barom",
+        "accusative": "Bary",
+        "instrumental": "Barami",
+        "locative": "Barach",
+        "vocative": "Bary"
+      }
+    },
+    "lemma": "Bar",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "cocktail bar",
+        "ru": "коктейль-бар"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Бар"
+    },
+    "translations": {
+      "ru": "бар"
+    }
+  },
+  "Bali": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Chcę coś jak na Bali — klimat, rośliny, neony.",
+        "ru": "Хочу что-то как на Бали — атмосфера, растения, неон.",
+        "ru_transcription": "Хчэ чощ як на БАЛи — КЛИмат, роШЛИНы, неОНы."
+      },
+      {
+        "pl": "Smakuje jak na Bali!",
+        "ru": "На вкус как на Бали!",
+        "ru_transcription": "СмакУе як на БАЛи!"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "Bali",
+        "genitive": "Bali",
+        "dative": "Bali",
+        "accusative": "Bali",
+        "instrumental": "Bali",
+        "locative": "Bali",
+        "vocative": "Bali"
+      }
+    },
+    "lemma": "Bali",
+    "morphology": {
+      "gender": "neuter",
+      "proper": true
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "jak na Bali",
+        "ru": "как на Бали"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "БАЛи"
+    },
+    "translations": {
+      "ru": "Бали (остров в Индонезии)"
+    }
+  },
+  "stories": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Oznaczę was na stories.",
+        "ru": "Я отмечу вас в сторис.",
+        "ru_transcription": "ОжНАчэ вас на сторис."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "stories",
+        "genitive": "stories",
+        "dative": "stories",
+        "accusative": "stories",
+        "instrumental": "stories",
+        "locative": "stories",
+        "vocative": "stories"
+      }
+    },
+    "lemma": "stories",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "na stories",
+        "ru": "в сторис"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "сторис"
+    },
+    "translations": {
+      "ru": "сторис (истории в социальных сетях)"
+    }
+  }
+}

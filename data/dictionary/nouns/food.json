@@ -1,0 +1,306 @@
+{
+  "mango": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Lemoniada mango, ale bez syropu.",
+        "ru": "Лимонад манго, но без сиропа.",
+        "ru_transcription": "лэмонЯда МАНго, але bez сыРОпу."
+      },
+      {
+        "pl": "Proszę więcej mango i truskawek.",
+        "ru": "Пожалуйста, больше манго и клубники.",
+        "ru_transcription": "ПРОше ВьЕнцей МАНго и труСкавэк."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "mango",
+        "genitive": "mango",
+        "dative": "mango",
+        "accusative": "mango",
+        "instrumental": "mango",
+        "locative": "mango",
+        "vocative": "mango"
+      }
+    },
+    "lemma": "mango",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "sok z mango",
+        "ru": "сок из манго"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МАНго"
+    },
+    "translations": {
+      "ru": "манго"
+    }
+  },
+  "granola": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy można mniej granoli?",
+        "ru": "Можно меньше гранолы?",
+        "ru_transcription": "Чи МОжна Мней граНОли?"
+      },
+      {
+        "pl": "Już zabieram i zmniejszę porcję granoli.",
+        "ru": "Уже забираю и уменьшу порцию гранолы.",
+        "ru_transcription": "юж забЬЕрам и змНЬЕше ПОРцйэ граНОли."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "granola",
+        "genitive": "granoli",
+        "dative": "granoli",
+        "accusative": "granolę",
+        "instrumental": "granolą",
+        "locative": "granoli",
+        "vocative": "granolo"
+      }
+    },
+    "lemma": "granola",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "porcja granoli",
+        "ru": "порция гранолы"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "граНОла"
+    },
+    "translations": {
+      "ru": "гранола"
+    }
+  },
+  "truskawka": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Proszę więcej mango i truskawek.",
+        "ru": "Пожалуйста, больше манго и клубники.",
+        "ru_transcription": "ПРОше ВьЕНцей МАНго и труСкавэк."
+      },
+      {
+        "pl": "Ja spróbuję Twojej truskawki.",
+        "ru": "Я попробую твою клубнику.",
+        "ru_transcription": "я спроБУе ТВОей труСкавки."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "truskawka",
+        "genitive": "truskawki",
+        "dative": "truskawce",
+        "accusative": "truskawkę",
+        "instrumental": "truskawką",
+        "locative": "truskawce",
+        "vocative": "truskawko"
+      },
+      "plural": {
+        "nominative": "truskawki",
+        "genitive": "truskawek",
+        "dative": "truskawkom",
+        "accusative": "truskawki",
+        "instrumental": "truskawkami",
+        "locative": "truskawkach",
+        "vocative": "truskawki"
+      }
+    },
+    "lemma": "truskawka",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "truskawka z kremem",
+        "ru": "клубника со сливками"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "труСкавка"
+    },
+    "translations": {
+      "ru": "клубника"
+    }
+  },
+  "kimchi": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Polecam miso ramen z tofu i kimchi.",
+        "ru": "Рекомендую мисо-рамен с тофу и кимчи.",
+        "ru_transcription": "ПолЕцам МИСо рамен з ТОфу и КИМчи."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "kimchi",
+        "genitive": "kimchi",
+        "dative": "kimchi",
+        "accusative": "kimchi",
+        "instrumental": "kimchi",
+        "locative": "kimchi",
+        "vocative": "kimchi"
+      }
+    },
+    "lemma": "kimchi",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "КИМчи"
+    },
+    "translations": {
+      "ru": "кимчи (корейская капуста)"
+    }
+  },
+  "gluten": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę acai bowl bez glutenu.",
+        "ru": "Пожалуйста, асаи-боул без глютена.",
+        "ru_transcription": "ПопРОше аСАЙ бОул без глюТЭна."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "gluten",
+        "genitive": "glutenu",
+        "dative": "glutenowi",
+        "accusative": "gluten",
+        "instrumental": "glutenem",
+        "locative": "glutenie",
+        "vocative": "glutenie"
+      }
+    },
+    "lemma": "gluten",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez glutenu",
+        "ru": "без глютена"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "глюТЭн"
+    },
+    "translations": {
+      "ru": "глютен"
+    }
+  },
+  "sos": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy sos zawiera miód albo mleko?",
+        "ru": "Содержит ли соус мёд или молоко?",
+        "ru_transcription": "Чи сос завьера мьот альбо мЛЕко?"
+      },
+      {
+        "pl": "Sos jest roślinny, bez mleka i bez miodu.",
+        "ru": "Соус растительный, без молока и без мёда.",
+        "ru_transcription": "Сос есть рошЛИНны, без мЛЕка и bez мьОду."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "sos",
+        "genitive": "sosu",
+        "dative": "sosowi",
+        "accusative": "sos",
+        "instrumental": "sosem",
+        "locative": "sosie",
+        "vocative": "sosie"
+      },
+      "plural": {
+        "nominative": "sosy",
+        "genitive": "sosów",
+        "dative": "sosom",
+        "accusative": "sosy",
+        "instrumental": "sosami",
+        "locative": "sosach",
+        "vocative": "sosy"
+      }
+    },
+    "lemma": "sos",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "sos pomidorowy",
+        "ru": "томатный соус"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "сос"
+    },
+    "translations": {
+      "ru": "соус"
+    }
+  },
+  "tapioka": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Może tapioka z mango na pół?",
+        "ru": "Может тапиока с манго пополам?",
+        "ru_transcription": "МОже тапьОка з МАНго на Пул?"
+      },
+      {
+        "pl": "Jak smakowała tapioka?",
+        "ru": "Как на вкус тапиока?",
+        "ru_transcription": "Як смаковаУа тапьОка?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "tapioka",
+        "genitive": "tapioki",
+        "dative": "tapioci",
+        "accusative": "tapiokę",
+        "instrumental": "tapioką",
+        "locative": "tapioci",
+        "vocative": "tapioko"
+      }
+    },
+    "lemma": "tapioka",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "pudding z tapioką",
+        "ru": "пудинг из тапиоки"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "тапьОка"
+    },
+    "translations": {
+      "ru": "тапиока"
+    }
+  }
+}

@@ -244,5 +244,78 @@
     "translations": {
       "ru": "за"
     }
+  },
+  "bez": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Bez mięsa i bez mleka.",
+        "ru": "Без мяса и без молока.",
+        "ru_transcription": "без МЬЕНса и без мЛЕка."
+      },
+      {
+        "pl": "Poproszę acai bowl bez glutenu.",
+        "ru": "Пожалуйста, асаи-боул без глютена.",
+        "ru_transcription": "ПопРОше аСАЙ бОул без глюТЭна."
+      },
+      {
+        "pl": "Matcha latte bez cukru.",
+        "ru": "Матча-латте без сахара.",
+        "ru_transcription": "МАча латтэ без ЦУкру."
+      }
+    ],
+    "lemma": "bez",
+    "part_of_speech": "preposition",
+    "required_case": "genitive",
+    "phrases_and_idioms": [
+      {
+        "pl": "bez problemu",
+        "ru": "без проблем"
+      },
+      {
+        "pl": "bez wątpienia",
+        "ru": "без сомнения"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "без"
+    },
+    "translations": {
+      "ru": "без"
+    }
+  },
+  "po": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Po deserze, dziękujemy.",
+        "ru": "После десерта, спасибо.",
+        "ru_transcription": "По ДЕзэрже, дженьКУЕмы."
+      },
+      {
+        "pl": "Wyszłyśmy z jogi.",
+        "ru": "Мы вышли с йоги.",
+        "ru_transcription": "ВЫшлышмы з ЙОги."
+      }
+    ],
+    "lemma": "po",
+    "part_of_speech": "preposition",
+    "required_case": "locative",
+    "phrases_and_idioms": [
+      {
+        "pl": "po polsku",
+        "ru": "по-польски"
+      },
+      {
+        "pl": "po pierwsze",
+        "ru": "во-первых"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "по"
+    },
+    "translations": {
+      "ru": "по, после"
+    }
   }
 }

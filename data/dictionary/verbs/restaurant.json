@@ -695,5 +695,338 @@
     "translations": {
       "ru": "оставлять"
     }
+  },
+  "sprawdzać": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Sprawdzę godziny.",
+        "ru": "Проверю часы работы.",
+        "ru_transcription": "СправДжэ годЗИны."
+      },
+      {
+        "pl": "Sprawdzam, czy są otwarci.",
+        "ru": "Проверяю, открыты ли они.",
+        "ru_transcription": "СправДжам, чи сон отВАРчи."
+      }
+    ],
+    "inflection": {
+      "infinitive": "sprawdzać",
+      "present": {
+        "sg1": "sprawdzam",
+        "sg2": "sprawdzasz", 
+        "sg3": "sprawdza",
+        "pl1": "sprawdzamy",
+        "pl2": "sprawdzacie",
+        "pl3": "sprawdzają"
+      },
+      "past_masc": {
+        "sg1": "sprawdzałem",
+        "sg2": "sprawdzałeś",
+        "sg3": "sprawdzał",
+        "pl1": "sprawdzaliśmy",
+        "pl2": "sprawdzaliście",
+        "pl3": "sprawdzali"
+      },
+      "past_fem": {
+        "sg1": "sprawdzałam",
+        "sg2": "sprawdzałaś",
+        "sg3": "sprawdzała",
+        "pl1": "sprawdzałyśmy",
+        "pl2": "sprawdzałyście",
+        "pl3": "sprawdzały"
+      },
+      "future": {
+        "sg1": "sprawdzę",
+        "sg2": "sprawdzisz",
+        "sg3": "sprawdzi",
+        "pl1": "sprawdzimy",
+        "pl2": "sprawdzicie",
+        "pl3": "sprawdzą"
+      }
+    },
+    "lemma": "sprawdzać",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "sprawdzać godziny",
+        "ru": "проверять часы работы"
+      },
+      {
+        "pl": "sprawdzać rachunek",
+        "ru": "проверять счёт"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "справДЖачь"
+    },
+    "translations": {
+      "ru": "проверять"
+    }
+  },
+  "zapakować": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Czy można zapakować na wynos?",
+        "ru": "Можно упаковать с собой?",
+        "ru_transcription": "Чи МОжна запакОвачь на ВЫнос?"
+      },
+      {
+        "pl": "Proszę zapakować resztę ramenu.",
+        "ru": "Упакуйте остаток рамэна, пожалуйста.",
+        "ru_transcription": "ПРОше запакОвачь РЭшчэ РАМэну."
+      }
+    ],
+    "inflection": {
+      "infinitive": "zapakować",
+      "present": {
+        "sg1": "zapakuję",
+        "sg2": "zapakujesz",
+        "sg3": "zapakuje",
+        "pl1": "zapakujemy", 
+        "pl2": "zapakujecie",
+        "pl3": "zapakują"
+      },
+      "past_masc": {
+        "sg1": "zapakowałem",
+        "sg2": "zapakowałeś",
+        "sg3": "zapakował",
+        "pl1": "zapakowaliśmy",
+        "pl2": "zapakowaliście",
+        "pl3": "zapakowali"
+      },
+      "past_fem": {
+        "sg1": "zapakowałam",
+        "sg2": "zapakowałaś",
+        "sg3": "zapakowała",
+        "pl1": "zapakowałyśmy",
+        "pl2": "zapakowałyście",
+        "pl3": "zapakowały"
+      },
+      "imperative": {
+        "sg2": "zapakuj",
+        "pl2": "zapakujcie"
+      }
+    },
+    "lemma": "zapakować",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "zapakować na wynos",
+        "ru": "упаковать с собой"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "запакОвачь"
+    },
+    "translations": {
+      "ru": "упаковать"
+    }
+  },
+  "zawierać": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Czy makaron zawiera jajka?",
+        "ru": "Содержит ли лапша яйца?",
+        "ru_transcription": "Чи макАрон завьера Яйка?"
+      },
+      {
+        "pl": "Czy sos zawiera miód albo mleko?",
+        "ru": "Содержит ли соус мёд или молоко?",
+        "ru_transcription": "Чи сос завьера мьот альбо мЛЕко?"
+      }
+    ],
+    "inflection": {
+      "infinitive": "zawierać",
+      "present": {
+        "sg1": "zawieramy",
+        "sg2": "zawierasz",
+        "sg3": "zawiera",
+        "pl1": "zawieramy",
+        "pl2": "zawieracie",
+        "pl3": "zawierają"
+      },
+      "past_masc": {
+        "sg1": "zawierałem",
+        "sg2": "zawierałeś",
+        "sg3": "zawierał",
+        "pl1": "zawieraliśmy",
+        "pl2": "zawieraliście",
+        "pl3": "zawierali"
+      },
+      "past_fem": {
+        "sg1": "zawierałam",
+        "sg2": "zawierałaś",
+        "sg3": "zawierała",
+        "pl1": "zawierałyśmy",
+        "pl2": "zawierałyście",
+        "pl3": "zawierały"
+      }
+    },
+    "lemma": "zawierać",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "zawierać składniki",
+        "ru": "содержать ингредиенты"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "завьерачь"
+    },
+    "translations": {
+      "ru": "содержать"
+    }
+  },
+  "wyglądać": {
+    "applied_rules": ["ć", "ą"],
+    "examples": [
+      {
+        "pl": "Wygląda pięknie.",
+        "ru": "Выглядит красиво.",
+        "ru_transcription": "ВыГЛёнда ПЕНкне."
+      },
+      {
+        "pl": "Jak to wygląda?",
+        "ru": "Как это выглядит?",
+        "ru_transcription": "Як то выГЛёнда?"
+      }
+    ],
+    "inflection": {
+      "infinitive": "wyglądać",
+      "present": {
+        "sg1": "wyglądam",
+        "sg2": "wyglądasz",
+        "sg3": "wygląda", 
+        "pl1": "wyglądamy",
+        "pl2": "wyglądacie",
+        "pl3": "wyglądają"
+      },
+      "past_masc": {
+        "sg1": "wyglądałem",
+        "sg2": "wyglądałeś",
+        "sg3": "wyglądał",
+        "pl1": "wyglądaliśmy",
+        "pl2": "wyglądaliście",
+        "pl3": "wyglądali"
+      },
+      "past_fem": {
+        "sg1": "wyglądałam",
+        "sg2": "wyglądałaś",
+        "sg3": "wyglądała",
+        "pl1": "wyglądałyśmy",
+        "pl2": "wyglądałyście",
+        "pl3": "wyglądały"
+      }
+    },
+    "lemma": "wyglądać",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "wyglądać pięknie",
+        "ru": "выглядеть красиво"
+      },
+      {
+        "pl": "wyglądać smakowo",
+        "ru": "выглядеть аппетитно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "выГЛёндачь"
+    },
+    "translations": {
+      "ru": "выглядеть"
+    }
+  },
+  "płacić": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Płacimy kartą.",
+        "ru": "Платим картой.",
+        "ru_transcription": "пуаЧИмы КАРтон."
+      },
+      {
+        "pl": "A potem płacimy kartą i zostawiamy napiwek.",
+        "ru": "А потом платим картой и оставляем чаевые.",
+        "ru_transcription": "А ПОтэм пуаЧИмы КАРтон и зостаВЯмы НАпивэк."
+      }
+    ],
+    "inflection": {
+      "infinitive": "płacić",
+      "present": {
+        "sg1": "płacę",
+        "sg2": "płacisz",
+        "sg3": "płaci",
+        "pl1": "płacimy",
+        "pl2": "płacicie",
+        "pl3": "płacą"
+      },
+      "past_masc": {
+        "sg1": "płaciłem",
+        "sg2": "płaciłeś",
+        "sg3": "płacił",
+        "pl1": "płaciliśmy",
+        "pl2": "płaciliście",
+        "pl3": "płacili"
+      },
+      "past_fem": {
+        "sg1": "płaciłam",
+        "sg2": "płaciłaś",
+        "sg3": "płaciła",
+        "pl1": "płaciłyśmy",
+        "pl2": "płaciłyście",
+        "pl3": "płaciły"
+      },
+      "imperative": {
+        "sg2": "płać",
+        "pl2": "płaćcie"
+      }
+    },
+    "lemma": "płacić",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "płacić kartą",
+        "ru": "платить картой"
+      },
+      {
+        "pl": "płacić gotówką",
+        "ru": "платить наличными"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "пуаЧИчь"
+    },
+    "translations": {
+      "ru": "платить"
+    }
   }
 }

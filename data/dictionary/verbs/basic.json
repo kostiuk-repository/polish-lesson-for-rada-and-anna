@@ -1517,5 +1517,312 @@
     "translations": {
       "ru": "вернуться"
     }
+  },
+  "iść": {
+    "applied_rules": ["ś", "ć"],
+    "examples": [
+      {
+        "pl": "Gdzie dziś idziemy?",
+        "ru": "Куда идём сегодня?",
+        "ru_transcription": "гдже джьш идЗЕмы?"
+      },
+      {
+        "pl": "Super, idziemy.",
+        "ru": "Супер, идём.",
+        "ru_transcription": "СУпер, иДЗЕмы."
+      }
+    ],
+    "inflection": {
+      "infinitive": "iść",
+      "present": {
+        "sg1": "idę",
+        "sg2": "idziesz",
+        "sg3": "idzie",
+        "pl1": "idziemy",
+        "pl2": "idziecie",
+        "pl3": "idą"
+      },
+      "past_masc": {
+        "sg1": "szedłem",
+        "sg2": "szedłeś",
+        "sg3": "szedł",
+        "pl1": "szliśmy",
+        "pl2": "szliście",
+        "pl3": "szli"
+      },
+      "past_fem": {
+        "sg1": "szłam",
+        "sg2": "szłaś",
+        "sg3": "szła",
+        "pl1": "szłyśmy",
+        "pl2": "szłyście",
+        "pl3": "szły"
+      },
+      "future": {
+        "sg1": "pójdę",
+        "sg2": "pójdziesz",
+        "sg3": "pójdzie",
+        "pl1": "pójdziemy",
+        "pl2": "pójdziecie",
+        "pl3": "pójdą"
+      }
+    },
+    "lemma": "iść",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "iść na spacer",
+        "ru": "идти на прогулку"
+      },
+      {
+        "pl": "iść do restauracji",
+        "ru": "идти в ресторан"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ишчь"
+    },
+    "translations": {
+      "ru": "идти"
+    }
+  },
+  "lubić": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Lubię ich burgery.",
+        "ru": "Люблю их бургеры.",
+        "ru_transcription": "ЛубьЕ их бурГЭры."
+      },
+      {
+        "pl": "Lubię to.",
+        "ru": "Мне нравится.",
+        "ru_transcription": "ЛубьЕ то."
+      }
+    ],
+    "inflection": {
+      "infinitive": "lubić",
+      "present": {
+        "sg1": "lubię",
+        "sg2": "lubisz",
+        "sg3": "lubi",
+        "pl1": "lubimy",
+        "pl2": "lubicie",
+        "pl3": "lubią"
+      },
+      "past_masc": {
+        "sg1": "lubiłem",
+        "sg2": "lubiłeś",
+        "sg3": "lubił",
+        "pl1": "lubiliśmy",
+        "pl2": "lubiliście",
+        "pl3": "lubili"
+      },
+      "past_fem": {
+        "sg1": "lubiłam",
+        "sg2": "lubiłaś",
+        "sg3": "lubiła",
+        "pl1": "lubiłyśmy",
+        "pl2": "lubiłyście",
+        "pl3": "lubiły"
+      }
+    },
+    "lemma": "lubić",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "lubić coś robić",
+        "ru": "любить что-то делать"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ЛУбичь"
+    },
+    "translations": {
+      "ru": "любить, нравиться"
+    }
+  },
+  "proponować": {
+    "applied_rules": ["ć"],
+    "examples": [
+      {
+        "pl": "Proponuję Vegan Ramen Shop Muranów.",
+        "ru": "Предлагаю Vegan Ramen Shop Muranów.",
+        "ru_transcription": "ПропонУЕ Веган Рамен Шоп Муранув."
+      }
+    ],
+    "inflection": {
+      "infinitive": "proponować",
+      "present": {
+        "sg1": "proponuję",
+        "sg2": "proponujesz",
+        "sg3": "proponuje",
+        "pl1": "proponujemy",
+        "pl2": "proponujecie",
+        "pl3": "proponują"
+      },
+      "past_masc": {
+        "sg1": "proponowałem",
+        "sg2": "proponowałeś",
+        "sg3": "proponował",
+        "pl1": "proponowaliśmy",
+        "pl2": "proponowaliście",
+        "pl3": "proponowali"
+      },
+      "past_fem": {
+        "sg1": "proponowałam",
+        "sg2": "proponowałaś",
+        "sg3": "proponowała",
+        "pl1": "proponowałyśmy",
+        "pl2": "proponowałyście",
+        "pl3": "proponowały"
+      }
+    },
+    "lemma": "proponować",
+    "morphology": {
+      "aspect": "imperfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "proponować rozwiązanie",
+        "ru": "предлагать решение"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "пропонОвачь"
+    },
+    "translations": {
+      "ru": "предлагать"
+    }
+  },
+  "wziąć": {
+    "applied_rules": ["ć", "ą"],
+    "examples": [
+      {
+        "pl": "A ja wezmę shoyu ramen.",
+        "ru": "А я возьму сёю-рамен.",
+        "ru_transcription": "А я ВЭзмэ ШОю рамен."
+      },
+      {
+        "pl": "Chyba weźmiemy jeszcze deser.",
+        "ru": "Наверное, возьмём ещё десерт.",
+        "ru_transcription": "Хыба ВЭзьмЕмы Ещчэ ДЕзэр."
+      }
+    ],
+    "inflection": {
+      "infinitive": "wziąć",
+      "present": {
+        "sg1": "wezmę",
+        "sg2": "weźmiesz",
+        "sg3": "weźmie",
+        "pl1": "weźmiemy",
+        "pl2": "weźmiecie",
+        "pl3": "wezmą"
+      },
+      "past_masc": {
+        "sg1": "wziąłem",
+        "sg2": "wziąłeś",
+        "sg3": "wziął",
+        "pl1": "wzięliśmy",
+        "pl2": "wzięliście",
+        "pl3": "wzięli"
+      },
+      "past_fem": {
+        "sg1": "wzięłam",
+        "sg2": "wzięłaś",
+        "sg3": "wzięła",
+        "pl1": "wzięłyśmy",
+        "pl2": "wzięłyście",
+        "pl3": "wzięły"
+      }
+    },
+    "lemma": "wziąć",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "transitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "wziąć udział",
+        "ru": "принять участие"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "вжёнчь"
+    },
+    "translations": {
+      "ru": "взять"
+    }
+  },
+  "wyjść": {
+    "applied_rules": ["ś", "ć"],
+    "examples": [
+      {
+        "pl": "Wyszłyśmy z jogi.",
+        "ru": "Мы вышли с йоги.",
+        "ru_transcription": "ВЫшлышмы з ЙОги."
+      }
+    ],
+    "inflection": {
+      "infinitive": "wyjść",
+      "present": {
+        "sg1": "wyjdę",
+        "sg2": "wyjdziesz",
+        "sg3": "wyjdzie",
+        "pl1": "wyjdziemy",
+        "pl2": "wyjdziecie",
+        "pl3": "wyjdą"
+      },
+      "past_masc": {
+        "sg1": "wyszedłem",
+        "sg2": "wyszedłeś",
+        "sg3": "wyszedł",
+        "pl1": "wyszliśmy",
+        "pl2": "wyszliście",
+        "pl3": "wyszli"
+      },
+      "past_fem": {
+        "sg1": "wyszłam",
+        "sg2": "wyszłaś",
+        "sg3": "wyszła",
+        "pl1": "wyszłyśmy",
+        "pl2": "wyszłyście",
+        "pl3": "wyszły"
+      }
+    },
+    "lemma": "wyjść",
+    "morphology": {
+      "aspect": "perfective",
+      "reflexive": false,
+      "transitivity": "intransitive"
+    },
+    "part_of_speech": "verb",
+    "phrases_and_idioms": [
+      {
+        "pl": "wyjść z domu",
+        "ru": "выйти из дома"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "выйшчь"
+    },
+    "translations": {
+      "ru": "выйти"
+    }
   }
 }

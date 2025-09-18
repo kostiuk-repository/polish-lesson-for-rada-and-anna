@@ -1168,5 +1168,236 @@
     "translations": {
       "ru": "сметана"
     }
+  },
+  "acai": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę acai bowl bez glutenu.",
+        "ru": "Пожалуйста, асаи-боул без глютена.",
+        "ru_transcription": "ПопРОше аСАЙ бОул без глюТЭна."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "acai",
+        "genitive": "acai",
+        "dative": "acai", 
+        "accusative": "acai",
+        "instrumental": "acai",
+        "locative": "acai",
+        "vocative": "acai"
+      }
+    },
+    "lemma": "acai",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "acai bowl",
+        "ru": "асаи-боул"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "аСАЙ"
+    },
+    "translations": {
+      "ru": "асаи (ягода)"
+    }
+  },
+  "bulion": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy bulion jest wegański?",
+        "ru": "Бульон веганский?",
+        "ru_transcription": "Чи БУЛьон есть вэгАНьски?"
+      },
+      {
+        "pl": "Bulion warzywny z glonami.",
+        "ru": "Овощной бульон с водорослями.",
+        "ru_transcription": "БУЛьон важЫвны з глОнами."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "bulion",
+        "genitive": "bulionu",
+        "dative": "bulionowi", 
+        "accusative": "bulion",
+        "instrumental": "bulionem",
+        "locative": "bulionie",
+        "vocative": "bulionie"
+      },
+      "plural": {
+        "nominative": "buliony",
+        "genitive": "bulionów",
+        "dative": "bulionom",
+        "accusative": "buliony", 
+        "instrumental": "bulionami",
+        "locative": "bulionach",
+        "vocative": "buliony"
+      }
+    },
+    "lemma": "bulion",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "bulion warzywny",
+        "ru": "овощной бульон"
+      },
+      {
+        "pl": "bulion z kości",
+        "ru": "костный бульон"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "БУЛьон"
+    },
+    "translations": {
+      "ru": "бульон"
+    }
+  },
+  "ramen": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Poproszę miso ramen.",
+        "ru": "Пожалуйста, мисо-рамен.",
+        "ru_transcription": "ПопРОше МИСо рамен."
+      },
+      {
+        "pl": "Shoyu ramen z tofu.",
+        "ru": "Сёю-рамен с тофу.",
+        "ru_transcription": "ШОю рамен з ТОфу."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "ramen",
+        "genitive": "ramenu",
+        "dative": "ramenowi", 
+        "accusative": "ramen",
+        "instrumental": "ramenem",
+        "locative": "ramenie",
+        "vocative": "ramenie"
+      }
+    },
+    "lemma": "ramen",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "miso ramen",
+        "ru": "мисо-рамен"
+      },
+      {
+        "pl": "shoyu ramen", 
+        "ru": "сёю-рамен"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "РАмен"
+    },
+    "translations": {
+      "ru": "рамен"
+    }
+  },
+  "tofu": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Tofu jest idealne.",
+        "ru": "Тофу идеальное.",
+        "ru_transcription": "ТОфу есть идеАЛьнэ."
+      },
+      {
+        "pl": "Buddha bowl z tofu.",
+        "ru": "Будда-боул с тофу.",
+        "ru_transcription": "Будда бОул з ТОфу."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "tofu",
+        "genitive": "tofu",
+        "dative": "tofu", 
+        "accusative": "tofu",
+        "instrumental": "tofu",
+        "locative": "tofu",
+        "vocative": "tofu"
+      }
+    },
+    "lemma": "tofu",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "ТОфу"
+    },
+    "translations": {
+      "ru": "тофу"
+    }
+  },
+  "makaron": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Makaron jest sprężysty.",
+        "ru": "Лапша упругая.",
+        "ru_transcription": "МакАрон есть спрэнЖЫсты."
+      },
+      {
+        "pl": "Czy makaron zawiera jajka?",
+        "ru": "Лапша содержит яйца?",
+        "ru_transcription": "Чи макАрон завьера Яйка?"
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "makaron",
+        "genitive": "makaronu",
+        "dative": "makaronowi", 
+        "accusative": "makaron",
+        "instrumental": "makaronem",
+        "locative": "makaronie",
+        "vocative": "makaronie"
+      },
+      "plural": {
+        "nominative": "makarony",
+        "genitive": "makaronów",
+        "dative": "makaronom",
+        "accusative": "makarony",
+        "instrumental": "makaronami", 
+        "locative": "makaronach",
+        "vocative": "makarony"
+      }
+    },
+    "lemma": "makaron",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "makaron bezjajeczny",
+        "ru": "лапша без яиц"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "макАрон"
+    },
+    "translations": {
+      "ru": "лапша, макароны"
+    }
   }
 }

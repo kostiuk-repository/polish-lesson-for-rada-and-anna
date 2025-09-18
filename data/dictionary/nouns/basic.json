@@ -804,5 +804,237 @@
     "translations": {
       "ru": "вода"
     }
+  },
+  "joga": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Wyszłyśmy z jogi.",
+        "ru": "Мы вышли с йоги.",
+        "ru_transcription": "ВЫшлышмы з ЙОги."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "joga",
+        "genitive": "jogi",
+        "dative": "jodze", 
+        "accusative": "jogę",
+        "instrumental": "jogą",
+        "locative": "jodze",
+        "vocative": "jogo"
+      }
+    },
+    "lemma": "joga",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "po jodze",
+        "ru": "после йоги"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ЙОга"
+    },
+    "translations": {
+      "ru": "йога"
+    }
+  },
+  "zdjęcie": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Czy zrobić zdjęcie?",
+        "ru": "Сделать фото?",
+        "ru_transcription": "Чи зРОбичь зДЗеньче?"
+      },
+      {
+        "pl": "Ładnie do zdjęcia.",
+        "ru": "Красиво для фото.",
+        "ru_transcription": "Уадне до зДЗенча."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "zdjęcie",
+        "genitive": "zdjęcia",
+        "dative": "zdjęciu", 
+        "accusative": "zdjęcie",
+        "instrumental": "zdjęciem",
+        "locative": "zdjęciu",
+        "vocative": "zdjęcie"
+      },
+      "plural": {
+        "nominative": "zdjęcia",
+        "genitive": "zdjęć",
+        "dative": "zdjęciom",
+        "accusative": "zdjęcia",
+        "instrumental": "zdjęciami",
+        "locative": "zdjęciach",
+        "vocative": "zdjęcia"
+      }
+    },
+    "lemma": "zdjęcie",
+    "morphology": {
+      "gender": "neuter"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "robić zdjęcie",
+        "ru": "делать фото"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "зДЗеньче"
+    },
+    "translations": {
+      "ru": "фотография, снимок"
+    }
+  },
+  "klimat": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Klimat jak na Bali.",
+        "ru": "Атмосфера как на Бали.",
+        "ru_transcription": "КЛИмат як на БАЛи."
+      },
+      {
+        "pl": "Klimat jest naprawdę instagramowy.",
+        "ru": "Атмосфера действительно «инстаграмная».",
+        "ru_transcription": "КЛИмат есть наПРАвдэ инстаграМОВы."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "klimat",
+        "genitive": "klimatu",
+        "dative": "klimatowi", 
+        "accusative": "klimat",
+        "instrumental": "klimatem",
+        "locative": "klimacie",
+        "vocative": "klimacie"
+      }
+    },
+    "lemma": "klimat",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "klimat jak na Bali",
+        "ru": "атмосфера как на Бали"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "КЛИмат"
+    },
+    "translations": {
+      "ru": "атмосфера, климат"
+    }
+  },
+  "napój": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Już podaję napoje.",
+        "ru": "Уже приношу напитки.",
+        "ru_transcription": "ЮЖ подАе напОйе."
+      },
+      {
+        "pl": "Najpierw napoje.",
+        "ru": "Сначала напитки.",
+        "ru_transcription": "НАЙперв напОйе."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "napój",
+        "genitive": "napoju",
+        "dative": "napojowi", 
+        "accusative": "napój",
+        "instrumental": "napojem",
+        "locative": "napoju",
+        "vocative": "napoju"
+      },
+      "plural": {
+        "nominative": "napoje",
+        "genitive": "napojów",
+        "dative": "napojom",
+        "accusative": "napoje",
+        "instrumental": "napojami",
+        "locative": "napojach",
+        "vocative": "napoje"
+      }
+    },
+    "lemma": "napój",
+    "morphology": {
+      "gender": "masculine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "наПУй"
+    },
+    "translations": {
+      "ru": "напиток"
+    }
+  },
+  "godzina": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Sprawdzę godziny.",
+        "ru": "Проверю часы работы.",
+        "ru_transcription": "СправДжэ годЗИны."
+      },
+      {
+        "pl": "Dziś czynne do 21.",
+        "ru": "Сегодня открыто до 21 часа.",
+        "ru_transcription": "джьш ЧЫНнэ до двадцЯстэй пьершэй."
+      }
+    ],
+    "inflection": {
+      "singular": {
+        "nominative": "godzina",
+        "genitive": "godziny",
+        "dative": "godzinie", 
+        "accusative": "godzinę",
+        "instrumental": "godziną",
+        "locative": "godzinie",
+        "vocative": "godzino"
+      },
+      "plural": {
+        "nominative": "godziny",
+        "genitive": "godzin",
+        "dative": "godzinom",
+        "accusative": "godziny",
+        "instrumental": "godzinami",
+        "locative": "godzinach",
+        "vocative": "godziny"
+      }
+    },
+    "lemma": "godzina",
+    "morphology": {
+      "gender": "feminine"
+    },
+    "part_of_speech": "noun",
+    "phrases_and_idioms": [
+      {
+        "pl": "godziny otwarcia",
+        "ru": "часы работы"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "годЗИна"
+    },
+    "translations": {
+      "ru": "час"
+    }
   }
 }

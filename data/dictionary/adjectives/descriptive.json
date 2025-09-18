@@ -559,5 +559,336 @@
     "translations": {
       "ru": "превосходный"
     }
+  },
+  "wegański": {
+    "applied_rules": ["ń", "sk"],
+    "examples": [
+      {
+        "pl": "Czy bulion jest wegański?",
+        "ru": "Бульон веганский?",
+        "ru_transcription": "Чи БУЛьон есть вэгАНьски?"
+      },
+      {
+        "pl": "Wegańska opcja bez mleka.",
+        "ru": "Веганский вариант без молока.",
+        "ru_transcription": "вэгАНьска опцйа без мЛЕка."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "wegański",
+        "genitive": "wegańskiego",
+        "dative": "wegańskiemu",
+        "accusative": "wegański/wegańskiego",
+        "instrumental": "wegańskim",
+        "locative": "wegańskim"
+      },
+      "feminine": {
+        "nominative": "wegańska",
+        "genitive": "wegańskiej", 
+        "dative": "wegańskiej",
+        "accusative": "wegańską",
+        "instrumental": "wegańską",
+        "locative": "wegańskiej"
+      },
+      "neuter": {
+        "nominative": "wegańskie",
+        "genitive": "wegańskiego",
+        "dative": "wegańskiemu",
+        "accusative": "wegańskie",
+        "instrumental": "wegańskim",
+        "locative": "wegańskim"
+      }
+    },
+    "lemma": "wegański",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "jedzenie wegańskie",
+        "ru": "веганская еда"
+      },
+      {
+        "pl": "restauracja wegańska",
+        "ru": "веганский ресторан"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "вэгАНьски"
+    },
+    "translations": {
+      "ru": "веганский"
+    }
+  },
+  "wegetariański": {
+    "applied_rules": ["ń", "sk"],
+    "examples": [
+      {
+        "pl": "Może jakieś wegetariańskie?",
+        "ru": "Может что-то вегетарианское?",
+        "ru_transcription": "МОже якашь вэгэтарьЯньскэ?"
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "wegetariański",
+        "genitive": "wegetariańskiego",
+        "dative": "wegetariańskiemu",
+        "accusative": "wegetariański/wegetariańskiego",
+        "instrumental": "wegetariańskim",
+        "locative": "wegetariańskim"
+      },
+      "feminine": {
+        "nominative": "wegetariańska",
+        "genitive": "wegetariańskiej",
+        "dative": "wegetariańskiej",
+        "accusative": "wegetariańską",
+        "instrumental": "wegetariańską",
+        "locative": "wegetariańskiej"
+      },
+      "neuter": {
+        "nominative": "wegetariańskie",
+        "genitive": "wegetariańskiego",
+        "dative": "wegetariańskiemu",
+        "accusative": "wegetariańskie",
+        "instrumental": "wegetariańskim",
+        "locative": "wegetariańskim"
+      }
+    },
+    "lemma": "wegetariański",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "kuchnia wegetariańska",
+        "ru": "вегетарианская кухня"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "вэгэтарьЯньски"
+    },
+    "translations": {
+      "ru": "вегетарианский"
+    }
+  },
+  "roślinny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Sos jest roślinny.",
+        "ru": "Соус растительный.",
+        "ru_transcription": "Сос есть рошЛИНны."
+      },
+      {
+        "pl": "Roślinne bistro z tarasem.",
+        "ru": "Растительное бистро с террасой.",
+        "ru_transcription": "рошЛИНнэ БИстро з таРАсэм."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "roślinny",
+        "genitive": "roślinnego",
+        "dative": "roślinnemu",
+        "accusative": "roślinny/roślinnego",
+        "instrumental": "roślinnym",
+        "locative": "roślinnym"
+      },
+      "feminine": {
+        "nominative": "roślinna",
+        "genitive": "roślinnej",
+        "dative": "roślinnej",
+        "accusative": "roślinną",
+        "instrumental": "roślinną",
+        "locative": "roślinnej"
+      },
+      "neuter": {
+        "nominative": "roślinne",
+        "genitive": "roślinnego",
+        "dative": "roślinnemu",
+        "accusative": "roślinne",
+        "instrumental": "roślinnym",
+        "locative": "roślinnym"
+      }
+    },
+    "lemma": "roślinny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "mleko roślinne",
+        "ru": "растительное молоко"
+      },
+      {
+        "pl": "kuchnia roślinna",
+        "ru": "растительная кухня"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "рошЛИНны"
+    },
+    "translations": {
+      "ru": "растительный"
+    }
+  },
+  "instagramowy": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Klimat jest naprawdę instagramowy.",
+        "ru": "Атмосфера действительно «инстаграмная».",
+        "ru_transcription": "КЛИмат есть наПРАвдэ инстаграМОВы."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "instagramowy",
+        "genitive": "instagramowego",
+        "dative": "instagramowemu",
+        "accusative": "instagramowy/instagramowego",
+        "instrumental": "instagramowym",
+        "locative": "instagramowym"
+      },
+      "feminine": {
+        "nominative": "instagramowa",
+        "genitive": "instagramowej",
+        "dative": "instagramowej",
+        "accusative": "instagramową",
+        "instrumental": "instagramową",
+        "locative": "instagramowej"
+      },
+      "neuter": {
+        "nominative": "instagramowe",
+        "genitive": "instagramowego",
+        "dative": "instagramowemu",
+        "accusative": "instagramowe",
+        "instrumental": "instagramowym",
+        "locative": "instagramowym"
+      }
+    },
+    "lemma": "instagramowy",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "miejsce instagramowe",
+        "ru": "инстаграмное место"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "инстаграМОВы"
+    },
+    "translations": {
+      "ru": "инстаграмный, фотогеничный"
+    }
+  },
+  "sprężysty": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Makaron jest sprężysty.",
+        "ru": "Лапша упругая.",
+        "ru_transcription": "МакАрон есть спрэнЖЫсты."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "sprężysty",
+        "genitive": "sprężystego",
+        "dative": "sprężystemu",
+        "accusative": "sprężysty/sprężystego",
+        "instrumental": "sprężystym",
+        "locative": "sprężystym"
+      },
+      "feminine": {
+        "nominative": "sprężysta",
+        "genitive": "sprężystej",
+        "dative": "sprężystej",
+        "accusative": "sprężystą",
+        "instrumental": "sprężystą",
+        "locative": "sprężystej"
+      },
+      "neuter": {
+        "nominative": "sprężyste",
+        "genitive": "sprężystego",
+        "dative": "sprężystemu",
+        "accusative": "sprężyste",
+        "instrumental": "sprężystym",
+        "locative": "sprężystym"
+      }
+    },
+    "lemma": "sprężysty",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "спрэнЖЫсты"
+    },
+    "translations": {
+      "ru": "упругий, эластичный"
+    }
+  },
+  "głęboki": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Bulion głęboki w smaku.",
+        "ru": "Бульон глубокий по вкусу.",
+        "ru_transcription": "БУЛьон глЭмБОки в СМАку."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "głęboki",
+        "genitive": "głębokiego",
+        "dative": "głębokiemu",
+        "accusative": "głęboki/głębokiego",
+        "instrumental": "głębokim",
+        "locative": "głębokim"
+      },
+      "feminine": {
+        "nominative": "głęboka",
+        "genitive": "głębokiej",
+        "dative": "głębokiej",
+        "accusative": "głęboką",
+        "instrumental": "głęboką",
+        "locative": "głębokiej"
+      },
+      "neuter": {
+        "nominative": "głębokie",
+        "genitive": "głębokiego",
+        "dative": "głębokiemu",
+        "accusative": "głębokie",
+        "instrumental": "głębokim",
+        "locative": "głębokim"
+      }
+    },
+    "lemma": "głęboki",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "głęboki w smaku",
+        "ru": "глубокий по вкусу"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "глЭнБОки"
+    },
+    "translations": {
+      "ru": "глубокий"
+    }
   }
 }

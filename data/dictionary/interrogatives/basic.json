@@ -30,5 +30,99 @@
     "translations": {
       "ru": "как"
     }
+  },
+  "gdzie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Hej, gdzie dziś idziemy?",
+        "ru": "Хей, куда идём сегодня?",
+        "ru_transcription": "Хэй, гдже джьш идЗЕмы?"
+      }
+    ],
+    "lemma": "gdzie",
+    "part_of_speech": "interrogative",
+    "phrases_and_idioms": [
+      {
+        "pl": "gdzie indziej",
+        "ru": "где-то ещё"
+      },
+      {
+        "pl": "gdzie tylko",
+        "ru": "где только"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "гдже"
+    },
+    "translations": {
+      "ru": "где, куда"
+    }
+  },
+  "co": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Co polecacie dzisiaj?",
+        "ru": "Что вы сегодня рекомендуете?",
+        "ru_transcription": "Цо полэЦАчэ ДЖИСяй?"
+      },
+      {
+        "pl": "Co było najlepsze?",
+        "ru": "Что было лучшим?",
+        "ru_transcription": "Цо Было найЛЕпше?"
+      },
+      {
+        "pl": "Do picia coś?",
+        "ru": "Что пить?",
+        "ru_transcription": "До ПИча чощ?"
+      }
+    ],
+    "lemma": "co",
+    "part_of_speech": "interrogative",
+    "phrases_and_idioms": [
+      {
+        "pl": "co za",
+        "ru": "что за"
+      },
+      {
+        "pl": "co więcej",
+        "ru": "что больше"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "цо"
+    },
+    "translations": {
+      "ru": "что"
+    }
+  },
+  "ile": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dla ilu osób stolik?",
+        "ru": "На сколько человек столик?",
+        "ru_transcription": "Для Илу ОСуб СТОлик?"
+      }
+    ],
+    "lemma": "ile",
+    "part_of_speech": "interrogative",
+    "phrases_and_idioms": [
+      {
+        "pl": "ile razy",
+        "ru": "сколько раз"
+      },
+      {
+        "pl": "ile kosztuje",
+        "ru": "сколько стоит"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "Иле"
+    },
+    "translations": {
+      "ru": "сколько"
+    }
   }
 }

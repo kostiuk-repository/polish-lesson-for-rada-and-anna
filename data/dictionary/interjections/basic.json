@@ -52,5 +52,45 @@
     "translations": {
       "ru": "господин"
     }
+  },
+  "hej": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Hej, gdzie dziś idziemy?",
+        "ru": "Хей, куда идём сегодня?",
+        "ru_transcription": "Хэй, гдже джьш идЗЕмы?"
+      }
+    ],
+    "lemma": "hej",
+    "part_of_speech": "interjection",
+    "usage_context": "informal_greeting",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "хэй"
+    },
+    "translations": {
+      "ru": "привет, хей"
+    }
+  },
+  "ojej": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Sprawdzę godziny… Ojej, dziś jest zamknięte.",
+        "ru": "Проверю часы… Ой, сегодня закрыто.",
+        "ru_transcription": "СправДжэ годЗИны… ОйЕй, джьш есть замкНьентэ."
+      }
+    ],
+    "lemma": "ojej",
+    "part_of_speech": "interjection",
+    "usage_context": "surprise_disappointment",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "ойЕй"
+    },
+    "translations": {
+      "ru": "ой, ойей"
+    }
   }
 }

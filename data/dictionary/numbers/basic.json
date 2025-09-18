@@ -152,5 +152,68 @@
     "translations": {
       "ru": "несколько"
     }
+  },
+  "pół": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Poproszę sernik matcha na pół.",
+        "ru": "Пожалуйста, чизкейк матча пополам.",
+        "ru_transcription": "ПопРОше СЕРник МАча на Пў."
+      },
+      {
+        "pl": "Poprosimy tapiokę na pół.",
+        "ru": "Пожалуйста, тапиоку пополам.",
+        "ru_transcription": "ПопроСИмы тапьОкэ на Пул."
+      }
+    ],
+    "lemma": "pół",
+    "morphology": {
+      "type": "fractional"
+    },
+    "part_of_speech": "number",
+    "phrases_and_idioms": [
+      {
+        "pl": "na pół",
+        "ru": "пополам"
+      },
+      {
+        "pl": "pół godziny",
+        "ru": "полчаса"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "пуў"
+    },
+    "translations": {
+      "ru": "половина"
+    }
+  },
+  "21": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dziś czynne do 21.",
+        "ru": "Сегодня открыто до 21 часа.",
+        "ru_transcription": "джьш ЧЫНнэ до двадцЯстэй пьершэй."
+      }
+    ],
+    "lemma": "dwadzieścia jeden",
+    "morphology": {
+      "type": "cardinal"
+    },
+    "part_of_speech": "number",
+    "phrases_and_idioms": [
+      {
+        "pl": "do 21",
+        "ru": "до 21 часа"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "двадцЯсть пьерв"
+    },
+    "translations": {
+      "ru": "двадцать один"
+    }
   }
 }

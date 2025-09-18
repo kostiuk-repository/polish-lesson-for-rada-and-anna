@@ -1,1 +1,104 @@
-{}
+{
+  "mój": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "Spróbuj mojego mango.",
+        "ru": "Попробуй моего манго.",
+        "ru_transcription": "СпробУй моЕго МАНго."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "mój",
+        "genitive": "mojego",
+        "dative": "mojemu",
+        "accusative": "mój/mojego",
+        "instrumental": "moim",
+        "locative": "moim"
+      },
+      "feminine": {
+        "nominative": "moja",
+        "genitive": "mojej",
+        "dative": "mojej",
+        "accusative": "moją",
+        "instrumental": "moją", 
+        "locative": "mojej"
+      },
+      "neuter": {
+        "nominative": "moje",
+        "genitive": "mojego",
+        "dative": "mojemu",
+        "accusative": "moje",
+        "instrumental": "moim",
+        "locative": "moim"
+      }
+    },
+    "lemma": "mój",
+    "part_of_speech": "pronoun",
+    "pronoun_type": "possessive",
+    "phrases_and_idioms": [
+      {
+        "pl": "mój Boże",
+        "ru": "боже мой"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "муй"
+    },
+    "translations": {
+      "ru": "мой"
+    }
+  },
+  "twój": {
+    "applied_rules": ["ó"],
+    "examples": [
+      {
+        "pl": "A ja spróbuję Twojej truskawki.",
+        "ru": "А я попробую твою клубнику.",
+        "ru_transcription": "а я спроБУе ТВОей труСкавки."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "twój",
+        "genitive": "twojego",
+        "dative": "twojemu",
+        "accusative": "twój/twojego",
+        "instrumental": "twoim",
+        "locative": "twoim"
+      },
+      "feminine": {
+        "nominative": "twoja",
+        "genitive": "twojej",
+        "dative": "twojej",
+        "accusative": "twoją",
+        "instrumental": "twoją",
+        "locative": "twojej"
+      },
+      "neuter": {
+        "nominative": "twoje",
+        "genitive": "twojego", 
+        "dative": "twojemu",
+        "accusative": "twoje",
+        "instrumental": "twoim",
+        "locative": "twoim"
+      }
+    },
+    "lemma": "twój",
+    "part_of_speech": "pronoun",
+    "pronoun_type": "possessive",
+    "phrases_and_idioms": [
+      {
+        "pl": "to twoja sprawa",
+        "ru": "это твоё дело"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "твуй"
+    },
+    "translations": {
+      "ru": "твой"
+    }
+  }
+}

@@ -203,5 +203,543 @@
       { "pl": "wolny dzień", "ru": "выходной день" }
     ],
     "applied_rules": ["ą"]
+  },
+  "naprawdę": {
+    "applied_rules": ["ę"],
+    "examples": [
+      {
+        "pl": "Klimat jest naprawdę instagramowy.",
+        "ru": "Атмосфера действительно «инстаграмная».",
+        "ru_transcription": "КЛИмат есть наПРАвдэ инстаграМОВы."
+      }
+    ],
+    "lemma": "naprawdę",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "to naprawdę",
+        "ru": "это действительно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "наПРАвдэ"
+    },
+    "translations": {
+      "ru": "действительно, правда"
+    }
+  },
+  "super": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Super, idziemy.",
+        "ru": "Супер, идём.",
+        "ru_transcription": "СУпер, иДЗЕмы."
+      },
+      {
+        "pl": "Bulion super, tofu idealne.",
+        "ru": "Бульон супер, тофу идеальное.",
+        "ru_transcription": "БУЛьон СУпер, ТОфу идеАЛьнэ."
+      }
+    ],
+    "lemma": "super",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "СУпер"
+    },
+    "translations": {
+      "ru": "супер, отлично"
+    }
+  },
+  "serio": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Serio fajna gra słów.",
+        "ru": "Правда, классная игра слов.",
+        "ru_transcription": "СЭрю файна гра слув."
+      }
+    ],
+    "lemma": "serio",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "na serio",
+        "ru": "всерьёз"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СЭрю"
+    },
+    "translations": {
+      "ru": "серьёзно, правда"
+    }
+  },
+  "blisko": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Blisko metra, smacznie i bez mięsa.",
+        "ru": "Близко к метро, вкусно и без мяса.",
+        "ru_transcription": "БЛИско МЭтра, СМАчне и без МЬЕНса."
+      }
+    ],
+    "lemma": "blisko",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "blisko czegoś",
+        "ru": "близко к чему-то"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "БЛИско"
+    },
+    "translations": {
+      "ru": "близко"
+    }
+  },
+  "tam": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Tam będzie spokojnie.",
+        "ru": "Там будет спокойно.",
+        "ru_transcription": "Там БУджэ спокОйне."
+      }
+    ],
+    "lemma": "tam",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "tam i z powrotem",
+        "ru": "туда и обратно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "там"
+    },
+    "translations": {
+      "ru": "там"
+    }
+  },
+  "tutaj": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Proszę usiąść tutaj, światło jest ładne.",
+        "ru": "Садитесь здесь, свет красивый.",
+        "ru_transcription": "ПРОше усЁнщь тУтай, ШФЬЯтло есть Уаднэ."
+      }
+    ],
+    "lemma": "tutaj",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [],
+    "pronunciation": {
+      "ru_transcription": "тУтай"
+    },
+    "translations": {
+      "ru": "здесь"
+    }
+  },
+  "ogólnie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Jak smakowało ogólnie?",
+        "ru": "Как в целом по вкусу?",
+        "ru_transcription": "Як смаковалО огУльне?"
+      }
+    ],
+    "lemma": "ogólnie",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "ogólnie rzecz biorąc",
+        "ru": "в общем и целом"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "огУльне"
+    },
+    "translations": {
+      "ru": "в целом, в общем"
+    }
+  },
+  "smacznie": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Blisko metra, smacznie i bez mięsa.",
+        "ru": "Близко к метро, вкусно и без мяса.",
+        "ru_transcription": "БЛИско МЭтра, СМАчне и без МЬЕНса."
+      }
+    ],
+    "lemma": "smacznie",
+    "part_of_speech": "adverb",
+    "phrases_and_idioms": [
+      {
+        "pl": "smacznie wyglądać",
+        "ru": "выглядеть аппетитно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СМАчне"
+    },
+    "translations": {
+      "ru": "вкусно"
+    }
+  },
+  "otwarty": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Czy dziś jesteście otwarci?",
+        "ru": "Вы сегодня открыты?",
+        "ru_transcription": "Чи джьш естешче отВАРчи?"
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "otwarty",
+        "genitive": "otwartego",
+        "dative": "otwartemu",
+        "accusative": "otwarty/otwartego",
+        "instrumental": "otwartym",
+        "locative": "otwartym"
+      },
+      "feminine": {
+        "nominative": "otwarta",
+        "genitive": "otwartej",
+        "dative": "otwartej",
+        "accusative": "otwartą",
+        "instrumental": "otwartą",
+        "locative": "otwartej"
+      },
+      "neuter": {
+        "nominative": "otwarte",
+        "genitive": "otwartego",
+        "dative": "otwartemu",
+        "accusative": "otwarte",
+        "instrumental": "otwartym",
+        "locative": "otwartym"
+      },
+      "plural_masc": {
+        "nominative": "otwarci",
+        "genitive": "otwartych",
+        "dative": "otwartym",
+        "accusative": "otwartych",
+        "instrumental": "otwartymi",
+        "locative": "otwartych"
+      },
+      "plural_fem_neut": {
+        "nominative": "otwarte",
+        "genitive": "otwartych",
+        "dative": "otwartym",
+        "accusative": "otwarte",
+        "instrumental": "otwartymi",
+        "locative": "otwartych"
+      }
+    },
+    "lemma": "otwarty",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "być otwartym",
+        "ru": "быть открытым"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "отВАРты"
+    },
+    "translations": {
+      "ru": "открытый"
+    }
+  },
+  "czynny": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dziś czynne do 21.",
+        "ru": "Сегодня открыто до 21 часа.",
+        "ru_transcription": "джьш ЧЫНнэ до двадцЯстэj пьершэй."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "czynny",
+        "genitive": "czynnego",
+        "dative": "czynnemu",
+        "accusative": "czynny/czynnego",
+        "instrumental": "czynnym",
+        "locative": "czynnym"
+      },
+      "feminine": {
+        "nominative": "czynna",
+        "genitive": "czynnej",
+        "dative": "czynnej",
+        "accusative": "czynną",
+        "instrumental": "czynną",
+        "locative": "czynnej"
+      },
+      "neuter": {
+        "nominative": "czynne",
+        "genitive": "czynnego",
+        "dative": "czynnemu",
+        "accusative": "czynne",
+        "instrumental": "czynnym",
+        "locative": "czynnym"
+      }
+    },
+    "lemma": "czynny",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "czynny całą dobę",
+        "ru": "работающий круглосуточно"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ЧЫНны"
+    },
+    "translations": {
+      "ru": "работающий, открытый"
+    }
+  },
+  "gotowy": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Gotowe. Dania zaraz będą.",
+        "ru": "Готово. Блюда скоро будут.",
+        "ru_transcription": "ГоТОвэ. ДАня ЗАРаз БЭндон."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "gotowy",
+        "genitive": "gotowego",
+        "dative": "gotowemu",
+        "accusative": "gotowy/gotowego",
+        "instrumental": "gotowym",
+        "locative": "gotowym"
+      },
+      "feminine": {
+        "nominative": "gotowa",
+        "genitive": "gotowej",
+        "dative": "gotowej",
+        "accusative": "gotową",
+        "instrumental": "gotową",
+        "locative": "gotowej"
+      },
+      "neuter": {
+        "nominative": "gotowe",
+        "genitive": "gotowego",
+        "dative": "gotowemu",
+        "accusative": "gotowe",
+        "instrumental": "gotowym",
+        "locative": "gotowym"
+      }
+    },
+    "lemma": "gotowy",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "być gotowym",
+        "ru": "быть готовым"
+      },
+      {
+        "pl": "gotowe jedzenie",
+        "ru": "готовая еда"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "готОВы"
+    },
+    "translations": {
+      "ru": "готовый"
+    }
+  },
+  "miły": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dziękujemy, wszystko było miłe.",
+        "ru": "Спасибо, всё было мило.",
+        "ru_transcription": "ДженьКУЕмы, ВШЫстко было МИлэ."
+      },
+      {
+        "pl": "Miłego wieczoru!",
+        "ru": "Хорошего вечера!",
+        "ru_transcription": "МиУего вЬЕчору!"
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "miły",
+        "genitive": "miłego",
+        "dative": "miłemu",
+        "accusative": "miły/miłego",
+        "instrumental": "miłym",
+        "locative": "miłym"
+      },
+      "feminine": {
+        "nominative": "miła",
+        "genitive": "miłej",
+        "dative": "miłej",
+        "accusative": "miłą",
+        "instrumental": "miłą",
+        "locative": "miłej"
+      },
+      "neuter": {
+        "nominative": "miłe",
+        "genitive": "miłego",
+        "dative": "miłemu",
+        "accusative": "miłe",
+        "instrumental": "miłym",
+        "locative": "miłym"
+      }
+    },
+    "lemma": "miły",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "miłego dnia",
+        "ru": "хорошего дня"
+      },
+      {
+        "pl": "miła atmosfera",
+        "ru": "приятная атмосфера"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "МИлы"
+    },
+    "translations": {
+      "ru": "милый, приятный"
+    }
+  },
+  "słony": {
+    "applied_rules": [],
+    "examples": [
+      {
+        "pl": "Dla mnie trochę za słone.",
+        "ru": "Для меня немного солоновато.",
+        "ru_transcription": "Для МНЕ ТРОхэ за Слонэ."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "słony",
+        "genitive": "słonego",
+        "dative": "słonemu",
+        "accusative": "słony/słonego",
+        "instrumental": "słonym",
+        "locative": "słonym"
+      },
+      "feminine": {
+        "nominative": "słona",
+        "genitive": "słonej",
+        "dative": "słonej",
+        "accusative": "słoną",
+        "instrumental": "słoną",
+        "locative": "słonej"
+      },
+      "neuter": {
+        "nominative": "słone",
+        "genitive": "słonego",
+        "dative": "słonemu",
+        "accusative": "słone",
+        "instrumental": "słonym",
+        "locative": "słonym"
+      }
+    },
+    "lemma": "słony",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "słona woda",
+        "ru": "солёная вода"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "СЛОны"
+    },
+    "translations": {
+      "ru": "солёный"
+    }
+  },
+  "świeży": {
+    "applied_rules": ["ś", "ż"],
+    "examples": [
+      {
+        "pl": "Wygląda pięknie. Świeże, lekkie, aromatyczne.",
+        "ru": "Выглядит красиво. Свежо, легко, ароматно.",
+        "ru_transcription": "ВыГЛёнда ПЕНкне. ШФЬЕже, ЛЕКкье, ароМаТычне."
+      }
+    ],
+    "inflection": {
+      "masculine": {
+        "nominative": "świeży",
+        "genitive": "świeżego",
+        "dative": "świeżemu",
+        "accusative": "świeży/świeżego",
+        "instrumental": "świeżym",
+        "locative": "świeżym"
+      },
+      "feminine": {
+        "nominative": "świeża",
+        "genitive": "świeżej",
+        "dative": "świeżej",
+        "accusative": "świeżą",
+        "instrumental": "świeżą",
+        "locative": "świeżej"
+      },
+      "neuter": {
+        "nominative": "świeże",
+        "genitive": "świeżego",
+        "dative": "świeżemu",
+        "accusative": "świeże",
+        "instrumental": "świeżym",
+        "locative": "świeżym"
+      }
+    },
+    "lemma": "świeży",
+    "morphology": {
+      "type": "qualitative"
+    },
+    "part_of_speech": "adjective",
+    "phrases_and_idioms": [
+      {
+        "pl": "świeże powietrze",
+        "ru": "свежий воздух"
+      },
+      {
+        "pl": "świeże owoce",
+        "ru": "свежие фрукты"
+      }
+    ],
+    "pronunciation": {
+      "ru_transcription": "ШФЬЕжы"
+    },
+    "translations": {
+      "ru": "свежий"
+    }
   }
 }
