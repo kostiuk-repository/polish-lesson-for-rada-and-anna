@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "1.0.0",
-    "last_updated": "2025-09-17",
-    "total_words": 129,
+    "last_updated": "2025-09-19",
+    "total_words": 288,
     "description": "Интерактивный словарь польского языка с произношением и примерами"
   },
   "categories": {
@@ -12,18 +12,23 @@
       "themes": {
         "basic": {
           "file": "verbs/basic.json",
-          "words_count": 17,
+          "words_count": 19,
           "description": "Основные глаголы повседневного общения"
         },
         "restaurant": {
           "file": "verbs/restaurant.json",
-          "words_count": 8,
+          "words_count": 13,
           "description": "Глаголы для ресторана и кафе"
         },
         "shop": {
           "file": "verbs/shop.json",
           "words_count": 2,
           "description": "Глаголы для покупок и магазинов"
+        },
+        "extended": {
+          "file": "verbs/extended.json",
+          "words_count": 10,
+          "description": "Дополнительные глаголы"
         }
       }
     },
@@ -33,7 +38,7 @@
       "themes": {
         "basic": {
           "file": "nouns/basic.json",
-          "words_count": 15,
+          "words_count": 20,
           "description": "Основные существительные"
         },
         "restaurant": {
@@ -48,8 +53,48 @@
         },
         "family": {
           "file": "nouns/family.json",
-          "words_count": 0,
+          "words_count": 10,
           "description": "Семья и родственники"
+        },
+        "food": {
+            "file": "nouns/food.json",
+            "words_count": 25,
+            "description": "Еда и продукты"
+        },
+        "drinks": {
+            "file": "nouns/drinks.json",
+            "words_count": 10,
+            "description": "Напитки"
+        },
+        "places": {
+            "file": "nouns/places.json",
+            "words_count": 15,
+            "description": "Места"
+        },
+        "utensils": {
+            "file": "nouns/utensils.json",
+            "words_count": 12,
+            "description": "Посуда и столовые приборы"
+        },
+        "ingredients": {
+            "file": "nouns/ingredients.json",
+            "words_count": 18,
+            "description": "Ингредиенты"
+        },
+        "specialty": {
+            "file": "nouns/specialty.json",
+            "words_count": 5,
+            "description": "Специальные блюда"
+        },
+        "brands": {
+            "file": "nouns/brands.json",
+            "words_count": 3,
+            "description": "Бренды"
+        },
+        "abstract": {
+            "file": "nouns/abstract.json",
+            "words_count": 7,
+            "description": "Абстрактные понятия"
         }
       }
     },
@@ -64,13 +109,23 @@
         },
         "descriptive": {
           "file": "adjectives/descriptive.json",
-          "words_count": 10,
+          "words_count": 16,
           "description": "Описательные прилагательные"
         },
         "colors": {
           "file": "adjectives/colors.json",
           "words_count": 1,
           "description": "Цвета"
+        },
+        "qualitative": {
+            "file": "adjectives/qualitative.json",
+            "words_count": 11,
+            "description": "Качественные прилагательные"
+        },
+        "food": {
+            "file": "adjectives/food.json",
+            "words_count": 8,
+            "description": "Прилагательные для еды"
         }
       }
     },
@@ -85,8 +140,13 @@
         },
         "time": {
           "file": "adverbs/time.json",
-          "words_count": 0,
+          "words_count": 9,
           "description": "Наречия времени"
+        },
+        "quantity": {
+            "file": "adverbs/quantity.json",
+            "words_count": 6,
+            "description": "Наречия количества"
         }
       }
     },
@@ -96,12 +156,12 @@
       "themes": {
         "personal": {
           "file": "pronouns/personal.json",
-          "words_count": 3,
+          "words_count": 6,
           "description": "Личные местоимения"
         },
         "possessive": {
           "file": "pronouns/possessive.json",
-          "words_count": 0,
+          "words_count": 7,
           "description": "Притяжательные местоимения"
         },
         "demonstrative": {
@@ -117,7 +177,7 @@
       "themes": {
         "basic": {
           "file": "prepositions/basic.json",
-          "words_count": 8,
+          "words_count": 10,
           "description": "Основные предлоги"
         }
       }
@@ -128,7 +188,7 @@
       "themes": {
         "basic": {
           "file": "conjunctions/basic.json",
-          "words_count": 6,
+          "words_count": 8,
           "description": "Основные союзы"
         }
       }
@@ -139,17 +199,17 @@
       "themes": {
         "cardinal": {
           "file": "numbers/cardinal.json",
-          "words_count": 0,
+          "words_count": 21,
           "description": "Количественные числительные"
         },
         "ordinal": {
           "file": "numbers/ordinal.json",
-          "words_count": 0,
+          "words_count": 10,
           "description": "Порядковые числительные"
         },
         "basic": {
           "file": "numbers/basic.json",
-          "words_count": 3,
+          "words_count": 5,
           "description": "Основные числительные"
         }
       }
@@ -173,6 +233,11 @@
           "file": "particles/basic.json",
           "words_count": 2,
           "description": "Основные частицы"
+        },
+        "modal": {
+            "file": "particles/modal.json",
+            "words_count": 3,
+            "description": "Модальные частицы"
         }
       }
     },
@@ -182,7 +247,7 @@
       "themes": {
         "basic": {
           "file": "interjections/basic.json",
-          "words_count": 2,
+          "words_count": 4,
           "description": "Основные междометия"
         }
       }
@@ -193,7 +258,7 @@
       "themes": {
         "basic": {
           "file": "interrogatives/basic.json",
-          "words_count": 1,
+          "words_count": 4,
           "description": "Основные вопросительные слова"
         }
       }
@@ -262,24 +327,24 @@
   },
   "statistics": {
     "by_part_of_speech": {
-      "particle": 2,
+      "particle": 5,
       "modal": 1,
       "punctuation": 1,
-      "interjection": 2,
-      "pronoun": 8,
-      "adjective": 15,
-      "noun": 40,
-      "preposition": 8,
-      "adverb": 16,
-      "numeral": 3,
-      "conjunction": 6,
-      "verb": 27
+      "interjection": 4,
+      "pronoun": 18,
+      "adjective": 40,
+      "noun": 148,
+      "preposition": 10,
+      "adverb": 30,
+      "numeral": 36,
+      "conjunction": 8,
+      "verb": 44
     },
     "by_difficulty": {
-      "A1": 120,
-      "A2": 85,
-      "B1": 30,
-      "B2": 10
+      "A1": 200,
+      "A2": 120,
+      "B1": 50,
+      "B2": 15
     },
     "most_searched": [
       "być",
