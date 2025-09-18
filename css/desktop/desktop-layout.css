@@ -273,6 +273,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-8);
   padding: var(--space-6) 0;
+  overflow: hidden;
 }
 
 .cards-grid--large {

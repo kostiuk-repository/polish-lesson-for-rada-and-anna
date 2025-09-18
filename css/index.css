@@ -347,6 +347,60 @@ input[type="reset"],
   top: 6px;
 }
 
+/* ===== INFLECTION TABLES ===== */
+.conjugation-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.conjugation-table th,
+.conjugation-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+}
+
+.conjugation-table thead th {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+  background-color: var(--gray-50);
+}
+
+.conjugation-table tbody tr:not(.conjugation-table__section) th,
+.conjugation-table tbody tr:not(.conjugation-table__section) td {
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.conjugation-table__section-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  background-color: var(--gray-50);
+  padding: var(--space-2) var(--space-4);
+}
+
+.conjugation-table__label {
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-700);
+  width: 40%;
+}
+
+.conjugation-table__value {
+  color: var(--gray-800);
+}
+
+.conjugation-table__value strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+.conjugation-table__value .text-muted {
+  color: var(--gray-400);
+}
+
 /* ===== PERFORMANCE OPTIMIZATIONS ===== */
 /* Оптимизации производительности */
 img {
@@ -355,6 +409,7 @@ img {
 
 .cards-grid {
   contain: layout style paint;
+  overflow: hidden;
 }
 
 .modal__content {
