@@ -273,7 +273,6 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-8);
   padding: var(--space-6) 0;
-  overflow: hidden;
 }
 
 .cards-grid--large {
@@ -304,7 +303,6 @@
   box-shadow: var(--shadow-lg);
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .lesson-header-box::before {
