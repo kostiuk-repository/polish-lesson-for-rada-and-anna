@@ -122,7 +122,7 @@
         { "text": "tutaj,", "wordKey": "tutaj" },
         { "text": "światło", "wordKey": "światło" },
         { "text": "jest", "wordKey": "być" },
-        { "text": "ładne.", "wordKey": "ładny" }
+        { "text": "ładne.", "wordKey": "ładnie" }
       ]
     },
     {
@@ -186,7 +186,7 @@
         { "text": "jeśli", "wordKey": "jeśli" },
         { "text": "się", "wordKey": "się" },
         { "text": "da,", "wordKey": "dać" },
-        { "text": "ładnie", "wordKey": "ładny" },
+        { "text": "ładnie", "wordKey": "ładnie" },
         { "text": "do", "wordKey": "do" },
         { "text": "zdjęcia,", "wordKey": "zdjęcie" },
         { "text": "proszę.", "wordKey": "prosić" }
@@ -508,7 +508,7 @@
       "words": [
         { "text": "Wszystko", "wordKey": "wszystko" },
         { "text": "było", "wordKey": "być" },
-        { "text": "ładne", "wordKey": "ładny" },
+        { "text": "ładne", "wordKey": "ładnie" },
         { "text": "na", "wordKey": "na" },
         { "text": "zdjęciach.", "wordKey": "zdjęcie" },
         { "text": "Oznaczę", "wordKey": "oznaczyć" },
