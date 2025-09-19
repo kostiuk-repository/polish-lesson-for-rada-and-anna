@@ -339,6 +339,37 @@
   }
 }
 
+@media (max-width: 480px) {
+  .modal {
+    padding: var(--space-1);
+  }
+
+  .modal__content {
+    max-height: 90vh;
+    border-radius: var(--radius-base);
+    margin-top: var(--space-2);
+  }
+
+  .modal__body {
+    padding: var(--space-2);
+  }
+
+  .conjugation-table th,
+  .conjugation-table td {
+    padding: var(--space-2);
+    font-size: var(--font-size-sm);
+  }
+
+  .dialog-text {
+    font-size: var(--font-size-base);
+  }
+
+  .tabs__button {
+    font-size: var(--font-size-xs);
+    padding: var(--space-2);
+  }
+}
+
 /* Очень маленькие экраны */
 @media (max-width: 360px) {
   .container {
@@ -360,6 +391,19 @@
   .nav-link {
     font-size: var(--font-size-sm);
     padding: var(--space-2);
+  }
+
+  .modal__title {
+    font-size: var(--font-size-base);
+  }
+
+  .category-card {
+    min-height: 120px;
+    padding: var(--space-4);
+  }
+
+  .dialog-controls {
+    padding: var(--space-3);
   }
 }
 
