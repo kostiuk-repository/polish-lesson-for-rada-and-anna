@@ -1,0 +1,70 @@
+/**
+ * Card Components Styles
+ */
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  transition: box-shadow var(--transition-base);
+}
+
+.card-clickable {
+  cursor: pointer;
+}
+
+.card-clickable:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+.card-content {
+  color: var(--color-text-primary);
+}
+
+.card-footer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: var(--border-width) solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.card-icon {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+/* Category Cards */
+.category-card {
+  min-height: 200px;
+}
+
+/* Lesson Cards */
+.lesson-card {
+  margin-bottom: var(--spacing-md);
+}
+
+.lesson-card.completed {
+  border-left: 4px solid var(--color-success);
+}

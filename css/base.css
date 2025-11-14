@@ -1,0 +1,66 @@
+/**
+ * Base Styles Entry Point
+ * Imports all base styles and component styles
+ */
+
+/* Base */
+@import './base/variables.css';
+@import './base/reset.css';
+
+/* Components */
+@import './components/buttons.css';
+@import './components/cards.css';
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-xxl);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+.error {
+  background-color: #FFEBEE;
+  color: var(--color-danger);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin: var(--spacing-md) 0;
+}
+
+/* Responsive Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.badge-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.badge-success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.badge-info {
+  background-color: var(--color-info);
+  color: white;
+}
